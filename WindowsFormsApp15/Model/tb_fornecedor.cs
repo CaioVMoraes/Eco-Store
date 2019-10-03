@@ -14,16 +14,20 @@ namespace WindowsFormsApp15.Model
     
     public partial class tb_fornecedor
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public tb_fornecedor()
+        {
+            this.tb_estoque = new HashSet<tb_estoque>();
+        }
+    
         public int id_fornecedor { get; set; }
         public string nm_fornecedor { get; set; }
         public string nm_empresa { get; set; }
         public string ds_telefone { get; set; }
         public string ds_celular { get; set; }
         public string ds_endereco { get; set; }
-        public int id_produto { get; set; }
-        public int id_estoque { get; set; }
     
-        public virtual tb_estoque tb_estoque { get; set; }
-        public virtual tb_produto tb_produto { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_estoque> tb_estoque { get; set; }
     }
 }

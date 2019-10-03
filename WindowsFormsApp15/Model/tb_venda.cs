@@ -22,10 +22,8 @@ namespace WindowsFormsApp15.Model
     
         public int id_venda { get; set; }
         public Nullable<int> id_usuario { get; set; }
-        public Nullable<int> id_produto { get; set; }
         public Nullable<System.DateTime> dt_saida { get; set; }
     
-        public virtual tb_produto tb_produto { get; set; }
         public virtual tb_usuario tb_usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_venda_item> tb_venda_item { get; set; }

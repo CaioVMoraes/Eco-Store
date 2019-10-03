@@ -18,8 +18,6 @@ namespace WindowsFormsApp15.Model
         public tb_produto()
         {
             this.tb_estoque = new HashSet<tb_estoque>();
-            this.tb_fornecedor = new HashSet<tb_fornecedor>();
-            this.tb_venda = new HashSet<tb_venda>();
             this.tb_venda_item = new HashSet<tb_venda_item>();
         }
     
@@ -32,10 +30,6 @@ namespace WindowsFormsApp15.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_estoque> tb_estoque { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_fornecedor> tb_fornecedor { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_venda> tb_venda { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_venda_item> tb_venda_item { get; set; }
     }
