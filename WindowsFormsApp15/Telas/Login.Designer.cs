@@ -35,6 +35,7 @@
             this.txtUsuario = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // bunifuTileButton1
@@ -151,12 +152,28 @@
             this.label7.TabIndex = 22;
             this.label7.Text = "Usuario:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(29, 362);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(113, 20);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Cadastrar-se";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(391, 404);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.txtUsuario);
@@ -178,6 +195,7 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox txtUsuario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -9,7 +9,7 @@ CREATE TABLE IF NOT EXISTS `EcoStore`.`tb_usuario` (
   `ds_email` VARCHAR(50) NOT NULL,
   `ds_cargo` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id_usuario`),
-  UNIQUE INDEX `ds_email_UNIQUE` (`ds_email` ASC) VISIBLE)
+  UNIQUE INDEX `ds_email_UNIQUE` (`ds_email` ASC))
 ENGINE = InnoDB;
 
 
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `EcoStore`.`tb_estoque` (
   `vl_valor` DECIMAL NOT NULL,
   `qtd_estoque` INT NULL,
   PRIMARY KEY (`id_estoque`),
-  INDEX `fk_tb_estoque_tb_produto1_idx` (`id_produto` ASC) VISIBLE,
+  INDEX `fk_tb_estoque_tb_produto1_idx` (`id_produto` ASC),
   CONSTRAINT `fk_tb_estoque_tb_produto1`
     FOREIGN KEY (`id_produto`)
     REFERENCES `tb_produto` (`id_produto`)
@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS `EcoStore`.`tb_fornecedor` (
   `id_produto` INT NOT NULL,
   `id_estoque` INT NOT NULL,
   PRIMARY KEY (`id_fornecedor`),
-  INDEX `fk_tb_fornecedor_tb_produto_idx` (`id_produto` ASC) VISIBLE,
-  INDEX `fk_tb_fornecedor_tb_estoque1_idx` (`id_estoque` ASC) VISIBLE,
+  INDEX `fk_tb_fornecedor_tb_produto_idx` (`id_produto` ASC) ,
+  INDEX `fk_tb_fornecedor_tb_estoque1_idx` (`id_estoque` ASC) ,
   CONSTRAINT `fk_tb_fornecedor_tb_produto`
     FOREIGN KEY (`id_produto`)
     REFERENCES `tb_produto` (`id_produto`)
@@ -84,8 +84,8 @@ CREATE TABLE IF NOT EXISTS `EcoStore`.`tb_venda` (
   `id_produto` INT NULL,
   `dt_saida` DATETIME NULL,
   PRIMARY KEY (`id_venda`),
-  INDEX `fk_tb_caixa_tb_usuario1_idx` (`id_usuario` ASC) VISIBLE,
-  INDEX `fk_tb_caixa_tb_produto1_idx` (`id_produto` ASC) VISIBLE,
+  INDEX `fk_tb_caixa_tb_usuario1_idx` (`id_usuario` ASC) ,
+  INDEX `fk_tb_caixa_tb_produto1_idx` (`id_produto` ASC) ,
   CONSTRAINT `fk_tb_caixa_tb_usuario1`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `tb_usuario` (`id_usuario`)
@@ -113,8 +113,8 @@ CREATE TABLE IF NOT EXISTS `EcoStore`.`tb_funcionario` (
   `tm_horasTrabalhadas` TIME NOT NULL,
   `dt_contratacao` DATE NOT NULL,
   PRIMARY KEY (`id_funcionario`),
-  UNIQUE INDEX `ds_cpf_UNIQUE` (`ds_cpf` ASC) VISIBLE,
-  INDEX `fk_tb_funcionario_tb_usuario1_idx` (`id_usuario` ASC) VISIBLE,
+  UNIQUE INDEX `ds_cpf_UNIQUE` (`ds_cpf` ASC) ,
+  INDEX `fk_tb_funcionario_tb_usuario1_idx` (`id_usuario` ASC) ,
   CONSTRAINT `fk_tb_funcionario_tb_usuario1`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `tb_usuario` (`id_usuario`)
@@ -134,8 +134,8 @@ CREATE TABLE IF NOT EXISTS `EcoStore`.`tb_controleDePonto` (
   `dt_entrada` DATETIME NULL,
   `dt_saida` DATETIME NULL,
   PRIMARY KEY (`id_controleDePonto`),
-  INDEX `fk_tb_controleDePonto_tb_funcionario1_idx` (`id_funcionario` ASC) VISIBLE,
-  INDEX `fk_tb_controleDePonto_tb_usuario1_idx` (`id_usuario` ASC) VISIBLE,
+  INDEX `fk_tb_controleDePonto_tb_funcionario1_idx` (`id_funcionario` ASC) ,
+  INDEX `fk_tb_controleDePonto_tb_usuario1_idx` (`id_usuario` ASC) ,
   CONSTRAINT `fk_tb_controleDePonto_tb_funcionario1`
     FOREIGN KEY (`id_funcionario`)
     REFERENCES `tb_funcionario` (`id_funcionario`)
@@ -162,8 +162,8 @@ CREATE TABLE IF NOT EXISTS `EcoStore`.`tb_folhaPagamento` (
   `vl_total` DECIMAL NULL,
   `id_controleDePonto` INT NULL,
   PRIMARY KEY (`id_folhaPagamento`),
-  INDEX `fk_tb_folhaPagamento_tb_funcionario1_idx` (`id_funcionario` ASC) VISIBLE,
-  INDEX `fk_tb_folhaPagamento_tb_controleDePonto1_idx` (`id_controleDePonto` ASC) VISIBLE,
+  INDEX `fk_tb_folhaPagamento_tb_funcionario1_idx` (`id_funcionario` ASC) ,
+  INDEX `fk_tb_folhaPagamento_tb_controleDePonto1_idx` (`id_controleDePonto` ASC) ,
   CONSTRAINT `fk_tb_folhaPagamento_tb_funcionario1`
     FOREIGN KEY (`id_funcionario`)
     REFERENCES `tb_funcionario` (`id_funcionario`)
@@ -186,8 +186,8 @@ CREATE TABLE IF NOT EXISTS `EcoStore`.`tb_venda_item` (
   `id_produto` INT NULL,
   `vl_valorTotal` DECIMAL NULL,
   PRIMARY KEY (`id_venda_item`),
-  INDEX `fk_tb_venda_item_tb_produto1_idx` (`id_produto` ASC) VISIBLE,
-  INDEX `fk_tb_venda_item_tb_venda1_idx` (`id_venda` ASC) VISIBLE,
+  INDEX `fk_tb_venda_item_tb_produto1_idx` (`id_produto` ASC) ,
+  INDEX `fk_tb_venda_item_tb_venda1_idx` (`id_venda` ASC) ,
   CONSTRAINT `fk_tb_venda_item_tb_produto1`
     FOREIGN KEY (`id_produto`)
     REFERENCES `tb_produto` (`id_produto`)
@@ -210,7 +210,7 @@ CREATE TABLE IF NOT EXISTS `EcoStore`.`tb_log` (
   `dt_dataLogin` DATETIME NULL,
   `dt_dataLogoff` DATETIME NULL,
   PRIMARY KEY (`id_log`),
-  INDEX `fk_tb_log_tb_usuario1_idx` (`id_usuario` ASC) VISIBLE,
+  INDEX `fk_tb_log_tb_usuario1_idx` (`id_usuario` ASC) ,
   CONSTRAINT `fk_tb_log_tb_usuario1`
     FOREIGN KEY (`id_usuario`)
     REFERENCES `tb_usuario` (`id_usuario`)

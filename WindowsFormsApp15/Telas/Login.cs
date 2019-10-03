@@ -50,5 +50,11 @@ namespace WindowsFormsApp15
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            Telas.CadastrarUsuario tela = new Telas.CadastrarUsuario();
+            tela.Show();
+        }
     }
 }

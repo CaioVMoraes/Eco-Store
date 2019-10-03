@@ -4,17 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8445fe8528b948e0b6f2cbb18b31af2a" Name="Diagram1">
-        <EntityTypeShape EntityType="ecostoreModel.tb_controledeponto" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_estoque" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_folhapagamento" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_fornecedor" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_funcionario" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_log" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_produto" Width="1.5" PointX="0.75" PointY="2.75" IsExpanded="true" />
+      <Diagram DiagramId="8445fe8528b948e0b6f2cbb18b31af2a" Name="Diagram1" ZoomLevel="67">
+        <EntityTypeShape EntityType="ecostoreModel.tb_controledeponto" Width="1.5" PointX="11.875" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecostoreModel.tb_estoque" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecostoreModel.tb_folhapagamento" Width="2" PointX="10.375" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecostoreModel.tb_fornecedor" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecostoreModel.tb_funcionario" Width="1.5" PointX="5.5" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecostoreModel.tb_log" Width="1.5" PointX="1.125" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecostoreModel.tb_produto" Width="1.5" PointX="9" PointY="8.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ecostoreModel.tb_usuario" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_venda" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_venda_item" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecostoreModel.tb_venda" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ecostoreModel.tb_venda_item" Width="1.5" PointX="7.25" PointY="5" IsExpanded="true" />
         <AssociationConnector Association="ecostoreModel.fk_tb_controleDePonto_tb_funcionario1" ManuallyRouted="false" />
         <AssociationConnector Association="ecostoreModel.fk_tb_controleDePonto_tb_usuario1" ManuallyRouted="false" />
         <AssociationConnector Association="ecostoreModel.fk_tb_folhaPagamento_tb_controleDePonto1" ManuallyRouted="false" />

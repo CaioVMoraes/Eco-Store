@@ -51,7 +51,7 @@
             this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtEmail.isPassword = true;
+            this.txtEmail.isPassword = false;
             this.txtEmail.Location = new System.Drawing.Point(215, 167);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
@@ -111,7 +111,7 @@
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtUsuario.isPassword = true;
+            this.txtUsuario.isPassword = false;
             this.txtUsuario.Location = new System.Drawing.Point(215, 43);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
