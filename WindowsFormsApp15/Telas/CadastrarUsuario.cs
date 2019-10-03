@@ -28,6 +28,7 @@ namespace WindowsFormsApp15.Telas
                 model.nm_usuario = txtUsuario.Text.Trim();
                 model.ds_email = txtEmail.Text.Trim();
                 model.ds_senha = txtSenha.Text.Trim();
+                model.ds_cargo = cboCargo.Text.Trim();
                 string confirmar = txtConfirmarSenha.Text.Trim();
 
                 business.inserirUsuario(model, confirmar);
