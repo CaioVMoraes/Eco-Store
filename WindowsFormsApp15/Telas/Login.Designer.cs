@@ -40,7 +40,7 @@
             // 
             // bunifuTileButton1
             // 
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.SeaGreen;
+            this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuTileButton1.color = System.Drawing.Color.SeaGreen;
             this.bunifuTileButton1.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -50,8 +50,8 @@
             this.bunifuTileButton1.ImagePosition = 20;
             this.bunifuTileButton1.ImageZoom = 50;
             this.bunifuTileButton1.LabelPosition = 41;
-            this.bunifuTileButton1.LabelText = "Tile 1";
-            this.bunifuTileButton1.Location = new System.Drawing.Point(139, 41);
+            this.bunifuTileButton1.LabelText = "Login";
+            this.bunifuTileButton1.Location = new System.Drawing.Point(195, 104);
             this.bunifuTileButton1.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuTileButton1.Name = "bunifuTileButton1";
             this.bunifuTileButton1.Size = new System.Drawing.Size(128, 129);
@@ -78,7 +78,7 @@
             this.btnEntrar.IconVisible = true;
             this.btnEntrar.IconZoom = 90D;
             this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(144, 297);
+            this.btnEntrar.Location = new System.Drawing.Point(195, 331);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -94,15 +94,16 @@
             // 
             // txtSenha
             // 
+            this.txtSenha.BackColor = System.Drawing.Color.White;
             this.txtSenha.BorderColorFocused = System.Drawing.Color.SteelBlue;
             this.txtSenha.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
             this.txtSenha.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtSenha.BorderThickness = 3;
+            this.txtSenha.BorderThickness = 2;
             this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtSenha.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtSenha.isPassword = true;
-            this.txtSenha.Location = new System.Drawing.Point(114, 247);
+            this.txtSenha.Location = new System.Drawing.Point(165, 281);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(192, 33);
@@ -111,15 +112,16 @@
             // 
             // txtUsuario
             // 
+            this.txtUsuario.BackColor = System.Drawing.Color.White;
             this.txtUsuario.BorderColorFocused = System.Drawing.Color.SteelBlue;
             this.txtUsuario.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
             this.txtUsuario.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtUsuario.BorderThickness = 3;
+            this.txtUsuario.BorderThickness = 2;
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
             this.txtUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtUsuario.isPassword = false;
-            this.txtUsuario.Location = new System.Drawing.Point(114, 209);
+            this.txtUsuario.Location = new System.Drawing.Point(165, 243);
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(192, 33);
@@ -133,7 +135,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(39, 261);
+            this.label6.Location = new System.Drawing.Point(90, 295);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(66, 20);
             this.label6.TabIndex = 23;
@@ -146,7 +148,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(29, 222);
+            this.label7.Location = new System.Drawing.Point(80, 256);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 20);
             this.label7.TabIndex = 22;
@@ -160,7 +162,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(29, 362);
+            this.label1.Location = new System.Drawing.Point(80, 396);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 20);
             this.label1.TabIndex = 27;
@@ -172,7 +174,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(391, 404);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(468, 533);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
