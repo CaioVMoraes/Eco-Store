@@ -245,6 +245,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -279,6 +280,10 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\collaborator-male.png" />
+    <None Include="Resources\pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664.jpg" />
+    <Content Include="Resources\3907f0a4052ed31662981053bbf12c4e.jpg" />
+    <Content Include="Resources\kkk.jpg" />
     <Content Include="Script.txt" />
   </ItemGroup>
   <ItemGroup>
