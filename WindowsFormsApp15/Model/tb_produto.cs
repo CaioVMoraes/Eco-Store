@@ -26,7 +26,6 @@ namespace WindowsFormsApp15.Model
         public string ds_categoria { get; set; }
         public decimal vl_valor { get; set; }
         public int id_fornecedor { get; set; }
-        public Nullable<int> qtd_disponivel { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_estoque> tb_estoque { get; set; }

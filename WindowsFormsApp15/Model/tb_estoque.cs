@@ -20,6 +20,7 @@ namespace WindowsFormsApp15.Model
         public System.DateTime dt_entrada { get; set; }
         public Nullable<System.DateTime> dt_validade { get; set; }
         public decimal vl_valor { get; set; }
+        public int qtd_produto { get; set; }
     
         public virtual tb_produto tb_produto { get; set; }
         public virtual tb_fornecedor tb_fornecedor { get; set; }

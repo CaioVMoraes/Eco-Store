@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp15.Telas
 {
-    public partial class CadastrarUsuario : Form
+    public partial class frmCadastrarUsuario : Form
     {
-        public CadastrarUsuario()
+        public frmCadastrarUsuario()
         {
             InitializeComponent();
         }

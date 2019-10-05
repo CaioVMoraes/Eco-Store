@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp15.Telas
 {
-    partial class CadastrarEstoque
+    partial class frmCadastrarEstoque
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarEstoque));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarEstoque));
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuMetroTextbox4 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();

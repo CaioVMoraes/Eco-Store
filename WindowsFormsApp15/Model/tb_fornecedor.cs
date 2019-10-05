@@ -26,6 +26,7 @@ namespace WindowsFormsApp15.Model
         public string ds_telefone { get; set; }
         public string ds_celular { get; set; }
         public string ds_endereco { get; set; }
+        public string ds_cnpj { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_estoque> tb_estoque { get; set; }

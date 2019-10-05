@@ -18,21 +18,18 @@ namespace WindowsFormsApp15.Model
         public tb_usuario()
         {
             this.tb_controledeponto = new HashSet<tb_controledeponto>();
-            this.tb_funcionario = new HashSet<tb_funcionario>();
             this.tb_log = new HashSet<tb_log>();
             this.tb_venda = new HashSet<tb_venda>();
         }
     
         public int id_usuario { get; set; }
+        public int id_funcionario { get; set; }
         public string nm_usuario { get; set; }
         public string ds_senha { get; set; }
-        public string ds_email { get; set; }
-        public string ds_cargo { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_controledeponto> tb_controledeponto { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_funcionario> tb_funcionario { get; set; }
+        public virtual tb_funcionario tb_funcionario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_log> tb_log { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

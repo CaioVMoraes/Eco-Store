@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp15.Telas
 {
-    public partial class ConsultarFornecedor : Form
+    public partial class frmFluxoCaixa : Form
     {
-        public ConsultarFornecedor()
+        public frmFluxoCaixa()
         {
             InitializeComponent();
         }

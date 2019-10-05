@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp15.Telas
 {
-    partial class CadastroLogin
+    partial class frmCadastroLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroLogin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastroLogin));
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtSenha = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.txtUsuario = new Bunifu.Framework.UI.BunifuMetroTextbox();

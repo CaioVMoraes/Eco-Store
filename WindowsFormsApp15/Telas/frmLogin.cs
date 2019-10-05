@@ -53,7 +53,7 @@ namespace WindowsFormsApp15
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Telas.CadastrarUsuario tela = new Telas.CadastrarUsuario();
+            Telas.frmCadastrarUsuario tela = new Telas.frmCadastrarUsuario();
             tela.Show();
         }
     }

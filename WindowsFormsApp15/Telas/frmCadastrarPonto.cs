@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp15.Telas
 {
-    public partial class CadastrarFuncionario : Form
+    public partial class frmCadastrarPonto : Form
     {
-        public CadastrarFuncionario()
+        public frmCadastrarPonto()
         {
             InitializeComponent();
         }

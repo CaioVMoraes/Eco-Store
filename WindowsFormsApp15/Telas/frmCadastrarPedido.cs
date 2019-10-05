@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp15.Telas
 {
-    public partial class FluxoCaixa : Form
+    public partial class frmCadastrarPedido : Form
     {
-        public FluxoCaixa()
+        public frmCadastrarPedido()
         {
             InitializeComponent();
         }

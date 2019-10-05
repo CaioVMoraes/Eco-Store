@@ -26,6 +26,7 @@
           <Property Name="dt_entrada" Type="datetime" Precision="0" Nullable="false" />
           <Property Name="dt_validade" Type="date" />
           <Property Name="vl_valor" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="qtd_produto" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_folhapagamento">
           <Key>
@@ -45,23 +46,39 @@
             <PropertyRef Name="id_fornecedor" />
           </Key>
           <Property Name="id_fornecedor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nm_fornecedor" Type="varchar" MaxLength="45" />
-          <Property Name="nm_empresa" Type="varchar" MaxLength="45" />
-          <Property Name="ds_telefone" Type="varchar" MaxLength="15" />
+          <Property Name="nm_fornecedor" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="nm_empresa" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="ds_telefone" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="ds_celular" Type="varchar" MaxLength="15" />
           <Property Name="ds_endereco" Type="varchar" MaxLength="80" Nullable="false" />
+          <Property Name="ds_cnpj" Type="varchar" MaxLength="17" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_funcionario">
           <Key>
             <PropertyRef Name="id_funcionario" />
           </Key>
           <Property Name="id_funcionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="id_usuario" Type="int" Nullable="false" />
           <Property Name="nm_funcionario" Type="varchar" MaxLength="70" Nullable="false" />
+          <Property Name="dt_nascimento" Type="date" Nullable="false" />
+          <Property Name="ds_genero" Type="enum" Nullable="false" />
+          <Property Name="vl_transporte" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="vl_refeicao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="vl_alimentacao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="vl_convenio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="ds_cep" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="ds_cidade" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_UF" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
+          <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="ds_cpf" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="ds_email" Type="varchar" MaxLength="50" />
+          <Property Name="ds_rg" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="img_foto" Type="longblob" Nullable="false" />
+          <Property Name="ds_email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="vl_salario" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="ds_endereco" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ds_telefone" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="ds_celular" Type="varchar" MaxLength="20" />
           <Property Name="tm_horasTrabalhadas" Type="time" Precision="0" Nullable="false" />
           <Property Name="dt_contratacao" Type="date" Nullable="false" />
         </EntityType>
@@ -83,17 +100,15 @@
           <Property Name="ds_categoria" Type="varchar" MaxLength="45" />
           <Property Name="vl_valor" Type="decimal" Precision="10" Scale="0" Nullable="false" />
           <Property Name="id_fornecedor" Type="int" Nullable="false" />
-          <Property Name="qtd_disponivel" Type="int" />
         </EntityType>
         <EntityType Name="tb_usuario">
           <Key>
             <PropertyRef Name="id_usuario" />
           </Key>
           <Property Name="id_usuario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_funcionario" Type="int" Nullable="false" />
           <Property Name="nm_usuario" Type="varchar" MaxLength="65" Nullable="false" />
           <Property Name="ds_senha" Type="varchar" MaxLength="16" Nullable="false" />
-          <Property Name="ds_email" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_venda">
           <Key>
@@ -196,20 +211,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="tb_funcionario_ibfk_1">
-          <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_usuario">
-              <PropertyRef Name="id_usuario" />
-            </Principal>
-            <Dependent Role="tb_funcionario">
-              <PropertyRef Name="id_usuario" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="tb_log_ibfk_1">
           <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -221,6 +222,18 @@
             </Principal>
             <Dependent Role="tb_log">
               <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="tb_usuario_ibfk_1">
+          <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="1" />
+          <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_funcionario">
+              <PropertyRef Name="id_funcionario" />
+            </Principal>
+            <Dependent Role="tb_usuario">
+              <PropertyRef Name="id_funcionario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -301,13 +314,13 @@
             <End Role="tb_controledeponto" EntitySet="tb_controledeponto" />
             <End Role="tb_folhapagamento" EntitySet="tb_folhapagamento" />
           </AssociationSet>
-          <AssociationSet Name="tb_funcionario_ibfk_1" Association="Self.tb_funcionario_ibfk_1">
-            <End Role="tb_usuario" EntitySet="tb_usuario" />
-            <End Role="tb_funcionario" EntitySet="tb_funcionario" />
-          </AssociationSet>
           <AssociationSet Name="tb_log_ibfk_1" Association="Self.tb_log_ibfk_1">
             <End Role="tb_usuario" EntitySet="tb_usuario" />
             <End Role="tb_log" EntitySet="tb_log" />
+          </AssociationSet>
+          <AssociationSet Name="tb_usuario_ibfk_1" Association="Self.tb_usuario_ibfk_1">
+            <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+            <End Role="tb_usuario" EntitySet="tb_usuario" />
           </AssociationSet>
           <AssociationSet Name="tb_venda_ibfk_1" Association="Self.tb_venda_ibfk_1">
             <End Role="tb_usuario" EntitySet="tb_usuario" />
@@ -361,9 +374,9 @@
             <End Role="tb_funcionario" EntitySet="tb_funcionario" />
             <End Role="tb_folhapagamento" EntitySet="tb_folhapagamento" />
           </AssociationSet>
-          <AssociationSet Name="tb_funcionario_ibfk_1" Association="ecostoreModel.tb_funcionario_ibfk_1">
-            <End Role="tb_usuario" EntitySet="tb_usuario" />
+          <AssociationSet Name="tb_usuario_ibfk_1" Association="ecostoreModel.tb_usuario_ibfk_1">
             <End Role="tb_funcionario" EntitySet="tb_funcionario" />
+            <End Role="tb_usuario" EntitySet="tb_usuario" />
           </AssociationSet>
           <AssociationSet Name="tb_log_ibfk_1" Association="ecostoreModel.tb_log_ibfk_1">
             <End Role="tb_usuario" EntitySet="tb_usuario" />
@@ -406,6 +419,7 @@
           <Property Name="dt_entrada" Type="DateTime" Nullable="false" />
           <Property Name="dt_validade" Type="DateTime" />
           <Property Name="vl_valor" Type="Decimal" Nullable="false" />
+          <Property Name="qtd_produto" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_estoque" ToRole="tb_produto" />
           <NavigationProperty Name="tb_fornecedor" Relationship="ecostoreModel.tb_estoque_ibfk_2" FromRole="tb_estoque" ToRole="tb_fornecedor" />
         </EntityType>
@@ -429,11 +443,12 @@
             <PropertyRef Name="id_fornecedor" />
           </Key>
           <Property Name="id_fornecedor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nm_fornecedor" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="nm_empresa" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="ds_telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="nm_fornecedor" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="nm_empresa" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="ds_telefone" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="ds_celular" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="ds_endereco" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="ds_cnpj" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_estoque" Relationship="ecostoreModel.tb_estoque_ibfk_2" FromRole="tb_fornecedor" ToRole="tb_estoque" />
         </EntityType>
         <EntityType Name="tb_funcionario">
@@ -441,17 +456,32 @@
             <PropertyRef Name="id_funcionario" />
           </Key>
           <Property Name="id_funcionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="id_usuario" Type="Int32" Nullable="false" />
           <Property Name="nm_funcionario" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="dt_nascimento" Type="DateTime" Nullable="false" />
+          <Property Name="ds_genero" Type="String" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
+          <Property Name="vl_transporte" Type="Decimal" Nullable="false" />
+          <Property Name="vl_refeicao" Type="Decimal" Nullable="false" />
+          <Property Name="vl_alimentacao" Type="Decimal" Nullable="false" />
+          <Property Name="vl_convenio" Type="Decimal" Nullable="false" />
+          <Property Name="ds_cep" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ds_cidade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ds_UF" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ds_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ds_cpf" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ds_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ds_rg" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="img_foto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ds_email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="vl_salario" Type="Decimal" Nullable="false" />
+          <Property Name="ds_endereco" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ds_telefone" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ds_celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="tm_horasTrabalhadas" Type="Time" Nullable="false" />
           <Property Name="dt_contratacao" Type="DateTime" Nullable="false" />
           <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
           <NavigationProperty Name="tb_folhapagamento" Relationship="ecostoreModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
-          <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_funcionario_ibfk_1" FromRole="tb_funcionario" ToRole="tb_usuario" />
+          <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_usuario_ibfk_1" FromRole="tb_funcionario" ToRole="tb_usuario" />
         </EntityType>
         <EntityType Name="tb_log">
           <Key>
@@ -472,7 +502,6 @@
           <Property Name="ds_categoria" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="vl_valor" Type="Decimal" Nullable="false" />
           <Property Name="id_fornecedor" Type="Int32" Nullable="false" />
-          <Property Name="qtd_disponivel" Type="Int32" />
           <NavigationProperty Name="tb_estoque" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_produto" ToRole="tb_estoque" />
           <NavigationProperty Name="tb_venda_item" Relationship="ecostoreModel.tb_venda_item_ibfk_1" FromRole="tb_produto" ToRole="tb_venda_item" />
         </EntityType>
@@ -481,12 +510,11 @@
             <PropertyRef Name="id_usuario" />
           </Key>
           <Property Name="id_usuario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_funcionario" Type="Int32" Nullable="false" />
           <Property Name="nm_usuario" Type="String" Nullable="false" MaxLength="65" FixedLength="false" Unicode="false" />
           <Property Name="ds_senha" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
-          <Property Name="ds_email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_2" FromRole="tb_usuario" ToRole="tb_controledeponto" />
-          <NavigationProperty Name="tb_funcionario" Relationship="ecostoreModel.tb_funcionario_ibfk_1" FromRole="tb_usuario" ToRole="tb_funcionario" />
+          <NavigationProperty Name="tb_funcionario" Relationship="ecostoreModel.tb_usuario_ibfk_1" FromRole="tb_usuario" ToRole="tb_funcionario" />
           <NavigationProperty Name="tb_log" Relationship="ecostoreModel.tb_log_ibfk_1" FromRole="tb_usuario" ToRole="tb_log" />
           <NavigationProperty Name="tb_venda" Relationship="ecostoreModel.tb_venda_ibfk_1" FromRole="tb_usuario" ToRole="tb_venda" />
         </EntityType>
@@ -595,17 +623,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="tb_funcionario_ibfk_1">
-          <End Type="ecostoreModel.tb_usuario" Role="tb_usuario" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="ecostoreModel.tb_funcionario" Role="tb_funcionario" Multiplicity="*" />
+        <Association Name="tb_usuario_ibfk_1">
+          <End Type="ecostoreModel.tb_funcionario" Role="tb_funcionario" Multiplicity="1" />
+          <End Type="ecostoreModel.tb_usuario" Role="tb_usuario" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tb_usuario">
-              <PropertyRef Name="id_usuario" />
+            <Principal Role="tb_funcionario">
+              <PropertyRef Name="id_funcionario" />
             </Principal>
-            <Dependent Role="tb_funcionario">
-              <PropertyRef Name="id_usuario" />
+            <Dependent Role="tb_usuario">
+              <PropertyRef Name="id_funcionario" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -686,6 +712,7 @@
           <EntitySetMapping Name="tb_estoque">
             <EntityTypeMapping TypeName="ecostoreModel.tb_estoque">
               <MappingFragment StoreEntitySet="tb_estoque">
+                <ScalarProperty Name="qtd_produto" ColumnName="qtd_produto" />
                 <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
                 <ScalarProperty Name="dt_validade" ColumnName="dt_validade" />
                 <ScalarProperty Name="dt_entrada" ColumnName="dt_entrada" />
@@ -712,6 +739,7 @@
           <EntitySetMapping Name="tb_fornecedor">
             <EntityTypeMapping TypeName="ecostoreModel.tb_fornecedor">
               <MappingFragment StoreEntitySet="tb_fornecedor">
+                <ScalarProperty Name="ds_cnpj" ColumnName="ds_cnpj" />
                 <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
                 <ScalarProperty Name="ds_celular" ColumnName="ds_celular" />
                 <ScalarProperty Name="ds_telefone" ColumnName="ds_telefone" />
@@ -726,12 +754,27 @@
               <MappingFragment StoreEntitySet="tb_funcionario">
                 <ScalarProperty Name="dt_contratacao" ColumnName="dt_contratacao" />
                 <ScalarProperty Name="tm_horasTrabalhadas" ColumnName="tm_horasTrabalhadas" />
+                <ScalarProperty Name="ds_celular" ColumnName="ds_celular" />
+                <ScalarProperty Name="ds_telefone" ColumnName="ds_telefone" />
+                <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
                 <ScalarProperty Name="vl_salario" ColumnName="vl_salario" />
                 <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
+                <ScalarProperty Name="img_foto" ColumnName="img_foto" />
+                <ScalarProperty Name="ds_rg" ColumnName="ds_rg" />
                 <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
+                <ScalarProperty Name="ds_numeroCasa" ColumnName="ds_numeroCasa" />
+                <ScalarProperty Name="ds_complemento" ColumnName="ds_complemento" />
+                <ScalarProperty Name="ds_UF" ColumnName="ds_UF" />
+                <ScalarProperty Name="ds_cidade" ColumnName="ds_cidade" />
+                <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
+                <ScalarProperty Name="vl_convenio" ColumnName="vl_convenio" />
+                <ScalarProperty Name="vl_alimentacao" ColumnName="vl_alimentacao" />
+                <ScalarProperty Name="vl_refeicao" ColumnName="vl_refeicao" />
+                <ScalarProperty Name="vl_transporte" ColumnName="vl_transporte" />
+                <ScalarProperty Name="ds_genero" ColumnName="ds_genero" />
+                <ScalarProperty Name="dt_nascimento" ColumnName="dt_nascimento" />
                 <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />
-                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
                 <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -749,7 +792,6 @@
           <EntitySetMapping Name="tb_produto">
             <EntityTypeMapping TypeName="ecostoreModel.tb_produto">
               <MappingFragment StoreEntitySet="tb_produto">
-                <ScalarProperty Name="qtd_disponivel" ColumnName="qtd_disponivel" />
                 <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
                 <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
                 <ScalarProperty Name="ds_categoria" ColumnName="ds_categoria" />
@@ -761,10 +803,9 @@
           <EntitySetMapping Name="tb_usuario">
             <EntityTypeMapping TypeName="ecostoreModel.tb_usuario">
               <MappingFragment StoreEntitySet="tb_usuario">
-                <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />
-                <ScalarProperty Name="ds_email" ColumnName="ds_email" />
                 <ScalarProperty Name="ds_senha" ColumnName="ds_senha" />
                 <ScalarProperty Name="nm_usuario" ColumnName="nm_usuario" />
+                <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
                 <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
               </MappingFragment>
             </EntityTypeMapping>

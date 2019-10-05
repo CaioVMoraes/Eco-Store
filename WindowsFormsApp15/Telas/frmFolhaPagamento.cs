@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp15.Telas
 {
-    public partial class CadastrarProduto : Form
+    public partial class frmFolhaPagamento : Form
     {
-        public CadastrarProduto()
+        public frmFolhaPagamento()
         {
             InitializeComponent();
         }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp15.Telas
 {
-    partial class ConsultarPonto
+    partial class frmConsultarPonto
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConsultarPonto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarPonto));
             this.bunifuDatepicker3 = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
