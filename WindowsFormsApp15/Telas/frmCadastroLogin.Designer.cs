@@ -73,6 +73,7 @@
             this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntrar.Textcolor = System.Drawing.Color.White;
             this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // txtSenha
             // 
@@ -185,7 +186,7 @@
             this.bunifuMetroTextbox1.TabIndex = 35;
             this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // CadastroLogin
+            // frmCadastroLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -200,7 +201,7 @@
             this.Controls.Add(this.txtUsuario);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Name = "CadastroLogin";
+            this.Name = "frmCadastroLogin";
             this.Text = "CadastroLogin";
             this.ResumeLayout(false);
             this.PerformLayout();

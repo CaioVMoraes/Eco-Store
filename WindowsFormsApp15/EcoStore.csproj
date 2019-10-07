@@ -70,7 +70,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\EstoqueBusiness.cs" />
+    <Compile Include="Business\FornecedorBusiness.cs" />
+    <Compile Include="Business\FuncionarioBusiness.cs" />
+    <Compile Include="Business\ProdutoBusiness.cs" />
     <Compile Include="Business\UsuarioBusiness.cs" />
+    <Compile Include="Database\EstoqueDatabase.cs" />
+    <Compile Include="Database\FornecedorDatabase.cs" />
+    <Compile Include="Database\FuncionarioDatabase.cs" />
+    <Compile Include="Database\ProdutoDatabase.cs" />
     <Compile Include="Database\UsuarioDatabase.cs" />
     <Compile Include="Model\Model.Context.cs">
       <AutoGen>True</AutoGen>

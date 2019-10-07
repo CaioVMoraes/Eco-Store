@@ -9,18 +9,18 @@ namespace WindowsFormsApp15.Business
 {
     class UsuarioBusiness
     {
-        Database.UsuarioDatabase database = new Database.UsuarioDatabase();
+        Database.UsuarioDatabase db = new Database.UsuarioDatabase();
 
         public tb_usuario ModeloUsuario(string nome, string senha)
         {
-            tb_usuario usuario = database.usuario(nome, senha);
+            tb_usuario usuario = db.usuario(nome, senha);
 
             return usuario;
         }
 
         public bool Usuario(string nome, string senha)
         {
-            tb_usuario usuario = database.usuario(nome, senha);
+            tb_usuario usuario = db.usuario(nome, senha);
 
             if (usuario == null)
             {
@@ -40,10 +40,9 @@ namespace WindowsFormsApp15.Business
 
         public void inserirUsuario(tb_usuario usuario, string confiSenha)
         {
-            List<tb_usuario> lista = database.ListaDeUsuarios();
+            List<tb_usuario> lista = db.ListaDeUsuarios();
 
             bool nomeExiste = lista.Exists(x => x.nm_usuario == usuario.nm_usuario);
-            bool emailExiste = lista.Exists(x => x.ds_email == usuario.ds_email);
 
             if (nomeExiste == true)
             {
@@ -65,15 +64,7 @@ namespace WindowsFormsApp15.Business
                 throw new ArgumentException("Confirme a sua senha");
             }
 
-            if (usuario.ds_email.Contains("@") == false)
-            {
-                throw new ArgumentException("Email invalido");
-            }
-
-            if (usuario.ds_email == string.Empty)
-            {
-                throw new ArgumentException("Informe o seu e-mail");
-            }
+          
 
             if (usuario.nm_usuario == string.Empty)
             {
@@ -95,7 +86,7 @@ namespace WindowsFormsApp15.Business
                 throw new ArgumentException("Senha deve ter pelo menos 8 caractéres");
             }
 
-            database.inserirUsuario(usuario);
+            db.inserirUsuario(usuario);
         }
 
     }
