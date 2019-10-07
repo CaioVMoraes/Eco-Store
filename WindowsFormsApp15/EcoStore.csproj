@@ -126,6 +126,12 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Objetos\Usuario.cs" />
+    <Compile Include="Telas\frmAlterarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmAlterarProdutos.Designer.cs">
+      <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmCadastrarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Telas\frmAlterarProdutos.resx">
+      <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmCadastrarEstoque.resx">
       <DependentUpon>frmCadastrarEstoque.cs</DependentUpon>
     </EmbeddedResource>
