@@ -34,7 +34,6 @@ namespace WindowsFormsApp15
                 Objetos.Usuario.UsuarioLogado.Usuario = usuarioTB.nm_usuario;
                 Objetos.Usuario.UsuarioLogado.Senha = usuarioTB.nm_usuario;
                 Objetos.Usuario.UsuarioLogado.Email = usuarioTB.ds_senha;
-                Objetos.Usuario.UsuarioLogado.Cargo = usuarioTB.ds_email;
 
                 if (login == true)
                 {
