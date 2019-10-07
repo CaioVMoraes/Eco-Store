@@ -16,5 +16,10 @@ namespace WindowsFormsApp15.Telas
         {
             InitializeComponent();
         }
+
+        private void frmCadastrarProduto_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
