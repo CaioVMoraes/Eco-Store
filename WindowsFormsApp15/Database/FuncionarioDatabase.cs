@@ -51,7 +51,6 @@ namespace WindowsFormsApp15.Database
             modelo.dt_contratacao = alterar.dt_contratacao;
             modelo.dt_nascimento = alterar.dt_nascimento;
             modelo.img_foto = alterar.img_foto;
-            modelo.tm_horasTrabalhadas = alterar.tm_horasTrabalhadas;
 
             db.SaveChanges();
 

@@ -70,11 +70,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\ControleDePontoBusiness.cs" />
     <Compile Include="Business\EstoqueBusiness.cs" />
     <Compile Include="Business\FornecedorBusiness.cs" />
     <Compile Include="Business\FuncionarioBusiness.cs" />
     <Compile Include="Business\ProdutoBusiness.cs" />
     <Compile Include="Business\UsuarioBusiness.cs" />
+    <Compile Include="Database\ControledePontoDatabase.cs" />
     <Compile Include="Database\EstoqueDatabase.cs" />
     <Compile Include="Database\FornecedorDatabase.cs" />
     <Compile Include="Database\FuncionarioDatabase.cs" />
