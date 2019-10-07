@@ -75,6 +75,7 @@
             this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntrar.Textcolor = System.Drawing.Color.White;
             this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // bunifuMetroTextbox4
             // 
@@ -217,7 +218,7 @@
             this.label1.TabIndex = 73;
             this.label1.Text = "Quantidade Disponivel:";
             // 
-            // CadastrarProduto
+            // frmCadastrarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -234,7 +235,7 @@
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Name = "CadastrarProduto";
+            this.Name = "frmCadastrarProduto";
             this.Text = "CadastrarProduto";
             this.ResumeLayout(false);
             this.PerformLayout();

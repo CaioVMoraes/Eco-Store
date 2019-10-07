@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp15.Telas
 {
-    public partial class frmCadastrarProduto : Form
+    public partial class frmAlterarProdutos : Form
     {
-        public frmCadastrarProduto()
+        public frmAlterarProdutos()
         {
             InitializeComponent();
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void frmAlterarProdutos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

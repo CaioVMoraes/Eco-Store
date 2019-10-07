@@ -70,7 +70,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\ControleDePontoBusiness.cs" />
+    <Compile Include="Business\EstoqueBusiness.cs" />
+    <Compile Include="Business\FornecedorBusiness.cs" />
+    <Compile Include="Business\FuncionarioBusiness.cs" />
+    <Compile Include="Business\ProdutoBusiness.cs" />
     <Compile Include="Business\UsuarioBusiness.cs" />
+    <Compile Include="Database\ControledePontoDatabase.cs" />
+    <Compile Include="Database\EstoqueDatabase.cs" />
+    <Compile Include="Database\FornecedorDatabase.cs" />
+    <Compile Include="Database\FuncionarioDatabase.cs" />
+    <Compile Include="Database\ProdutoDatabase.cs" />
     <Compile Include="Database\UsuarioDatabase.cs" />
     <Compile Include="Model\Model.Context.cs">
       <AutoGen>True</AutoGen>
@@ -118,6 +128,12 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Objetos\Usuario.cs" />
+    <Compile Include="Telas\frmAlterarProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmAlterarProdutos.Designer.cs">
+      <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmCadastrarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +194,12 @@
     <Compile Include="Telas\frmConsultarPonto.Designer.cs">
       <DependentUpon>frmConsultarPonto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmConsultarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmConsultarProduto.Designer.cs">
+      <DependentUpon>frmConsultarProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmFluxoCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +220,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Telas\frmAlterarProdutos.resx">
+      <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmCadastrarEstoque.resx">
       <DependentUpon>frmCadastrarEstoque.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmConsultarPonto.resx">
       <DependentUpon>frmConsultarPonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmConsultarProduto.resx">
+      <DependentUpon>frmConsultarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmFluxoCaixa.resx">
       <DependentUpon>frmFluxoCaixa.cs</DependentUpon>
@@ -283,7 +311,9 @@
     <None Include="Resources\collaborator-male.png" />
     <None Include="Resources\pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664.jpg" />
     <Content Include="Resources\3907f0a4052ed31662981053bbf12c4e.jpg" />
+    <None Include="Resources\dd.jpg" />
     <Content Include="Resources\kkk.jpg" />
+    <None Include="Resources\Logo Branco.png" />
     <Content Include="Script.txt" />
   </ItemGroup>
   <ItemGroup>
