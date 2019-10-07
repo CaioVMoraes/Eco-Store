@@ -50,3 +50,6 @@ C:\Users\infob16\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsForms
 C:\Users\infob16\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Form1.resources
 C:\Users\infob16\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Properties.Resources.resources
 C:\Users\infob16\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csproj.GenerateResource.Cache
+C:\Users\infob04\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config
+C:\Users\infob04\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
+C:\Users\infob04\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
