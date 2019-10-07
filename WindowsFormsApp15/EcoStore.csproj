@@ -186,6 +186,12 @@
     <Compile Include="Telas\frmConsultarPonto.Designer.cs">
       <DependentUpon>frmConsultarPonto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\frmConsultarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmConsultarProduto.Designer.cs">
+      <DependentUpon>frmConsultarProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmFluxoCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -235,6 +241,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmConsultarPonto.resx">
       <DependentUpon>frmConsultarPonto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmConsultarProduto.resx">
+      <DependentUpon>frmConsultarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmFluxoCaixa.resx">
       <DependentUpon>frmFluxoCaixa.cs</DependentUpon>
@@ -292,6 +301,7 @@
     <None Include="Resources\pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664.jpg" />
     <Content Include="Resources\3907f0a4052ed31662981053bbf12c4e.jpg" />
     <Content Include="Resources\kkk.jpg" />
+    <None Include="Resources\Logo Branco.png" />
     <Content Include="Script.txt" />
   </ItemGroup>
   <ItemGroup>

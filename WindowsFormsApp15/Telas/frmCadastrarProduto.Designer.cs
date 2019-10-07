@@ -223,7 +223,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Image = global::WindowsFormsApp15.Properties.Resources.Logo_Branco;
             this.pictureBox1.Location = new System.Drawing.Point(147, 77);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(157, 132);

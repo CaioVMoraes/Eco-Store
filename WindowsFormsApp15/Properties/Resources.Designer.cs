@@ -83,6 +83,16 @@ namespace WindowsFormsApp15.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_Branco {
+            get {
+                object obj = ResourceManager.GetObject("Logo Branco", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pngtree_profile_web_icon_flat_line_filled_gray_icon_vector_png_image_1710664 {
             get {
                 object obj = ResourceManager.GetObject("pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664", resourceCulture);
