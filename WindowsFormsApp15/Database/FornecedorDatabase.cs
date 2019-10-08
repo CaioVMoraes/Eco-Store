@@ -23,6 +23,12 @@ namespace WindowsFormsApp15.Database
             return lista;
         
         }
+        public tb_fornecedor Listar(int id)
+        {
+            tb_fornecedor modelo = db.tb_fornecedor.FirstOrDefault(x => x.id_fornecedor == id);
+
+            return modelo;
+        }
         public void AlterarFornecedor (tb_fornecedor modelo)
         {
             tb_fornecedor alterar = db.tb_fornecedor.FirstOrDefault(x => x.nm_empresa == x.nm_empresa);

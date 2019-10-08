@@ -21,6 +21,12 @@ namespace WindowsFormsApp15.Business
 
             return lista;
         }
+        public Model.tb_produto Listar(int id)
+        {
+            Model.tb_produto modelo = db.Listar(id);
+
+            return modelo;
+        }
 
         public void AlterarProduto(Model.tb_produto modelo)
         {

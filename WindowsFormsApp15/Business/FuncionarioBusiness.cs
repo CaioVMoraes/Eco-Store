@@ -21,6 +21,12 @@ namespace WindowsFormsApp15.Business
 
             return lista;
         }
+        public Model.tb_funcionario Listar(int id)
+        {
+            Model.tb_funcionario modelo = db.Listar(id);
+
+            return modelo;
+        }
 
         public void AlterarFuncionario(Model.tb_funcionario funcionario)
         {

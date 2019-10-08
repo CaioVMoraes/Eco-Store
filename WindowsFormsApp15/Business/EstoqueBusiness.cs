@@ -21,6 +21,12 @@ namespace WindowsFormsApp15.Business
 
             return lista;
         }
+        public Model.tb_estoque Listar(int id)
+        {
+            Model.tb_estoque modelo = db.Listar(id);
+
+            return modelo;
+        }
         public void AlterarEstoque(tb_estoque modelo)
         {
             db.AlterarEstoque(modelo);

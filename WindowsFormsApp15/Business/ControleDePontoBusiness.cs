@@ -21,6 +21,12 @@ namespace WindowsFormsApp15.Business
 
             return lista;
         }
+        public Model.tb_controledeponto Listar(int id)
+        {
+            Model.tb_controledeponto modelo = db.Listar(id);
+
+            return modelo;
+        }
         public void AlterarPonto(tb_controledeponto modelo)
         {
             db.AlterarPonto(modelo);

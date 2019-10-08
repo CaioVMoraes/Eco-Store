@@ -20,6 +20,12 @@ namespace WindowsFormsApp15.Business
 
             return lista;
         }
+        public Model.tb_fornecedor Listar(int id)
+        {
+            Model.tb_fornecedor modelo = db.Listar(id);
+
+            return modelo;
+        }
 
         public void AlterarFornecedor(Model.tb_fornecedor modelo)
         {

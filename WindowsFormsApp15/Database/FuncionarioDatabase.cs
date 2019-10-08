@@ -23,6 +23,12 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
+        public tb_funcionario Listar(int id)
+        {
+            tb_funcionario modelo = db.tb_funcionario.FirstOrDefault(x => x.id_funcionario == id);
+
+            return modelo;
+        }
 
         public void AlterarFuncionario(tb_funcionario modelo)
         {

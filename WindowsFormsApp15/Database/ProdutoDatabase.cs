@@ -24,6 +24,13 @@ namespace WindowsFormsApp15.Database
             return lista;
         }
 
+        public tb_produto Listar(int id)
+        {
+            tb_produto modelo = db.tb_produto.FirstOrDefault(x => x.id_produto == id);
+
+            return modelo;
+        }
+
         public void AlterarProduto(tb_produto modelo)
         {
             tb_produto alterar = db.tb_produto.FirstOrDefault(x => x.id_produto == x.id_produto);
@@ -34,7 +41,6 @@ namespace WindowsFormsApp15.Database
 
             db.SaveChanges();
           
-
         }
         public void RemoverProduto(tb_produto modelo)
         {
@@ -42,6 +48,8 @@ namespace WindowsFormsApp15.Database
 
             db.SaveChanges();
         }
+
+
 
 
 

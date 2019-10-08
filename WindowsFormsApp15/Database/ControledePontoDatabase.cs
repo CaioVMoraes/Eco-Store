@@ -22,6 +22,13 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
+        public tb_controledeponto Listar(int id)
+        {
+            tb_controledeponto modelo = db.tb_controledeponto.FirstOrDefault(x => x.id_controleDePonto == id);
+
+            return modelo;
+        }
+        
         public void AlterarPonto(tb_controledeponto modelo)
         {
             tb_controledeponto alterar = db.tb_controledeponto.FirstOrDefault(x => x.id_controleDePonto == x.id_controleDePonto);
