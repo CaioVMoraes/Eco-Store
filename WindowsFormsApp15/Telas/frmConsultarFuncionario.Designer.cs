@@ -163,7 +163,7 @@
             this.bunifuDatepicker1.BackColor = System.Drawing.Color.SkyBlue;
             this.bunifuDatepicker1.BorderRadius = 0;
             this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.bunifuDatepicker1.FormatCustom = null;
             this.bunifuDatepicker1.Location = new System.Drawing.Point(611, 194);
             this.bunifuDatepicker1.Name = "bunifuDatepicker1";
