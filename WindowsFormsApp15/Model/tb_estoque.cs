@@ -17,7 +17,7 @@ namespace WindowsFormsApp15.Model
         public int id_estoque { get; set; }
         public int id_fornecedor { get; set; }
         public int id_produto { get; set; }
-        public System.DateTime dt_entrada { get; set; }
+        public Nullable<System.DateTime> dt_entrada { get; set; }
         public Nullable<System.DateTime> dt_validade { get; set; }
         public decimal vl_valor { get; set; }
         public int qtd_produto { get; set; }

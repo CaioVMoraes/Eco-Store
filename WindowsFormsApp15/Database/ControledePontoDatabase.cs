@@ -26,7 +26,9 @@ namespace WindowsFormsApp15.Database
         {
             tb_controledeponto alterar = db.tb_controledeponto.FirstOrDefault(x => x.id_controleDePonto == x.id_controleDePonto);
 
-            modelo.dt_entrada = alterar.dt_entrada;
+            modelo.dt_chegada = alterar.dt_chegada;
+            modelo.dt_saidaAlmoco = alterar.dt_saidaAlmoco;
+            modelo.dt_voltaAlmoco = alterar.dt_voltaAlmoco;
             modelo.dt_mes = alterar.dt_mes;
             modelo.dt_saida = alterar.dt_saida;
 

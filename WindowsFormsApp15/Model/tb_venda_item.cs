@@ -17,7 +17,6 @@ namespace WindowsFormsApp15.Model
         public int id_venda_item { get; set; }
         public Nullable<int> id_venda { get; set; }
         public Nullable<int> id_produto { get; set; }
-        public Nullable<decimal> vl_valorTotal { get; set; }
     
         public virtual tb_produto tb_produto { get; set; }
         public virtual tb_venda tb_venda { get; set; }

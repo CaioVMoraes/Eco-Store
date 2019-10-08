@@ -12,21 +12,19 @@ namespace WindowsFormsApp15.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_venda
+    public partial class tb_categoria
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_venda()
+        public tb_categoria()
         {
-            this.tb_venda_item = new HashSet<tb_venda_item>();
+            this.tb_produto = new HashSet<tb_produto>();
         }
     
-        public int id_venda { get; set; }
-        public Nullable<int> id_usuario { get; set; }
-        public Nullable<System.DateTime> dt_saida { get; set; }
-        public decimal vl_valorTotal { get; set; }
+        public int id_categoria { get; set; }
+        public string nm_categoria { get; set; }
+        public string ds_categoria { get; set; }
     
-        public virtual tb_usuario tb_usuario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_venda_item> tb_venda_item { get; set; }
+        public virtual ICollection<tb_produto> tb_produto { get; set; }
     }
 }

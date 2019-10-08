@@ -49,11 +49,6 @@ namespace WindowsFormsApp15.Business
                 throw new ArgumentException("Usúario já existe");
             }
 
-            if (emailExiste == true)
-            {
-                throw new ArgumentException("E-mail já registrado");
-            }
-
             if (usuario.ds_senha == string.Empty)
             {
                 throw new ArgumentException("Insira uma senha válida");

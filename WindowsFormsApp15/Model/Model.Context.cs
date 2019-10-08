@@ -25,6 +25,7 @@ namespace WindowsFormsApp15.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<tb_categoria> tb_categoria { get; set; }
         public virtual DbSet<tb_controledeponto> tb_controledeponto { get; set; }
         public virtual DbSet<tb_estoque> tb_estoque { get; set; }
         public virtual DbSet<tb_folhapagamento> tb_folhapagamento { get; set; }

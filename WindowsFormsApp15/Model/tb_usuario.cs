@@ -17,7 +17,6 @@ namespace WindowsFormsApp15.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tb_usuario()
         {
-            this.tb_controledeponto = new HashSet<tb_controledeponto>();
             this.tb_log = new HashSet<tb_log>();
             this.tb_venda = new HashSet<tb_venda>();
         }
@@ -27,8 +26,6 @@ namespace WindowsFormsApp15.Model
         public string nm_usuario { get; set; }
         public string ds_senha { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_controledeponto> tb_controledeponto { get; set; }
         public virtual tb_funcionario tb_funcionario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_log> tb_log { get; set; }

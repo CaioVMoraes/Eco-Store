@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ecostoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="ecostoreEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tb_categoria" EntityType="ecostoreModel.tb_categoria" />
     <EntitySet Name="tb_controledeponto" EntityType="ecostoreModel.tb_controledeponto" />
     <EntitySet Name="tb_estoque" EntityType="ecostoreModel.tb_estoque" />
     <EntitySet Name="tb_folhapagamento" EntityType="ecostoreModel.tb_folhapagamento" />
@@ -11,12 +12,12 @@
     <EntitySet Name="tb_usuario" EntityType="ecostoreModel.tb_usuario" />
     <EntitySet Name="tb_venda" EntityType="ecostoreModel.tb_venda" />
     <EntitySet Name="tb_venda_item" EntityType="ecostoreModel.tb_venda_item" />
+    <AssociationSet Name="tb_produto_ibfk_2" Association="ecostoreModel.tb_produto_ibfk_2">
+      <End Role="tb_categoria" EntitySet="tb_categoria" />
+      <End Role="tb_produto" EntitySet="tb_produto" />
+    </AssociationSet>
     <AssociationSet Name="tb_controledeponto_ibfk_1" Association="ecostoreModel.tb_controledeponto_ibfk_1">
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
-      <End Role="tb_controledeponto" EntitySet="tb_controledeponto" />
-    </AssociationSet>
-    <AssociationSet Name="tb_controledeponto_ibfk_2" Association="ecostoreModel.tb_controledeponto_ibfk_2">
-      <End Role="tb_usuario" EntitySet="tb_usuario" />
       <End Role="tb_controledeponto" EntitySet="tb_controledeponto" />
     </AssociationSet>
     <AssociationSet Name="tb_folhapagamento_ibfk_2" Association="ecostoreModel.tb_folhapagamento_ibfk_2">
@@ -34,6 +35,10 @@
     <AssociationSet Name="tb_folhapagamento_ibfk_1" Association="ecostoreModel.tb_folhapagamento_ibfk_1">
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
       <End Role="tb_folhapagamento" EntitySet="tb_folhapagamento" />
+    </AssociationSet>
+    <AssociationSet Name="tb_produto_ibfk_1" Association="ecostoreModel.tb_produto_ibfk_1">
+      <End Role="tb_fornecedor" EntitySet="tb_fornecedor" />
+      <End Role="tb_produto" EntitySet="tb_produto" />
     </AssociationSet>
     <AssociationSet Name="tb_usuario_ibfk_1" Association="ecostoreModel.tb_usuario_ibfk_1">
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
@@ -56,18 +61,27 @@
       <End Role="tb_venda_item" EntitySet="tb_venda_item" />
     </AssociationSet>
   </EntityContainer>
+  <EntityType Name="tb_categoria">
+    <Key>
+      <PropertyRef Name="id_categoria" />
+    </Key>
+    <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nm_categoria" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="ds_categoria" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_produto_ibfk_2" FromRole="tb_categoria" ToRole="tb_produto" />
+  </EntityType>
   <EntityType Name="tb_controledeponto">
     <Key>
       <PropertyRef Name="id_controleDePonto" />
     </Key>
     <Property Name="id_controleDePonto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_funcionario" Type="Int32" Nullable="false" />
-    <Property Name="id_usuario" Type="Int32" Nullable="false" />
-    <Property Name="dt_mes" Type="DateTime" Nullable="false" />
-    <Property Name="dt_entrada" Type="DateTime" />
+    <Property Name="dt_mes" Type="DateTime" />
+    <Property Name="dt_chegada" Type="DateTime" />
+    <Property Name="dt_saidaAlmoco" Type="DateTime" />
+    <Property Name="dt_voltaAlmoco" Type="DateTime" />
     <Property Name="dt_saida" Type="DateTime" />
     <NavigationProperty Name="tb_funcionario" Relationship="ecostoreModel.tb_controledeponto_ibfk_1" FromRole="tb_controledeponto" ToRole="tb_funcionario" />
-    <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_controledeponto_ibfk_2" FromRole="tb_controledeponto" ToRole="tb_usuario" />
     <NavigationProperty Name="tb_folhapagamento" Relationship="ecostoreModel.tb_folhapagamento_ibfk_2" FromRole="tb_controledeponto" ToRole="tb_folhapagamento" />
   </EntityType>
   <EntityType Name="tb_estoque">
@@ -77,7 +91,7 @@
     <Property Name="id_estoque" Type="Int32" Nullable="false" />
     <Property Name="id_fornecedor" Type="Int32" Nullable="false" />
     <Property Name="id_produto" Type="Int32" Nullable="false" />
-    <Property Name="dt_entrada" Type="DateTime" Nullable="false" />
+    <Property Name="dt_entrada" Type="DateTime" />
     <Property Name="dt_validade" Type="DateTime" />
     <Property Name="vl_valor" Type="Decimal" Nullable="false" />
     <Property Name="qtd_produto" Type="Int32" Nullable="false" />
@@ -90,12 +104,12 @@
     </Key>
     <Property Name="id_folhaPagamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_funcionario" Type="Int32" />
+    <Property Name="id_controleDePonto" Type="Int32" />
     <Property Name="dt_mes" Type="DateTime" />
     <Property Name="vl_salario" Type="Decimal" />
     <Property Name="vl_desconto" Type="Decimal" />
     <Property Name="vl_contribuicao" Type="Decimal" />
     <Property Name="vl_total" Type="Decimal" />
-    <Property Name="id_controleDePonto" Type="Int32" />
     <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_folhapagamento_ibfk_2" FromRole="tb_folhapagamento" ToRole="tb_controledeponto" />
     <NavigationProperty Name="tb_funcionario" Relationship="ecostoreModel.tb_folhapagamento_ibfk_1" FromRole="tb_folhapagamento" ToRole="tb_funcionario" />
   </EntityType>
@@ -111,6 +125,7 @@
     <Property Name="ds_endereco" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
     <Property Name="ds_cnpj" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_estoque" Relationship="ecostoreModel.tb_estoque_ibfk_2" FromRole="tb_fornecedor" ToRole="tb_estoque" />
+    <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_produto_ibfk_1" FromRole="tb_fornecedor" ToRole="tb_produto" />
   </EntityType>
   <EntityType Name="tb_funcionario">
     <Key>
@@ -118,7 +133,7 @@
     </Key>
     <Property Name="id_funcionario" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="nm_funcionario" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
-    <Property Name="dt_nascimento" Type="DateTime" Nullable="false" />
+    <Property Name="dt_nascimento" Type="DateTime" />
     <Property Name="ds_genero" Type="String" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
     <Property Name="vl_transporte" Type="Decimal" Nullable="false" />
     <Property Name="vl_refeicao" Type="Decimal" Nullable="false" />
@@ -139,7 +154,7 @@
     <Property Name="ds_telefone" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="ds_celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="tm_horasTrabalhadas" Type="Time" Nullable="false" />
-    <Property Name="dt_contratacao" Type="DateTime" Nullable="false" />
+    <Property Name="dt_contratacao" Type="DateTime" />
     <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
     <NavigationProperty Name="tb_folhapagamento" Relationship="ecostoreModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
     <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_usuario_ibfk_1" FromRole="tb_funcionario" ToRole="tb_usuario" />
@@ -151,7 +166,8 @@
     <Property Name="id_log" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_usuario" Type="Int32" />
     <Property Name="dt_dataLogin" Type="DateTime" />
-    <Property Name="dt_dataLogoff" Type="DateTime" />
+    <Property Name="ds_telaEntrou" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ds_oqFez" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_log_ibfk_1" FromRole="tb_log" ToRole="tb_usuario" />
   </EntityType>
   <EntityType Name="tb_produto">
@@ -159,11 +175,14 @@
       <PropertyRef Name="id_produto" />
     </Key>
     <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_fornecedor" Type="Int32" />
+    <Property Name="id_categoria" Type="Int32" />
     <Property Name="nm_produto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="ds_categoria" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-    <Property Name="id_fornecedor" Type="Int32" Nullable="false" />
+    <Property Name="img_produto" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="tb_categoria" Relationship="ecostoreModel.tb_produto_ibfk_2" FromRole="tb_produto" ToRole="tb_categoria" />
     <NavigationProperty Name="tb_estoque" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_produto" ToRole="tb_estoque" />
+    <NavigationProperty Name="tb_fornecedor" Relationship="ecostoreModel.tb_produto_ibfk_1" FromRole="tb_produto" ToRole="tb_fornecedor" />
     <NavigationProperty Name="tb_venda_item" Relationship="ecostoreModel.tb_venda_item_ibfk_1" FromRole="tb_produto" ToRole="tb_venda_item" />
   </EntityType>
   <EntityType Name="tb_usuario">
@@ -174,7 +193,6 @@
     <Property Name="id_funcionario" Type="Int32" Nullable="false" />
     <Property Name="nm_usuario" Type="String" Nullable="false" MaxLength="65" FixedLength="false" Unicode="false" />
     <Property Name="ds_senha" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_2" FromRole="tb_usuario" ToRole="tb_controledeponto" />
     <NavigationProperty Name="tb_funcionario" Relationship="ecostoreModel.tb_usuario_ibfk_1" FromRole="tb_usuario" ToRole="tb_funcionario" />
     <NavigationProperty Name="tb_log" Relationship="ecostoreModel.tb_log_ibfk_1" FromRole="tb_usuario" ToRole="tb_log" />
     <NavigationProperty Name="tb_venda" Relationship="ecostoreModel.tb_venda_ibfk_1" FromRole="tb_usuario" ToRole="tb_venda" />
@@ -186,6 +204,7 @@
     <Property Name="id_venda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_usuario" Type="Int32" />
     <Property Name="dt_saida" Type="DateTime" />
+    <Property Name="vl_valorTotal" Type="Decimal" Nullable="false" />
     <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_venda_ibfk_1" FromRole="tb_venda" ToRole="tb_usuario" />
     <NavigationProperty Name="tb_venda_item" Relationship="ecostoreModel.tb_venda_item_ibfk_2" FromRole="tb_venda" ToRole="tb_venda_item" />
   </EntityType>
@@ -196,10 +215,21 @@
     <Property Name="id_venda_item" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_venda" Type="Int32" />
     <Property Name="id_produto" Type="Int32" />
-    <Property Name="vl_valorTotal" Type="Decimal" />
     <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_venda_item_ibfk_1" FromRole="tb_venda_item" ToRole="tb_produto" />
     <NavigationProperty Name="tb_venda" Relationship="ecostoreModel.tb_venda_item_ibfk_2" FromRole="tb_venda_item" ToRole="tb_venda" />
   </EntityType>
+  <Association Name="tb_produto_ibfk_2">
+    <End Type="ecostoreModel.tb_categoria" Role="tb_categoria" Multiplicity="0..1" />
+    <End Type="ecostoreModel.tb_produto" Role="tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_categoria">
+        <PropertyRef Name="id_categoria" />
+      </Principal>
+      <Dependent Role="tb_produto">
+        <PropertyRef Name="id_categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="tb_controledeponto_ibfk_1">
     <End Type="ecostoreModel.tb_funcionario" Role="tb_funcionario" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -211,20 +241,6 @@
       </Principal>
       <Dependent Role="tb_controledeponto">
         <PropertyRef Name="id_funcionario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="tb_controledeponto_ibfk_2">
-    <End Type="ecostoreModel.tb_usuario" Role="tb_usuario" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Type="ecostoreModel.tb_controledeponto" Role="tb_controledeponto" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_usuario">
-        <PropertyRef Name="id_usuario" />
-      </Principal>
-      <Dependent Role="tb_controledeponto">
-        <PropertyRef Name="id_usuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -281,6 +297,18 @@
       </Principal>
       <Dependent Role="tb_folhapagamento">
         <PropertyRef Name="id_funcionario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_produto_ibfk_1">
+    <End Type="ecostoreModel.tb_fornecedor" Role="tb_fornecedor" Multiplicity="0..1" />
+    <End Type="ecostoreModel.tb_produto" Role="tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_fornecedor">
+        <PropertyRef Name="id_fornecedor" />
+      </Principal>
+      <Dependent Role="tb_produto">
+        <PropertyRef Name="id_fornecedor" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

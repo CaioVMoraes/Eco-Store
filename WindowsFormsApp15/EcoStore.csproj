@@ -97,6 +97,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Model\tb_categoria.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\tb_controledeponto.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

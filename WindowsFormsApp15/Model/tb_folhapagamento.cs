@@ -16,12 +16,12 @@ namespace WindowsFormsApp15.Model
     {
         public int id_folhaPagamento { get; set; }
         public Nullable<int> id_funcionario { get; set; }
+        public Nullable<int> id_controleDePonto { get; set; }
         public Nullable<System.DateTime> dt_mes { get; set; }
         public Nullable<decimal> vl_salario { get; set; }
         public Nullable<decimal> vl_desconto { get; set; }
         public Nullable<decimal> vl_contribuicao { get; set; }
         public Nullable<decimal> vl_total { get; set; }
-        public Nullable<int> id_controleDePonto { get; set; }
     
         public virtual tb_controledeponto tb_controledeponto { get; set; }
         public virtual tb_funcionario tb_funcionario { get; set; }

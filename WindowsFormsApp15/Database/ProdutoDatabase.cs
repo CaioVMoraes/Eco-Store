@@ -30,7 +30,7 @@ namespace WindowsFormsApp15.Database
 
             alterar.nm_produto = alterar.nm_produto;
             alterar.vl_valor = alterar.vl_valor;
-            alterar.ds_categoria = alterar.ds_categoria;
+            alterar.id_categoria = alterar.id_categoria;
 
             db.SaveChanges();
           

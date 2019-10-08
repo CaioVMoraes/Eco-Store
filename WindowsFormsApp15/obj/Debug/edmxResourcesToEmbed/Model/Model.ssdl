@@ -1,14 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ecostoreModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tb_categoria">
+    <Key>
+      <PropertyRef Name="id_categoria" />
+    </Key>
+    <Property Name="id_categoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_categoria" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ds_categoria" Type="varchar" MaxLength="45" />
+  </EntityType>
   <EntityType Name="tb_controledeponto">
     <Key>
       <PropertyRef Name="id_controleDePonto" />
     </Key>
     <Property Name="id_controleDePonto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_funcionario" Type="int" Nullable="false" />
-    <Property Name="id_usuario" Type="int" Nullable="false" />
-    <Property Name="dt_mes" Type="date" Nullable="false" />
-    <Property Name="dt_entrada" Type="datetime" Precision="0" />
+    <Property Name="dt_mes" Type="date" />
+    <Property Name="dt_chegada" Type="datetime" Precision="0" />
+    <Property Name="dt_saidaAlmoco" Type="datetime" Precision="0" />
+    <Property Name="dt_voltaAlmoco" Type="datetime" Precision="0" />
     <Property Name="dt_saida" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="tb_estoque">
@@ -18,9 +27,9 @@
     <Property Name="id_estoque" Type="int" Nullable="false" />
     <Property Name="id_fornecedor" Type="int" Nullable="false" />
     <Property Name="id_produto" Type="int" Nullable="false" />
-    <Property Name="dt_entrada" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="dt_entrada" Type="datetime" Precision="0" />
     <Property Name="dt_validade" Type="date" />
-    <Property Name="vl_valor" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="qtd_produto" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
@@ -29,12 +38,12 @@
     </Key>
     <Property Name="id_folhaPagamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_funcionario" Type="int" />
-    <Property Name="dt_mes" Type="date" />
-    <Property Name="vl_salario" Type="decimal" Precision="10" Scale="0" />
-    <Property Name="vl_desconto" Type="decimal" Precision="10" Scale="0" />
-    <Property Name="vl_contribuicao" Type="decimal" Precision="10" Scale="0" />
-    <Property Name="vl_total" Type="decimal" Precision="10" Scale="0" />
     <Property Name="id_controleDePonto" Type="int" />
+    <Property Name="dt_mes" Type="date" />
+    <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="vl_desconto" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="vl_contribuicao" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="vl_total" Type="decimal" Precision="10" Scale="2" />
   </EntityType>
   <EntityType Name="tb_fornecedor">
     <Key>
@@ -54,7 +63,7 @@
     </Key>
     <Property Name="id_funcionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_funcionario" Type="varchar" MaxLength="70" Nullable="false" />
-    <Property Name="dt_nascimento" Type="date" Nullable="false" />
+    <Property Name="dt_nascimento" Type="datetime" Precision="0" />
     <Property Name="ds_genero" Type="enum" Nullable="false" />
     <Property Name="vl_transporte" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_refeicao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
@@ -70,12 +79,12 @@
     <Property Name="img_foto" Type="longblob" Nullable="false" />
     <Property Name="ds_email" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="vl_salario" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="ds_endereco" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ds_telefone" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="ds_celular" Type="varchar" MaxLength="20" />
     <Property Name="tm_horasTrabalhadas" Type="time" Precision="0" Nullable="false" />
-    <Property Name="dt_contratacao" Type="date" Nullable="false" />
+    <Property Name="dt_contratacao" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="tb_log">
     <Key>
@@ -84,17 +93,19 @@
     <Property Name="id_log" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_usuario" Type="int" />
     <Property Name="dt_dataLogin" Type="datetime" Precision="0" />
-    <Property Name="dt_dataLogoff" Type="datetime" Precision="0" />
+    <Property Name="ds_telaEntrou" Type="varchar" MaxLength="15" />
+    <Property Name="ds_oqFez" Type="varchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="tb_produto">
     <Key>
       <PropertyRef Name="id_produto" />
     </Key>
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_fornecedor" Type="int" />
+    <Property Name="id_categoria" Type="int" />
     <Property Name="nm_produto" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="ds_categoria" Type="varchar" MaxLength="45" />
-    <Property Name="vl_valor" Type="decimal" Precision="10" Scale="0" Nullable="false" />
-    <Property Name="id_fornecedor" Type="int" Nullable="false" />
+    <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="img_produto" Type="longblob" />
   </EntityType>
   <EntityType Name="tb_usuario">
     <Key>
@@ -112,6 +123,7 @@
     <Property Name="id_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_usuario" Type="int" />
     <Property Name="dt_saida" Type="datetime" Precision="0" />
+    <Property Name="vl_valorTotal" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_venda_item">
     <Key>
@@ -120,7 +132,6 @@
     <Property Name="id_venda_item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_venda" Type="int" />
     <Property Name="id_produto" Type="int" />
-    <Property Name="vl_valorTotal" Type="decimal" Precision="10" Scale="0" />
   </EntityType>
   <Association Name="tb_controledeponto_ibfk_1">
     <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="1">
@@ -133,20 +144,6 @@
       </Principal>
       <Dependent Role="tb_controledeponto">
         <PropertyRef Name="id_funcionario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="tb_controledeponto_ibfk_2">
-    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="tb_controledeponto" Type="Self.tb_controledeponto" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_usuario">
-        <PropertyRef Name="id_usuario" />
-      </Principal>
-      <Dependent Role="tb_controledeponto">
-        <PropertyRef Name="id_usuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -220,6 +217,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="tb_produto_ibfk_1">
+    <End Role="tb_fornecedor" Type="Self.tb_fornecedor" Multiplicity="0..1" />
+    <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_fornecedor">
+        <PropertyRef Name="id_fornecedor" />
+      </Principal>
+      <Dependent Role="tb_produto">
+        <PropertyRef Name="id_fornecedor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_produto_ibfk_2">
+    <End Role="tb_categoria" Type="Self.tb_categoria" Multiplicity="0..1" />
+    <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_categoria">
+        <PropertyRef Name="id_categoria" />
+      </Principal>
+      <Dependent Role="tb_produto">
+        <PropertyRef Name="id_categoria" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="tb_usuario_ibfk_1">
     <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="1" />
     <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="*" />
@@ -275,6 +296,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="ecostoreModelStoreContainer">
+    <EntitySet Name="tb_categoria" EntityType="Self.tb_categoria" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_controledeponto" EntityType="Self.tb_controledeponto" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_estoque" EntityType="Self.tb_estoque" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_folhapagamento" EntityType="Self.tb_folhapagamento" Schema="db_a4e776_ecostor" store:Type="Tables" />
@@ -287,10 +309,6 @@
     <EntitySet Name="tb_venda_item" EntityType="Self.tb_venda_item" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <AssociationSet Name="tb_controledeponto_ibfk_1" Association="Self.tb_controledeponto_ibfk_1">
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
-      <End Role="tb_controledeponto" EntitySet="tb_controledeponto" />
-    </AssociationSet>
-    <AssociationSet Name="tb_controledeponto_ibfk_2" Association="Self.tb_controledeponto_ibfk_2">
-      <End Role="tb_usuario" EntitySet="tb_usuario" />
       <End Role="tb_controledeponto" EntitySet="tb_controledeponto" />
     </AssociationSet>
     <AssociationSet Name="tb_estoque_ibfk_1" Association="Self.tb_estoque_ibfk_1">
@@ -312,6 +330,14 @@
     <AssociationSet Name="tb_log_ibfk_1" Association="Self.tb_log_ibfk_1">
       <End Role="tb_usuario" EntitySet="tb_usuario" />
       <End Role="tb_log" EntitySet="tb_log" />
+    </AssociationSet>
+    <AssociationSet Name="tb_produto_ibfk_1" Association="Self.tb_produto_ibfk_1">
+      <End Role="tb_fornecedor" EntitySet="tb_fornecedor" />
+      <End Role="tb_produto" EntitySet="tb_produto" />
+    </AssociationSet>
+    <AssociationSet Name="tb_produto_ibfk_2" Association="Self.tb_produto_ibfk_2">
+      <End Role="tb_categoria" EntitySet="tb_categoria" />
+      <End Role="tb_produto" EntitySet="tb_produto" />
     </AssociationSet>
     <AssociationSet Name="tb_usuario_ibfk_1" Association="Self.tb_usuario_ibfk_1">
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
