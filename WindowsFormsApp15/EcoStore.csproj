@@ -337,6 +337,7 @@
     <None Include="Resources\dd.jpg" />
     <Content Include="Resources\kkk.jpg" />
     <None Include="Resources\Logo Branco.png" />
+    <None Include="Resources\Plano Verde1.png" />
     <Content Include="Script.txt" />
   </ItemGroup>
   <ItemGroup>
