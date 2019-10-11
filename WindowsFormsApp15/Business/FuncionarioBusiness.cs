@@ -115,7 +115,9 @@ namespace WindowsFormsApp15.Business
         }
 
         public void AlterarFuncionario(Model.tb_funcionario funcionario)
-        {//*Dados Pessoais*
+        {
+            
+            //*Dados Pessoais*
 
             if (model.nm_funcionario == string.Empty)
             {
@@ -202,8 +204,9 @@ namespace WindowsFormsApp15.Business
 
             db.AlterarFuncionario(funcionario);
         }
-        public void RemoverFuncionario(Model.tb_funcionario funcionario)
-        {//*Dados Pessoais*
+        public void RemoverFuncionario( int id)
+        {
+            //*Dados Pessoais*
 
             if (model.nm_funcionario == string.Empty)
             {
@@ -288,7 +291,7 @@ namespace WindowsFormsApp15.Business
                 throw new Exception("NumeroEnder é obrigatório");
             }
 
-            db.RemoverFuncionario(funcionario);
+            db.RemoverFuncionario(id);
         }
     }
 }

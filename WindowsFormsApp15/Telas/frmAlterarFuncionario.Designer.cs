@@ -32,45 +32,28 @@
             this.nudTransp = new System.Windows.Forms.NumericUpDown();
             this.nudAliment = new System.Windows.Forms.NumericUpDown();
             this.nudRef = new System.Windows.Forms.NumericUpDown();
-            this.nudNumRes = new System.Windows.Forms.NumericUpDown();
-            this.cboUF = new System.Windows.Forms.ComboBox();
-            this.txtCep = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtCidade = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txtComplemento = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.txtEndereço = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.cboCargo = new System.Windows.Forms.ComboBox();
-            this.cboGen = new System.Windows.Forms.ComboBox();
-            this.txtTelefone = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label11 = new System.Windows.Forms.Label();
-            this.txtCelular = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnProcurar = new System.Windows.Forms.Button();
-            this.txtID = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.nudSalario = new System.Windows.Forms.NumericUpDown();
-            this.txtRg = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txtCPF = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txtEmail = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.dtpNascimento = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.picFoto = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtNome = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -79,7 +62,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label27 = new System.Windows.Forms.Label();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -89,15 +72,31 @@
             this.bunifuMetroTextbox2 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.lblErro = new System.Windows.Forms.Label();
             this.btnCadastrarFuncionario = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtRg = new System.Windows.Forms.TextBox();
+            this.txtCpf = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.dtpContrat = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.dtpNascimento = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.txtNumRes = new System.Windows.Forms.TextBox();
+            this.txtComplemento = new System.Windows.Forms.TextBox();
+            this.txtCep = new System.Windows.Forms.TextBox();
+            this.txtEndereço = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.cboUF = new System.Windows.Forms.ComboBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.cboCargo = new System.Windows.Forms.ComboBox();
+            this.cboGen = new System.Windows.Forms.ComboBox();
+            this.nudSalario = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.nudTransp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAliment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRef)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumRes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
             this.SuspendLayout();
             // 
             // nudTransp
@@ -126,42 +125,6 @@
             this.nudRef.Size = new System.Drawing.Size(192, 22);
             this.nudRef.TabIndex = 274;
             this.nudRef.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // nudNumRes
-            // 
-            this.nudNumRes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudNumRes.Location = new System.Drawing.Point(253, 830);
-            this.nudNumRes.Name = "nudNumRes";
-            this.nudNumRes.Size = new System.Drawing.Size(192, 22);
-            this.nudNumRes.TabIndex = 273;
-            this.nudNumRes.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // cboUF
-            // 
-            this.cboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboUF.FormattingEnabled = true;
-            this.cboUF.Location = new System.Drawing.Point(253, 761);
-            this.cboUF.Name = "cboUF";
-            this.cboUF.Size = new System.Drawing.Size(192, 24);
-            this.cboUF.TabIndex = 272;
-            // 
-            // txtCep
-            // 
-            this.txtCep.BackColor = System.Drawing.Color.White;
-            this.txtCep.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtCep.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtCep.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtCep.BorderThickness = 2;
-            this.txtCep.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCep.isPassword = true;
-            this.txtCep.Location = new System.Drawing.Point(253, 691);
-            this.txtCep.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(192, 27);
-            this.txtCep.TabIndex = 271;
-            this.txtCep.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label14
             // 
@@ -228,42 +191,6 @@
             this.label13.TabIndex = 265;
             this.label13.Text = "Endereço:";
             // 
-            // txtCidade
-            // 
-            this.txtCidade.BackColor = System.Drawing.Color.White;
-            this.txtCidade.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtCidade.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtCidade.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtCidade.BorderThickness = 2;
-            this.txtCidade.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtCidade.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCidade.isPassword = true;
-            this.txtCidade.Location = new System.Drawing.Point(253, 723);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(192, 27);
-            this.txtCidade.TabIndex = 264;
-            this.txtCidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtComplemento
-            // 
-            this.txtComplemento.BackColor = System.Drawing.Color.White;
-            this.txtComplemento.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtComplemento.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtComplemento.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtComplemento.BorderThickness = 2;
-            this.txtComplemento.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtComplemento.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtComplemento.isPassword = true;
-            this.txtComplemento.Location = new System.Drawing.Point(253, 793);
-            this.txtComplemento.Margin = new System.Windows.Forms.Padding(4);
-            this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(192, 27);
-            this.txtComplemento.TabIndex = 263;
-            this.txtComplemento.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -302,24 +229,6 @@
             this.label20.Size = new System.Drawing.Size(124, 20);
             this.label20.TabIndex = 260;
             this.label20.Text = "Complemento:";
-            // 
-            // txtEndereço
-            // 
-            this.txtEndereço.BackColor = System.Drawing.Color.White;
-            this.txtEndereço.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtEndereço.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtEndereço.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtEndereço.BorderThickness = 2;
-            this.txtEndereço.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEndereço.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereço.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtEndereço.isPassword = true;
-            this.txtEndereço.Location = new System.Drawing.Point(253, 656);
-            this.txtEndereço.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEndereço.Name = "txtEndereço";
-            this.txtEndereço.Size = new System.Drawing.Size(192, 27);
-            this.txtEndereço.TabIndex = 259;
-            this.txtEndereço.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label22
             // 
@@ -373,42 +282,6 @@
             this.label12.TabIndex = 255;
             this.label12.Text = "Informações Pessoais:";
             // 
-            // cboCargo
-            // 
-            this.cboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(577, 388);
-            this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(148, 24);
-            this.cboCargo.TabIndex = 254;
-            // 
-            // cboGen
-            // 
-            this.cboGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboGen.FormattingEnabled = true;
-            this.cboGen.Location = new System.Drawing.Point(577, 355);
-            this.cboGen.Name = "cboGen";
-            this.cboGen.Size = new System.Drawing.Size(148, 24);
-            this.cboGen.TabIndex = 253;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.BackColor = System.Drawing.Color.White;
-            this.txtTelefone.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtTelefone.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtTelefone.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtTelefone.BorderThickness = 2;
-            this.txtTelefone.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtTelefone.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtTelefone.isPassword = true;
-            this.txtTelefone.Location = new System.Drawing.Point(577, 454);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(148, 27);
-            this.txtTelefone.TabIndex = 252;
-            this.txtTelefone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -421,24 +294,6 @@
             this.label11.Size = new System.Drawing.Size(84, 20);
             this.label11.TabIndex = 251;
             this.label11.Text = "Telefone:";
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.BackColor = System.Drawing.Color.White;
-            this.txtCelular.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtCelular.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtCelular.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtCelular.BorderThickness = 2;
-            this.txtCelular.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtCelular.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCelular.isPassword = true;
-            this.txtCelular.Location = new System.Drawing.Point(577, 419);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(148, 27);
-            this.txtCelular.TabIndex = 250;
-            this.txtCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label9
             // 
@@ -483,95 +338,6 @@
             this.btnProcurar.TabIndex = 246;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = true;
-            // 
-            // txtID
-            // 
-            this.txtID.BackColor = System.Drawing.Color.SkyBlue;
-            this.txtID.BorderRadius = 0;
-            this.txtID.ForeColor = System.Drawing.Color.White;
-            this.txtID.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txtID.FormatCustom = null;
-            this.txtID.Location = new System.Drawing.Point(255, 523);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(192, 27);
-            this.txtID.TabIndex = 245;
-            this.txtID.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
-            // 
-            // nudSalario
-            // 
-            this.nudSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSalario.Location = new System.Drawing.Point(577, 494);
-            this.nudSalario.Name = "nudSalario";
-            this.nudSalario.Size = new System.Drawing.Size(148, 22);
-            this.nudSalario.TabIndex = 244;
-            this.nudSalario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txtRg
-            // 
-            this.txtRg.BackColor = System.Drawing.Color.White;
-            this.txtRg.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtRg.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtRg.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtRg.BorderThickness = 2;
-            this.txtRg.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtRg.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtRg.isPassword = true;
-            this.txtRg.Location = new System.Drawing.Point(255, 419);
-            this.txtRg.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(192, 27);
-            this.txtRg.TabIndex = 243;
-            this.txtRg.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtCPF
-            // 
-            this.txtCPF.BackColor = System.Drawing.Color.White;
-            this.txtCPF.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtCPF.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtCPF.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtCPF.BorderThickness = 2;
-            this.txtCPF.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtCPF.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtCPF.isPassword = true;
-            this.txtCPF.Location = new System.Drawing.Point(255, 454);
-            this.txtCPF.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(192, 27);
-            this.txtCPF.TabIndex = 242;
-            this.txtCPF.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BackColor = System.Drawing.Color.White;
-            this.txtEmail.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtEmail.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtEmail.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtEmail.BorderThickness = 2;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtEmail.isPassword = true;
-            this.txtEmail.Location = new System.Drawing.Point(255, 489);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(192, 27);
-            this.txtEmail.TabIndex = 241;
-            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // dtpNascimento
-            // 
-            this.dtpNascimento.BackColor = System.Drawing.Color.SkyBlue;
-            this.dtpNascimento.BorderRadius = 0;
-            this.dtpNascimento.ForeColor = System.Drawing.Color.White;
-            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.FormatCustom = null;
-            this.dtpNascimento.Location = new System.Drawing.Point(255, 385);
-            this.dtpNascimento.Name = "dtpNascimento";
-            this.dtpNascimento.Size = new System.Drawing.Size(192, 27);
-            this.dtpNascimento.TabIndex = 240;
-            this.dtpNascimento.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
             // 
             // label8
             // 
@@ -636,24 +402,6 @@
             this.label1.Size = new System.Drawing.Size(58, 20);
             this.label1.TabIndex = 236;
             this.label1.Text = "Email:";
-            // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtNome.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtNome.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtNome.BorderThickness = 2;
-            this.txtNome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNome.isPassword = true;
-            this.txtNome.Location = new System.Drawing.Point(255, 352);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(192, 27);
-            this.txtNome.TabIndex = 234;
-            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label4
             // 
@@ -747,7 +495,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtId);
             this.groupBox1.Controls.Add(this.btnEntrar);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Location = new System.Drawing.Point(309, 199);
@@ -756,13 +504,13 @@
             this.groupBox1.TabIndex = 280;
             this.groupBox1.TabStop = false;
             // 
-            // textBox1
+            // txtId
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(150, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 22);
-            this.textBox1.TabIndex = 285;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(150, 43);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(144, 22);
+            this.txtId.TabIndex = 285;
             // 
             // btnEntrar
             // 
@@ -797,6 +545,7 @@
             this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntrar.Textcolor = System.Drawing.Color.White;
             this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // label27
             // 
@@ -929,6 +678,157 @@
             this.btnCadastrarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrarFuncionario.Textcolor = System.Drawing.Color.White;
             this.btnCadastrarFuncionario.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(261, 497);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(191, 23);
+            this.txtEmail.TabIndex = 300;
+            // 
+            // txtRg
+            // 
+            this.txtRg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRg.Location = new System.Drawing.Point(261, 427);
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(191, 23);
+            this.txtRg.TabIndex = 299;
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(261, 462);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(191, 23);
+            this.txtCpf.TabIndex = 298;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(262, 356);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(191, 23);
+            this.txtNome.TabIndex = 297;
+            // 
+            // dtpContrat
+            // 
+            this.dtpContrat.BackColor = System.Drawing.Color.SkyBlue;
+            this.dtpContrat.BorderRadius = 0;
+            this.dtpContrat.ForeColor = System.Drawing.Color.White;
+            this.dtpContrat.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpContrat.FormatCustom = null;
+            this.dtpContrat.Location = new System.Drawing.Point(261, 527);
+            this.dtpContrat.Name = "dtpContrat";
+            this.dtpContrat.Size = new System.Drawing.Size(192, 27);
+            this.dtpContrat.TabIndex = 296;
+            this.dtpContrat.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
+            // 
+            // dtpNascimento
+            // 
+            this.dtpNascimento.BackColor = System.Drawing.Color.SkyBlue;
+            this.dtpNascimento.BorderRadius = 0;
+            this.dtpNascimento.ForeColor = System.Drawing.Color.White;
+            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNascimento.FormatCustom = null;
+            this.dtpNascimento.Location = new System.Drawing.Point(261, 389);
+            this.dtpNascimento.Name = "dtpNascimento";
+            this.dtpNascimento.Size = new System.Drawing.Size(192, 27);
+            this.dtpNascimento.TabIndex = 295;
+            this.dtpNascimento.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
+            // 
+            // txtNumRes
+            // 
+            this.txtNumRes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumRes.Location = new System.Drawing.Point(246, 829);
+            this.txtNumRes.Name = "txtNumRes";
+            this.txtNumRes.Size = new System.Drawing.Size(192, 23);
+            this.txtNumRes.TabIndex = 306;
+            // 
+            // txtComplemento
+            // 
+            this.txtComplemento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Location = new System.Drawing.Point(246, 797);
+            this.txtComplemento.Name = "txtComplemento";
+            this.txtComplemento.Size = new System.Drawing.Size(192, 23);
+            this.txtComplemento.TabIndex = 305;
+            // 
+            // txtCep
+            // 
+            this.txtCep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCep.Location = new System.Drawing.Point(247, 693);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(191, 23);
+            this.txtCep.TabIndex = 304;
+            // 
+            // txtEndereço
+            // 
+            this.txtEndereço.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereço.Location = new System.Drawing.Point(247, 660);
+            this.txtEndereço.Name = "txtEndereço";
+            this.txtEndereço.Size = new System.Drawing.Size(191, 23);
+            this.txtEndereço.TabIndex = 303;
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(247, 727);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(191, 23);
+            this.txtCidade.TabIndex = 302;
+            // 
+            // cboUF
+            // 
+            this.cboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboUF.FormattingEnabled = true;
+            this.cboUF.Location = new System.Drawing.Point(246, 762);
+            this.cboUF.Name = "cboUF";
+            this.cboUF.Size = new System.Drawing.Size(192, 24);
+            this.cboUF.TabIndex = 301;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(562, 423);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(148, 23);
+            this.txtCelular.TabIndex = 311;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(562, 458);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(148, 23);
+            this.txtTelefone.TabIndex = 310;
+            // 
+            // cboCargo
+            // 
+            this.cboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCargo.FormattingEnabled = true;
+            this.cboCargo.Location = new System.Drawing.Point(562, 388);
+            this.cboCargo.Name = "cboCargo";
+            this.cboCargo.Size = new System.Drawing.Size(148, 24);
+            this.cboCargo.TabIndex = 309;
+            // 
+            // cboGen
+            // 
+            this.cboGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGen.FormattingEnabled = true;
+            this.cboGen.Location = new System.Drawing.Point(562, 355);
+            this.cboGen.Name = "cboGen";
+            this.cboGen.Size = new System.Drawing.Size(148, 24);
+            this.cboGen.TabIndex = 308;
+            // 
+            // nudSalario
+            // 
+            this.nudSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSalario.Location = new System.Drawing.Point(562, 494);
+            this.nudSalario.Name = "nudSalario";
+            this.nudSalario.Size = new System.Drawing.Size(148, 22);
+            this.nudSalario.TabIndex = 307;
+            this.nudSalario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmAlterarFuncionario
             // 
@@ -938,6 +838,23 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1039, 911);
+            this.Controls.Add(this.txtCelular);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.cboCargo);
+            this.Controls.Add(this.cboGen);
+            this.Controls.Add(this.nudSalario);
+            this.Controls.Add(this.txtNumRes);
+            this.Controls.Add(this.txtComplemento);
+            this.Controls.Add(this.txtCep);
+            this.Controls.Add(this.txtEndereço);
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.cboUF);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtRg);
+            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.dtpContrat);
+            this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.lblErro);
             this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.panel1);
@@ -948,45 +865,28 @@
             this.Controls.Add(this.nudTransp);
             this.Controls.Add(this.nudAliment);
             this.Controls.Add(this.nudRef);
-            this.Controls.Add(this.nudNumRes);
-            this.Controls.Add(this.cboUF);
-            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtCidade);
-            this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.txtEndereço);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.cboCargo);
-            this.Controls.Add(this.cboGen);
-            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnProcurar);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.nudSalario);
-            this.Controls.Add(this.txtRg);
-            this.Controls.Add(this.txtCPF);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.picFoto);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
@@ -998,14 +898,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudTransp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAliment)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRef)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudNumRes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1015,45 +914,28 @@
         private System.Windows.Forms.NumericUpDown nudTransp;
         private System.Windows.Forms.NumericUpDown nudAliment;
         private System.Windows.Forms.NumericUpDown nudRef;
-        private System.Windows.Forms.NumericUpDown nudNumRes;
-        private System.Windows.Forms.ComboBox cboUF;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtCep;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label13;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtCidade;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtComplemento;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label20;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtEndereço;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox cboCargo;
-        private System.Windows.Forms.ComboBox cboGen;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtTelefone;
         private System.Windows.Forms.Label label11;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtCelular;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnProcurar;
-        private Bunifu.Framework.UI.BunifuDatepicker txtID;
-        private System.Windows.Forms.NumericUpDown nudSalario;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtRg;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtCPF;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtEmail;
-        private Bunifu.Framework.UI.BunifuDatepicker dtpNascimento;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtNome;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
@@ -1069,8 +951,25 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label lblErro;
         private Bunifu.Framework.UI.BunifuFlatButton btnCadastrarFuncionario;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtRg;
+        private System.Windows.Forms.TextBox txtCpf;
+        private System.Windows.Forms.TextBox txtNome;
+        private Bunifu.Framework.UI.BunifuDatepicker dtpContrat;
+        private Bunifu.Framework.UI.BunifuDatepicker dtpNascimento;
+        private System.Windows.Forms.TextBox txtNumRes;
+        private System.Windows.Forms.TextBox txtComplemento;
+        private System.Windows.Forms.TextBox txtCep;
+        private System.Windows.Forms.TextBox txtEndereço;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.ComboBox cboUF;
+        private System.Windows.Forms.TextBox txtCelular;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.ComboBox cboCargo;
+        private System.Windows.Forms.ComboBox cboGen;
+        private System.Windows.Forms.NumericUpDown nudSalario;
     }
 }

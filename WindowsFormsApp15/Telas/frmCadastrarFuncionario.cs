@@ -21,45 +21,40 @@ namespace WindowsFormsApp15.Telas
 
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
-            try
-            {
-                //*Informações Pessoais*
 
-                model.nm_funcionario = txtNome.Text;
-                model.dt_nascimento = dtpNascimento.Value;
-                model.ds_rg = txtRg.Text;
-                model.ds_email = txtEmail.Text;
-                model.dt_contratacao = dtpContrat.Value;
-                model.ds_genero = cboGen.Text;
-                model.ds_cargo = cboCargo.Text;
-                model.ds_celular = txtCelular.Text;
-                model.ds_telefone = txtTelefone.Text;
-                model.vl_salario = nudSalario.Value;
+            //*Informações Pessoais*
 
-                //*Endereço*
+            model.nm_funcionario = txtNome.Text;
+            model.dt_nascimento = dtpNascimento.Value;
+            model.ds_rg = txtRg.Text;
+            model.ds_cpf = txtCpf.Text;
+            model.ds_email = txtEmail.Text;
+            model.dt_contratacao = dtpContrat.Value;
+            model.ds_genero = cboGen.Text;
+            model.ds_cargo = cboCargo.Text;
+            model.ds_celular = txtCelular.Text;
+            model.ds_telefone = txtTelefone.Text;
+            model.vl_salario = nudSalario.Value;
 
-                model.ds_endereco = txtEndereço.Text;
-                model.ds_cep = txtCep.Text;
-                model.ds_cidade = txtCidade.Text;
-                model.ds_UF = cboUF.Text;
-                model.ds_complemento = txtComplemento.Text;
-                model.ds_numeroCasa = Convert.ToString(nudNumRes.Value);
+            //*Endereço*
 
-                //*Beneficíos*
+            model.ds_endereco = txtEndereço.Text;
+            model.ds_cep = txtCep.Text;
+            model.ds_cidade = txtCidade.Text;
+            model.ds_UF = cboUF.Text;
+            model.ds_complemento = txtComplemento.Text;
+            model.ds_numeroCasa = txtNumRes.Text;
 
-                model.vl_transporte = nudTransp.Value;
-                model.vl_refeicao = nudRef.Value;
-                model.vl_alimentacao = nudAliment.Value;
-                model.vl_convenio = nudConv.Value;
+            //*Beneficíos*
 
-                business.CadastrarFuncionario(model);
+            model.vl_transporte = nudTransp.Value;
+            model.vl_refeicao = nudRef.Value;
+            model.vl_alimentacao = nudAliment.Value;
 
-               MessageBox.Show("Cadastrado com Sucesso");
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            business.CadastrarFuncionario(model);
+
+            MessageBox.Show("Cadastrado com Sucesso");
+
         }
     }
 }

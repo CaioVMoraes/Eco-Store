@@ -62,8 +62,9 @@ namespace WindowsFormsApp15.Database
 
         }
 
-        public void RemoverFuncionario(tb_funcionario modelo)
+        public void RemoverFuncionario(int id)
         {
+            tb_funcionario modelo = db.tb_funcionario.FirstOrDefault(x => x.id_funcionario == id);
             db.tb_funcionario.Remove(modelo);
 
             db.SaveChanges();
