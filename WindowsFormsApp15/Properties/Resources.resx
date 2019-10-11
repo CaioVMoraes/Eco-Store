@@ -121,17 +121,20 @@
   <data name="IconeRemover1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\IconeRemover1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="dd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\dd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="3907f0a4052ed31662981053bbf12c4e" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3907f0a4052ed31662981053bbf12c4e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="collaborator-male" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\collaborator-male.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="EditarFuncionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\EditarFuncionario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="dd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\dd.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Plano Verde1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plano Verde1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,7 +148,7 @@
   <data name="Editar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Editar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="EditarFuncionario" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\EditarFuncionario.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="860086" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\860086.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
