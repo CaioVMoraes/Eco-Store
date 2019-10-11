@@ -109,6 +109,9 @@
     <Compile Include="Model\tb_controledeponto.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tb_despesa.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\tb_estoque.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -124,7 +127,13 @@
     <Compile Include="Model\tb_log.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tb_pedido_compra.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\tb_produto.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tb_produto_venda.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tb_usuario.cs">

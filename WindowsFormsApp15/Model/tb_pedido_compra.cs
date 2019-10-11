@@ -12,27 +12,25 @@ namespace WindowsFormsApp15.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_estoque
+    public partial class tb_pedido_compra
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_estoque()
+        public tb_pedido_compra()
         {
-            this.tb_produto_venda = new HashSet<tb_produto_venda>();
+            this.tb_estoque = new HashSet<tb_estoque>();
         }
     
-        public int id_estoque { get; set; }
         public int id_pedido_compra { get; set; }
         public int id_fornecedor { get; set; }
         public int id_produto { get; set; }
-        public Nullable<System.DateTime> dt_entrada { get; set; }
-        public Nullable<System.DateTime> dt_validade { get; set; }
-        public decimal vl_valor { get; set; }
+        public Nullable<System.DateTime> dt_pedido { get; set; }
+        public Nullable<System.DateTime> dt_prevista { get; set; }
         public int qtd_produto { get; set; }
+        public decimal vl_valor { get; set; }
     
-        public virtual tb_pedido_compra tb_pedido_compra { get; set; }
-        public virtual tb_produto tb_produto { get; set; }
-        public virtual tb_fornecedor tb_fornecedor { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_produto_venda> tb_produto_venda { get; set; }
+        public virtual ICollection<tb_estoque> tb_estoque { get; set; }
+        public virtual tb_fornecedor tb_fornecedor { get; set; }
+        public virtual tb_produto tb_produto { get; set; }
     }
 }

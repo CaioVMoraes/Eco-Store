@@ -12,13 +12,11 @@ namespace WindowsFormsApp15.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_venda_item
+    public partial class tb_despesa
     {
-        public int id_venda_item { get; set; }
-        public Nullable<int> id_venda { get; set; }
-        public Nullable<int> id_produto_venda { get; set; }
-    
-        public virtual tb_produto_venda tb_produto_venda { get; set; }
-        public virtual tb_venda tb_venda { get; set; }
+        public int id_despesa { get; set; }
+        public string ds_descricao { get; set; }
+        public Nullable<decimal> vl_despesa { get; set; }
+        public Nullable<System.DateTime> dt_pagamento { get; set; }
     }
 }
