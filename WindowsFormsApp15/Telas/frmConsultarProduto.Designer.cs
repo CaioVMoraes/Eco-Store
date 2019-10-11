@@ -33,19 +33,20 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNome = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtNome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 181);
             this.dataGridView1.Name = "dataGridView1";
@@ -90,24 +91,6 @@
             this.label3.TabIndex = 155;
             this.label3.Text = "X";
             // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtNome.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtNome.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtNome.BorderThickness = 2;
-            this.txtNome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNome.isPassword = true;
-            this.txtNome.Location = new System.Drawing.Point(203, 103);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(192, 27);
-            this.txtNome.TabIndex = 157;
-            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -123,11 +106,11 @@
             // 
             // cboCategoria
             // 
-            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(504, 103);
+            this.cboCategoria.Location = new System.Drawing.Point(504, 102);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(192, 26);
+            this.cboCategoria.Size = new System.Drawing.Size(192, 24);
             this.cboCategoria.TabIndex = 158;
             // 
             // label2
@@ -178,6 +161,14 @@
             this.label4.TabIndex = 164;
             this.label4.Text = "Consultar Produto";
             // 
+            // txtNome
+            // 
+            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(203, 103);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(192, 23);
+            this.txtNome.TabIndex = 297;
+            // 
             // frmConsultarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -185,12 +176,12 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(815, 614);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboFornecedor);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cboCategoria);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
@@ -211,12 +202,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtNome;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cboFornecedor;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNome;
     }
 }

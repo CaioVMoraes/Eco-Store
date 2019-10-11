@@ -50,7 +50,7 @@ namespace WindowsFormsApp15.Telas
                 model.vl_transporte = nudTransp.Value;
                 model.vl_refeicao = nudRef.Value;
                 model.vl_alimentacao = nudAliment.Value;
-                model.vl_convenio = nudConv.Value;
+              
 
                 business.CadastrarFuncionario(model);
 
