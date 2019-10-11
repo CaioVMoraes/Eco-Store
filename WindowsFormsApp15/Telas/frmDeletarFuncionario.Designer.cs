@@ -53,8 +53,6 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.cboUF = new System.Windows.Forms.ComboBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtRg = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dtpContrat = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dtpNascimento = new Bunifu.Framework.UI.BunifuDatepicker();
@@ -85,6 +83,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtRg = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -241,7 +241,7 @@
             // 
             // picFoto
             // 
-            this.picFoto.BackColor = System.Drawing.Color.Gray;
+            this.picFoto.BackColor = System.Drawing.Color.Transparent;
             this.picFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picFoto.Image = global::WindowsFormsApp15.Properties.Resources.collaborator_male;
             this.picFoto.Location = new System.Drawing.Point(764, 353);
@@ -385,22 +385,6 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(191, 23);
             this.txtEmail.TabIndex = 372;
-            // 
-            // txtRg
-            // 
-            this.txtRg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRg.Location = new System.Drawing.Point(262, 431);
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(191, 23);
-            this.txtRg.TabIndex = 371;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(262, 466);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(191, 23);
-            this.txtCpf.TabIndex = 370;
             // 
             // txtNome
             // 
@@ -773,6 +757,24 @@
             this.label7.TabIndex = 340;
             this.label7.Text = "Nome:";
             // 
+            // txtCpf
+            // 
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(261, 468);
+            this.txtCpf.Mask = "000.000.000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(193, 24);
+            this.txtCpf.TabIndex = 385;
+            // 
+            // txtRg
+            // 
+            this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRg.Location = new System.Drawing.Point(261, 430);
+            this.txtRg.Mask = "00.000.000-0";
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(193, 24);
+            this.txtRg.TabIndex = 384;
+            // 
             // frmDeletarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -781,6 +783,8 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1039, 911);
+            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtRg);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.cboCargo);
@@ -793,8 +797,6 @@
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.cboUF);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtRg);
-            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.dtpContrat);
             this.Controls.Add(this.dtpNascimento);
@@ -875,8 +877,6 @@
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.ComboBox cboUF;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtRg;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtNome;
         private Bunifu.Framework.UI.BunifuDatepicker dtpContrat;
         private Bunifu.Framework.UI.BunifuDatepicker dtpNascimento;
@@ -907,5 +907,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtRg;
     }
 }

@@ -73,8 +73,6 @@
             this.lblErro = new System.Windows.Forms.Label();
             this.btnCadastrarFuncionario = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtRg = new System.Windows.Forms.TextBox();
-            this.txtCpf = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dtpContrat = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dtpNascimento = new Bunifu.Framework.UI.BunifuDatepicker();
@@ -89,6 +87,8 @@
             this.cboCargo = new System.Windows.Forms.ComboBox();
             this.cboGen = new System.Windows.Forms.ComboBox();
             this.nudSalario = new System.Windows.Forms.NumericUpDown();
+            this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.txtRg = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudTransp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAliment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudRef)).BeginInit();
@@ -103,6 +103,11 @@
             // 
             this.nudTransp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudTransp.Location = new System.Drawing.Point(678, 661);
+            this.nudTransp.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.nudTransp.Name = "nudTransp";
             this.nudTransp.Size = new System.Drawing.Size(192, 22);
             this.nudTransp.TabIndex = 276;
@@ -112,6 +117,11 @@
             // 
             this.nudAliment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudAliment.Location = new System.Drawing.Point(678, 728);
+            this.nudAliment.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.nudAliment.Name = "nudAliment";
             this.nudAliment.Size = new System.Drawing.Size(192, 22);
             this.nudAliment.TabIndex = 275;
@@ -121,6 +131,11 @@
             // 
             this.nudRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudRef.Location = new System.Drawing.Point(678, 694);
+            this.nudRef.Maximum = new decimal(new int[] {
+            1410065408,
+            2,
+            0,
+            0});
             this.nudRef.Name = "nudRef";
             this.nudRef.Size = new System.Drawing.Size(192, 22);
             this.nudRef.TabIndex = 274;
@@ -367,7 +382,7 @@
             // 
             // picFoto
             // 
-            this.picFoto.BackColor = System.Drawing.Color.Gray;
+            this.picFoto.BackColor = System.Drawing.Color.Transparent;
             this.picFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.picFoto.Image = global::WindowsFormsApp15.Properties.Resources.collaborator_male;
             this.picFoto.Location = new System.Drawing.Point(765, 352);
@@ -684,30 +699,16 @@
             // 
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(261, 497);
+            this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(191, 23);
             this.txtEmail.TabIndex = 300;
-            // 
-            // txtRg
-            // 
-            this.txtRg.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRg.Location = new System.Drawing.Point(261, 427);
-            this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(191, 23);
-            this.txtRg.TabIndex = 299;
-            // 
-            // txtCpf
-            // 
-            this.txtCpf.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCpf.Location = new System.Drawing.Point(261, 462);
-            this.txtCpf.Name = "txtCpf";
-            this.txtCpf.Size = new System.Drawing.Size(191, 23);
-            this.txtCpf.TabIndex = 298;
             // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(262, 356);
+            this.txtNome.MaxLength = 70;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(191, 23);
             this.txtNome.TabIndex = 297;
@@ -742,6 +743,7 @@
             // 
             this.txtNumRes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumRes.Location = new System.Drawing.Point(246, 829);
+            this.txtNumRes.MaxLength = 20;
             this.txtNumRes.Name = "txtNumRes";
             this.txtNumRes.Size = new System.Drawing.Size(192, 23);
             this.txtNumRes.TabIndex = 306;
@@ -750,6 +752,7 @@
             // 
             this.txtComplemento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplemento.Location = new System.Drawing.Point(246, 797);
+            this.txtComplemento.MaxLength = 50;
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(192, 23);
             this.txtComplemento.TabIndex = 305;
@@ -758,6 +761,7 @@
             // 
             this.txtCep.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCep.Location = new System.Drawing.Point(247, 693);
+            this.txtCep.MaxLength = 20;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(191, 23);
             this.txtCep.TabIndex = 304;
@@ -766,6 +770,7 @@
             // 
             this.txtEndereço.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereço.Location = new System.Drawing.Point(247, 660);
+            this.txtEndereço.MaxLength = 50;
             this.txtEndereço.Name = "txtEndereço";
             this.txtEndereço.Size = new System.Drawing.Size(191, 23);
             this.txtEndereço.TabIndex = 303;
@@ -774,6 +779,7 @@
             // 
             this.txtCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(247, 727);
+            this.txtCidade.MaxLength = 50;
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(191, 23);
             this.txtCidade.TabIndex = 302;
@@ -791,6 +797,7 @@
             // 
             this.txtCelular.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelular.Location = new System.Drawing.Point(562, 423);
+            this.txtCelular.MaxLength = 20;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(148, 23);
             this.txtCelular.TabIndex = 311;
@@ -799,6 +806,7 @@
             // 
             this.txtTelefone.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.Location = new System.Drawing.Point(562, 458);
+            this.txtTelefone.MaxLength = 15;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(148, 23);
             this.txtTelefone.TabIndex = 310;
@@ -825,10 +833,33 @@
             // 
             this.nudSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudSalario.Location = new System.Drawing.Point(562, 494);
+            this.nudSalario.Maximum = new decimal(new int[] {
+            1316134912,
+            2328,
+            0,
+            0});
             this.nudSalario.Name = "nudSalario";
             this.nudSalario.Size = new System.Drawing.Size(148, 22);
             this.nudSalario.TabIndex = 307;
             this.nudSalario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtCpf
+            // 
+            this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCpf.Location = new System.Drawing.Point(260, 464);
+            this.txtCpf.Mask = "000.000.000-00";
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(193, 24);
+            this.txtCpf.TabIndex = 313;
+            // 
+            // txtRg
+            // 
+            this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRg.Location = new System.Drawing.Point(260, 426);
+            this.txtRg.Mask = "00.000.000-0";
+            this.txtRg.Name = "txtRg";
+            this.txtRg.Size = new System.Drawing.Size(193, 24);
+            this.txtRg.TabIndex = 312;
             // 
             // frmAlterarFuncionario
             // 
@@ -838,6 +869,8 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1039, 911);
+            this.Controls.Add(this.txtCpf);
+            this.Controls.Add(this.txtRg);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.cboCargo);
@@ -850,8 +883,6 @@
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.cboUF);
             this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtRg);
-            this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.dtpContrat);
             this.Controls.Add(this.dtpNascimento);
@@ -955,8 +986,6 @@
         private System.Windows.Forms.Label lblErro;
         private Bunifu.Framework.UI.BunifuFlatButton btnCadastrarFuncionario;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtRg;
-        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox txtNome;
         private Bunifu.Framework.UI.BunifuDatepicker dtpContrat;
         private Bunifu.Framework.UI.BunifuDatepicker dtpNascimento;
@@ -971,5 +1000,7 @@
         private System.Windows.Forms.ComboBox cboCargo;
         private System.Windows.Forms.ComboBox cboGen;
         private System.Windows.Forms.NumericUpDown nudSalario;
+        private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.MaskedTextBox txtRg;
     }
 }

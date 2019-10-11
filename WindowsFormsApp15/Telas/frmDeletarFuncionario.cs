@@ -65,6 +65,7 @@ namespace WindowsFormsApp15.Telas
                 txtCidade.Text = model.ds_cidade;
                 cboUF.Text = model.ds_UF;
                 txtComplemento.Text = model.ds_complemento;
+                txtNumRes.Text = model.ds_numeroCasa;
 
                 //*Beneficíos*
 

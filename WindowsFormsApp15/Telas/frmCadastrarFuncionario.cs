@@ -56,5 +56,10 @@ namespace WindowsFormsApp15.Telas
             MessageBox.Show("Cadastrado com Sucesso");
 
         }
+
+        private void frmCadastrarFuncionario_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

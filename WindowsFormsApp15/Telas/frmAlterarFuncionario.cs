@@ -87,7 +87,7 @@ namespace WindowsFormsApp15.Telas
             model.ds_cidade = txtCidade.Text;
             model.ds_UF = cboUF.Text;
             model.ds_complemento = txtComplemento.Text;
-            model.ds_numeroCasa = Convert.ToString(nudNumRes.Value);
+            model.ds_numeroCasa = txtNumRes.Text;
 
             //*Beneficíos*
 

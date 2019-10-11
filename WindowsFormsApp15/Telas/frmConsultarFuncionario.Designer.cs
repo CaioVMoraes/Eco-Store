@@ -33,7 +33,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNome = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtRg = new System.Windows.Forms.MaskedTextBox();
@@ -45,6 +44,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNome = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFuncionario)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -97,24 +97,6 @@
             this.label2.TabIndex = 170;
             this.label2.Text = "CPF:";
             // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtNome.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtNome.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtNome.BorderThickness = 2;
-            this.txtNome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNome.isPassword = true;
-            this.txtNome.Location = new System.Drawing.Point(108, 158);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(287, 27);
-            this.txtNome.TabIndex = 168;
-            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -144,7 +126,7 @@
             // txtRg
             // 
             this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRg.Location = new System.Drawing.Point(108, 197);
+            this.txtRg.Location = new System.Drawing.Point(92, 201);
             this.txtRg.Mask = "00.000.000-0";
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(287, 24);
@@ -267,12 +249,20 @@
             this.panel1.Size = new System.Drawing.Size(1280, 28);
             this.panel1.TabIndex = 166;
             // 
+            // txtNome
+            // 
+            this.txtNome.Location = new System.Drawing.Point(92, 163);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(287, 20);
+            this.txtNome.TabIndex = 188;
+            // 
             // frmConsultarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.ClientSize = new System.Drawing.Size(1280, 712);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.label9);
@@ -285,7 +275,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label7);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultarFuncionario";
@@ -303,7 +292,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtNome;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.MaskedTextBox txtRg;
@@ -315,5 +303,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtNome;
     }
 }
