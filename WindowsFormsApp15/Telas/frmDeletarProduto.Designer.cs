@@ -35,22 +35,22 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label5 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
-            this.txtID = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.txtNome = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtIDFornecedor = new System.Windows.Forms.TextBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -149,14 +149,15 @@
             this.label5.TabIndex = 291;
             this.label5.Text = "Deletar Produto";
             // 
-            // numericUpDown1
+            // nudValor
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(233, 419);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(183, 26);
-            this.numericUpDown1.TabIndex = 289;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudValor.Enabled = false;
+            this.nudValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudValor.Location = new System.Drawing.Point(181, 131);
+            this.nudValor.Name = "nudValor";
+            this.nudValor.Size = new System.Drawing.Size(183, 24);
+            this.nudValor.TabIndex = 289;
+            this.nudValor.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -212,60 +213,47 @@
             // 
             // cboCategoria
             // 
-            this.cboCategoria.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.cboCategoria.Enabled = false;
+            this.cboCategoria.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(233, 384);
+            this.cboCategoria.Location = new System.Drawing.Point(181, 94);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(183, 25);
             this.cboCategoria.TabIndex = 288;
             // 
-            // txtID
-            // 
-            this.txtID.BackColor = System.Drawing.Color.White;
-            this.txtID.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtID.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtID.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtID.BorderThickness = 2;
-            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtID.isPassword = true;
-            this.txtID.Location = new System.Drawing.Point(233, 313);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(183, 27);
-            this.txtID.TabIndex = 287;
-            this.txtID.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtNome
-            // 
-            this.txtNome.BackColor = System.Drawing.Color.White;
-            this.txtNome.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtNome.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtNome.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.txtNome.BorderThickness = 2;
-            this.txtNome.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtNome.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txtNome.isPassword = true;
-            this.txtNome.Location = new System.Drawing.Point(233, 348);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(183, 27);
-            this.txtNome.TabIndex = 286;
-            this.txtNome.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtNome);
+            this.groupBox2.Controls.Add(this.txtIDFornecedor);
             this.groupBox2.Controls.Add(this.bunifuFlatButton1);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.nudValor);
+            this.groupBox2.Controls.Add(this.cboCategoria);
             this.groupBox2.Location = new System.Drawing.Point(52, 290);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(379, 252);
             this.groupBox2.TabIndex = 290;
             this.groupBox2.TabStop = false;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Enabled = false;
+            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(181, 61);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(183, 23);
+            this.txtNome.TabIndex = 298;
+            // 
+            // txtIDFornecedor
+            // 
+            this.txtIDFornecedor.Enabled = false;
+            this.txtIDFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDFornecedor.Location = new System.Drawing.Point(181, 27);
+            this.txtIDFornecedor.Name = "txtIDFornecedor";
+            this.txtIDFornecedor.Size = new System.Drawing.Size(183, 23);
+            this.txtIDFornecedor.TabIndex = 297;
             // 
             // bunifuFlatButton1
             // 
@@ -362,19 +350,15 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cboCategoria);
-            this.Controls.Add(this.txtID);
-            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDeletarProduto";
             this.Text = "frmDeletarFuncionario";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -397,15 +381,15 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown nudValor;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cboCategoria;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtID;
-        private Bunifu.Framework.UI.BunifuMetroTextbox txtNome;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtIDFornecedor;
+        private System.Windows.Forms.TextBox txtNome;
     }
 }
