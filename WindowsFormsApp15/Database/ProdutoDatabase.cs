@@ -47,9 +47,10 @@ namespace WindowsFormsApp15.Database
         {
             tb_produto alterar = db.tb_produto.FirstOrDefault(x => x.id_produto == x.id_produto);
 
-            alterar.nm_produto = alterar.nm_produto;
-            alterar.vl_valor = alterar.vl_valor;
-            alterar.id_categoria = alterar.id_categoria;
+            modelo.nm_produto = alterar.nm_produto;
+            modelo.vl_valor = alterar.vl_valor;
+            modelo.id_categoria = alterar.id_categoria;
+            modelo.id_fornecedor = alterar.id_fornecedor;
 
             db.SaveChanges();
           
