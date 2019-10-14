@@ -57,14 +57,7 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
             this.cboUF = new System.Windows.Forms.ComboBox();
-            this.nudRef = new System.Windows.Forms.NumericUpDown();
-            this.nudAliment = new System.Windows.Forms.NumericUpDown();
-            this.nudTransp = new System.Windows.Forms.NumericUpDown();
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -84,9 +77,6 @@
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRef)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAliment)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTransp)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -265,20 +255,21 @@
             this.btnCadastrarFuncionario.Iconimage_right = null;
             this.btnCadastrarFuncionario.Iconimage_right_Selected = null;
             this.btnCadastrarFuncionario.Iconimage_Selected = null;
-            this.btnCadastrarFuncionario.IconMarginLeft = 0;
+            this.btnCadastrarFuncionario.IconMarginLeft = 80;
             this.btnCadastrarFuncionario.IconMarginRight = 0;
             this.btnCadastrarFuncionario.IconRightVisible = true;
             this.btnCadastrarFuncionario.IconRightZoom = 0D;
             this.btnCadastrarFuncionario.IconVisible = true;
             this.btnCadastrarFuncionario.IconZoom = 90D;
-            this.btnCadastrarFuncionario.IsTab = false;
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(713, 523);
+            this.btnCadastrarFuncionario.IsTab = true;
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(613, 547);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnCadastrarFuncionario.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnCadastrarFuncionario.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCadastrarFuncionario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCadastrarFuncionario.selected = false;
-            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(138, 34);
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(330, 55);
             this.btnCadastrarFuncionario.TabIndex = 163;
             this.btnCadastrarFuncionario.Text = "CADASTRAR";
             this.btnCadastrarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -460,138 +451,14 @@
             this.label24.TabIndex = 186;
             this.label24.Text = "Endereço:";
             // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.label14.Location = new System.Drawing.Point(479, 359);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(143, 29);
-            this.label14.TabIndex = 221;
-            this.label14.Text = "Beneficios:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(480, 477);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(154, 20);
-            this.label15.TabIndex = 215;
-            this.label15.Text = "Vale Alimentação:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(480, 443);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(127, 20);
-            this.label16.TabIndex = 214;
-            this.label16.Text = "Vale Refeição:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.BackColor = System.Drawing.Color.Transparent;
-            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label26.Location = new System.Drawing.Point(478, 410);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(142, 20);
-            this.label26.TabIndex = 209;
-            this.label26.Text = "Vale Transporte:";
-            // 
             // cboUF
             // 
             this.cboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboUF.FormattingEnabled = true;
             this.cboUF.Location = new System.Drawing.Point(235, 512);
             this.cboUF.Name = "cboUF";
-            this.cboUF.Size = new System.Drawing.Size(192, 24);
+            this.cboUF.Size = new System.Drawing.Size(327, 24);
             this.cboUF.TabIndex = 223;
-            // 
-            // nudRef
-            // 
-            this.nudRef.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudRef.Location = new System.Drawing.Point(659, 441);
-            this.nudRef.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudRef.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudRef.Name = "nudRef";
-            this.nudRef.Size = new System.Drawing.Size(192, 22);
-            this.nudRef.TabIndex = 225;
-            this.nudRef.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudRef.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // nudAliment
-            // 
-            this.nudAliment.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudAliment.Location = new System.Drawing.Point(659, 475);
-            this.nudAliment.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudAliment.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudAliment.Name = "nudAliment";
-            this.nudAliment.Size = new System.Drawing.Size(192, 22);
-            this.nudAliment.TabIndex = 226;
-            this.nudAliment.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudAliment.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            // 
-            // nudTransp
-            // 
-            this.nudTransp.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudTransp.Location = new System.Drawing.Point(659, 408);
-            this.nudTransp.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.nudTransp.Minimum = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
-            this.nudTransp.Name = "nudTransp";
-            this.nudTransp.Size = new System.Drawing.Size(192, 22);
-            this.nudTransp.TabIndex = 227;
-            this.nudTransp.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.nudTransp.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
             // 
             // label28
             // 
@@ -663,9 +530,9 @@
             // 
             this.lblErro.AutoSize = true;
             this.lblErro.BackColor = System.Drawing.Color.Transparent;
-            this.lblErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErro.ForeColor = System.Drawing.Color.Red;
-            this.lblErro.Location = new System.Drawing.Point(481, 566);
+            this.lblErro.Location = new System.Drawing.Point(614, 620);
             this.lblErro.Name = "lblErro";
             this.lblErro.Size = new System.Drawing.Size(0, 16);
             this.lblErro.TabIndex = 284;
@@ -685,7 +552,7 @@
             this.txtCidade.Location = new System.Drawing.Point(236, 477);
             this.txtCidade.MaxLength = 50;
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(191, 23);
+            this.txtCidade.Size = new System.Drawing.Size(326, 23);
             this.txtCidade.TabIndex = 286;
             // 
             // txtTelefone
@@ -703,7 +570,7 @@
             this.txtEndereço.Location = new System.Drawing.Point(236, 410);
             this.txtEndereço.MaxLength = 50;
             this.txtEndereço.Name = "txtEndereço";
-            this.txtEndereço.Size = new System.Drawing.Size(191, 23);
+            this.txtEndereço.Size = new System.Drawing.Size(326, 23);
             this.txtEndereço.TabIndex = 288;
             // 
             // txtCep
@@ -712,7 +579,7 @@
             this.txtCep.Location = new System.Drawing.Point(236, 443);
             this.txtCep.MaxLength = 20;
             this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(191, 23);
+            this.txtCep.Size = new System.Drawing.Size(326, 23);
             this.txtCep.TabIndex = 289;
             // 
             // txtComplemento
@@ -721,7 +588,7 @@
             this.txtComplemento.Location = new System.Drawing.Point(235, 547);
             this.txtComplemento.MaxLength = 50;
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(192, 23);
+            this.txtComplemento.Size = new System.Drawing.Size(327, 23);
             this.txtComplemento.TabIndex = 290;
             // 
             // txtCelular
@@ -748,7 +615,7 @@
             this.txtNumRes.Location = new System.Drawing.Point(235, 579);
             this.txtNumRes.MaxLength = 20;
             this.txtNumRes.Name = "txtNumRes";
-            this.txtNumRes.Size = new System.Drawing.Size(192, 23);
+            this.txtNumRes.Size = new System.Drawing.Size(327, 23);
             this.txtNumRes.TabIndex = 295;
             // 
             // txtRg
@@ -790,14 +657,7 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lblErro);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.nudTransp);
-            this.Controls.Add(this.nudAliment);
-            this.Controls.Add(this.nudRef);
             this.Controls.Add(this.cboUF);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label26);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
@@ -832,9 +692,6 @@
             this.Load += new System.EventHandler(this.frmCadastrarFuncionario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudRef)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudAliment)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudTransp)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -871,14 +728,7 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox cboUF;
-        private System.Windows.Forms.NumericUpDown nudRef;
-        private System.Windows.Forms.NumericUpDown nudAliment;
-        private System.Windows.Forms.NumericUpDown nudTransp;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Panel panel1;
