@@ -27,7 +27,7 @@ namespace WindowsFormsApp15.Telas
                               
                 business.RemoverFuncionario(id);
 
-                MessageBox.Show("Cadastrado com Sucesso");
+                MessageBox.Show("Deletado com Sucesso");
             }
             catch(Exception ex)
             {

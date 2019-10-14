@@ -17,27 +17,52 @@ namespace WindowsFormsApp15.Telas
             InitializeComponent();
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+
+        Business.FuncionarioBusiness business = new Business.FuncionarioBusiness();
+        Model.tb_funcionario modelo = new Model.tb_funcionario();
+       
+        private void txtNome_TextChanged(object sender, EventArgs e)
         {
-            try
-            {
-                Business.FuncionarioBusiness business = new Business.FuncionarioBusiness();
-                Model.tb_funcionario modelo = new Model.tb_funcionario();
+            string nome = txtNome.Text;
 
-                txtNome.Text = modelo.nm_funcionario;
-                txtRg.Text = modelo.ds_rg;
-                txtCPF.Text = modelo.ds_cpf;
-                cboCargo.Text = modelo.ds_cargo;
-                dtpContrat.Value = modelo.dt_contratacao;
+            List<Model.tb_funcionario> lista = business.ConsultarFuncionarioNome(nome);
 
-                List<Model.tb_funcionario> lista = business.ConsultarFuncionario();
+            dgvConsultarFuncionario.DataSource = lista;
+        }
+        private void txtRg_TextChanged(object sender, EventArgs e)
+        {
+            string rg = txtRg.Text;
 
-                dgvConsultarFuncionario.DataSource = lista;
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            List<Model.tb_funcionario> lista = business.ConsultarFuncionarioRg(rg);
+
+            dgvConsultarFuncionario.DataSource = lista;
+        }
+
+        private void txtCPF_TextChanged(object sender, EventArgs e)
+        {
+            string cpf = txtCPF.Text;
+
+            List<Model.tb_funcionario> lista = business.ConsultarFuncionarioCpf(cpf);
+
+            dgvConsultarFuncionario.DataSource = lista;
+        }
+
+        private void cboCargo_TextChanged(object sender, EventArgs e)
+        {
+            string cargo = cboCargo.Text;
+
+            List<Model.tb_funcionario> lista = business.ConsultarFuncionarioCargo(cargo);
+
+            dgvConsultarFuncionario.DataSource = lista;
+        }
+
+        private void dtpContrat_onValueChanged(object sender, EventArgs e)
+        {
+            DateTime contrat = dtpContrat.Value;
+
+            List<Model.tb_funcionario> lista = business.ConsultarFuncionarioContratacao(contrat);
+
+            dgvConsultarFuncionario.DataSource = lista;
         }
     }
 }

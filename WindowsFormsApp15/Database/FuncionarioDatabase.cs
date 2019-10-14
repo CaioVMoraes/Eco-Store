@@ -17,12 +17,37 @@ namespace WindowsFormsApp15.Database
             db.SaveChanges(); 
 
         }
-        public List<tb_funcionario> ConsultarFuncionario()
+        public List<tb_funcionario> ConsultarFuncionarioNome(string Nome)
         {
-            List<tb_funcionario> lista = db.tb_funcionario.ToList();
+            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.nm_funcionario == Nome).ToList();
 
             return lista;
         }
+        public List<tb_funcionario> ConsultarFuncionarioRg(string Rg)
+        {
+            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_rg == Rg).ToList();
+
+            return lista;
+        }
+        public List<tb_funcionario> ConsultarFuncionarioCpf(string cpf)
+        {
+            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_cpf == cpf).ToList();
+
+            return lista;
+        }
+        public List<tb_funcionario> ConsultarFuncionarioCargo(string Cargo)
+        {
+            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_cargo == Cargo).ToList();
+
+            return lista;
+        }
+        public List<tb_funcionario> ConsultarFuncionarioContracao(DateTime Contrat)
+        {
+            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.dt_contratacao == Contrat).ToList();
+
+            return lista;
+        }
+
         public tb_funcionario Listar(int id)
         {
             tb_funcionario modelo = db.tb_funcionario.FirstOrDefault(x => x.id_funcionario == id);

@@ -53,6 +53,8 @@ namespace WindowsFormsApp15.Telas
                 nudTransp.Value = model.vl_transporte;
                 nudRef.Value = model.vl_refeicao;
                 nudAliment.Value = model.vl_alimentacao;
+
+                MessageBox.Show("Alterado com sucesso");
             }
             catch (Exception ex)
             {

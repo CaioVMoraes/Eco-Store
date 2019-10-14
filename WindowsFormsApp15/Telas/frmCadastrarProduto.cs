@@ -17,14 +17,6 @@ namespace WindowsFormsApp15.Telas
             InitializeComponent();
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
-        {
-           
-        }
+       
     }
 }

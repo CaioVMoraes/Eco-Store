@@ -17,9 +17,21 @@ namespace WindowsFormsApp15.Database
             db.SaveChanges();
 
         }
-        public List<tb_produto> ConsultarProduto()
+        public List<tb_produto> ConsultarProdutoNome(string Produtonome)
         {
-            List<tb_produto> lista = db.tb_produto.ToList();
+            List<tb_produto> lista = db.tb_produto.Where(x=> x.nm_produto == Produtonome).ToList();
+
+            return lista;
+        }
+        public List<tb_produto> ConsultarProdutoCategoria(string categoria)
+        {
+            List<tb_produto> lista = db.tb_categoria.Where(x => x.ds_categoria == x).ToList();
+
+            return lista;
+        }
+        public List<tb_produto> ConsultarProdutoFornecedor()
+        {
+            List<tb_produto> lista = db.tb_produto.Where(x => x.t == x.nm_produto).ToList();
 
             return lista;
         }

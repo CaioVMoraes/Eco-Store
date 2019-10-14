@@ -40,13 +40,6 @@ namespace WindowsFormsApp15.Business
             {
                 throw new Exception("E-mail do funcionário é obrigatório");
             }
-
-            bool email = model.ds_email.Contains("@");
-
-            if (email == true)
-            {
-                throw new Exception("Apenas é permitido letras de (A á Z), numeros de (0 á 9) e caracteres como . e _");
-            }
             if (model.dt_contratacao == null)
             {
                 throw new Exception("A data de contrataçao é obrigatória");
@@ -101,9 +94,33 @@ namespace WindowsFormsApp15.Business
             }
 
         }
-        public List<Model.tb_funcionario> ConsultarFuncionario()
+        public List<Model.tb_funcionario> ConsultarFuncionarioNome(string nome)
         {
-            List<Model.tb_funcionario> lista = db.ConsultarFuncionario();
+            List<Model.tb_funcionario> lista = db.ConsultarFuncionarioNome(nome);
+
+            return lista;
+        }
+        public List<Model.tb_funcionario> ConsultarFuncionarioRg(string Rg)
+        {
+            List<Model.tb_funcionario> lista = db.ConsultarFuncionarioRg(Rg);
+
+            return lista;
+        }
+        public List<Model.tb_funcionario> ConsultarFuncionarioCpf(string cpf)
+        {
+            List<Model.tb_funcionario> lista = db.ConsultarFuncionarioCpf(cpf);
+
+            return lista;
+        }
+        public List<Model.tb_funcionario> ConsultarFuncionarioCargo(string cargo)
+        {
+            List<Model.tb_funcionario> lista = db.ConsultarFuncionarioCargo(cargo);
+
+            return lista;
+        }
+        public List<Model.tb_funcionario> ConsultarFuncionarioContratacao(DateTime contrat)
+        {
+            List<Model.tb_funcionario> lista = db.ConsultarFuncionarioContracao(contrat);
 
             return lista;
         }
@@ -141,13 +158,6 @@ namespace WindowsFormsApp15.Business
             if (model.ds_email == string.Empty)
             {
                 throw new Exception("E-mail do funcionário é obrigatório");
-            }
-
-            bool email = model.ds_email.Contains("@");
-
-            if (email == true)
-            {
-                throw new Exception("Apenas é permitido letras de (A á Z), numeros de (0 á 9) e caracteres como . e _");
             }
             if (model.dt_contratacao == null)
             {
@@ -230,13 +240,6 @@ namespace WindowsFormsApp15.Business
             if (model.ds_email == string.Empty)
             {
                 throw new Exception("E-mail do funcionário é obrigatório");
-            }
-
-            bool email = model.ds_email.Contains("@");
-
-            if (email == true)
-            {
-                throw new Exception("Apenas é permitido letras de (A á Z), numeros de (0 á 9) e caracteres como . e _");
             }
             if (model.dt_contratacao == null)
             {

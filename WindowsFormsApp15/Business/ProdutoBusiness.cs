@@ -15,9 +15,9 @@ namespace WindowsFormsApp15.Business
         {
             db.CadastrarProduto(modelo);
         }
-        public List<Model.tb_produto> ConsultarFuncionario()
+        public List<Model.tb_produto> ConsultarFuncionario(string nome)
         {
-            List<Model.tb_produto> lista = db.ConsultarProduto();
+            List<Model.tb_produto> lista = db.ConsultarProdutoNome(nome);
 
             return lista;
         }
