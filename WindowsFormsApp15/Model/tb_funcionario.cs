@@ -41,7 +41,7 @@ namespace WindowsFormsApp15.Model
         public string ds_endereco { get; set; }
         public string ds_telefone { get; set; }
         public string ds_celular { get; set; }
-        public Nullable<System.DateTime> dt_contratacao { get; set; }
+        public System.DateTime dt_contratacao { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_controledeponto> tb_controledeponto { get; set; }

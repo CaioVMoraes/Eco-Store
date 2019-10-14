@@ -15,12 +15,27 @@ namespace WindowsFormsApp15.Business
         {
             db.CadastrarProduto(modelo);
         }
-        public List<Model.tb_produto> ConsultarFuncionario(string nome)
+        public List<Model.tb_produto> ConsultarProduto(string nome)
         {
             List<Model.tb_produto> lista = db.ConsultarProdutoNome(nome);
 
             return lista;
         }
+        public List<Model.tb_produto> ConsultarProdutoCategoria(int idcategoria)
+        {
+            List<Model.tb_produto> lista = db.ConsultarProdutoCategoria(idcategoria);
+
+            return lista;
+        }
+        public List<Model.tb_produto> ConsultarProdutoFornecedor(int idfornecedor)
+        {
+            List<Model.tb_produto> lista = db.ConsultarProdutoFornecedor(idfornecedor);
+
+            return lista;
+        }
+
+
+
         public Model.tb_produto Listar(int id)
         {
             Model.tb_produto modelo = db.Listar(id);

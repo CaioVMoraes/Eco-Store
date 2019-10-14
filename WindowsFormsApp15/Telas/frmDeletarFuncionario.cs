@@ -69,9 +69,7 @@ namespace WindowsFormsApp15.Telas
 
                 //*Beneficíos*
 
-                nudTransp.Value = model.vl_transporte;
-                nudRef.Value = model.vl_refeicao;
-                nudAliment.Value = model.vl_alimentacao;
+               
             }
             catch(Exception ex)
             {

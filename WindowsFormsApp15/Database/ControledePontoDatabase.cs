@@ -34,10 +34,11 @@ namespace WindowsFormsApp15.Database
             tb_controledeponto alterar = db.tb_controledeponto.FirstOrDefault(x => x.id_controleDePonto == x.id_controleDePonto);
 
             modelo.dt_chegada = alterar.dt_chegada;
+            modelo.dt_saida = alterar.dt_saida;
             modelo.dt_saidaAlmoco = alterar.dt_saidaAlmoco;
             modelo.dt_voltaAlmoco = alterar.dt_voltaAlmoco;
-            modelo.dt_mes = alterar.dt_mes;
-            modelo.dt_saida = alterar.dt_saida;
+            modelo.dt_entradaHoraExtra = alterar.dt_entradaHoraExtra;
+            modelo.dt_saidaHoraExtra = alterar.dt_saidaHoraExtra;
 
             db.SaveChanges();
         }

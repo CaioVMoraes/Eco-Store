@@ -48,11 +48,12 @@ namespace WindowsFormsApp15.Telas
                 cboUF.Text = model.ds_UF;
                 txtComplemento.Text = model.ds_complemento;
 
-                //*Beneficíos*
+               //*Salario*
 
-                nudTransp.Value = model.vl_transporte;
-                nudRef.Value = model.vl_refeicao;
-                nudAliment.Value = model.vl_alimentacao;
+               
+          
+
+               
 
                 MessageBox.Show("Alterado com sucesso");
             }
@@ -93,9 +94,7 @@ namespace WindowsFormsApp15.Telas
 
             //*Beneficíos*
 
-            model.vl_transporte = nudTransp.Value;
-            model.vl_refeicao = nudRef.Value;
-            model.vl_alimentacao = nudAliment.Value;
+           
 
             business.CadastrarFuncionario(model);
 
