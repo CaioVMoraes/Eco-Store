@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarProduto));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvProduto = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblMinimizar = new System.Windows.Forms.Label();
+            this.lblSair = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,56 +40,56 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvProduto
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 181);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(791, 421);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvProduto.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProduto.Location = new System.Drawing.Point(12, 181);
+            this.dgvProduto.Name = "dgvProduto";
+            this.dgvProduto.Size = new System.Drawing.Size(791, 421);
+            this.dgvProduto.TabIndex = 0;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblMinimizar);
+            this.panel1.Controls.Add(this.lblSair);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(815, 28);
             this.panel1.TabIndex = 155;
             // 
-            // label5
+            // lblMinimizar
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(764, 2);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(21, 23);
-            this.label5.TabIndex = 156;
-            this.label5.Text = "_";
+            this.lblMinimizar.AutoSize = true;
+            this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimizar.ForeColor = System.Drawing.Color.White;
+            this.lblMinimizar.Location = new System.Drawing.Point(764, 2);
+            this.lblMinimizar.Name = "lblMinimizar";
+            this.lblMinimizar.Size = new System.Drawing.Size(21, 23);
+            this.lblMinimizar.TabIndex = 156;
+            this.lblMinimizar.Text = "_";
             // 
-            // label3
+            // lblSair
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(789, 5);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(23, 23);
-            this.label3.TabIndex = 155;
-            this.label3.Text = "X";
+            this.lblSair.AutoSize = true;
+            this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSair.ForeColor = System.Drawing.Color.White;
+            this.lblSair.Location = new System.Drawing.Point(789, 5);
+            this.lblSair.Name = "lblSair";
+            this.lblSair.Size = new System.Drawing.Size(23, 23);
+            this.lblSair.TabIndex = 155;
+            this.lblSair.Text = "X";
             // 
             // label7
             // 
@@ -165,6 +165,7 @@
             // 
             this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(203, 103);
+            this.txtNome.MaxLength = 45;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(192, 23);
             this.txtNome.TabIndex = 297;
@@ -184,11 +185,11 @@
             this.Controls.Add(this.cboCategoria);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvProduto);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultarProduto";
             this.Text = "frmConsultarProduto";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -198,10 +199,10 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvProduto;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblMinimizar;
+        private System.Windows.Forms.Label lblSair;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Label label2;
