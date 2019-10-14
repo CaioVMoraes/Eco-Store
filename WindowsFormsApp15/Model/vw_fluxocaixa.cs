@@ -12,13 +12,10 @@ namespace WindowsFormsApp15.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_venda_item
+    public partial class vw_fluxocaixa
     {
-        public int id_venda_item { get; set; }
-        public int id_venda { get; set; }
-        public int id_estoque { get; set; }
-    
-        public virtual tb_estoque tb_estoque { get; set; }
-        public virtual tb_venda tb_venda { get; set; }
+        public System.DateTime dt_pagamento { get; set; }
+        public Nullable<decimal> vl_operacao { get; set; }
+        public string tp_operacao { get; set; }
     }
 }

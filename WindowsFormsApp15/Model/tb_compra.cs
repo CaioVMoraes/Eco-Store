@@ -12,25 +12,19 @@ namespace WindowsFormsApp15.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_pedido_compra
+    public partial class tb_compra
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_pedido_compra()
+        public tb_compra()
         {
-            this.tb_estoque = new HashSet<tb_estoque>();
+            this.tb_compra_item = new HashSet<tb_compra_item>();
         }
     
-        public int id_pedido_compra { get; set; }
-        public int id_fornecedor { get; set; }
-        public int id_produto { get; set; }
-        public Nullable<System.DateTime> dt_pedido { get; set; }
-        public Nullable<System.DateTime> dt_prevista { get; set; }
-        public int qtd_produto { get; set; }
-        public decimal vl_valor { get; set; }
+        public int id_compra { get; set; }
+        public System.DateTime dt_compra { get; set; }
+        public decimal vl_valorTotal { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_estoque> tb_estoque { get; set; }
-        public virtual tb_fornecedor tb_fornecedor { get; set; }
-        public virtual tb_produto tb_produto { get; set; }
+        public virtual ICollection<tb_compra_item> tb_compra_item { get; set; }
     }
 }

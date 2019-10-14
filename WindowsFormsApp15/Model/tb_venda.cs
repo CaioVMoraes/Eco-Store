@@ -21,8 +21,8 @@ namespace WindowsFormsApp15.Model
         }
     
         public int id_venda { get; set; }
-        public Nullable<int> id_usuario { get; set; }
-        public Nullable<System.DateTime> dt_saida { get; set; }
+        public int id_usuario { get; set; }
+        public System.DateTime dt_saida { get; set; }
         public decimal vl_valorTotal { get; set; }
     
         public virtual tb_usuario tb_usuario { get; set; }

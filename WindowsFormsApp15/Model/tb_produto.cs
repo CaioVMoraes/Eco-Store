@@ -17,25 +17,22 @@ namespace WindowsFormsApp15.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tb_produto()
         {
+            this.tb_compra_item = new HashSet<tb_compra_item>();
             this.tb_estoque = new HashSet<tb_estoque>();
-            this.tb_pedido_compra = new HashSet<tb_pedido_compra>();
-            this.tb_produto_venda = new HashSet<tb_produto_venda>();
         }
     
         public int id_produto { get; set; }
-        public Nullable<int> id_fornecedor { get; set; }
-        public Nullable<int> id_categoria { get; set; }
+        public int id_fornecedor { get; set; }
+        public int id_categoria { get; set; }
         public string nm_produto { get; set; }
         public decimal vl_valor { get; set; }
         public byte[] img_produto { get; set; }
     
         public virtual tb_categoria tb_categoria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_compra_item> tb_compra_item { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_estoque> tb_estoque { get; set; }
         public virtual tb_fornecedor tb_fornecedor { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_pedido_compra> tb_pedido_compra { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_produto_venda> tb_produto_venda { get; set; }
     }
 }
