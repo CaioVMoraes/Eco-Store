@@ -10,14 +10,33 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="tb_compra">
+      <EntityTypeMapping TypeName="ecostoreModel.tb_compra">
+        <MappingFragment StoreEntitySet="tb_compra">
+          <ScalarProperty Name="vl_valorTotal" ColumnName="vl_valorTotal" />
+          <ScalarProperty Name="dt_compra" ColumnName="dt_compra" />
+          <ScalarProperty Name="id_compra" ColumnName="id_compra" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tb_compra_item">
+      <EntityTypeMapping TypeName="ecostoreModel.tb_compra_item">
+        <MappingFragment StoreEntitySet="tb_compra_item">
+          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
+          <ScalarProperty Name="id_compra" ColumnName="id_compra" />
+          <ScalarProperty Name="id_compra_item" ColumnName="id_compra_item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="tb_controledeponto">
       <EntityTypeMapping TypeName="ecostoreModel.tb_controledeponto">
         <MappingFragment StoreEntitySet="tb_controledeponto">
+          <ScalarProperty Name="dt_saidaHoraExtra" ColumnName="dt_saidaHoraExtra" />
+          <ScalarProperty Name="dt_entradaHoraExtra" ColumnName="dt_entradaHoraExtra" />
           <ScalarProperty Name="dt_saida" ColumnName="dt_saida" />
           <ScalarProperty Name="dt_voltaAlmoco" ColumnName="dt_voltaAlmoco" />
           <ScalarProperty Name="dt_saidaAlmoco" ColumnName="dt_saidaAlmoco" />
           <ScalarProperty Name="dt_chegada" ColumnName="dt_chegada" />
-          <ScalarProperty Name="dt_mes" ColumnName="dt_mes" />
           <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
           <ScalarProperty Name="id_controleDePonto" ColumnName="id_controleDePonto" />
         </MappingFragment>
@@ -41,8 +60,6 @@
           <ScalarProperty Name="dt_validade" ColumnName="dt_validade" />
           <ScalarProperty Name="dt_entrada" ColumnName="dt_entrada" />
           <ScalarProperty Name="id_produto" ColumnName="id_produto" />
-          <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
-          <ScalarProperty Name="id_pedido_compra" ColumnName="id_pedido_compra" />
           <ScalarProperty Name="id_estoque" ColumnName="id_estoque" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -50,12 +67,25 @@
     <EntitySetMapping Name="tb_folhapagamento">
       <EntityTypeMapping TypeName="ecostoreModel.tb_folhapagamento">
         <MappingFragment StoreEntitySet="tb_folhapagamento">
-          <ScalarProperty Name="vl_total" ColumnName="vl_total" />
-          <ScalarProperty Name="vl_contribuicao" ColumnName="vl_contribuicao" />
-          <ScalarProperty Name="vl_desconto" ColumnName="vl_desconto" />
-          <ScalarProperty Name="vl_salario" ColumnName="vl_salario" />
-          <ScalarProperty Name="dt_mes" ColumnName="dt_mes" />
+          <ScalarProperty Name="vl_liquido" ColumnName="vl_liquido" />
+          <ScalarProperty Name="vl_faltas" ColumnName="vl_faltas" />
+          <ScalarProperty Name="vl_planoOdonto" ColumnName="vl_planoOdonto" />
+          <ScalarProperty Name="vl_planoSaude" ColumnName="vl_planoSaude" />
+          <ScalarProperty Name="vl_totalPlanos" ColumnName="vl_totalPlanos" />
+          <ScalarProperty Name="vl_totalImpostos" ColumnName="vl_totalImpostos" />
+          <ScalarProperty Name="vl_fgts" ColumnName="vl_fgts" />
+          <ScalarProperty Name="vl_ir" ColumnName="vl_ir" />
+          <ScalarProperty Name="vl_inss" ColumnName="vl_inss" />
+          <ScalarProperty Name="vl_totalVales" ColumnName="vl_totalVales" />
+          <ScalarProperty Name="vl_valeTransporte" ColumnName="vl_valeTransporte" />
+          <ScalarProperty Name="vl_valeRefeicao" ColumnName="vl_valeRefeicao" />
+          <ScalarProperty Name="vl_valeAlimentacao" ColumnName="vl_valeAlimentacao" />
+          <ScalarProperty Name="vl_totalProventos" ColumnName="vl_totalProventos" />
+          <ScalarProperty Name="vl_salarioFamilia" ColumnName="vl_salarioFamilia" />
+          <ScalarProperty Name="vl_plr" ColumnName="vl_plr" />
+          <ScalarProperty Name="vl_gratificacoes" ColumnName="vl_gratificacoes" />
           <ScalarProperty Name="id_controleDePonto" ColumnName="id_controleDePonto" />
+          <ScalarProperty Name="dt_pagamento" ColumnName="dt_pagamento" />
           <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
           <ScalarProperty Name="id_folhaPagamento" ColumnName="id_folhaPagamento" />
         </MappingFragment>
@@ -64,9 +94,9 @@
     <EntitySetMapping Name="tb_fornecedor">
       <EntityTypeMapping TypeName="ecostoreModel.tb_fornecedor">
         <MappingFragment StoreEntitySet="tb_fornecedor">
+          <ScalarProperty Name="ds_celular" ColumnName="ds_celular" />
           <ScalarProperty Name="ds_cnpj" ColumnName="ds_cnpj" />
           <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
-          <ScalarProperty Name="ds_celular" ColumnName="ds_celular" />
           <ScalarProperty Name="ds_telefone" ColumnName="ds_telefone" />
           <ScalarProperty Name="nm_empresa" ColumnName="nm_empresa" />
           <ScalarProperty Name="nm_fornecedor" ColumnName="nm_fornecedor" />
@@ -78,7 +108,6 @@
       <EntityTypeMapping TypeName="ecostoreModel.tb_funcionario">
         <MappingFragment StoreEntitySet="tb_funcionario">
           <ScalarProperty Name="dt_contratacao" ColumnName="dt_contratacao" />
-          <ScalarProperty Name="tm_horasTrabalhadas" ColumnName="tm_horasTrabalhadas" />
           <ScalarProperty Name="ds_celular" ColumnName="ds_celular" />
           <ScalarProperty Name="ds_telefone" ColumnName="ds_telefone" />
           <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
@@ -94,9 +123,6 @@
           <ScalarProperty Name="ds_cidade" ColumnName="ds_cidade" />
           <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
           <ScalarProperty Name="vl_convenio" ColumnName="vl_convenio" />
-          <ScalarProperty Name="vl_alimentacao" ColumnName="vl_alimentacao" />
-          <ScalarProperty Name="vl_refeicao" ColumnName="vl_refeicao" />
-          <ScalarProperty Name="vl_transporte" ColumnName="vl_transporte" />
           <ScalarProperty Name="ds_genero" ColumnName="ds_genero" />
           <ScalarProperty Name="dt_nascimento" ColumnName="dt_nascimento" />
           <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />
@@ -115,19 +141,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tb_pedido_compra">
-      <EntityTypeMapping TypeName="ecostoreModel.tb_pedido_compra">
-        <MappingFragment StoreEntitySet="tb_pedido_compra">
-          <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
-          <ScalarProperty Name="qtd_produto" ColumnName="qtd_produto" />
-          <ScalarProperty Name="dt_prevista" ColumnName="dt_prevista" />
-          <ScalarProperty Name="dt_pedido" ColumnName="dt_pedido" />
-          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
-          <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
-          <ScalarProperty Name="id_pedido_compra" ColumnName="id_pedido_compra" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tb_produto">
       <EntityTypeMapping TypeName="ecostoreModel.tb_produto">
         <MappingFragment StoreEntitySet="tb_produto">
@@ -140,18 +153,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tb_produto_venda">
-      <EntityTypeMapping TypeName="ecostoreModel.tb_produto_venda">
-        <MappingFragment StoreEntitySet="tb_produto_venda">
-          <ScalarProperty Name="id_produto" ColumnName="id_produto" />
-          <ScalarProperty Name="id_estoque" ColumnName="id_estoque" />
-          <ScalarProperty Name="id_produto_venda" ColumnName="id_produto_venda" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tb_usuario">
       <EntityTypeMapping TypeName="ecostoreModel.tb_usuario">
         <MappingFragment StoreEntitySet="tb_usuario">
+          <ScalarProperty Name="nv_nivelAcesso" ColumnName="nv_nivelAcesso" />
           <ScalarProperty Name="ds_senha" ColumnName="ds_senha" />
           <ScalarProperty Name="nm_usuario" ColumnName="nm_usuario" />
           <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
@@ -172,9 +177,18 @@
     <EntitySetMapping Name="tb_venda_item">
       <EntityTypeMapping TypeName="ecostoreModel.tb_venda_item">
         <MappingFragment StoreEntitySet="tb_venda_item">
-          <ScalarProperty Name="id_produto_venda" ColumnName="id_produto_venda" />
+          <ScalarProperty Name="id_estoque" ColumnName="id_estoque" />
           <ScalarProperty Name="id_venda" ColumnName="id_venda" />
           <ScalarProperty Name="id_venda_item" ColumnName="id_venda_item" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_fluxocaixa">
+      <EntityTypeMapping TypeName="ecostoreModel.vw_fluxocaixa">
+        <MappingFragment StoreEntitySet="vw_fluxocaixa">
+          <ScalarProperty Name="tp_operacao" ColumnName="tp_operacao" />
+          <ScalarProperty Name="vl_operacao" ColumnName="vl_operacao" />
+          <ScalarProperty Name="dt_pagamento" ColumnName="dt_pagamento" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

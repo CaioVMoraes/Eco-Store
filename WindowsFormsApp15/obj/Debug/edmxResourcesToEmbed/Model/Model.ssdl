@@ -8,17 +8,34 @@
     <Property Name="nm_categoria" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_categoria" Type="varchar" MaxLength="45" />
   </EntityType>
+  <EntityType Name="tb_compra">
+    <Key>
+      <PropertyRef Name="id_compra" />
+    </Key>
+    <Property Name="id_compra" Type="int" Nullable="false" />
+    <Property Name="dt_compra" Type="date" Nullable="false" />
+    <Property Name="vl_valorTotal" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tb_compra_item">
+    <Key>
+      <PropertyRef Name="id_compra_item" />
+    </Key>
+    <Property Name="id_compra_item" Type="int" Nullable="false" />
+    <Property Name="id_compra" Type="int" Nullable="false" />
+    <Property Name="id_produto" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="tb_controledeponto">
     <Key>
       <PropertyRef Name="id_controleDePonto" />
     </Key>
     <Property Name="id_controleDePonto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_funcionario" Type="int" Nullable="false" />
-    <Property Name="dt_mes" Type="date" />
     <Property Name="dt_chegada" Type="datetime" Precision="0" />
     <Property Name="dt_saidaAlmoco" Type="datetime" Precision="0" />
     <Property Name="dt_voltaAlmoco" Type="datetime" Precision="0" />
     <Property Name="dt_saida" Type="datetime" Precision="0" />
+    <Property Name="dt_entradaHoraExtra" Type="datetime" Precision="0" />
+    <Property Name="dt_saidaHoraExtra" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="tb_despesa">
     <Key>
@@ -26,19 +43,17 @@
     </Key>
     <Property Name="id_despesa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="ds_descricao" Type="varchar" MaxLength="200" />
-    <Property Name="vl_despesa" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="dt_pagamento" Type="date" />
+    <Property Name="vl_despesa" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="dt_pagamento" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_estoque">
     <Key>
       <PropertyRef Name="id_estoque" />
     </Key>
     <Property Name="id_estoque" Type="int" Nullable="false" />
-    <Property Name="id_pedido_compra" Type="int" Nullable="false" />
-    <Property Name="id_fornecedor" Type="int" Nullable="false" />
     <Property Name="id_produto" Type="int" Nullable="false" />
-    <Property Name="dt_entrada" Type="datetime" Precision="0" />
-    <Property Name="dt_validade" Type="date" />
+    <Property Name="dt_entrada" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="dt_validade" Type="date" Nullable="false" />
     <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="qtd_produto" Type="int" Nullable="false" />
   </EntityType>
@@ -47,13 +62,26 @@
       <PropertyRef Name="id_folhaPagamento" />
     </Key>
     <Property Name="id_folhaPagamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="id_funcionario" Type="int" />
-    <Property Name="id_controleDePonto" Type="int" />
-    <Property Name="dt_mes" Type="date" />
-    <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="vl_desconto" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="vl_contribuicao" Type="decimal" Precision="10" Scale="2" />
-    <Property Name="vl_total" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="id_funcionario" Type="int" Nullable="false" />
+    <Property Name="dt_pagamento" Type="date" Nullable="false" />
+    <Property Name="id_controleDePonto" Type="int" Nullable="false" />
+    <Property Name="vl_gratificacoes" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_plr" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_salarioFamilia" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_totalProventos" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_valeAlimentacao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_valeRefeicao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_valeTransporte" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_totalVales" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_inss" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_ir" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_fgts" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_totalImpostos" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_totalPlanos" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_planoSaude" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_planoOdonto" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_faltas" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_liquido" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_fornecedor">
     <Key>
@@ -63,9 +91,9 @@
     <Property Name="nm_fornecedor" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="nm_empresa" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="ds_telefone" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="ds_celular" Type="varchar" MaxLength="15" />
     <Property Name="ds_endereco" Type="varchar" MaxLength="80" Nullable="false" />
     <Property Name="ds_cnpj" Type="varchar" MaxLength="17" Nullable="false" />
+    <Property Name="ds_celular" Type="varchar" MaxLength="15" />
   </EntityType>
   <EntityType Name="tb_funcionario">
     <Key>
@@ -73,11 +101,8 @@
     </Key>
     <Property Name="id_funcionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_funcionario" Type="varchar" MaxLength="70" Nullable="false" />
-    <Property Name="dt_nascimento" Type="datetime" Precision="0" />
+    <Property Name="dt_nascimento" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="ds_genero" Type="enum" Nullable="false" />
-    <Property Name="vl_transporte" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="vl_refeicao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="vl_alimentacao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_convenio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="ds_cep" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_cidade" Type="varchar" MaxLength="50" Nullable="false" />
@@ -91,9 +116,8 @@
     <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="ds_endereco" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ds_telefone" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ds_telefone" Type="varchar" MaxLength="15" />
     <Property Name="ds_celular" Type="varchar" MaxLength="20" />
-    <Property Name="tm_horasTrabalhadas" Type="time" Precision="0" Nullable="false" />
     <Property Name="dt_contratacao" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="tb_log">
@@ -101,41 +125,21 @@
       <PropertyRef Name="id_log" />
     </Key>
     <Property Name="id_log" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="id_usuario" Type="int" />
-    <Property Name="dt_dataLogin" Type="datetime" Precision="0" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="dt_dataLogin" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="ds_telaEntrou" Type="varchar" MaxLength="15" />
     <Property Name="ds_oqFez" Type="varchar" MaxLength="30" />
-  </EntityType>
-  <EntityType Name="tb_pedido_compra">
-    <Key>
-      <PropertyRef Name="id_pedido_compra" />
-    </Key>
-    <Property Name="id_pedido_compra" Type="int" Nullable="false" />
-    <Property Name="id_fornecedor" Type="int" Nullable="false" />
-    <Property Name="id_produto" Type="int" Nullable="false" />
-    <Property Name="dt_pedido" Type="datetime" Precision="0" />
-    <Property Name="dt_prevista" Type="datetime" Precision="0" />
-    <Property Name="qtd_produto" Type="int" Nullable="false" />
-    <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_produto">
     <Key>
       <PropertyRef Name="id_produto" />
     </Key>
     <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="id_fornecedor" Type="int" />
-    <Property Name="id_categoria" Type="int" />
+    <Property Name="id_fornecedor" Type="int" Nullable="false" />
+    <Property Name="id_categoria" Type="int" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="img_produto" Type="longblob" />
-  </EntityType>
-  <EntityType Name="tb_produto_venda">
-    <Key>
-      <PropertyRef Name="id_produto_venda" />
-    </Key>
-    <Property Name="id_produto_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="id_estoque" Type="int" Nullable="false" />
-    <Property Name="id_produto" Type="int" Nullable="false" />
+    <Property Name="img_produto" Type="longblob" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_usuario">
     <Key>
@@ -145,14 +149,15 @@
     <Property Name="id_funcionario" Type="int" Nullable="false" />
     <Property Name="nm_usuario" Type="varchar" MaxLength="65" Nullable="false" />
     <Property Name="ds_senha" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="nv_nivelAcesso" Type="enum" />
   </EntityType>
   <EntityType Name="tb_venda">
     <Key>
       <PropertyRef Name="id_venda" />
     </Key>
     <Property Name="id_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="id_usuario" Type="int" />
-    <Property Name="dt_saida" Type="datetime" Precision="0" />
+    <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="dt_saida" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="vl_valorTotal" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_venda_item">
@@ -160,9 +165,44 @@
       <PropertyRef Name="id_venda_item" />
     </Key>
     <Property Name="id_venda_item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="id_venda" Type="int" />
-    <Property Name="id_produto_venda" Type="int" />
+    <Property Name="id_venda" Type="int" Nullable="false" />
+    <Property Name="id_estoque" Type="int" Nullable="false" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_fluxocaixa">
+    <Key>
+      <PropertyRef Name="dt_pagamento" />
+      <PropertyRef Name="tp_operacao" />
+    </Key>
+    <Property Name="dt_pagamento" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="vl_operacao" Type="decimal" Precision="54" Scale="2" />
+    <Property Name="tp_operacao" Type="varchar" MaxLength="7" Nullable="false" />
+  </EntityType>
+  <Association Name="tb_compra_item_ibfk_1">
+    <End Role="tb_compra" Type="Self.tb_compra" Multiplicity="1" />
+    <End Role="tb_compra_item" Type="Self.tb_compra_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_compra">
+        <PropertyRef Name="id_compra" />
+      </Principal>
+      <Dependent Role="tb_compra_item">
+        <PropertyRef Name="id_compra" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tb_compra_item_ibfk_2">
+    <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="1" />
+    <End Role="tb_compra_item" Type="Self.tb_compra_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_produto">
+        <PropertyRef Name="id_produto" />
+      </Principal>
+      <Dependent Role="tb_compra_item">
+        <PropertyRef Name="id_produto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="tb_controledeponto_ibfk_1">
     <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -178,18 +218,6 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_estoque_ibfk_1">
-    <End Role="tb_pedido_compra" Type="Self.tb_pedido_compra" Multiplicity="1" />
-    <End Role="tb_estoque" Type="Self.tb_estoque" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_pedido_compra">
-        <PropertyRef Name="id_pedido_compra" />
-      </Principal>
-      <Dependent Role="tb_estoque">
-        <PropertyRef Name="id_pedido_compra" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="tb_estoque_ibfk_2">
     <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
@@ -203,22 +231,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="tb_estoque_ibfk_3">
-    <End Role="tb_fornecedor" Type="Self.tb_fornecedor" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="tb_estoque" Type="Self.tb_estoque" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_fornecedor">
-        <PropertyRef Name="id_fornecedor" />
-      </Principal>
-      <Dependent Role="tb_estoque">
-        <PropertyRef Name="id_fornecedor" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="tb_folhapagamento_ibfk_1">
-    <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="0..1">
+    <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
     <End Role="tb_folhapagamento" Type="Self.tb_folhapagamento" Multiplicity="*" />
@@ -232,7 +246,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_folhapagamento_ibfk_2">
-    <End Role="tb_controledeponto" Type="Self.tb_controledeponto" Multiplicity="0..1">
+    <End Role="tb_controledeponto" Type="Self.tb_controledeponto" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
     <End Role="tb_folhapagamento" Type="Self.tb_folhapagamento" Multiplicity="*" />
@@ -246,7 +260,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_log_ibfk_1">
-    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="0..1">
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
     <End Role="tb_log" Type="Self.tb_log" Multiplicity="*" />
@@ -259,36 +273,8 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="tb_pedido_compra_ibfk_1">
-    <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="tb_pedido_compra" Type="Self.tb_pedido_compra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_produto">
-        <PropertyRef Name="id_produto" />
-      </Principal>
-      <Dependent Role="tb_pedido_compra">
-        <PropertyRef Name="id_produto" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="tb_pedido_compra_ibfk_2">
-    <End Role="tb_fornecedor" Type="Self.tb_fornecedor" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="tb_pedido_compra" Type="Self.tb_pedido_compra" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_fornecedor">
-        <PropertyRef Name="id_fornecedor" />
-      </Principal>
-      <Dependent Role="tb_pedido_compra">
-        <PropertyRef Name="id_fornecedor" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="tb_produto_ibfk_1">
-    <End Role="tb_fornecedor" Type="Self.tb_fornecedor" Multiplicity="0..1" />
+    <End Role="tb_fornecedor" Type="Self.tb_fornecedor" Multiplicity="1" />
     <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_fornecedor">
@@ -300,7 +286,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_produto_ibfk_2">
-    <End Role="tb_categoria" Type="Self.tb_categoria" Multiplicity="0..1" />
+    <End Role="tb_categoria" Type="Self.tb_categoria" Multiplicity="1" />
     <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_categoria">
@@ -308,30 +294,6 @@
       </Principal>
       <Dependent Role="tb_produto">
         <PropertyRef Name="id_categoria" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="tb_produto_venda_ibfk_1">
-    <End Role="tb_estoque" Type="Self.tb_estoque" Multiplicity="1" />
-    <End Role="tb_produto_venda" Type="Self.tb_produto_venda" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_estoque">
-        <PropertyRef Name="id_estoque" />
-      </Principal>
-      <Dependent Role="tb_produto_venda">
-        <PropertyRef Name="id_estoque" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="tb_produto_venda_ibfk_2">
-    <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="1" />
-    <End Role="tb_produto_venda" Type="Self.tb_produto_venda" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_produto">
-        <PropertyRef Name="id_produto" />
-      </Principal>
-      <Dependent Role="tb_produto_venda">
-        <PropertyRef Name="id_produto" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -348,7 +310,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_venda_ibfk_1">
-    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="0..1">
+    <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
     <End Role="tb_venda" Type="Self.tb_venda" Multiplicity="*" />
@@ -362,21 +324,21 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_venda_item_ibfk_1">
-    <End Role="tb_produto_venda" Type="Self.tb_produto_venda" Multiplicity="0..1">
+    <End Role="tb_estoque" Type="Self.tb_estoque" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
     <End Role="tb_venda_item" Type="Self.tb_venda_item" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="tb_produto_venda">
-        <PropertyRef Name="id_produto_venda" />
+      <Principal Role="tb_estoque">
+        <PropertyRef Name="id_estoque" />
       </Principal>
       <Dependent Role="tb_venda_item">
-        <PropertyRef Name="id_produto_venda" />
+        <PropertyRef Name="id_estoque" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_venda_item_ibfk_2">
-    <End Role="tb_venda" Type="Self.tb_venda" Multiplicity="0..1">
+    <End Role="tb_venda" Type="Self.tb_venda" Multiplicity="1">
       <OnDelete Action="Cascade" />
     </End>
     <End Role="tb_venda_item" Type="Self.tb_venda_item" Multiplicity="*" />
@@ -391,6 +353,8 @@
   </Association>
   <EntityContainer Name="ecostoreModelStoreContainer">
     <EntitySet Name="tb_categoria" EntityType="Self.tb_categoria" Schema="db_a4e776_ecostor" store:Type="Tables" />
+    <EntitySet Name="tb_compra" EntityType="Self.tb_compra" Schema="db_a4e776_ecostor" store:Type="Tables" />
+    <EntitySet Name="tb_compra_item" EntityType="Self.tb_compra_item" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_controledeponto" EntityType="Self.tb_controledeponto" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_despesa" EntityType="Self.tb_despesa" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_estoque" EntityType="Self.tb_estoque" Schema="db_a4e776_ecostor" store:Type="Tables" />
@@ -398,26 +362,31 @@
     <EntitySet Name="tb_fornecedor" EntityType="Self.tb_fornecedor" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_funcionario" EntityType="Self.tb_funcionario" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_log" EntityType="Self.tb_log" Schema="db_a4e776_ecostor" store:Type="Tables" />
-    <EntitySet Name="tb_pedido_compra" EntityType="Self.tb_pedido_compra" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_produto" EntityType="Self.tb_produto" Schema="db_a4e776_ecostor" store:Type="Tables" />
-    <EntitySet Name="tb_produto_venda" EntityType="Self.tb_produto_venda" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_usuario" EntityType="Self.tb_usuario" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_venda" EntityType="Self.tb_venda" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_venda_item" EntityType="Self.tb_venda_item" Schema="db_a4e776_ecostor" store:Type="Tables" />
+    <EntitySet Name="vw_fluxocaixa" EntityType="Self.vw_fluxocaixa" store:Type="Views" store:Schema="db_a4e776_ecostor">
+      <DefiningQuery>SELECT
+`vw_fluxocaixa`.`dt_pagamento`, 
+`vw_fluxocaixa`.`vl_operacao`, 
+`vw_fluxocaixa`.`tp_operacao`
+FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="tb_compra_item_ibfk_1" Association="Self.tb_compra_item_ibfk_1">
+      <End Role="tb_compra" EntitySet="tb_compra" />
+      <End Role="tb_compra_item" EntitySet="tb_compra_item" />
+    </AssociationSet>
+    <AssociationSet Name="tb_compra_item_ibfk_2" Association="Self.tb_compra_item_ibfk_2">
+      <End Role="tb_produto" EntitySet="tb_produto" />
+      <End Role="tb_compra_item" EntitySet="tb_compra_item" />
+    </AssociationSet>
     <AssociationSet Name="tb_controledeponto_ibfk_1" Association="Self.tb_controledeponto_ibfk_1">
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
       <End Role="tb_controledeponto" EntitySet="tb_controledeponto" />
     </AssociationSet>
     <AssociationSet Name="tb_estoque_ibfk_1" Association="Self.tb_estoque_ibfk_1">
-      <End Role="tb_pedido_compra" EntitySet="tb_pedido_compra" />
-      <End Role="tb_estoque" EntitySet="tb_estoque" />
-    </AssociationSet>
-    <AssociationSet Name="tb_estoque_ibfk_2" Association="Self.tb_estoque_ibfk_2">
       <End Role="tb_produto" EntitySet="tb_produto" />
-      <End Role="tb_estoque" EntitySet="tb_estoque" />
-    </AssociationSet>
-    <AssociationSet Name="tb_estoque_ibfk_3" Association="Self.tb_estoque_ibfk_3">
-      <End Role="tb_fornecedor" EntitySet="tb_fornecedor" />
       <End Role="tb_estoque" EntitySet="tb_estoque" />
     </AssociationSet>
     <AssociationSet Name="tb_folhapagamento_ibfk_1" Association="Self.tb_folhapagamento_ibfk_1">
@@ -432,14 +401,6 @@
       <End Role="tb_usuario" EntitySet="tb_usuario" />
       <End Role="tb_log" EntitySet="tb_log" />
     </AssociationSet>
-    <AssociationSet Name="tb_pedido_compra_ibfk_1" Association="Self.tb_pedido_compra_ibfk_1">
-      <End Role="tb_produto" EntitySet="tb_produto" />
-      <End Role="tb_pedido_compra" EntitySet="tb_pedido_compra" />
-    </AssociationSet>
-    <AssociationSet Name="tb_pedido_compra_ibfk_2" Association="Self.tb_pedido_compra_ibfk_2">
-      <End Role="tb_fornecedor" EntitySet="tb_fornecedor" />
-      <End Role="tb_pedido_compra" EntitySet="tb_pedido_compra" />
-    </AssociationSet>
     <AssociationSet Name="tb_produto_ibfk_1" Association="Self.tb_produto_ibfk_1">
       <End Role="tb_fornecedor" EntitySet="tb_fornecedor" />
       <End Role="tb_produto" EntitySet="tb_produto" />
@@ -447,14 +408,6 @@
     <AssociationSet Name="tb_produto_ibfk_2" Association="Self.tb_produto_ibfk_2">
       <End Role="tb_categoria" EntitySet="tb_categoria" />
       <End Role="tb_produto" EntitySet="tb_produto" />
-    </AssociationSet>
-    <AssociationSet Name="tb_produto_venda_ibfk_1" Association="Self.tb_produto_venda_ibfk_1">
-      <End Role="tb_estoque" EntitySet="tb_estoque" />
-      <End Role="tb_produto_venda" EntitySet="tb_produto_venda" />
-    </AssociationSet>
-    <AssociationSet Name="tb_produto_venda_ibfk_2" Association="Self.tb_produto_venda_ibfk_2">
-      <End Role="tb_produto" EntitySet="tb_produto" />
-      <End Role="tb_produto_venda" EntitySet="tb_produto_venda" />
     </AssociationSet>
     <AssociationSet Name="tb_usuario_ibfk_1" Association="Self.tb_usuario_ibfk_1">
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
@@ -465,7 +418,7 @@
       <End Role="tb_venda" EntitySet="tb_venda" />
     </AssociationSet>
     <AssociationSet Name="tb_venda_item_ibfk_1" Association="Self.tb_venda_item_ibfk_1">
-      <End Role="tb_produto_venda" EntitySet="tb_produto_venda" />
+      <End Role="tb_estoque" EntitySet="tb_estoque" />
       <End Role="tb_venda_item" EntitySet="tb_venda_item" />
     </AssociationSet>
     <AssociationSet Name="tb_venda_item_ibfk_2" Association="Self.tb_venda_item_ibfk_2">
