@@ -71,7 +71,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 20);
             this.label2.TabIndex = 130;
-            this.label2.Text = "Usuario:";
+            this.label2.Text = "Usuário:";
             // 
             // btnEntrar
             // 
@@ -220,7 +220,7 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(155, 20);
             this.label7.TabIndex = 308;
-            this.label7.Text = "Cadastrar Usuario";
+            this.label7.Text = "Cadastrar Usuário";
             // 
             // comboBox2
             // 
