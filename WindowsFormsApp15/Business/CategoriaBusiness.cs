@@ -10,23 +10,34 @@ namespace WindowsFormsApp15.Business
     class CategoriaBusiness
     {
         Database.CategoriaDatabase db = new Database.CategoriaDatabase();
+
         public void CadastrarCategoria(tb_categoria modelo)
         {
             db.CadastrarCategoria(modelo);
         }
+
         public List<tb_categoria> ConsultarCategoria()
         {
             List<tb_categoria> lista = db.ListarCategoria();
 
             return lista;
         }
+ 
+        public tb_categoria ListarModeloCategoria(int id)
+        {
+            tb_categoria lista = db.ListarModeloCategoria(id);
+
+            return lista;
+        }
+
         public void AlterarPonto(tb_categoria modelo)
         {
             db.AlterarCategoria(modelo);
         }
-        public void RemoverPonto(tb_categoria modelo)
+
+        public void RemoverPonto(int id)
         {
-            db.RemoverCategoria(modelo);
+            db.RemoverCategoria(id);
         }
 
     }

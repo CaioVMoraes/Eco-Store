@@ -14,6 +14,7 @@ namespace WindowsFormsApp15.Business
         public void CadastrarEstoque(tb_estoque modelo)
         {
             db.CadastrarEstoque(modelo);
+
         }
         public List<tb_estoque> ConsultarEstoque()
         {
@@ -31,9 +32,9 @@ namespace WindowsFormsApp15.Business
         {
             db.AlterarEstoque(modelo);
         }
-        public void RemoverEstoque(tb_estoque modelo)
+        public void RemoverEstoque(int id)
         {
-            db.RemoverEstoque(modelo);
+            db.RemoverEstoque(id);
         }
     }
 }

@@ -44,9 +44,11 @@ namespace WindowsFormsApp15.Database
 
             db.SaveChanges();
         }
-        public void RemoverVenda(tb_venda modelo)
+        public void RemoverVenda(int id)
         {
-            db.tb_venda.Remove(modelo);
+            tb_venda deletar = db.tb_venda.FirstOrDefault(x => x.id_venda == id);
+            db.tb_venda.Remove(deletar);
+            db.SaveChanges();
         }
     }
 }

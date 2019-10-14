@@ -21,19 +21,34 @@ namespace WindowsFormsApp15
         {
             try
             {
-                Business.UsuarioBusiness business = new Business.UsuarioBusiness();
+                Business.UsuarioBusiness usuarioBusiness = new Business.UsuarioBusiness();
+                Business.FuncionarioBusiness funcionarioBusiness = new Business.FuncionarioBusiness();
 
                 string usuario = txtUsuario.Text;
                 string senha = txtSenha.Text;
 
-                bool login = business.Usuario(usuario, senha);
+                Model.tb_usuario modeloUsuario = usuarioBusiness.ModeloUsuario(usuario, senha);
 
-                Model.tb_usuario usuarioTB = business.ModeloUsuario(usuario, senha);
+                bool login = usuarioBusiness.Usuario(usuario, senha);
 
-                Objetos.Usuario.UsuarioLogado.ID = usuarioTB.id_usuario;
-                Objetos.Usuario.UsuarioLogado.Usuario = usuarioTB.nm_usuario;
-                Objetos.Usuario.UsuarioLogado.Senha = usuarioTB.nm_usuario;
-                Objetos.Usuario.UsuarioLogado.Email = usuarioTB.ds_senha;
+                Model.tb_funcionario funcionario = funcionarioBusiness.Listar(modeloUsuario.id_funcionario);
+
+                Objetos.Usuario.UsuarioLogado.ID = funcionario.id_funcionario;
+                Objetos.Usuario.UsuarioLogado.Nome = funcionario.nm_funcionario;
+                Objetos.Usuario.UsuarioLogado.RG = funcionario.ds_rg;
+                Objetos.Usuario.UsuarioLogado.CPF = funcionario.ds_cpf;
+                Objetos.Usuario.UsuarioLogado.telefone = funcionario.ds_telefone;
+                Objetos.Usuario.UsuarioLogado.Celular = funcionario.ds_celular;
+                Objetos.Usuario.UsuarioLogado.Email = funcionario.ds_email;
+                Objetos.Usuario.UsuarioLogado.endereco = funcionario.ds_endereco;
+                Objetos.Usuario.UsuarioLogado.numeroCasa = funcionario.ds_numeroCasa;
+                Objetos.Usuario.UsuarioLogado.cep = funcionario.ds_cep;
+                Objetos.Usuario.UsuarioLogado.cidade = funcionario.ds_cidade;
+                Objetos.Usuario.UsuarioLogado.UF = funcionario.ds_UF;
+                Objetos.Usuario.UsuarioLogado.cep = funcionario.ds_cep;
+                Objetos.Usuario.UsuarioLogado.cep = funcionario.ds_cep;
+                Objetos.Usuario.UsuarioLogado.cep = funcionario.ds_cep;
+
 
                 if (login == true)
                 {

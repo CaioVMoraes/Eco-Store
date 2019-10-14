@@ -51,15 +51,19 @@ namespace WindowsFormsApp15.Database
             modelo.vl_valor = alterar.vl_valor;
             modelo.id_categoria = alterar.id_categoria;
             modelo.id_fornecedor = alterar.id_fornecedor;
-
+            modelo.img_produto = alterar.img_produto;
+            
             db.SaveChanges();
           
         }
         public void RemoverProduto(tb_produto modelo)
         {
-            db.tb_produto.Remove(modelo);
+           tb_produto deletar = db.tb_produto.FirstOrDefault(x => x.id_produto == x.id_produto);
+
+            db.tb_produto.Remove(deletar);
 
             db.SaveChanges();
+
         }
 
 

@@ -31,9 +31,9 @@ namespace WindowsFormsApp15.Business
         {
             db.AlterarPonto(modelo);
         }
-        public void RemoverPonto(tb_controledeponto modelo)
+        public void RemoverPonto(int id)
         {
-            db.RemoverPonto(modelo);
+            db.RemoverPonto(id);
         }
     }
 }

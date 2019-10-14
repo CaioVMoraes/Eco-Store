@@ -33,9 +33,9 @@ namespace WindowsFormsApp15.Business
         {
             db.AlterarLog(modelo);
         }
-        public void RemoverLog(tb_log modelo)
+        public void RemoverLog(int id)
         {
-            db.RemoverLog(modelo);
+            db.RemoverLog(id);
         }
     }
 }

@@ -40,7 +40,7 @@
             // 
             // bunifuTileButton1
             // 
-            this.bunifuTileButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuTileButton1.BackColor = System.Drawing.Color.SeaGreen;
             this.bunifuTileButton1.color = System.Drawing.Color.SeaGreen;
             this.bunifuTileButton1.colorActive = System.Drawing.Color.MediumSeaGreen;
             this.bunifuTileButton1.Cursor = System.Windows.Forms.Cursors.Hand;

@@ -30,20 +30,19 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
-        public void RemoverUsuario(tb_usuario modelo)
+        public void RemoverUsuario(int id)
         {
-            db.tb_usuario.Remove(modelo);
+            tb_usuario deletar = db.tb_usuario.FirstOrDefault(x => x.id_usuario == x.id_usuario);
+            db.tb_usuario.Remove(deletar);
         }
         public void alterarusuario(tb_usuario modelo)
         {
-            tb_usuario alterar = db.tb_usuario.FirstOrDefault(x=> x.id_usuario == x.id_usuario);
+            tb_usuario alterar = db.tb_usuario.FirstOrDefault(x => x.id_usuario == x.id_usuario);
 
             modelo.nm_usuario = alterar.nm_usuario;
             modelo.ds_senha = alterar.ds_senha;
 
             db.SaveChanges();
-
-            
         }
     }
 }

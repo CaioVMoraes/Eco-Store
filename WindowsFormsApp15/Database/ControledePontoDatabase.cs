@@ -42,9 +42,12 @@ namespace WindowsFormsApp15.Database
 
             db.SaveChanges();
         }
-        public void RemoverPonto(tb_controledeponto modelo)
+        public void RemoverPonto(int id)
         {
-            db.tb_controledeponto.Remove(modelo);
+            tb_controledeponto deletar = db.tb_controledeponto.FirstOrDefault(x => x.id_controleDePonto ==id);
+
+            db.tb_controledeponto.Remove(deletar);
+            db.SaveChanges();
         }
     }
 }
