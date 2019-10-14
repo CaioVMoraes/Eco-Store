@@ -149,6 +149,18 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Objetos\Usuario.cs" />
+    <Compile Include="Telas\frmAlterarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmAlterarCategoria.Designer.cs">
+      <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmCadastrarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmCadastrarCategoria.Designer.cs">
+      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\frmDeletarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,11 +277,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Telas\frmAlterarCategoria.resx">
+      <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmAlterarFuncionario.resx">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmAlterarProdutos.resx">
       <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmCadastrarCategoria.resx">
+      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmCadastrarEstoque.resx">
       <DependentUpon>frmCadastrarEstoque.cs</DependentUpon>
@@ -374,6 +392,7 @@
     <None Include="Resources\IconeRemover1.png" />
     <None Include="Resources\EditarFuncionario.png" />
     <None Include="Resources\860086.png" />
+    <None Include="Resources\Etiqueta.png" />
     <Content Include="Resources\kkk.jpg" />
     <None Include="Resources\Logo Branco.png" />
     <None Include="Resources\Plano Verde1.png" />
