@@ -32,9 +32,9 @@ namespace WindowsFormsApp15.Business
             db.AlterarFornecedor(modelo);
         }
 
-        public void RemoverForncedor(Model.tb_fornecedor modelo)
+        public void RemoverForncedor(int id)
         {
-            db.RemoverFornecedor(modelo);
+            db.RemoverFornecedor(id);
         }
     }
 }

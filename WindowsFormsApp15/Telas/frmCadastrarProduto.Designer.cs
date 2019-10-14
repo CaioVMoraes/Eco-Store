@@ -33,7 +33,7 @@
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picProduto = new System.Windows.Forms.PictureBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,7 +47,7 @@
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduto)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             this.SuspendLayout();
@@ -103,16 +103,16 @@
             this.label5.TabIndex = 291;
             this.label5.Text = "Cadastrar Produto";
             // 
-            // pictureBox1
+            // picProduto
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::WindowsFormsApp15.Properties.Resources._860086;
-            this.pictureBox1.Location = new System.Drawing.Point(172, 71);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(139, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 311;
-            this.pictureBox1.TabStop = false;
+            this.picProduto.BackColor = System.Drawing.Color.Transparent;
+            this.picProduto.Image = global::WindowsFormsApp15.Properties.Resources._860086;
+            this.picProduto.Location = new System.Drawing.Point(172, 71);
+            this.picProduto.Name = "picProduto";
+            this.picProduto.Size = new System.Drawing.Size(139, 112);
+            this.picProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picProduto.TabIndex = 311;
+            this.picProduto.TabStop = false;
             // 
             // btnLimpar
             // 
@@ -216,6 +216,7 @@
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.Textcolor = System.Drawing.Color.White;
             this.btnCadastrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // txtIDFornecedor
             // 
@@ -282,7 +283,7 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(488, 553);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picProduto);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.label2);
@@ -295,7 +296,7 @@
             this.Text = "CadastrarProduto";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduto)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
@@ -310,7 +311,7 @@
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblSair;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picProduto;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Label label2;

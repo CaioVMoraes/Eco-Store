@@ -39,9 +39,12 @@ namespace WindowsFormsApp15.Database
 
             db.SaveChanges();
         }
-        public void RemoverEstoque(tb_estoque modelo)
+        public void RemoverEstoque(int id)
         {
-            db.tb_estoque.Remove(modelo);
+            tb_estoque deletar = db.tb_estoque.FirstOrDefault(x => x.id_estoque == id);
+
+            db.tb_estoque.Remove(deletar);
+            db.SaveChanges();
         }
     }
 }

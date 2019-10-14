@@ -39,9 +39,11 @@ namespace WindowsFormsApp15.Database
 
             db.SaveChanges();
         }
-        public void RemoverLog(tb_log modelo)
+        public void RemoverLog(int id)
         {
-            db.tb_log.Remove(modelo);
+            tb_log deletar = db.tb_log.FirstOrDefault(x => x.id_log ==  id);
+            db.tb_log.Remove(deletar);
+            db.SaveChanges();
         }
     }
 }

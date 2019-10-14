@@ -37,9 +37,9 @@ namespace WindowsFormsApp15.Business
         {
             db.AlterarVenda(modelo);
         }
-        public void RemoverVenda(tb_venda modelo)
+        public void RemoverVenda(int id)
         {
-            db.RemoverVenda(modelo);
+            db.RemoverVenda(id);
         }
     }
 }

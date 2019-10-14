@@ -22,6 +22,14 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
+
+        public tb_categoria ListarModeloCategoria(int id)
+        {
+            tb_categoria lista = db.tb_categoria.FirstOrDefault(X => X.id_categoria == id);
+
+            return lista;
+        }
+
         public void AlterarCategoria(tb_categoria modelo)
         {
             tb_categoria alterar = db.tb_categoria.FirstOrDefault(x => x.id_categoria == x.id_categoria);
@@ -31,9 +39,12 @@ namespace WindowsFormsApp15.Database
 
             db.SaveChanges();
         }
-        public void RemoverCategoria(tb_categoria modelo)
+        public void RemoverCategoria(int id)
         {
-            db.tb_categoria.Remove(modelo);
+            tb_categoria deletar = db.tb_categoria.FirstOrDefault(x => x.id_categoria == id);
+
+            db.tb_categoria.Remove(deletar);
+            db.SaveChanges();
         }
     }
 }

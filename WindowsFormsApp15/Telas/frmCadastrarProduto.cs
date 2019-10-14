@@ -17,6 +17,28 @@ namespace WindowsFormsApp15.Telas
             InitializeComponent();
         }
 
-       
+        
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Model.tb_produto modelo = new Model.tb_produto();
+                Business.ProdutoBusiness business = new Business.ProdutoBusiness();
+
+                modelo.id_fornecedor = Convert.ToInt32(txtIDFornecedor.Text);
+                modelo.id_categoria = Convert.ToInt32(cboCategoria.Text);
+                modelo.nm_produto = txtNome.Text;
+                modelo.vl_valor = nudValor.Value;
+
+                business.CadastrarProduto(modelo);
+
+                MessageBox.Show("Cadastrado com sucesso");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+        }
     }
 }

@@ -110,9 +110,10 @@ namespace WindowsFormsApp15.Business
 
             db.alterarusuario(usuario);
         }
-        public void RemoverUsuario(tb_usuario usuario)
+        public void RemoverUsuario(int id)
         {
             List<tb_usuario> lista = db.ListaDeUsuarios();
+            tb_usuario usuario = new tb_usuario();
 
             bool nomeExiste = lista.Exists(x => x.nm_usuario == usuario.nm_usuario);
 
@@ -136,7 +137,7 @@ namespace WindowsFormsApp15.Business
                 throw new ArgumentException("Senha deve ter pelo menos 8 caractéres");
             }
 
-            db.RemoverUsuario(usuario);
+            db.RemoverUsuario(id);
         }
 
     }
