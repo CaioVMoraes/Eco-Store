@@ -148,4 +148,4 @@ C:\Users\infob02\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\WindowsForm
 C:\Users\infob02\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\EcoStore.csproj.GenerateResource.Cache
 C:\Users\infob02\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
 C:\Users\infob02\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
-C:\Users\infob04\Source\Repos\eco-store3\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config
+C:\Users\infob08\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmDeletarFuncionario.resources

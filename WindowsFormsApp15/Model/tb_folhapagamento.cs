@@ -15,13 +15,26 @@ namespace WindowsFormsApp15.Model
     public partial class tb_folhapagamento
     {
         public int id_folhaPagamento { get; set; }
-        public Nullable<int> id_funcionario { get; set; }
-        public Nullable<int> id_controleDePonto { get; set; }
-        public Nullable<System.DateTime> dt_mes { get; set; }
-        public Nullable<decimal> vl_salario { get; set; }
-        public Nullable<decimal> vl_desconto { get; set; }
-        public Nullable<decimal> vl_contribuicao { get; set; }
-        public Nullable<decimal> vl_total { get; set; }
+        public int id_funcionario { get; set; }
+        public System.DateTime dt_pagamento { get; set; }
+        public int id_controleDePonto { get; set; }
+        public decimal vl_gratificacoes { get; set; }
+        public decimal vl_plr { get; set; }
+        public decimal vl_salarioFamilia { get; set; }
+        public decimal vl_totalProventos { get; set; }
+        public decimal vl_valeAlimentacao { get; set; }
+        public decimal vl_valeRefeicao { get; set; }
+        public decimal vl_valeTransporte { get; set; }
+        public decimal vl_totalVales { get; set; }
+        public decimal vl_inss { get; set; }
+        public decimal vl_ir { get; set; }
+        public decimal vl_fgts { get; set; }
+        public decimal vl_totalImpostos { get; set; }
+        public decimal vl_totalPlanos { get; set; }
+        public decimal vl_planoSaude { get; set; }
+        public decimal vl_planoOdonto { get; set; }
+        public decimal vl_faltas { get; set; }
+        public decimal vl_liquido { get; set; }
     
         public virtual tb_controledeponto tb_controledeponto { get; set; }
         public virtual tb_funcionario tb_funcionario { get; set; }

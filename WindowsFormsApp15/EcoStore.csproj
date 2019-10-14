@@ -106,6 +106,12 @@
     <Compile Include="Model\tb_categoria.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tb_compra.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tb_compra_item.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\tb_controledeponto.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -127,13 +133,7 @@
     <Compile Include="Model\tb_log.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Model\tb_pedido_compra.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Model\tb_produto.cs">
-      <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\tb_produto_venda.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tb_usuario.cs">
@@ -143,6 +143,9 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tb_venda_item.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\vw_fluxocaixa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Objetos\Usuario.cs" />

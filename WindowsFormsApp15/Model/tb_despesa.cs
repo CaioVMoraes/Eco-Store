@@ -16,7 +16,7 @@ namespace WindowsFormsApp15.Model
     {
         public int id_despesa { get; set; }
         public string ds_descricao { get; set; }
-        public Nullable<decimal> vl_despesa { get; set; }
-        public Nullable<System.DateTime> dt_pagamento { get; set; }
+        public decimal vl_despesa { get; set; }
+        public System.DateTime dt_pagamento { get; set; }
     }
 }

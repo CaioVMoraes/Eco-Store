@@ -25,6 +25,7 @@ namespace WindowsFormsApp15.Model
         public int id_funcionario { get; set; }
         public string nm_usuario { get; set; }
         public string ds_senha { get; set; }
+        public string nv_nivelAcesso { get; set; }
     
         public virtual tb_funcionario tb_funcionario { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
