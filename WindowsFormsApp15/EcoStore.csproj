@@ -149,112 +149,106 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Objetos\Usuario.cs" />
-    <Compile Include="Telas\frmDeletarFuncionario.cs">
+    <Compile Include="Telas\Funcionario_\frmDeletarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmDeletarFuncionario.Designer.cs">
+    <Compile Include="Telas\Funcionario_\frmDeletarFuncionario.Designer.cs">
       <DependentUpon>frmDeletarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmAlterarFuncionario.cs">
+    <Compile Include="Telas\Funcionario_\frmAlterarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmAlterarFuncionario.Designer.cs">
+    <Compile Include="Telas\Funcionario_\frmAlterarFuncionario.Designer.cs">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmAlterarProdutos.cs">
+    <Compile Include="Telas\Produto_\frmAlterarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmAlterarProdutos.Designer.cs">
+    <Compile Include="Telas\Produto_\frmAlterarProdutos.Designer.cs">
       <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmCadastrarEstoque.cs">
+    <Compile Include="Telas\Estoque\frmCadastrarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmCadastrarEstoque.Designer.cs">
+    <Compile Include="Telas\Estoque\frmCadastrarEstoque.Designer.cs">
       <DependentUpon>frmCadastrarEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmCadastrarFuncionario.cs">
+    <Compile Include="Telas\Funcionario_\frmCadastrarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmCadastrarFuncionario.Designer.cs">
+    <Compile Include="Telas\Funcionario_\frmCadastrarFuncionario.Designer.cs">
       <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmCadastrarPedido.cs">
+    <Compile Include="Telas\Pedido\frmCadastrarPedido.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmCadastrarPedido.Designer.cs">
+    <Compile Include="Telas\Pedido\frmCadastrarPedido.Designer.cs">
       <DependentUpon>frmCadastrarPedido.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmCadastrarPonto.cs">
+    <Compile Include="Telas\Controle de Ponto\frmCadastrarPonto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmCadastrarPonto.Designer.cs">
+    <Compile Include="Telas\Controle de Ponto\frmCadastrarPonto.Designer.cs">
       <DependentUpon>frmCadastrarPonto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmCadastrarProduto.cs">
+    <Compile Include="Telas\Produto_\frmCadastrarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmCadastrarProduto.Designer.cs">
+    <Compile Include="Telas\Produto_\frmCadastrarProduto.Designer.cs">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmCadastrarUsuario.cs">
+    <Compile Include="Telas\Usuario\frmCadastrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmCadastrarUsuario.Designer.cs">
+    <Compile Include="Telas\Usuario\frmCadastrarUsuario.Designer.cs">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmCadastroFornecedores.cs">
+    <Compile Include="Telas\Fornecedor\frmCadastroFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmCadastroFornecedores.Designer.cs">
+    <Compile Include="Telas\Fornecedor\frmCadastroFornecedores.Designer.cs">
       <DependentUpon>frmCadastroFornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmCadastroLogin.cs">
+    <Compile Include="Telas\Fornecedor\frmConsultarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmCadastroLogin.Designer.cs">
-      <DependentUpon>frmCadastroLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\frmConsultarFornecedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\frmConsultarFornecedor.Designer.cs">
+    <Compile Include="Telas\Fornecedor\frmConsultarFornecedor.Designer.cs">
       <DependentUpon>frmConsultarFornecedor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmConsultarFuncionario.cs">
+    <Compile Include="Telas\Funcionario_\frmConsultarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmConsultarFuncionario.Designer.cs">
+    <Compile Include="Telas\Funcionario_\frmConsultarFuncionario.Designer.cs">
       <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmConsultarPonto.cs">
+    <Compile Include="Telas\Controle de Ponto\frmConsultarPonto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmConsultarPonto.Designer.cs">
+    <Compile Include="Telas\Controle de Ponto\frmConsultarPonto.Designer.cs">
       <DependentUpon>frmConsultarPonto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmConsultarProduto.cs">
+    <Compile Include="Telas\Produto_\frmConsultarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmConsultarProduto.Designer.cs">
+    <Compile Include="Telas\Produto_\frmConsultarProduto.Designer.cs">
       <DependentUpon>frmConsultarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmDeletarProduto.cs">
+    <Compile Include="Telas\Produto_\frmDeletarProduto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmDeletarProduto.Designer.cs">
+    <Compile Include="Telas\Produto_\frmDeletarProduto.Designer.cs">
       <DependentUpon>frmDeletarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmFluxoCaixa.cs">
+    <Compile Include="Telas\Fluxo de Caixa\frmFluxoCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmFluxoCaixa.Designer.cs">
+    <Compile Include="Telas\Fluxo de Caixa\frmFluxoCaixa.Designer.cs">
       <DependentUpon>frmFluxoCaixa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\frmFolhaPagamento.cs">
+    <Compile Include="Telas\Folha de Pagamento\frmFolhaPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\frmFolhaPagamento.Designer.cs">
+    <Compile Include="Telas\Folha de Pagamento\frmFolhaPagamento.Designer.cs">
       <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\frmLogin.cs">
@@ -265,58 +259,55 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Telas\frmAlterarFuncionario.resx">
+    <EmbeddedResource Include="Telas\Funcionario_\frmAlterarFuncionario.resx">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmAlterarProdutos.resx">
+    <EmbeddedResource Include="Telas\Produto_\frmAlterarProdutos.resx">
       <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmCadastrarEstoque.resx">
+    <EmbeddedResource Include="Telas\Estoque\frmCadastrarEstoque.resx">
       <DependentUpon>frmCadastrarEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmCadastrarFuncionario.resx">
+    <EmbeddedResource Include="Telas\Funcionario_\frmCadastrarFuncionario.resx">
       <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmCadastrarPedido.resx">
+    <EmbeddedResource Include="Telas\Pedido\frmCadastrarPedido.resx">
       <DependentUpon>frmCadastrarPedido.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmCadastrarPonto.resx">
+    <EmbeddedResource Include="Telas\Controle de Ponto\frmCadastrarPonto.resx">
       <DependentUpon>frmCadastrarPonto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmCadastrarProduto.resx">
+    <EmbeddedResource Include="Telas\Produto_\frmCadastrarProduto.resx">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmCadastrarUsuario.resx">
+    <EmbeddedResource Include="Telas\Usuario\frmCadastrarUsuario.resx">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmCadastroFornecedores.resx">
+    <EmbeddedResource Include="Telas\Fornecedor\frmCadastroFornecedores.resx">
       <DependentUpon>frmCadastroFornecedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmCadastroLogin.resx">
-      <DependentUpon>frmCadastroLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmConsultarFornecedor.resx">
+    <EmbeddedResource Include="Telas\Fornecedor\frmConsultarFornecedor.resx">
       <DependentUpon>frmConsultarFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmConsultarFuncionario.resx">
+    <EmbeddedResource Include="Telas\Funcionario_\frmConsultarFuncionario.resx">
       <DependentUpon>frmConsultarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmConsultarPonto.resx">
+    <EmbeddedResource Include="Telas\Controle de Ponto\frmConsultarPonto.resx">
       <DependentUpon>frmConsultarPonto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmConsultarProduto.resx">
+    <EmbeddedResource Include="Telas\Produto_\frmConsultarProduto.resx">
       <DependentUpon>frmConsultarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmDeletarFuncionario.resx">
+    <EmbeddedResource Include="Telas\Funcionario_\frmDeletarFuncionario.resx">
       <DependentUpon>frmDeletarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmDeletarProduto.resx">
+    <EmbeddedResource Include="Telas\Produto_\frmDeletarProduto.resx">
       <DependentUpon>frmDeletarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmFluxoCaixa.resx">
+    <EmbeddedResource Include="Telas\Fluxo de Caixa\frmFluxoCaixa.resx">
       <DependentUpon>frmFluxoCaixa.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\frmFolhaPagamento.resx">
+    <EmbeddedResource Include="Telas\Folha de Pagamento\frmFolhaPagamento.resx">
       <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\frmLogin.resx">

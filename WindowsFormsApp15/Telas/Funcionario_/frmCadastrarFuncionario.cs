@@ -46,10 +46,6 @@ namespace WindowsFormsApp15.Telas
                 model.ds_complemento = txtComplemento.Text;
                 model.ds_numeroCasa = txtNumRes.Text;
 
-                //*Beneficíos*
-
-              
-
                 business.CadastrarFuncionario(model);
 
                 MessageBox.Show("Cadastrado com Sucesso");

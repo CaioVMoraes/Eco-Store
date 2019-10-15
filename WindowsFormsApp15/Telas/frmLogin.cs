@@ -37,18 +37,18 @@ namespace WindowsFormsApp15
                 Objetos.Usuario.UsuarioLogado.Nome = funcionario.nm_funcionario;
                 Objetos.Usuario.UsuarioLogado.RG = funcionario.ds_rg;
                 Objetos.Usuario.UsuarioLogado.CPF = funcionario.ds_cpf;
-                Objetos.Usuario.UsuarioLogado.telefone = funcionario.ds_telefone;
+                Objetos.Usuario.UsuarioLogado.Telefone = funcionario.ds_telefone;
                 Objetos.Usuario.UsuarioLogado.Celular = funcionario.ds_celular;
                 Objetos.Usuario.UsuarioLogado.Email = funcionario.ds_email;
-                Objetos.Usuario.UsuarioLogado.endereco = funcionario.ds_endereco;
-                Objetos.Usuario.UsuarioLogado.numeroCasa = funcionario.ds_numeroCasa;
+                Objetos.Usuario.UsuarioLogado.Endereco = funcionario.ds_endereco;
                 Objetos.Usuario.UsuarioLogado.cep = funcionario.ds_cep;
                 Objetos.Usuario.UsuarioLogado.cidade = funcionario.ds_cidade;
                 Objetos.Usuario.UsuarioLogado.UF = funcionario.ds_UF;
-                Objetos.Usuario.UsuarioLogado.cep = funcionario.ds_cep;
-                Objetos.Usuario.UsuarioLogado.cep = funcionario.ds_cep;
-                Objetos.Usuario.UsuarioLogado.cep = funcionario.ds_cep;
-
+                Objetos.Usuario.UsuarioLogado.Complemento = funcionario.ds_complemento;
+                Objetos.Usuario.UsuarioLogado.NumeroCasa = funcionario.ds_numeroCasa;
+                Objetos.Usuario.UsuarioLogado.Cargo = funcionario.ds_cargo;
+                Objetos.Usuario.UsuarioLogado.Salario = funcionario.vl_salario;
+                Objetos.Usuario.UsuarioLogado.DataContratacao = funcionario.dt_contratacao;
 
                 if (login == true)
                 {
