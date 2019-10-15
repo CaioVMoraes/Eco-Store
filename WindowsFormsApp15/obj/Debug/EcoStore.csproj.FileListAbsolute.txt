@@ -182,3 +182,4 @@ C:\Users\infob04\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\WindowsForm
 C:\Users\infob04\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\EcoStore.csproj.GenerateResource.Cache
 C:\Users\infob04\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
 C:\Users\infob04\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
+Z:\eco-store\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config
