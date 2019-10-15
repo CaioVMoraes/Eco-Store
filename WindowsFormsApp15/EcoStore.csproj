@@ -149,6 +149,24 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Objetos\Usuario.cs" />
+    <Compile Include="Telas\frmAlterarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmAlterarCategoria.Designer.cs">
+      <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmCadastrarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmCadastrarCategoria.Designer.cs">
+      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\frmDeletarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\frmDeletarCategoria.Designer.cs">
+      <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Funcionario_\frmDeletarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -259,6 +277,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Telas\frmAlterarCategoria.resx">
+      <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmCadastrarCategoria.resx">
+      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\frmDeletarCategoria.resx">
+      <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmAlterarFuncionario.resx">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
