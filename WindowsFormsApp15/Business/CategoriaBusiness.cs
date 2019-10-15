@@ -13,6 +13,17 @@ namespace WindowsFormsApp15.Business
 
         public void CadastrarCategoria(tb_categoria modelo)
         {
+            if (string.IsNullOrEmpty(modelo.nm_categoria))
+            {
+                
+            }
+
+            if (!Utils.Validacoes.ValidarCPF(""))
+            {
+
+            }
+
+
             db.CadastrarCategoria(modelo);
         }
 
