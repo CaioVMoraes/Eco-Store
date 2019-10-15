@@ -26,6 +26,7 @@ namespace WindowsFormsApp15.Model
         }
     
         public virtual DbSet<tb_categoria> tb_categoria { get; set; }
+        public virtual DbSet<tb_cliente> tb_cliente { get; set; }
         public virtual DbSet<tb_compra> tb_compra { get; set; }
         public virtual DbSet<tb_compra_item> tb_compra_item { get; set; }
         public virtual DbSet<tb_controledeponto> tb_controledeponto { get; set; }
