@@ -40,7 +40,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnAlterar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.dtpData = new Bunifu.Framework.UI.BunifuDatepicker();
             this.txtIDProduto = new System.Windows.Forms.TextBox();
@@ -49,6 +48,7 @@
             this.cboVendido = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnAlterar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -215,40 +215,6 @@
             this.groupBox2.TabIndex = 336;
             this.groupBox2.TabStop = false;
             // 
-            // btnAlterar
-            // 
-            this.btnAlterar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnAlterar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAlterar.BorderRadius = 0;
-            this.btnAlterar.ButtonText = "ALTERAR";
-            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlterar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAlterar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAlterar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Iconimage")));
-            this.btnAlterar.Iconimage_right = null;
-            this.btnAlterar.Iconimage_right_Selected = null;
-            this.btnAlterar.Iconimage_Selected = null;
-            this.btnAlterar.IconMarginLeft = 0;
-            this.btnAlterar.IconMarginRight = 0;
-            this.btnAlterar.IconRightVisible = true;
-            this.btnAlterar.IconRightZoom = 0D;
-            this.btnAlterar.IconVisible = true;
-            this.btnAlterar.IconZoom = 90D;
-            this.btnAlterar.IsTab = false;
-            this.btnAlterar.Location = new System.Drawing.Point(277, 216);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnAlterar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnAlterar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnAlterar.selected = false;
-            this.btnAlterar.Size = new System.Drawing.Size(138, 34);
-            this.btnAlterar.TabIndex = 171;
-            this.btnAlterar.Text = "ALTERAR";
-            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAlterar.Textcolor = System.Drawing.Color.White;
-            this.btnAlterar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // txtValor
             // 
             this.txtValor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -341,6 +307,40 @@
             this.label7.Size = new System.Drawing.Size(101, 20);
             this.label7.TabIndex = 316;
             this.label7.Text = "ID Produto:";
+            // 
+            // btnAlterar
+            // 
+            this.btnAlterar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnAlterar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAlterar.BorderRadius = 0;
+            this.btnAlterar.ButtonText = "ALTERAR";
+            this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlterar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnAlterar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnAlterar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Iconimage")));
+            this.btnAlterar.Iconimage_right = null;
+            this.btnAlterar.Iconimage_right_Selected = null;
+            this.btnAlterar.Iconimage_Selected = null;
+            this.btnAlterar.IconMarginLeft = 0;
+            this.btnAlterar.IconMarginRight = 0;
+            this.btnAlterar.IconRightVisible = true;
+            this.btnAlterar.IconRightZoom = 0D;
+            this.btnAlterar.IconVisible = true;
+            this.btnAlterar.IconZoom = 90D;
+            this.btnAlterar.IsTab = false;
+            this.btnAlterar.Location = new System.Drawing.Point(152, 217);
+            this.btnAlterar.Name = "btnAlterar";
+            this.btnAlterar.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnAlterar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnAlterar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnAlterar.selected = false;
+            this.btnAlterar.Size = new System.Drawing.Size(138, 34);
+            this.btnAlterar.TabIndex = 171;
+            this.btnAlterar.Text = "ALTERAR";
+            this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAlterar.Textcolor = System.Drawing.Color.White;
+            this.btnAlterar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // frmAlterarEstoque
             // 
