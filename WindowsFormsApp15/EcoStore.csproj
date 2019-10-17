@@ -170,6 +170,18 @@
     <Compile Include="Telas\Categoria_\frmDeletarCategoria.Designer.cs">
       <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Estoque\frmAlterarEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\frmAlterarEstoque.Designer.cs">
+      <DependentUpon>frmAlterarEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Estoque\frmConsultarEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Estoque\frmConsultarEstoque.Designer.cs">
+      <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Fluxo de Caixa\frmTelaCaixa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +325,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Categoria_\frmDeletarCategoria.resx">
       <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\frmAlterarEstoque.resx">
+      <DependentUpon>frmAlterarEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Estoque\frmConsultarEstoque.resx">
+      <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Fluxo de Caixa\frmTelaCaixa.resx">
       <DependentUpon>frmTelaCaixa.cs</DependentUpon>
