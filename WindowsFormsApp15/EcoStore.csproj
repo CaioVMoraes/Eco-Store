@@ -188,6 +188,12 @@
     <Compile Include="Telas\Funcionario_\frmAlterarFuncionario.Designer.cs">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Produto_\frmAlterarProdutos.cs">
       <SubType>Form</SubType>
     </Compile>
