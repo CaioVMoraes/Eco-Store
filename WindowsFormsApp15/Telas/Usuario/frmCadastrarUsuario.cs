@@ -24,23 +24,13 @@ namespace WindowsFormsApp15.Telas
         {
             try
             {
-                //*Informações Pessoais*
-
                 //model.id_funcionario = 
                 model.nm_usuario = txtUsuario.Text;
-                model.
+                model.ds_senha = txtSenha.Text;
+                string confirmar = txtConfirmar.Text;
+                model.nv_nivelAcesso = cboNivel.Text;
 
-                //*Endereço*
-
-                model.ds_endereco = txtEndereço.Text;
-                model.ds_cep = txtCep.Text;
-                model.ds_cidade = txtCidade.Text;
-                model.ds_UF = cboUF.Text;
-                model.ds_complemento = txtComplemento.Text;
-                model.ds_numeroCasa = txtNumRes.Text;
-                model.img_foto = null;
-
-                business.CadastrarFuncionario(model);
+                business.inserirUsuario(model, confirmar);
 
                 MessageBox.Show("Cadastrado com Sucesso");
             }
