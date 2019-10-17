@@ -29,92 +29,55 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCadastrarEstoque));
-            this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuMetroTextbox4 = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.bunifuDatepicker1 = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.bunifuDatepicker2 = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.cboVendido = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMinimizar = new System.Windows.Forms.Label();
+            this.lblSair = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dtpData = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.txtValor = new System.Windows.Forms.TextBox();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnEntrar
+            // btnCadastrar
             // 
-            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEntrar.BorderRadius = 0;
-            this.btnEntrar.ButtonText = "CADASTRAR";
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEntrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEntrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Iconimage")));
-            this.btnEntrar.Iconimage_right = null;
-            this.btnEntrar.Iconimage_right_Selected = null;
-            this.btnEntrar.Iconimage_Selected = null;
-            this.btnEntrar.IconMarginLeft = 0;
-            this.btnEntrar.IconMarginRight = 0;
-            this.btnEntrar.IconRightVisible = true;
-            this.btnEntrar.IconRightZoom = 0D;
-            this.btnEntrar.IconVisible = true;
-            this.btnEntrar.IconZoom = 90D;
-            this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(321, 277);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEntrar.selected = false;
-            this.btnEntrar.Size = new System.Drawing.Size(138, 34);
-            this.btnEntrar.TabIndex = 81;
-            this.btnEntrar.Text = "CADASTRAR";
-            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntrar.Textcolor = System.Drawing.Color.White;
-            this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // bunifuMetroTextbox4
-            // 
-            this.bunifuMetroTextbox4.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.bunifuMetroTextbox4.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuMetroTextbox4.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.bunifuMetroTextbox4.BorderThickness = 3;
-            this.bunifuMetroTextbox4.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox4.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuMetroTextbox4.isPassword = true;
-            this.bunifuMetroTextbox4.Location = new System.Drawing.Point(267, 188);
-            this.bunifuMetroTextbox4.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox4.Name = "bunifuMetroTextbox4";
-            this.bunifuMetroTextbox4.Size = new System.Drawing.Size(192, 33);
-            this.bunifuMetroTextbox4.TabIndex = 80;
-            this.bunifuMetroTextbox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(267, 79);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(192, 21);
-            this.comboBox2.TabIndex = 79;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(151, 162);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 20);
-            this.label4.TabIndex = 78;
-            this.label4.Text = "Validade:";
+            this.btnCadastrar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnCadastrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCadastrar.BorderRadius = 0;
+            this.btnCadastrar.ButtonText = "CADASTRAR";
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCadastrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Iconimage")));
+            this.btnCadastrar.Iconimage_right = null;
+            this.btnCadastrar.Iconimage_right_Selected = null;
+            this.btnCadastrar.Iconimage_Selected = null;
+            this.btnCadastrar.IconMarginLeft = 0;
+            this.btnCadastrar.IconMarginRight = 0;
+            this.btnCadastrar.IconRightVisible = true;
+            this.btnCadastrar.IconRightZoom = 0D;
+            this.btnCadastrar.IconVisible = true;
+            this.btnCadastrar.IconZoom = 90D;
+            this.btnCadastrar.IsTab = false;
+            this.btnCadastrar.Location = new System.Drawing.Point(287, 285);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnCadastrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCadastrar.selected = false;
+            this.btnCadastrar.Size = new System.Drawing.Size(138, 34);
+            this.btnCadastrar.TabIndex = 81;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrar.Textcolor = System.Drawing.Color.White;
+            this.btnCadastrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // label2
             // 
@@ -123,24 +86,11 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(85, 121);
+            this.label2.Location = new System.Drawing.Point(41, 162);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 20);
+            this.label2.Size = new System.Drawing.Size(155, 20);
             this.label2.TabIndex = 76;
-            this.label2.Text = "Data de Chegada";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(105, 80);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 20);
-            this.label6.TabIndex = 74;
-            this.label6.Text = "ID Fornecedor:";
+            this.label2.Text = "Data de Chegada:";
             // 
             // label7
             // 
@@ -149,58 +99,20 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(134, 40);
+            this.label7.Location = new System.Drawing.Point(41, 115);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(101, 20);
             this.label7.TabIndex = 73;
             this.label7.Text = "ID Produto:";
             // 
-            // label1
+            // cboVendido
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(87, 201);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 20);
-            this.label1.TabIndex = 82;
-            this.label1.Text = "Valor da Compra:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(267, 39);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(192, 21);
-            this.comboBox1.TabIndex = 83;
-            // 
-            // bunifuDatepicker1
-            // 
-            this.bunifuDatepicker1.BackColor = System.Drawing.Color.SkyBlue;
-            this.bunifuDatepicker1.BorderRadius = 0;
-            this.bunifuDatepicker1.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker1.FormatCustom = null;
-            this.bunifuDatepicker1.Location = new System.Drawing.Point(267, 109);
-            this.bunifuDatepicker1.Name = "bunifuDatepicker1";
-            this.bunifuDatepicker1.Size = new System.Drawing.Size(192, 32);
-            this.bunifuDatepicker1.TabIndex = 84;
-            this.bunifuDatepicker1.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
-            // 
-            // bunifuDatepicker2
-            // 
-            this.bunifuDatepicker2.BackColor = System.Drawing.Color.SkyBlue;
-            this.bunifuDatepicker2.BorderRadius = 0;
-            this.bunifuDatepicker2.ForeColor = System.Drawing.Color.White;
-            this.bunifuDatepicker2.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.bunifuDatepicker2.FormatCustom = null;
-            this.bunifuDatepicker2.Location = new System.Drawing.Point(267, 150);
-            this.bunifuDatepicker2.Name = "bunifuDatepicker2";
-            this.bunifuDatepicker2.Size = new System.Drawing.Size(192, 32);
-            this.bunifuDatepicker2.TabIndex = 85;
-            this.bunifuDatepicker2.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
+            this.cboVendido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboVendido.FormattingEnabled = true;
+            this.cboVendido.Location = new System.Drawing.Point(215, 233);
+            this.cboVendido.Name = "cboVendido";
+            this.cboVendido.Size = new System.Drawing.Size(210, 24);
+            this.cboVendido.TabIndex = 83;
             // 
             // label3
             // 
@@ -209,50 +121,129 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(31, 242);
+            this.label3.Location = new System.Drawing.Point(41, 237);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(204, 20);
+            this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 87;
-            this.label3.Text = "Quantidade no Estoque:";
+            this.label3.Text = "Vendido:";
             // 
-            // bunifuMetroTextbox1
+            // label4
             // 
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
-            this.bunifuMetroTextbox1.BorderThickness = 3;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bunifuMetroTextbox1.isPassword = true;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(267, 229);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(192, 33);
-            this.bunifuMetroTextbox1.TabIndex = 86;
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(41, 200);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(56, 20);
+            this.label4.TabIndex = 88;
+            this.label4.Text = "Valor:";
             // 
-            // CadastrarEstoque
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.lblMinimizar);
+            this.panel1.Controls.Add(this.lblSair);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(471, 28);
+            this.panel1.TabIndex = 309;
+            // 
+            // lblMinimizar
+            // 
+            this.lblMinimizar.AutoSize = true;
+            this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimizar.ForeColor = System.Drawing.Color.White;
+            this.lblMinimizar.Location = new System.Drawing.Point(417, 2);
+            this.lblMinimizar.Name = "lblMinimizar";
+            this.lblMinimizar.Size = new System.Drawing.Size(21, 23);
+            this.lblMinimizar.TabIndex = 156;
+            this.lblMinimizar.Text = "_";
+            // 
+            // lblSair
+            // 
+            this.lblSair.AutoSize = true;
+            this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSair.ForeColor = System.Drawing.Color.White;
+            this.lblSair.Location = new System.Drawing.Point(442, 5);
+            this.lblSair.Name = "lblSair";
+            this.lblSair.Size = new System.Drawing.Size(23, 23);
+            this.lblSair.TabIndex = 155;
+            this.lblSair.Text = "X";
+            // 
+            // txtID
+            // 
+            this.txtID.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.Location = new System.Drawing.Point(215, 112);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(210, 23);
+            this.txtID.TabIndex = 312;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(150, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 20);
+            this.label1.TabIndex = 313;
+            this.label1.Text = "Cadastrar Estoque";
+            // 
+            // dtpData
+            // 
+            this.dtpData.BackColor = System.Drawing.Color.SkyBlue;
+            this.dtpData.BorderRadius = 0;
+            this.dtpData.ForeColor = System.Drawing.Color.White;
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpData.FormatCustom = null;
+            this.dtpData.Location = new System.Drawing.Point(215, 150);
+            this.dtpData.Name = "dtpData";
+            this.dtpData.Size = new System.Drawing.Size(210, 32);
+            this.dtpData.TabIndex = 314;
+            this.dtpData.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
+            // 
+            // txtValor
+            // 
+            this.txtValor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtValor.Location = new System.Drawing.Point(215, 197);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(210, 23);
+            this.txtValor.TabIndex = 315;
+            // 
+            // frmCadastrarEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(507, 354);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.bunifuMetroTextbox1);
-            this.Controls.Add(this.bunifuDatepicker2);
-            this.Controls.Add(this.bunifuDatepicker1);
-            this.Controls.Add(this.comboBox1);
+            this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(471, 354);
+            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.dtpData);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.bunifuMetroTextbox4);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cboVendido);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
-            this.Name = "CadastrarEstoque";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "frmCadastrarEstoque";
             this.Text = "CadastrarEstoque";
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,18 +251,18 @@
 
         #endregion
 
-        private Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker1;
-        private Bunifu.Framework.UI.BunifuDatepicker bunifuDatepicker2;
+        private System.Windows.Forms.ComboBox cboVendido;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblMinimizar;
+        private System.Windows.Forms.Label lblSair;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuDatepicker dtpData;
+        private System.Windows.Forms.TextBox txtValor;
     }
 }

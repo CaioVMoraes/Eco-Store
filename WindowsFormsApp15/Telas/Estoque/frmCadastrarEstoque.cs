@@ -16,5 +16,10 @@ namespace WindowsFormsApp15.Telas
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
