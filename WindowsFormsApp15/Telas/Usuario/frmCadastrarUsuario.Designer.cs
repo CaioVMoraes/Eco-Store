@@ -42,8 +42,8 @@
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cboFuncionario = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.txtFuncionario = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -222,14 +222,6 @@
             this.label7.TabIndex = 308;
             this.label7.Text = "Cadastrar Usuário";
             // 
-            // cboFuncionario
-            // 
-            this.cboFuncionario.FormattingEnabled = true;
-            this.cboFuncionario.Location = new System.Drawing.Point(246, 253);
-            this.cboFuncionario.Name = "cboFuncionario";
-            this.cboFuncionario.Size = new System.Drawing.Size(183, 21);
-            this.cboFuncionario.TabIndex = 309;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -243,6 +235,14 @@
             this.label8.TabIndex = 310;
             this.label8.Text = "Funcionário:";
             // 
+            // txtFuncionario
+            // 
+            this.txtFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFuncionario.Location = new System.Drawing.Point(246, 251);
+            this.txtFuncionario.Name = "txtFuncionario";
+            this.txtFuncionario.Size = new System.Drawing.Size(183, 23);
+            this.txtFuncionario.TabIndex = 311;
+            // 
             // frmCadastrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -251,8 +251,8 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(501, 379);
+            this.Controls.Add(this.txtFuncionario);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.cboFuncionario);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtConfirmar);
@@ -288,7 +288,7 @@
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblSair;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cboFuncionario;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtFuncionario;
     }
 }
