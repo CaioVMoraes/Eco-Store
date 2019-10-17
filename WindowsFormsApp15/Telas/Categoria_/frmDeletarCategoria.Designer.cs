@@ -36,17 +36,17 @@
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.btnBuscar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label27 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnDeletar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
-            this.btnBuscar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnDeletar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,6 +131,40 @@
             this.txtID.Size = new System.Drawing.Size(216, 22);
             this.txtID.TabIndex = 284;
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnBuscar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBuscar.BorderRadius = 0;
+            this.btnBuscar.ButtonText = "BUSCAR";
+            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnBuscar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnBuscar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Iconimage")));
+            this.btnBuscar.Iconimage_right = null;
+            this.btnBuscar.Iconimage_right_Selected = null;
+            this.btnBuscar.Iconimage_Selected = null;
+            this.btnBuscar.IconMarginLeft = 0;
+            this.btnBuscar.IconMarginRight = 0;
+            this.btnBuscar.IconRightVisible = true;
+            this.btnBuscar.IconRightZoom = 0D;
+            this.btnBuscar.IconVisible = true;
+            this.btnBuscar.IconZoom = 90D;
+            this.btnBuscar.IsTab = false;
+            this.btnBuscar.Location = new System.Drawing.Point(429, 38);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnBuscar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnBuscar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnBuscar.selected = false;
+            this.btnBuscar.Size = new System.Drawing.Size(110, 27);
+            this.btnBuscar.TabIndex = 170;
+            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnBuscar.Textcolor = System.Drawing.Color.White;
+            this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
@@ -170,6 +204,40 @@
             this.groupBox2.Size = new System.Drawing.Size(576, 320);
             this.groupBox2.TabIndex = 316;
             this.groupBox2.TabStop = false;
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnDeletar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeletar.BorderRadius = 0;
+            this.btnDeletar.ButtonText = "DELETAR";
+            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDeletar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDeletar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Iconimage")));
+            this.btnDeletar.Iconimage_right = null;
+            this.btnDeletar.Iconimage_right_Selected = null;
+            this.btnDeletar.Iconimage_Selected = null;
+            this.btnDeletar.IconMarginLeft = 0;
+            this.btnDeletar.IconMarginRight = 0;
+            this.btnDeletar.IconRightVisible = true;
+            this.btnDeletar.IconRightZoom = 0D;
+            this.btnDeletar.IconVisible = true;
+            this.btnDeletar.IconZoom = 90D;
+            this.btnDeletar.IsTab = false;
+            this.btnDeletar.Location = new System.Drawing.Point(406, 265);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnDeletar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnDeletar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDeletar.selected = false;
+            this.btnDeletar.Size = new System.Drawing.Size(138, 34);
+            this.btnDeletar.TabIndex = 171;
+            this.btnDeletar.Text = "DELETAR";
+            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletar.Textcolor = System.Drawing.Color.White;
+            this.btnDeletar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // label7
             // 
@@ -245,74 +313,6 @@
             this.lblSair.Size = new System.Drawing.Size(23, 23);
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnBuscar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.BorderRadius = 0;
-            this.btnBuscar.ButtonText = "BUSCAR";
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBuscar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Iconimage")));
-            this.btnBuscar.Iconimage_right = null;
-            this.btnBuscar.Iconimage_right_Selected = null;
-            this.btnBuscar.Iconimage_Selected = null;
-            this.btnBuscar.IconMarginLeft = 0;
-            this.btnBuscar.IconMarginRight = 0;
-            this.btnBuscar.IconRightVisible = true;
-            this.btnBuscar.IconRightZoom = 0D;
-            this.btnBuscar.IconVisible = true;
-            this.btnBuscar.IconZoom = 90D;
-            this.btnBuscar.IsTab = false;
-            this.btnBuscar.Location = new System.Drawing.Point(429, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnBuscar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnBuscar.selected = false;
-            this.btnBuscar.Size = new System.Drawing.Size(110, 27);
-            this.btnBuscar.TabIndex = 170;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Textcolor = System.Drawing.Color.White;
-            this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnDeletar
-            // 
-            this.btnDeletar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnDeletar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDeletar.BorderRadius = 0;
-            this.btnDeletar.ButtonText = "DELETAR";
-            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDeletar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDeletar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Iconimage")));
-            this.btnDeletar.Iconimage_right = null;
-            this.btnDeletar.Iconimage_right_Selected = null;
-            this.btnDeletar.Iconimage_Selected = null;
-            this.btnDeletar.IconMarginLeft = 0;
-            this.btnDeletar.IconMarginRight = 0;
-            this.btnDeletar.IconRightVisible = true;
-            this.btnDeletar.IconRightZoom = 0D;
-            this.btnDeletar.IconVisible = true;
-            this.btnDeletar.IconZoom = 90D;
-            this.btnDeletar.IsTab = false;
-            this.btnDeletar.Location = new System.Drawing.Point(406, 265);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnDeletar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnDeletar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDeletar.selected = false;
-            this.btnDeletar.Size = new System.Drawing.Size(138, 34);
-            this.btnDeletar.TabIndex = 171;
-            this.btnDeletar.Text = "DELETAR";
-            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletar.Textcolor = System.Drawing.Color.White;
-            this.btnDeletar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // frmDeletarCategoria
             // 
