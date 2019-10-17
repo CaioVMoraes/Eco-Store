@@ -339,15 +339,16 @@
             // 
             // cboNivel
             // 
+            this.cboNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNivel.FormattingEnabled = true;
             this.cboNivel.Items.AddRange(new object[] {
             "Baixo",
             "Médio",
             "Alto",
             "Administrador"});
-            this.cboNivel.Location = new System.Drawing.Point(232, 170);
+            this.cboNivel.Location = new System.Drawing.Point(232, 167);
             this.cboNivel.Name = "cboNivel";
-            this.cboNivel.Size = new System.Drawing.Size(183, 21);
+            this.cboNivel.Size = new System.Drawing.Size(183, 24);
             this.cboNivel.TabIndex = 325;
             // 
             // label4
@@ -369,7 +370,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(493, 669);
+            this.ClientSize = new System.Drawing.Size(493, 673);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label21);

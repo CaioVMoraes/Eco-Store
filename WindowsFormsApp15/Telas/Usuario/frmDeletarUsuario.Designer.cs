@@ -37,7 +37,6 @@
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.cboNivel = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
             this.btnDeletar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.cboNivel = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -145,20 +145,6 @@
             this.txtUsuario.Size = new System.Drawing.Size(183, 23);
             this.txtUsuario.TabIndex = 327;
             // 
-            // cboNivel
-            // 
-            this.cboNivel.Enabled = false;
-            this.cboNivel.FormattingEnabled = true;
-            this.cboNivel.Items.AddRange(new object[] {
-            "Baixo",
-            "Médio",
-            "Alto",
-            "Administrador"});
-            this.cboNivel.Location = new System.Drawing.Point(232, 170);
-            this.cboNivel.Name = "cboNivel";
-            this.cboNivel.Size = new System.Drawing.Size(183, 21);
-            this.cboNivel.TabIndex = 325;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -234,6 +220,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.cboNivel);
             this.groupBox2.Controls.Add(this.txtFuncionario);
             this.groupBox2.Controls.Add(this.btnDeletar);
             this.groupBox2.Controls.Add(this.label8);
@@ -243,7 +230,6 @@
             this.groupBox2.Controls.Add(this.txtSenha);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtUsuario);
-            this.groupBox2.Controls.Add(this.cboNivel);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 344);
             this.groupBox2.Name = "groupBox2";
@@ -368,13 +354,28 @@
             this.btnDeletar.Textcolor = System.Drawing.Color.White;
             this.btnDeletar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // cboNivel
+            // 
+            this.cboNivel.Enabled = false;
+            this.cboNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNivel.FormattingEnabled = true;
+            this.cboNivel.Items.AddRange(new object[] {
+            "Baixo",
+            "Médio",
+            "Alto",
+            "Administrador"});
+            this.cboNivel.Location = new System.Drawing.Point(232, 167);
+            this.cboNivel.Name = "cboNivel";
+            this.cboNivel.Size = new System.Drawing.Size(183, 24);
+            this.cboNivel.TabIndex = 332;
+            // 
             // frmDeletarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(493, 669);
+            this.ClientSize = new System.Drawing.Size(493, 673);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox1);
@@ -406,7 +407,6 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.ComboBox cboNivel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label27;
@@ -420,5 +420,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox cboNivel;
     }
 }
