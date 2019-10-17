@@ -185,3 +185,4 @@ Z:\eco-store\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config
 C:\Users\infob04\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmAlterarCategoria.resources
 C:\Users\infob04\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmCadastrarCategoria.resources
 C:\Users\infob04\Source\Repos\eco-store3\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmDeletarCategoria.resources
+C:\Users\infob08\Source\Repos\eco-store3\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config

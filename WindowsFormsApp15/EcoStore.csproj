@@ -224,6 +224,12 @@
     <Compile Include="Telas\Produto_\frmCadastrarProduto.Designer.cs">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Usuario\frmAlterarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Usuario\frmAlterarUsuario.Designer.cs">
+      <DependentUpon>frmAlterarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Usuario\frmCadastrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,6 +325,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Produto_\frmCadastrarProduto.resx">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Usuario\frmAlterarUsuario.resx">
+      <DependentUpon>frmAlterarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Usuario\frmCadastrarUsuario.resx">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
