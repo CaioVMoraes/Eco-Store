@@ -25,12 +25,9 @@ namespace WindowsFormsApp15.Model
         public decimal vl_valeAlimentacao { get; set; }
         public decimal vl_valeRefeicao { get; set; }
         public decimal vl_valeTransporte { get; set; }
-        public decimal vl_totalVales { get; set; }
         public decimal vl_inss { get; set; }
         public decimal vl_ir { get; set; }
         public decimal vl_fgts { get; set; }
-        public decimal vl_totalImpostos { get; set; }
-        public decimal vl_totalPlanos { get; set; }
         public decimal vl_planoSaude { get; set; }
         public decimal vl_planoOdonto { get; set; }
         public decimal vl_faltas { get; set; }

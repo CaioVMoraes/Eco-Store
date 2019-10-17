@@ -8,6 +8,19 @@
     <Property Name="nm_categoria" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_categoria" Type="varchar" MaxLength="45" />
   </EntityType>
+  <EntityType Name="tb_cliente">
+    <Key>
+      <PropertyRef Name="id_cliente" />
+    </Key>
+    <Property Name="id_cliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nm_cliente" Type="varchar" MaxLength="70" Nullable="false" />
+    <Property Name="ds_telefone" Type="varchar" MaxLength="15" />
+    <Property Name="ds_celular" Type="varchar" MaxLength="15" />
+    <Property Name="ds_email" Type="varchar" MaxLength="50" />
+    <Property Name="ds_cpf" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="ds_rg" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="qtd_frequenciaMensal" Type="int" />
+  </EntityType>
   <EntityType Name="tb_compra">
     <Key>
       <PropertyRef Name="id_compra" />
@@ -72,12 +85,9 @@
     <Property Name="vl_valeAlimentacao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_valeRefeicao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_valeTransporte" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="vl_totalVales" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_inss" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_ir" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_fgts" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="vl_totalImpostos" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="vl_totalPlanos" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_planoSaude" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_planoOdonto" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_faltas" Type="decimal" Precision="10" Scale="2" Nullable="false" />
@@ -91,9 +101,13 @@
     <Property Name="nm_fornecedor" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="nm_empresa" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="ds_telefone" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="ds_endereco" Type="varchar" MaxLength="80" Nullable="false" />
-    <Property Name="ds_cnpj" Type="varchar" MaxLength="17" Nullable="false" />
     <Property Name="ds_celular" Type="varchar" MaxLength="15" />
+    <Property Name="ds_endereco" Type="varchar" MaxLength="80" />
+    <Property Name="ds_cep" Type="varchar" MaxLength="20" />
+    <Property Name="ds_cidade" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ds_UF" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
+    <Property Name="ds_cnpj" Type="varchar" MaxLength="17" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_funcionario">
     <Key>
@@ -101,24 +115,23 @@
     </Key>
     <Property Name="id_funcionario" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="nm_funcionario" Type="varchar" MaxLength="70" Nullable="false" />
-    <Property Name="dt_nascimento" Type="datetime" Precision="0" Nullable="false" />
-    <Property Name="ds_genero" Type="enum" Nullable="false" />
-    <Property Name="vl_convenio" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ds_rg" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ds_cpf" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="img_foto" Type="longblob" />
+    <Property Name="ds_telefone" Type="varchar" MaxLength="15" />
+    <Property Name="ds_celular" Type="varchar" MaxLength="20" />
+    <Property Name="ds_email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ds_endereco" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_cep" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_cidade" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ds_UF" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
-    <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="ds_cpf" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="ds_rg" Type="varchar" MaxLength="15" Nullable="false" />
-    <Property Name="img_foto" Type="longblob" Nullable="false" />
-    <Property Name="ds_email" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="ds_genero" Type="enum" Nullable="false" />
+    <Property Name="dt_nascimento" Type="date" Nullable="false" />
     <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="ds_endereco" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ds_telefone" Type="varchar" MaxLength="15" />
-    <Property Name="ds_celular" Type="varchar" MaxLength="20" />
-    <Property Name="dt_contratacao" Type="datetime" Precision="0" />
+    <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="dt_contratacao" Type="date" />
   </EntityType>
   <EntityType Name="tb_log">
     <Key>
@@ -157,6 +170,7 @@
     </Key>
     <Property Name="id_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_usuario" Type="int" Nullable="false" />
+    <Property Name="id_cliente" Type="int" Nullable="false" />
     <Property Name="dt_saida" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="vl_valorTotal" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
@@ -323,6 +337,20 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="tb_venda_ibfk_2">
+    <End Role="tb_cliente" Type="Self.tb_cliente" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="tb_venda" Type="Self.tb_venda" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tb_cliente">
+        <PropertyRef Name="id_cliente" />
+      </Principal>
+      <Dependent Role="tb_venda">
+        <PropertyRef Name="id_cliente" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="tb_venda_item_ibfk_1">
     <End Role="tb_estoque" Type="Self.tb_estoque" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -353,6 +381,7 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
   </Association>
   <EntityContainer Name="ecostoreModelStoreContainer">
     <EntitySet Name="tb_categoria" EntityType="Self.tb_categoria" Schema="db_a4e776_ecostor" store:Type="Tables" />
+    <EntitySet Name="tb_cliente" EntityType="Self.tb_cliente" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_compra" EntityType="Self.tb_compra" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_compra_item" EntityType="Self.tb_compra_item" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_controledeponto" EntityType="Self.tb_controledeponto" Schema="db_a4e776_ecostor" store:Type="Tables" />
@@ -415,6 +444,10 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
     </AssociationSet>
     <AssociationSet Name="tb_venda_ibfk_1" Association="Self.tb_venda_ibfk_1">
       <End Role="tb_usuario" EntitySet="tb_usuario" />
+      <End Role="tb_venda" EntitySet="tb_venda" />
+    </AssociationSet>
+    <AssociationSet Name="tb_venda_ibfk_2" Association="Self.tb_venda_ibfk_2">
+      <End Role="tb_cliente" EntitySet="tb_cliente" />
       <End Role="tb_venda" EntitySet="tb_venda" />
     </AssociationSet>
     <AssociationSet Name="tb_venda_item_ibfk_1" Association="Self.tb_venda_item_ibfk_1">

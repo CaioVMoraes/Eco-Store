@@ -60,7 +60,6 @@ namespace WindowsFormsApp15.Database
             tb_funcionario alterar = db.tb_funcionario.FirstOrDefault(x => x.nm_funcionario == x.nm_funcionario);
 
             modelo.nm_funcionario = alterar.nm_funcionario;
-            modelo.vl_convenio = alterar.vl_convenio;
             modelo.vl_salario = alterar.vl_salario;
             modelo.ds_cargo = alterar.ds_cargo;
             modelo.ds_celular = alterar.ds_celular;

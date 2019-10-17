@@ -12,27 +12,24 @@ namespace WindowsFormsApp15.Model
     using System;
     using System.Collections.Generic;
     
-    public partial class tb_fornecedor
+    public partial class tb_cliente
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public tb_fornecedor()
+        public tb_cliente()
         {
-            this.tb_produto = new HashSet<tb_produto>();
+            this.tb_venda = new HashSet<tb_venda>();
         }
     
-        public int id_fornecedor { get; set; }
-        public string nm_fornecedor { get; set; }
-        public string nm_empresa { get; set; }
+        public int id_cliente { get; set; }
+        public string nm_cliente { get; set; }
         public string ds_telefone { get; set; }
         public string ds_celular { get; set; }
-        public string ds_endereco { get; set; }
-        public string ds_cep { get; set; }
-        public string ds_cidade { get; set; }
-        public string ds_UF { get; set; }
-        public string ds_complemento { get; set; }
-        public string ds_cnpj { get; set; }
+        public string ds_email { get; set; }
+        public string ds_cpf { get; set; }
+        public string ds_rg { get; set; }
+        public Nullable<int> qtd_frequenciaMensal { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tb_produto> tb_produto { get; set; }
+        public virtual ICollection<tb_venda> tb_venda { get; set; }
     }
 }
