@@ -298,6 +298,12 @@
     <Compile Include="Telas\Usuario\frmConsultarUsuario.Designer.cs">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Usuario\frmDeletarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Usuario\frmDeletarUsuario.Designer.cs">
+      <DependentUpon>frmDeletarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Validacoes.cs" />
     <EmbeddedResource Include="Telas\Categoria_\frmAlterarCategoria.resx">
       <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
@@ -377,6 +383,9 @@
     </Compile>
     <EmbeddedResource Include="Telas\Usuario\frmConsultarUsuario.resx">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Usuario\frmDeletarUsuario.resx">
+      <DependentUpon>frmDeletarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
