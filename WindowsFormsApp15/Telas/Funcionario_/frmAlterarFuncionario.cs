@@ -50,11 +50,6 @@ namespace WindowsFormsApp15.Telas
 
                //*Salario*
 
-               
-          
-
-               
-
                 MessageBox.Show("Alterado com sucesso");
             }
             catch (Exception ex)

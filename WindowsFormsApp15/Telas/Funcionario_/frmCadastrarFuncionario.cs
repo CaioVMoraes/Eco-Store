@@ -45,6 +45,7 @@ namespace WindowsFormsApp15.Telas
                 model.ds_UF = cboUF.Text;
                 model.ds_complemento = txtComplemento.Text;
                 model.ds_numeroCasa = txtNumRes.Text;
+                model.img_foto = null;
 
                 business.CadastrarFuncionario(model);
 
