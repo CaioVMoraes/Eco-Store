@@ -152,6 +152,30 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Autenticacao\Usuario.cs" />
+    <Compile Include="Telas\Categoria_\frmAlterarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Categoria_\frmAlterarCategoria.Designer.cs">
+      <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Categoria_\frmCadastrarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Categoria_\frmCadastrarCategoria.Designer.cs">
+      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Categoria_\frmDeletarCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Categoria_\frmDeletarCategoria.Designer.cs">
+      <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Fluxo de Caixa\frmTelaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fluxo de Caixa\frmTelaCaixa.Designer.cs">
+      <DependentUpon>frmTelaCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Funcionario_\frmDeletarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,10 +266,6 @@
     <Compile Include="Telas\Produto_\frmDeletarProduto.Designer.cs">
       <DependentUpon>frmDeletarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Fluxo de Caixa\frmFluxoCaixa.cs" />
-    <Compile Include="Telas\Fluxo de Caixa\frmFluxoCaixa.Designer.cs">
-      <DependentUpon>frmFluxoCaixa.cs</DependentUpon>
-    </Compile>
     <Compile Include="Telas\Folha de Pagamento\frmFolhaPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -260,7 +280,25 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\Usuario\frmConsultarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Usuario\frmConsultarUsuario.Designer.cs">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Validacoes.cs" />
+    <EmbeddedResource Include="Telas\Categoria_\frmAlterarCategoria.resx">
+      <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Categoria_\frmCadastrarCategoria.resx">
+      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Categoria_\frmDeletarCategoria.resx">
+      <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fluxo de Caixa\frmTelaCaixa.resx">
+      <DependentUpon>frmTelaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmAlterarFuncionario.resx">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
     </EmbeddedResource>
@@ -306,9 +344,6 @@
     <EmbeddedResource Include="Telas\Produto_\frmDeletarProduto.resx">
       <DependentUpon>frmDeletarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Fluxo de Caixa\frmFluxoCaixa.resx">
-      <DependentUpon>frmFluxoCaixa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Folha de Pagamento\frmFolhaPagamento.resx">
       <DependentUpon>frmFolhaPagamento.cs</DependentUpon>
     </EmbeddedResource>
@@ -325,6 +360,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Telas\Usuario\frmConsultarUsuario.resx">
+      <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
