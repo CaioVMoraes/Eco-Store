@@ -26,21 +26,21 @@ namespace WindowsFormsApp15.Model
         public string nm_funcionario { get; set; }
         public string ds_rg { get; set; }
         public string ds_cpf { get; set; }
-        public byte[] img_foto { get; set; }
         public string ds_telefone { get; set; }
         public string ds_celular { get; set; }
         public string ds_email { get; set; }
+        public System.DateTime dt_nascimento { get; set; }
+        public string ds_genero { get; set; }
         public string ds_endereco { get; set; }
-        public string ds_numeroCasa { get; set; }
         public string ds_cep { get; set; }
         public string ds_cidade { get; set; }
         public string ds_UF { get; set; }
         public string ds_complemento { get; set; }
-        public string ds_genero { get; set; }
-        public System.DateTime dt_nascimento { get; set; }
-        public decimal vl_salario { get; set; }
+        public string ds_numeroCasa { get; set; }
         public string ds_cargo { get; set; }
-        public System.DateTime dt_contratacao { get; set; }
+        public decimal vl_salario { get; set; }
+        public Nullable<System.DateTime> dt_contratacao { get; set; }
+        public byte[] img_foto { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_controledeponto> tb_controledeponto { get; set; }

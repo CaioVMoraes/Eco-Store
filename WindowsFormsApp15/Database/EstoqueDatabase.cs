@@ -32,10 +32,8 @@ namespace WindowsFormsApp15.Database
         {
             tb_estoque alterar = db.tb_estoque.FirstOrDefault(x => x.id_estoque == x.id_estoque);
 
-            modelo.qtd_produto = alterar.qtd_produto;
             modelo.vl_valor = alterar.vl_valor;
             modelo.dt_entrada = alterar.dt_entrada;
-            modelo.dt_validade = alterar.dt_validade;
 
             db.SaveChanges();
         }

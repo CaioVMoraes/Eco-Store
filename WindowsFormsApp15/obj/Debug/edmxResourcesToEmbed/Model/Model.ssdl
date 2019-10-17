@@ -66,9 +66,8 @@
     <Property Name="id_estoque" Type="int" Nullable="false" />
     <Property Name="id_produto" Type="int" Nullable="false" />
     <Property Name="dt_entrada" Type="datetime" Precision="0" Nullable="false" />
-    <Property Name="dt_validade" Type="date" Nullable="false" />
     <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="qtd_produto" Type="int" Nullable="false" />
+    <Property Name="bt_vendido" Type="bool" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
     <Key>
@@ -76,12 +75,11 @@
     </Key>
     <Property Name="id_folhaPagamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_funcionario" Type="int" Nullable="false" />
-    <Property Name="dt_pagamento" Type="date" Nullable="false" />
     <Property Name="id_controleDePonto" Type="int" Nullable="false" />
+    <Property Name="dt_pagamento" Type="date" Nullable="false" />
     <Property Name="vl_gratificacoes" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_plr" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_salarioFamilia" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="vl_totalProventos" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_valeAlimentacao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_valeRefeicao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_valeTransporte" Type="decimal" Precision="10" Scale="2" Nullable="false" />
@@ -104,8 +102,8 @@
     <Property Name="ds_celular" Type="varchar" MaxLength="15" />
     <Property Name="ds_endereco" Type="varchar" MaxLength="80" />
     <Property Name="ds_cep" Type="varchar" MaxLength="20" />
-    <Property Name="ds_cidade" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ds_UF" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="ds_cidade" Type="varchar" MaxLength="50" />
+    <Property Name="ds_UF" Type="varchar" MaxLength="15" />
     <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
     <Property Name="ds_cnpj" Type="varchar" MaxLength="17" Nullable="false" />
   </EntityType>
@@ -117,20 +115,19 @@
     <Property Name="nm_funcionario" Type="varchar" MaxLength="70" Nullable="false" />
     <Property Name="ds_rg" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="ds_cpf" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="img_foto" Type="longblob" />
     <Property Name="ds_telefone" Type="varchar" MaxLength="15" />
     <Property Name="ds_celular" Type="varchar" MaxLength="20" />
     <Property Name="ds_email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="dt_nascimento" Type="date" Nullable="false" />
+    <Property Name="ds_genero" Type="enum" Nullable="false" />
     <Property Name="ds_endereco" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_cep" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_cidade" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="ds_UF" Type="varchar" MaxLength="15" Nullable="false" />
     <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
-    <Property Name="ds_genero" Type="enum" Nullable="false" />
-    <Property Name="dt_nascimento" Type="date" Nullable="false" />
-    <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="dt_contratacao" Type="date" />
   </EntityType>
   <EntityType Name="tb_log">
@@ -152,7 +149,7 @@
     <Property Name="id_categoria" Type="int" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="img_produto" Type="longblob" Nullable="false" />
+    <Property Name="img_produto" Type="longblob" />
   </EntityType>
   <EntityType Name="tb_usuario">
     <Key>

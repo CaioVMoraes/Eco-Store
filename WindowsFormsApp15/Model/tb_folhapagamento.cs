@@ -16,12 +16,11 @@ namespace WindowsFormsApp15.Model
     {
         public int id_folhaPagamento { get; set; }
         public int id_funcionario { get; set; }
-        public System.DateTime dt_pagamento { get; set; }
         public int id_controleDePonto { get; set; }
+        public System.DateTime dt_pagamento { get; set; }
         public decimal vl_gratificacoes { get; set; }
         public decimal vl_plr { get; set; }
         public decimal vl_salarioFamilia { get; set; }
-        public decimal vl_totalProventos { get; set; }
         public decimal vl_valeAlimentacao { get; set; }
         public decimal vl_valeRefeicao { get; set; }
         public decimal vl_valeTransporte { get; set; }

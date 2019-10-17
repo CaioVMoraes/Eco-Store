@@ -16,5 +16,13 @@ namespace WindowsFormsApp15.Telas.Usuario
         {
             InitializeComponent();
         }
+
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            Database.UsuarioDatabase database = new Database.UsuarioDatabase();
+            List<Model.tb_usuario> lista = database.ListaDeUsuarios();
+
+            dataGridView1.DataSource = lista;
+        }
     }
 }

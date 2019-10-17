@@ -69,9 +69,8 @@
     <EntitySetMapping Name="tb_estoque">
       <EntityTypeMapping TypeName="ecostoreModel.tb_estoque">
         <MappingFragment StoreEntitySet="tb_estoque">
-          <ScalarProperty Name="qtd_produto" ColumnName="qtd_produto" />
+          <ScalarProperty Name="bt_vendido" ColumnName="bt_vendido" />
           <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
-          <ScalarProperty Name="dt_validade" ColumnName="dt_validade" />
           <ScalarProperty Name="dt_entrada" ColumnName="dt_entrada" />
           <ScalarProperty Name="id_produto" ColumnName="id_produto" />
           <ScalarProperty Name="id_estoque" ColumnName="id_estoque" />
@@ -91,12 +90,11 @@
           <ScalarProperty Name="vl_valeTransporte" ColumnName="vl_valeTransporte" />
           <ScalarProperty Name="vl_valeRefeicao" ColumnName="vl_valeRefeicao" />
           <ScalarProperty Name="vl_valeAlimentacao" ColumnName="vl_valeAlimentacao" />
-          <ScalarProperty Name="vl_totalProventos" ColumnName="vl_totalProventos" />
           <ScalarProperty Name="vl_salarioFamilia" ColumnName="vl_salarioFamilia" />
           <ScalarProperty Name="vl_plr" ColumnName="vl_plr" />
           <ScalarProperty Name="vl_gratificacoes" ColumnName="vl_gratificacoes" />
-          <ScalarProperty Name="id_controleDePonto" ColumnName="id_controleDePonto" />
           <ScalarProperty Name="dt_pagamento" ColumnName="dt_pagamento" />
+          <ScalarProperty Name="id_controleDePonto" ColumnName="id_controleDePonto" />
           <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
           <ScalarProperty Name="id_folhaPagamento" ColumnName="id_folhaPagamento" />
         </MappingFragment>
@@ -123,20 +121,19 @@
       <EntityTypeMapping TypeName="ecostoreModel.tb_funcionario">
         <MappingFragment StoreEntitySet="tb_funcionario">
           <ScalarProperty Name="dt_contratacao" ColumnName="dt_contratacao" />
-          <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />
           <ScalarProperty Name="vl_salario" ColumnName="vl_salario" />
-          <ScalarProperty Name="dt_nascimento" ColumnName="dt_nascimento" />
-          <ScalarProperty Name="ds_genero" ColumnName="ds_genero" />
+          <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />
+          <ScalarProperty Name="ds_numeroCasa" ColumnName="ds_numeroCasa" />
           <ScalarProperty Name="ds_complemento" ColumnName="ds_complemento" />
           <ScalarProperty Name="ds_UF" ColumnName="ds_UF" />
           <ScalarProperty Name="ds_cidade" ColumnName="ds_cidade" />
           <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
-          <ScalarProperty Name="ds_numeroCasa" ColumnName="ds_numeroCasa" />
           <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
+          <ScalarProperty Name="ds_genero" ColumnName="ds_genero" />
+          <ScalarProperty Name="dt_nascimento" ColumnName="dt_nascimento" />
           <ScalarProperty Name="ds_email" ColumnName="ds_email" />
           <ScalarProperty Name="ds_celular" ColumnName="ds_celular" />
           <ScalarProperty Name="ds_telefone" ColumnName="ds_telefone" />
-          <ScalarProperty Name="img_foto" ColumnName="img_foto" />
           <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
           <ScalarProperty Name="ds_rg" ColumnName="ds_rg" />
           <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />

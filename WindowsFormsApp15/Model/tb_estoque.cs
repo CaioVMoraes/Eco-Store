@@ -23,9 +23,8 @@ namespace WindowsFormsApp15.Model
         public int id_estoque { get; set; }
         public int id_produto { get; set; }
         public System.DateTime dt_entrada { get; set; }
-        public System.DateTime dt_validade { get; set; }
         public decimal vl_valor { get; set; }
-        public int qtd_produto { get; set; }
+        public Nullable<bool> bt_vendido { get; set; }
     
         public virtual tb_produto tb_produto { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

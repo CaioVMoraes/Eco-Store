@@ -19,8 +19,6 @@ namespace WindowsFormsApp15
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            try
-            {
                 Business.UsuarioBusiness usuarioBusiness = new Business.UsuarioBusiness();
                 Business.FuncionarioBusiness funcionarioBusiness = new Business.FuncionarioBusiness();
 
@@ -52,17 +50,13 @@ namespace WindowsFormsApp15
 
                 if (login == true)
                 {
-                    MessageBox.Show("login efetuado com sucesso");
-                }
+                Telas.Menu tela = new Telas.Menu();
+                tela.Show();
+            }
                 else
                 {
                     MessageBox.Show("Credenciais incorretas");
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
 
         private void label1_Click(object sender, EventArgs e)

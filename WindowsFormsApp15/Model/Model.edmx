@@ -71,9 +71,8 @@
           <Property Name="id_estoque" Type="int" Nullable="false" />
           <Property Name="id_produto" Type="int" Nullable="false" />
           <Property Name="dt_entrada" Type="datetime" Precision="0" Nullable="false" />
-          <Property Name="dt_validade" Type="date" Nullable="false" />
           <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="qtd_produto" Type="int" Nullable="false" />
+          <Property Name="bt_vendido" Type="bool" />
         </EntityType>
         <EntityType Name="tb_folhapagamento">
           <Key>
@@ -81,12 +80,11 @@
           </Key>
           <Property Name="id_folhaPagamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_funcionario" Type="int" Nullable="false" />
-          <Property Name="dt_pagamento" Type="date" Nullable="false" />
           <Property Name="id_controleDePonto" Type="int" Nullable="false" />
+          <Property Name="dt_pagamento" Type="date" Nullable="false" />
           <Property Name="vl_gratificacoes" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="vl_plr" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="vl_salarioFamilia" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="vl_totalProventos" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="vl_valeAlimentacao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="vl_valeRefeicao" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="vl_valeTransporte" Type="decimal" Precision="10" Scale="2" Nullable="false" />
@@ -109,8 +107,8 @@
           <Property Name="ds_celular" Type="varchar" MaxLength="15" />
           <Property Name="ds_endereco" Type="varchar" MaxLength="80" />
           <Property Name="ds_cep" Type="varchar" MaxLength="20" />
-          <Property Name="ds_cidade" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ds_UF" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="ds_cidade" Type="varchar" MaxLength="50" />
+          <Property Name="ds_UF" Type="varchar" MaxLength="15" />
           <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
           <Property Name="ds_cnpj" Type="varchar" MaxLength="17" Nullable="false" />
         </EntityType>
@@ -122,21 +120,21 @@
           <Property Name="nm_funcionario" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="ds_rg" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="ds_cpf" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="img_foto" Type="longblob" />
           <Property Name="ds_telefone" Type="varchar" MaxLength="15" />
           <Property Name="ds_celular" Type="varchar" MaxLength="20" />
           <Property Name="ds_email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="dt_nascimento" Type="date" Nullable="false" />
+          <Property Name="ds_genero" Type="enum" Nullable="false" />
           <Property Name="ds_endereco" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="ds_cep" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="ds_cidade" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="ds_UF" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
-          <Property Name="ds_genero" Type="enum" Nullable="false" />
-          <Property Name="dt_nascimento" Type="date" Nullable="false" />
-          <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="dt_contratacao" Type="date" />
+          <Property Name="img_foto" Type="longblob" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_log">
           <Key>
@@ -157,7 +155,7 @@
           <Property Name="id_categoria" Type="int" Nullable="false" />
           <Property Name="nm_produto" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="img_produto" Type="longblob" Nullable="false" />
+          <Property Name="img_produto" Type="longblob" />
         </EntityType>
         <EntityType Name="tb_usuario">
           <Key>
@@ -615,9 +613,8 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="id_estoque" Type="Int32" Nullable="false" />
           <Property Name="id_produto" Type="Int32" Nullable="false" />
           <Property Name="dt_entrada" Type="DateTime" Nullable="false" />
-          <Property Name="dt_validade" Type="DateTime" Nullable="false" />
           <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-          <Property Name="qtd_produto" Type="Int32" Nullable="false" />
+          <Property Name="bt_vendido" Type="Boolean" />
           <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_estoque" ToRole="tb_produto" />
           <NavigationProperty Name="tb_venda_item" Relationship="ecostoreModel.tb_venda_item_ibfk_1" FromRole="tb_estoque" ToRole="tb_venda_item" />
         </EntityType>
@@ -627,12 +624,11 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           </Key>
           <Property Name="id_folhaPagamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_funcionario" Type="Int32" Nullable="false" />
-          <Property Name="dt_pagamento" Type="DateTime" Nullable="false" />
           <Property Name="id_controleDePonto" Type="Int32" Nullable="false" />
+          <Property Name="dt_pagamento" Type="DateTime" Nullable="false" />
           <Property Name="vl_gratificacoes" Type="Decimal" Nullable="false" />
           <Property Name="vl_plr" Type="Decimal" Nullable="false" />
           <Property Name="vl_salarioFamilia" Type="Decimal" Nullable="false" />
-          <Property Name="vl_totalProventos" Type="Decimal" Nullable="false" />
           <Property Name="vl_valeAlimentacao" Type="Decimal" Nullable="false" />
           <Property Name="vl_valeRefeicao" Type="Decimal" Nullable="false" />
           <Property Name="vl_valeTransporte" Type="Decimal" Nullable="false" />
@@ -657,8 +653,8 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="ds_celular" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="ds_endereco" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
           <Property Name="ds_cep" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ds_cidade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ds_UF" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ds_cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ds_UF" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="ds_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ds_cnpj" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_produto_ibfk_1" FromRole="tb_fornecedor" ToRole="tb_produto" />
@@ -671,21 +667,21 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="nm_funcionario" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
           <Property Name="ds_rg" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="ds_cpf" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="img_foto" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="ds_telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="ds_celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ds_email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dt_nascimento" Type="DateTime" Nullable="false" />
+          <Property Name="ds_genero" Type="String" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
           <Property Name="ds_endereco" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ds_cep" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ds_cidade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ds_UF" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="ds_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="ds_genero" Type="String" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
-          <Property Name="dt_nascimento" Type="DateTime" Nullable="false" />
-          <Property Name="vl_salario" Type="Decimal" Nullable="false" />
+          <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="vl_salario" Type="Decimal" Nullable="false" />
           <Property Name="dt_contratacao" Type="DateTime" />
+          <Property Name="img_foto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
           <NavigationProperty Name="tb_folhapagamento" Relationship="ecostoreModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
           <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_usuario_ibfk_1" FromRole="tb_funcionario" ToRole="tb_usuario" />
@@ -710,7 +706,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="id_categoria" Type="Int32" Nullable="false" />
           <Property Name="nm_produto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-          <Property Name="img_produto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="img_produto" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="tb_categoria" Relationship="ecostoreModel.tb_produto_ibfk_2" FromRole="tb_produto" ToRole="tb_categoria" />
           <NavigationProperty Name="tb_compra_item" Relationship="ecostoreModel.tb_compra_item_ibfk_2" FromRole="tb_produto" ToRole="tb_compra_item" />
           <NavigationProperty Name="tb_estoque" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_produto" ToRole="tb_estoque" />
@@ -1021,9 +1017,8 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <EntitySetMapping Name="tb_estoque">
             <EntityTypeMapping TypeName="ecostoreModel.tb_estoque">
               <MappingFragment StoreEntitySet="tb_estoque">
-                <ScalarProperty Name="qtd_produto" ColumnName="qtd_produto" />
+                <ScalarProperty Name="bt_vendido" ColumnName="bt_vendido" />
                 <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
-                <ScalarProperty Name="dt_validade" ColumnName="dt_validade" />
                 <ScalarProperty Name="dt_entrada" ColumnName="dt_entrada" />
                 <ScalarProperty Name="id_produto" ColumnName="id_produto" />
                 <ScalarProperty Name="id_estoque" ColumnName="id_estoque" />
@@ -1043,12 +1038,11 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
                 <ScalarProperty Name="vl_valeTransporte" ColumnName="vl_valeTransporte" />
                 <ScalarProperty Name="vl_valeRefeicao" ColumnName="vl_valeRefeicao" />
                 <ScalarProperty Name="vl_valeAlimentacao" ColumnName="vl_valeAlimentacao" />
-                <ScalarProperty Name="vl_totalProventos" ColumnName="vl_totalProventos" />
                 <ScalarProperty Name="vl_salarioFamilia" ColumnName="vl_salarioFamilia" />
                 <ScalarProperty Name="vl_plr" ColumnName="vl_plr" />
                 <ScalarProperty Name="vl_gratificacoes" ColumnName="vl_gratificacoes" />
-                <ScalarProperty Name="id_controleDePonto" ColumnName="id_controleDePonto" />
                 <ScalarProperty Name="dt_pagamento" ColumnName="dt_pagamento" />
+                <ScalarProperty Name="id_controleDePonto" ColumnName="id_controleDePonto" />
                 <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
                 <ScalarProperty Name="id_folhaPagamento" ColumnName="id_folhaPagamento" />
               </MappingFragment>
@@ -1074,21 +1068,21 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <EntitySetMapping Name="tb_funcionario">
             <EntityTypeMapping TypeName="ecostoreModel.tb_funcionario">
               <MappingFragment StoreEntitySet="tb_funcionario">
+                <ScalarProperty Name="img_foto" ColumnName="img_foto" />
                 <ScalarProperty Name="dt_contratacao" ColumnName="dt_contratacao" />
-                <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />
                 <ScalarProperty Name="vl_salario" ColumnName="vl_salario" />
-                <ScalarProperty Name="dt_nascimento" ColumnName="dt_nascimento" />
-                <ScalarProperty Name="ds_genero" ColumnName="ds_genero" />
+                <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />
+                <ScalarProperty Name="ds_numeroCasa" ColumnName="ds_numeroCasa" />
                 <ScalarProperty Name="ds_complemento" ColumnName="ds_complemento" />
                 <ScalarProperty Name="ds_UF" ColumnName="ds_UF" />
                 <ScalarProperty Name="ds_cidade" ColumnName="ds_cidade" />
                 <ScalarProperty Name="ds_cep" ColumnName="ds_cep" />
-                <ScalarProperty Name="ds_numeroCasa" ColumnName="ds_numeroCasa" />
                 <ScalarProperty Name="ds_endereco" ColumnName="ds_endereco" />
+                <ScalarProperty Name="ds_genero" ColumnName="ds_genero" />
+                <ScalarProperty Name="dt_nascimento" ColumnName="dt_nascimento" />
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
                 <ScalarProperty Name="ds_celular" ColumnName="ds_celular" />
                 <ScalarProperty Name="ds_telefone" ColumnName="ds_telefone" />
-                <ScalarProperty Name="img_foto" ColumnName="img_foto" />
                 <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
                 <ScalarProperty Name="ds_rg" ColumnName="ds_rg" />
                 <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />

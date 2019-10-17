@@ -230,16 +230,16 @@
     <Compile Include="Telas\Produto_\frmCadastrarProduto.Designer.cs">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Usuario\frmAlterarUsuario.cs">
+    <Compile Include="Telas\Usuario_\frmAlterarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Usuario\frmAlterarUsuario.Designer.cs">
+    <Compile Include="Telas\Usuario_\frmAlterarUsuario.Designer.cs">
       <DependentUpon>frmAlterarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Usuario\frmCadastrarUsuario.cs">
+    <Compile Include="Telas\Usuario_\frmCadastrarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Usuario\frmCadastrarUsuario.Designer.cs">
+    <Compile Include="Telas\Usuario_\frmCadastrarUsuario.Designer.cs">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Fornecedor\frmCadastroFornecedores.cs">
@@ -292,16 +292,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telas\Usuario\frmConsultarUsuario.cs">
+    <Compile Include="Telas\Usuario_\frmConsultarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Usuario\frmConsultarUsuario.Designer.cs">
+    <Compile Include="Telas\Usuario_\frmConsultarUsuario.Designer.cs">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Usuario\frmDeletarUsuario.cs">
+    <Compile Include="Telas\Usuario_\frmDeletarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Usuario\frmDeletarUsuario.Designer.cs">
+    <Compile Include="Telas\Usuario_\frmDeletarUsuario.Designer.cs">
       <DependentUpon>frmDeletarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Validacoes.cs" />
@@ -319,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmAlterarFuncionario.resx">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Produto_\frmAlterarProdutos.resx">
       <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
@@ -338,10 +341,10 @@
     <EmbeddedResource Include="Telas\Produto_\frmCadastrarProduto.resx">
       <DependentUpon>frmCadastrarProduto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Usuario\frmAlterarUsuario.resx">
+    <EmbeddedResource Include="Telas\Usuario_\frmAlterarUsuario.resx">
       <DependentUpon>frmAlterarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Usuario\frmCadastrarUsuario.resx">
+    <EmbeddedResource Include="Telas\Usuario_\frmCadastrarUsuario.resx">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Fornecedor\frmCadastroFornecedores.resx">
@@ -381,10 +384,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Telas\Usuario\frmConsultarUsuario.resx">
+    <EmbeddedResource Include="Telas\Usuario_\frmConsultarUsuario.resx">
       <DependentUpon>frmConsultarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Usuario\frmDeletarUsuario.resx">
+    <EmbeddedResource Include="Telas\Usuario_\frmDeletarUsuario.resx">
       <DependentUpon>frmDeletarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\Model.edmx">

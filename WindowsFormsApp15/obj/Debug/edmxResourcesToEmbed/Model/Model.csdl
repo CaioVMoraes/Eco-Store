@@ -147,9 +147,8 @@
     <Property Name="id_estoque" Type="Int32" Nullable="false" />
     <Property Name="id_produto" Type="Int32" Nullable="false" />
     <Property Name="dt_entrada" Type="DateTime" Nullable="false" />
-    <Property Name="dt_validade" Type="DateTime" Nullable="false" />
     <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-    <Property Name="qtd_produto" Type="Int32" Nullable="false" />
+    <Property Name="bt_vendido" Type="Boolean" />
     <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_estoque" ToRole="tb_produto" />
     <NavigationProperty Name="tb_venda_item" Relationship="ecostoreModel.tb_venda_item_ibfk_1" FromRole="tb_estoque" ToRole="tb_venda_item" />
   </EntityType>
@@ -159,12 +158,11 @@
     </Key>
     <Property Name="id_folhaPagamento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_funcionario" Type="Int32" Nullable="false" />
-    <Property Name="dt_pagamento" Type="DateTime" Nullable="false" />
     <Property Name="id_controleDePonto" Type="Int32" Nullable="false" />
+    <Property Name="dt_pagamento" Type="DateTime" Nullable="false" />
     <Property Name="vl_gratificacoes" Type="Decimal" Nullable="false" />
     <Property Name="vl_plr" Type="Decimal" Nullable="false" />
     <Property Name="vl_salarioFamilia" Type="Decimal" Nullable="false" />
-    <Property Name="vl_totalProventos" Type="Decimal" Nullable="false" />
     <Property Name="vl_valeAlimentacao" Type="Decimal" Nullable="false" />
     <Property Name="vl_valeRefeicao" Type="Decimal" Nullable="false" />
     <Property Name="vl_valeTransporte" Type="Decimal" Nullable="false" />
@@ -189,8 +187,8 @@
     <Property Name="ds_celular" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="ds_endereco" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
     <Property Name="ds_cep" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ds_cidade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ds_UF" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ds_cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ds_UF" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="ds_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ds_cnpj" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_produto_ibfk_1" FromRole="tb_fornecedor" ToRole="tb_produto" />
@@ -203,20 +201,19 @@
     <Property Name="nm_funcionario" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
     <Property Name="ds_rg" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="ds_cpf" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="img_foto" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="ds_telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="ds_celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ds_email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dt_nascimento" Type="DateTime" Nullable="false" />
+    <Property Name="ds_genero" Type="String" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
     <Property Name="ds_endereco" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ds_cep" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ds_cidade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ds_UF" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="ds_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ds_genero" Type="String" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
-    <Property Name="dt_nascimento" Type="DateTime" Nullable="false" />
-    <Property Name="vl_salario" Type="Decimal" Nullable="false" />
+    <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="vl_salario" Type="Decimal" Nullable="false" />
     <Property Name="dt_contratacao" Type="DateTime" />
     <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
     <NavigationProperty Name="tb_folhapagamento" Relationship="ecostoreModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
@@ -242,7 +239,7 @@
     <Property Name="id_categoria" Type="Int32" Nullable="false" />
     <Property Name="nm_produto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-    <Property Name="img_produto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="img_produto" Type="Binary" MaxLength="Max" FixedLength="false" />
     <NavigationProperty Name="tb_categoria" Relationship="ecostoreModel.tb_produto_ibfk_2" FromRole="tb_produto" ToRole="tb_categoria" />
     <NavigationProperty Name="tb_compra_item" Relationship="ecostoreModel.tb_compra_item_ibfk_2" FromRole="tb_produto" ToRole="tb_compra_item" />
     <NavigationProperty Name="tb_estoque" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_produto" ToRole="tb_estoque" />

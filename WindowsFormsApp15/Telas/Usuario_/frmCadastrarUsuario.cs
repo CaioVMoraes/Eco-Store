@@ -24,7 +24,7 @@ namespace WindowsFormsApp15.Telas
         {
             try
             {
-                //model.id_funcionario = 
+                model.id_funcionario = Convert.ToInt32(txtFuncionario.Text);
                 model.nm_usuario = txtUsuario.Text;
                 model.ds_senha = txtSenha.Text;
                 string confirmar = txtConfirmar.Text;

@@ -76,7 +76,6 @@ namespace WindowsFormsApp15.Database
             modelo.ds_UF = alterar.ds_UF;
             modelo.dt_contratacao = alterar.dt_contratacao;
             modelo.dt_nascimento = alterar.dt_nascimento;
-            modelo.img_foto = alterar.img_foto;
 
             db.SaveChanges();
 
