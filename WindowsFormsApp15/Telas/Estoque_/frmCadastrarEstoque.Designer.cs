@@ -32,7 +32,6 @@
             this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cboVendido = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -41,8 +40,11 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpData = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.txtValor = new System.Windows.Forms.TextBox();
+            this.nudValor = new System.Windows.Forms.NumericUpDown();
+            this.rdnSim = new System.Windows.Forms.RadioButton();
+            this.rdnNao = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCadastrar
@@ -78,6 +80,7 @@
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCadastrar.Textcolor = System.Drawing.Color.White;
             this.btnCadastrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // label2
             // 
@@ -104,15 +107,6 @@
             this.label7.Size = new System.Drawing.Size(101, 20);
             this.label7.TabIndex = 73;
             this.label7.Text = "ID Produto:";
-            // 
-            // cboVendido
-            // 
-            this.cboVendido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboVendido.FormattingEnabled = true;
-            this.cboVendido.Location = new System.Drawing.Point(215, 233);
-            this.cboVendido.Name = "cboVendido";
-            this.cboVendido.Size = new System.Drawing.Size(210, 24);
-            this.cboVendido.TabIndex = 83;
             // 
             // label3
             // 
@@ -212,13 +206,40 @@
             this.dtpData.TabIndex = 314;
             this.dtpData.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
             // 
-            // txtValor
+            // nudValor
             // 
-            this.txtValor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(215, 197);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(210, 23);
-            this.txtValor.TabIndex = 315;
+            this.nudValor.Location = new System.Drawing.Point(215, 200);
+            this.nudValor.Name = "nudValor";
+            this.nudValor.Size = new System.Drawing.Size(210, 20);
+            this.nudValor.TabIndex = 315;
+            // 
+            // rdnSim
+            // 
+            this.rdnSim.AutoSize = true;
+            this.rdnSim.BackColor = System.Drawing.Color.Transparent;
+            this.rdnSim.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdnSim.ForeColor = System.Drawing.Color.White;
+            this.rdnSim.Location = new System.Drawing.Point(215, 237);
+            this.rdnSim.Name = "rdnSim";
+            this.rdnSim.Size = new System.Drawing.Size(43, 19);
+            this.rdnSim.TabIndex = 316;
+            this.rdnSim.TabStop = true;
+            this.rdnSim.Text = "Sim";
+            this.rdnSim.UseVisualStyleBackColor = false;
+            // 
+            // rdnNao
+            // 
+            this.rdnNao.AutoSize = true;
+            this.rdnNao.BackColor = System.Drawing.Color.Transparent;
+            this.rdnNao.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdnNao.ForeColor = System.Drawing.Color.White;
+            this.rdnNao.Location = new System.Drawing.Point(323, 237);
+            this.rdnNao.Name = "rdnNao";
+            this.rdnNao.Size = new System.Drawing.Size(48, 19);
+            this.rdnNao.TabIndex = 317;
+            this.rdnNao.TabStop = true;
+            this.rdnNao.Text = "Não";
+            this.rdnNao.UseVisualStyleBackColor = false;
             // 
             // frmCadastrarEstoque
             // 
@@ -228,14 +249,15 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(471, 354);
-            this.Controls.Add(this.txtValor);
+            this.Controls.Add(this.rdnNao);
+            this.Controls.Add(this.rdnSim);
+            this.Controls.Add(this.nudValor);
             this.Controls.Add(this.dtpData);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.cboVendido);
             this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label7);
@@ -244,6 +266,7 @@
             this.Text = "CadastrarEstoque";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,7 +277,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cboVendido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
@@ -263,6 +285,8 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuDatepicker dtpData;
-        private System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.NumericUpDown nudValor;
+        private System.Windows.Forms.RadioButton rdnSim;
+        private System.Windows.Forms.RadioButton rdnNao;
     }
 }

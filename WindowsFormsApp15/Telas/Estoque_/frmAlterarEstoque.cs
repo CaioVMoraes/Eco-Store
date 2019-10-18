@@ -16,5 +16,13 @@ namespace WindowsFormsApp15.Telas.Estoque
         {
             InitializeComponent();
         }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            Model.tb_estoque modelo = new Model.tb_estoque();
+            Business.EstoqueBusiness business = new Business.EstoqueBusiness();
+
+
+        }
     }
 }
