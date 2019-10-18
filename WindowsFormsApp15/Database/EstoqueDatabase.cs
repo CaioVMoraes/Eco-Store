@@ -22,12 +22,14 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
+
         public tb_estoque Listar(int id)
         {
             tb_estoque modelo = db.tb_estoque.FirstOrDefault(x => x.id_estoque == id);
 
             return modelo;
         }
+
         public void AlterarEstoque(tb_estoque modelo)
         {
             tb_estoque alterar = db.tb_estoque.FirstOrDefault(x => x.id_estoque == x.id_estoque);

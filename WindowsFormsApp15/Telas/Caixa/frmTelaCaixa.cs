@@ -27,5 +27,23 @@ namespace WindowsFormsApp15.Telas
             
 
         }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            Model.tb_produto produto = listBox1.SelectedItem as Model.tb_produto;
+
+            // business pra ver se tem item no stock
+
+
+            List<Model.tb_produto> itens = dataGridView1.DataSource as List<Model.tb_produto>;
+            if (itens == null)
+                itens = new List<Model.tb_produto>();
+
+            itens.Add(produto);
+
+
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = itens;
+        }
     }
 }
