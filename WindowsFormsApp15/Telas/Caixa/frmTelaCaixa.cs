@@ -29,15 +29,22 @@ namespace WindowsFormsApp15.Telas
 
             if(estoque != null)
             {
-                List<Model.tb_produto> itens = dataGridView1.DataSource as List<Model.tb_produto>;
+                List<Model.tb_estoque> itens = dataGridView1.DataSource as List<Model.tb_estoque>;
                 if (itens == null)
-                    itens = new List<Model.tb_produto>();
+                    itens = new List<Model.tb_estoque>();
 
-                itens.Add(produto);
+
+                /*tb_estoque estoque = null;*/ // business pega o primeiro item do produto onde o vendido eh falso...e ja aproveita p da update p true
+
+
+                //itens.Add(estoque);
 
 
                 dataGridView1.DataSource = null;
                 dataGridView1.DataSource = itens;
+
+                decimal total = itens.Sum(x => x.vl_valor);
+                label1.Text = "R$" + total;
             }
             else
             {
@@ -49,12 +56,21 @@ namespace WindowsFormsApp15.Telas
         {
             List<tb_produto> lista = produtoBusiness.ConsultarTodosProdutos();
 
-            listBox1.DataSource = lista.Select(x => x.nm_produto);
+            listBox1.DisplayMember = nameof(tb_produto.nm_produto);
+            listBox1.DataSource = lista;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             //dataGridView1.
+
+
+            List<Model.tb_estoque> itens = dataGridView1.DataSource as List<Model.tb_estoque>;
+
+            foreach (var item in itens)
+            {
+                
+            }
         }
     }
 }
