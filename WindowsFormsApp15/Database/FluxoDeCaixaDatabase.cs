@@ -9,7 +9,6 @@ namespace WindowsFormsApp15.Database
 {
     class FluxoDeCaixaDatabase
     {
-        internal object vw_fluxocaixa;
         Model.ecostoreEntities db = new ecostoreEntities();
         public List<vw_fluxocaixa> FluxoDeCaixa()
         {

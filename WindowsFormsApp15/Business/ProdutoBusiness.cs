@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Business
 {
@@ -52,6 +53,13 @@ namespace WindowsFormsApp15.Business
         public List<Model.tb_produto> ConsultarProdutoFornecedor(int idfornecedor)
         {
             List<Model.tb_produto> lista = db.ConsultarProdutoFornecedor(idfornecedor);
+
+            return lista;
+        }
+
+        public List<tb_produto> ConsultarTodosProdutos()
+        {
+            List<tb_produto> lista = db.ConsultarTodosProdutos();
 
             return lista;
         }

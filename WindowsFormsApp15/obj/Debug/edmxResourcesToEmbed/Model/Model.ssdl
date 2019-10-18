@@ -129,6 +129,7 @@
     <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="dt_contratacao" Type="date" />
+    <Property Name="img_foto" Type="longblob" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_log">
     <Key>

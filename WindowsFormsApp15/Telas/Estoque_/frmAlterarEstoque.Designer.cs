@@ -40,19 +40,21 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtValor = new System.Windows.Forms.TextBox();
             this.dtpData = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.txtIDProduto = new System.Windows.Forms.TextBox();
+            this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cboVendido = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAlterar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.nudValor = new System.Windows.Forms.NumericUpDown();
+            this.rdnSim = new System.Windows.Forms.RadioButton();
+            this.rdnNao = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -170,6 +172,7 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Textcolor = System.Drawing.Color.White;
             this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label27
             // 
@@ -200,12 +203,13 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.txtValor);
+            this.groupBox2.Controls.Add(this.rdnNao);
+            this.groupBox2.Controls.Add(this.rdnSim);
+            this.groupBox2.Controls.Add(this.nudValor);
             this.groupBox2.Controls.Add(this.dtpData);
-            this.groupBox2.Controls.Add(this.txtIDProduto);
+            this.groupBox2.Controls.Add(this.txtNomeProduto);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.cboVendido);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.btnAlterar);
@@ -214,14 +218,6 @@
             this.groupBox2.Size = new System.Drawing.Size(460, 278);
             this.groupBox2.TabIndex = 336;
             this.groupBox2.TabStop = false;
-            // 
-            // txtValor
-            // 
-            this.txtValor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtValor.Location = new System.Drawing.Point(205, 114);
-            this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(210, 23);
-            this.txtValor.TabIndex = 323;
             // 
             // dtpData
             // 
@@ -236,13 +232,13 @@
             this.dtpData.TabIndex = 322;
             this.dtpData.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
             // 
-            // txtIDProduto
+            // txtNomeProduto
             // 
-            this.txtIDProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDProduto.Location = new System.Drawing.Point(205, 29);
-            this.txtIDProduto.Name = "txtIDProduto";
-            this.txtIDProduto.Size = new System.Drawing.Size(210, 23);
-            this.txtIDProduto.TabIndex = 321;
+            this.txtNomeProduto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeProduto.Location = new System.Drawing.Point(205, 29);
+            this.txtNomeProduto.Name = "txtNomeProduto";
+            this.txtNomeProduto.Size = new System.Drawing.Size(210, 23);
+            this.txtNomeProduto.TabIndex = 321;
             // 
             // label4
             // 
@@ -270,18 +266,6 @@
             this.label3.TabIndex = 319;
             this.label3.Text = "Vendido:";
             // 
-            // cboVendido
-            // 
-            this.cboVendido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboVendido.FormattingEnabled = true;
-            this.cboVendido.Items.AddRange(new object[] {
-            "Sim",
-            "Não"});
-            this.cboVendido.Location = new System.Drawing.Point(205, 150);
-            this.cboVendido.Name = "cboVendido";
-            this.cboVendido.Size = new System.Drawing.Size(210, 24);
-            this.cboVendido.TabIndex = 318;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -304,9 +288,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(31, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 20);
+            this.label7.Size = new System.Drawing.Size(148, 20);
             this.label7.TabIndex = 316;
-            this.label7.Text = "ID Produto:";
+            this.label7.Text = "Nome do Produto";
             // 
             // btnAlterar
             // 
@@ -343,6 +327,40 @@
             this.btnAlterar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
+            // nudValor
+            // 
+            this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudValor.Location = new System.Drawing.Point(205, 117);
+            this.nudValor.Name = "nudValor";
+            this.nudValor.Size = new System.Drawing.Size(210, 20);
+            this.nudValor.TabIndex = 323;
+            // 
+            // rdnSim
+            // 
+            this.rdnSim.AutoSize = true;
+            this.rdnSim.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdnSim.ForeColor = System.Drawing.Color.White;
+            this.rdnSim.Location = new System.Drawing.Point(205, 157);
+            this.rdnSim.Name = "rdnSim";
+            this.rdnSim.Size = new System.Drawing.Size(49, 20);
+            this.rdnSim.TabIndex = 324;
+            this.rdnSim.TabStop = true;
+            this.rdnSim.Text = "Sim";
+            this.rdnSim.UseVisualStyleBackColor = true;
+            // 
+            // rdnNao
+            // 
+            this.rdnNao.AutoSize = true;
+            this.rdnNao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdnNao.ForeColor = System.Drawing.Color.White;
+            this.rdnNao.Location = new System.Drawing.Point(305, 157);
+            this.rdnNao.Name = "rdnNao";
+            this.rdnNao.Size = new System.Drawing.Size(53, 20);
+            this.rdnNao.TabIndex = 325;
+            this.rdnNao.TabStop = true;
+            this.rdnNao.Text = "Não";
+            this.rdnNao.UseVisualStyleBackColor = true;
+            // 
             // frmAlterarEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,6 +384,7 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -384,13 +403,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
         private Bunifu.Framework.UI.BunifuFlatButton btnAlterar;
-        private System.Windows.Forms.TextBox txtValor;
         private Bunifu.Framework.UI.BunifuDatepicker dtpData;
-        private System.Windows.Forms.TextBox txtIDProduto;
+        private System.Windows.Forms.TextBox txtNomeProduto;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cboVendido;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown nudValor;
+        private System.Windows.Forms.RadioButton rdnNao;
+        private System.Windows.Forms.RadioButton rdnSim;
     }
 }

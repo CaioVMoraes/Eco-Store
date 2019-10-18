@@ -32,12 +32,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,22 +79,22 @@
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
             // 
-            // txtSenha
+            // txtDescricao
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(275, 152);
-            this.txtSenha.Multiline = true;
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(292, 185);
-            this.txtSenha.TabIndex = 312;
+            this.txtDescricao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescricao.Location = new System.Drawing.Point(275, 152);
+            this.txtDescricao.Multiline = true;
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(292, 114);
+            this.txtDescricao.TabIndex = 312;
             // 
-            // txtUsuario
+            // txtNome
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(275, 111);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(292, 23);
-            this.txtUsuario.TabIndex = 311;
+            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Location = new System.Drawing.Point(275, 111);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(292, 23);
+            this.txtNome.TabIndex = 311;
             // 
             // label1
             // 
@@ -135,39 +135,40 @@
             this.label3.TabIndex = 313;
             this.label3.Text = "Cadastrar Categoria";
             // 
-            // btnEntrar
+            // btnCadastrar
             // 
-            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEntrar.BorderRadius = 0;
-            this.btnEntrar.ButtonText = "CADASTRAR";
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEntrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEntrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Iconimage")));
-            this.btnEntrar.Iconimage_right = null;
-            this.btnEntrar.Iconimage_right_Selected = null;
-            this.btnEntrar.Iconimage_Selected = null;
-            this.btnEntrar.IconMarginLeft = 0;
-            this.btnEntrar.IconMarginRight = 0;
-            this.btnEntrar.IconRightVisible = true;
-            this.btnEntrar.IconRightZoom = 0D;
-            this.btnEntrar.IconVisible = true;
-            this.btnEntrar.IconZoom = 90D;
-            this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(429, 359);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEntrar.selected = false;
-            this.btnEntrar.Size = new System.Drawing.Size(138, 34);
-            this.btnEntrar.TabIndex = 314;
-            this.btnEntrar.Text = "CADASTRAR";
-            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntrar.Textcolor = System.Drawing.Color.White;
-            this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnCadastrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCadastrar.BorderRadius = 0;
+            this.btnCadastrar.ButtonText = "CADASTRAR";
+            this.btnCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCadastrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCadastrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCadastrar.Iconimage")));
+            this.btnCadastrar.Iconimage_right = null;
+            this.btnCadastrar.Iconimage_right_Selected = null;
+            this.btnCadastrar.Iconimage_Selected = null;
+            this.btnCadastrar.IconMarginLeft = 0;
+            this.btnCadastrar.IconMarginRight = 0;
+            this.btnCadastrar.IconRightVisible = true;
+            this.btnCadastrar.IconRightZoom = 0D;
+            this.btnCadastrar.IconVisible = true;
+            this.btnCadastrar.IconZoom = 90D;
+            this.btnCadastrar.IsTab = false;
+            this.btnCadastrar.Location = new System.Drawing.Point(429, 302);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnCadastrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnCadastrar.selected = false;
+            this.btnCadastrar.Size = new System.Drawing.Size(138, 34);
+            this.btnCadastrar.TabIndex = 314;
+            this.btnCadastrar.Text = "CADASTRAR";
+            this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastrar.Textcolor = System.Drawing.Color.White;
+            this.btnCadastrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // frmCadastrarCategoria
             // 
@@ -175,11 +176,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(605, 422);
-            this.Controls.Add(this.btnEntrar);
+            this.ClientSize = new System.Drawing.Size(605, 354);
+            this.Controls.Add(this.btnCadastrar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtSenha);
-            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
@@ -198,11 +199,11 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblSair;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
     }
 }
