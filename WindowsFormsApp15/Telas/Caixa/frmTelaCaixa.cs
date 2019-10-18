@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas
 {
@@ -17,33 +18,43 @@ namespace WindowsFormsApp15.Telas
             InitializeComponent();
         }
 
-        private void btnAddItem_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-
-        }
+        Business.EstoqueBusiness estoqueBusiness = new Business.EstoqueBusiness();
+        Business.ProdutoBusiness produtoBusiness = new Business.ProdutoBusiness();
 
         private void label15_Click(object sender, EventArgs e)
         {
             Model.tb_produto produto = listBox1.SelectedItem as Model.tb_produto;
 
-            // business pra ver se tem item no stock
+            List<Model.tb_estoque> estoque = estoqueBusiness.ConsultarEstoqueId(produto.id_produto);
+
+            if(estoque != null)
+            {
+                List<Model.tb_produto> itens = dataGridView1.DataSource as List<Model.tb_produto>;
+                if (itens == null)
+                    itens = new List<Model.tb_produto>();
+
+                itens.Add(produto);
 
 
-            List<Model.tb_produto> itens = dataGridView1.DataSource as List<Model.tb_produto>;
-            if (itens == null)
-                itens = new List<Model.tb_produto>();
+                dataGridView1.DataSource = null;
+                dataGridView1.DataSource = itens;
+            }
+            else
+            {
+                MessageBox.Show("Produto Indisponivel");
+            }
+        }
 
-            itens.Add(produto);
+        private void frmFluxoCaixa_Load(object sender, EventArgs e)
+        {
+            List<tb_produto> lista = produtoBusiness.ConsultarTodosProdutos();
 
+            listBox1.DataSource = lista.Select(x => x.nm_produto);
+        }
 
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = itens;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.
         }
     }
 }

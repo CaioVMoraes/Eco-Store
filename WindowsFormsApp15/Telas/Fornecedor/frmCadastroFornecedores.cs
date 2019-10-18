@@ -16,5 +16,13 @@ namespace WindowsFormsApp15.Telas
         {
             InitializeComponent();
         }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            Business.FornecedorBusiness business = new Business.FornecedorBusiness();
+
+            Model.tb_fornecedor model = new Model.tb_fornecedor();
+
+        }
     }
 }

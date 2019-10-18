@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFluxoCaixa));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -42,9 +45,6 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label15 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,9 +56,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -78,6 +78,42 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(724, 150);
             this.panel3.TabIndex = 72;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Location = new System.Drawing.Point(0, 85);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(724, 46);
+            this.panel4.TabIndex = 55;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(586, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 37);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "0,00";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label12.Location = new System.Drawing.Point(19, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 20);
+            this.label12.TabIndex = 56;
+            this.label12.Text = "Total (R$):";
             // 
             // label8
             // 
@@ -228,42 +264,6 @@
             this.label15.Text = "+";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(0, 85);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(724, 46);
-            this.panel4.TabIndex = 55;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(586, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 37);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "0,00";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(19, 13);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(83, 20);
-            this.label12.TabIndex = 56;
-            this.label12.Text = "Total (R$):";
-            // 
             // button1
             // 
             this.button1.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
@@ -405,13 +405,14 @@
             this.Name = "frmFluxoCaixa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FluxoCaixa";
+            this.Load += new System.EventHandler(this.frmFluxoCaixa_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

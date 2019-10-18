@@ -9,7 +9,6 @@ C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\MySql.Data.d
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\MySql.Data.Entity.EF6.dll
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\EntityFramework.xml
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csprojResolveAssemblyReference.cache
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Form1.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Properties.Resources.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csproj.GenerateResource.Cache
