@@ -204,6 +204,18 @@
     <Compile Include="Telas\Fluxo de Caixa\frmFluxoDeCaixa.Designer.cs">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Fornecedor\frmAlterarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fornecedor\frmAlterarFornecedor.Designer.cs">
+      <DependentUpon>frmAlterarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Fornecedor\frmDeletarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fornecedor\frmDeletarFornecedor.Designer.cs">
+      <DependentUpon>frmDeletarFornecedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Funcionario_\frmDeletarFuncionario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -332,6 +344,7 @@
     <Compile Include="Telas\Usuario_\frmDeletarUsuario.Designer.cs">
       <DependentUpon>frmDeletarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ConverterImagem.cs" />
     <Compile Include="Utils\Validacoes.cs" />
     <EmbeddedResource Include="Telas\Categoria_\frmAlterarCategoria.resx">
       <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
@@ -356,6 +369,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Fluxo de Caixa\frmFluxoDeCaixa.resx">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fornecedor\frmAlterarFornecedor.resx">
+      <DependentUpon>frmAlterarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fornecedor\frmDeletarFornecedor.resx">
+      <DependentUpon>frmDeletarFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmAlterarFuncionario.resx">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>

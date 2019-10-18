@@ -54,7 +54,7 @@ namespace WindowsFormsApp15.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.
+            //dataGridView1.
         }
     }
 }

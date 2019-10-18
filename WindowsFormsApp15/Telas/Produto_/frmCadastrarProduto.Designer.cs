@@ -46,6 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtImagem = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduto)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -131,6 +132,7 @@
             this.btnProcurar.TabIndex = 309;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // label2
             // 
@@ -275,6 +277,14 @@
             this.label4.TabIndex = 160;
             this.label4.Text = "Valor:";
             // 
+            // txtImagem
+            // 
+            this.txtImagem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImagem.Location = new System.Drawing.Point(141, 218);
+            this.txtImagem.Name = "txtImagem";
+            this.txtImagem.Size = new System.Drawing.Size(203, 23);
+            this.txtImagem.TabIndex = 303;
+            // 
             // frmCadastrarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -283,6 +293,7 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(488, 553);
+            this.Controls.Add(this.txtImagem);
             this.Controls.Add(this.picProduto);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnProcurar);
@@ -324,5 +335,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtImagem;
     }
 }

@@ -16,5 +16,11 @@ namespace WindowsFormsApp15.Telas
         {
             InitializeComponent();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Business.CategoriaBusiness business = new Business.CategoriaBusiness();
+            Model.tb_categoria model = new Model.tb_categoria();
+        }
     }
 }
