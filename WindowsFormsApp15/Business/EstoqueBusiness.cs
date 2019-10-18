@@ -15,7 +15,7 @@ namespace WindowsFormsApp15.Business
         {
             db.CadastrarEstoque(modelo);
 
-          if(modelo.id_estoque == 0)
+            if (modelo.id_estoque == 0)
             {
                 throw new ArgumentException("Id inválido");
             }
@@ -27,20 +27,16 @@ namespace WindowsFormsApp15.Business
             {
                 throw new ArgumentException("O campo valor é obrigatório");
             }
-            if (modelo.bt_vendido == null)
-            {
-                throw new ArgumentException("O campo vendido é obrigatório");
-            }
 
 
         }
         public List<tb_estoque> ConsultarEstoque()
         {
-           List<tb_estoque> lista = db.ConsultarEstoque();
+            List<tb_estoque> lista = db.ConsultarEstoque();
 
             return lista;
         }
-      
+
         public List<tb_estoque> ConsultarEstoqueId(int id)
         {
             List<tb_estoque> lista = db.ConsultarEstoqueId(id);
@@ -87,10 +83,7 @@ namespace WindowsFormsApp15.Business
             {
                 throw new ArgumentException("O campo valor é obrigatório");
             }
-            if (modelo.bt_vendido == null)
-            {
-                throw new ArgumentException("O campo vendido é obrigatório");
-            }
+
         }
         public void RemoverEstoque(int id)
         {
@@ -107,10 +100,6 @@ namespace WindowsFormsApp15.Business
             if (modelo.vl_valor == 0)
             {
                 throw new ArgumentException("O campo valor é obrigatório");
-            }
-            if (modelo.bt_vendido == null)
-            {
-                throw new ArgumentException("O campo vendido é obrigatório");
             }
 
         }

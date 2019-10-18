@@ -70,5 +70,6 @@ namespace WindowsFormsApp15.Database
             db.tb_estoque.Remove(deletar);
             db.SaveChanges();
         }
+
     }
 }
