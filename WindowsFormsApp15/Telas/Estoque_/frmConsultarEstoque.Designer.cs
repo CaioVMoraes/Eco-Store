@@ -32,16 +32,17 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvConsultarEstoque = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtProduto = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpData = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label4 = new System.Windows.Forms.Label();
-            this.cboVendido = new System.Windows.Forms.ComboBox();
+            this.rdnSim = new System.Windows.Forms.RadioButton();
+            this.rdnNao = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,14 +83,14 @@
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
             // 
-            // dataGridView1
+            // dgvConsultarEstoque
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 177);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(726, 331);
-            this.dataGridView1.TabIndex = 321;
+            this.dgvConsultarEstoque.BackgroundColor = System.Drawing.Color.White;
+            this.dgvConsultarEstoque.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarEstoque.Location = new System.Drawing.Point(12, 177);
+            this.dgvConsultarEstoque.Name = "dgvConsultarEstoque";
+            this.dgvConsultarEstoque.Size = new System.Drawing.Size(726, 331);
+            this.dgvConsultarEstoque.TabIndex = 321;
             // 
             // label3
             // 
@@ -124,6 +125,7 @@
             this.txtProduto.Name = "txtProduto";
             this.txtProduto.Size = new System.Drawing.Size(183, 23);
             this.txtProduto.TabIndex = 317;
+            this.txtProduto.TextChanged += new System.EventHandler(this.txtProduto_TextChanged);
             // 
             // label2
             // 
@@ -165,14 +167,35 @@
             this.label4.TabIndex = 323;
             this.label4.Text = "Vendido:";
             // 
-            // cboVendido
+            // rdnSim
             // 
-            this.cboVendido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboVendido.FormattingEnabled = true;
-            this.cboVendido.Location = new System.Drawing.Point(129, 141);
-            this.cboVendido.Name = "cboVendido";
-            this.cboVendido.Size = new System.Drawing.Size(183, 24);
-            this.cboVendido.TabIndex = 324;
+            this.rdnSim.AutoSize = true;
+            this.rdnSim.BackColor = System.Drawing.Color.Transparent;
+            this.rdnSim.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdnSim.ForeColor = System.Drawing.Color.White;
+            this.rdnSim.Location = new System.Drawing.Point(129, 145);
+            this.rdnSim.Name = "rdnSim";
+            this.rdnSim.Size = new System.Drawing.Size(49, 20);
+            this.rdnSim.TabIndex = 324;
+            this.rdnSim.TabStop = true;
+            this.rdnSim.Text = "Sim";
+            this.rdnSim.UseVisualStyleBackColor = false;
+            this.rdnSim.CheckedChanged += new System.EventHandler(this.rdnSim_CheckedChanged);
+            // 
+            // rdnNao
+            // 
+            this.rdnNao.AutoSize = true;
+            this.rdnNao.BackColor = System.Drawing.Color.Transparent;
+            this.rdnNao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdnNao.ForeColor = System.Drawing.Color.White;
+            this.rdnNao.Location = new System.Drawing.Point(199, 145);
+            this.rdnNao.Name = "rdnNao";
+            this.rdnNao.Size = new System.Drawing.Size(53, 20);
+            this.rdnNao.TabIndex = 325;
+            this.rdnNao.TabStop = true;
+            this.rdnNao.Text = "Não";
+            this.rdnNao.UseVisualStyleBackColor = false;
+            this.rdnNao.CheckedChanged += new System.EventHandler(this.rdnNao_CheckedChanged);
             // 
             // frmConsultarEstoque
             // 
@@ -181,11 +204,12 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(750, 520);
-            this.Controls.Add(this.cboVendido);
+            this.Controls.Add(this.rdnNao);
+            this.Controls.Add(this.rdnSim);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dtpData);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvConsultarEstoque);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtProduto);
@@ -195,7 +219,7 @@
             this.Text = "frmConsultarEstoque";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarEstoque)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,13 +230,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblSair;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvConsultarEstoque;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtProduto;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuDatepicker dtpData;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cboVendido;
+        private System.Windows.Forms.RadioButton rdnSim;
+        private System.Windows.Forms.RadioButton rdnNao;
     }
 }
