@@ -71,6 +71,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\CategoriaBusiness.cs" />
+    <Compile Include="Business\ClienteBusiness.cs" />
     <Compile Include="Business\ControleDePontoBusiness.cs" />
     <Compile Include="Business\EstoqueBusiness.cs" />
     <Compile Include="Business\FluxoDeCaixaBusiness.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Business\UsuarioBusiness.cs" />
     <Compile Include="Business\VendaBusiness.cs" />
     <Compile Include="Database\CategoriaDatabase.cs" />
+    <Compile Include="Database\ClienteDatabase.cs" />
     <Compile Include="Database\ControledePontoDatabase.cs" />
     <Compile Include="Database\EstoqueDatabase.cs" />
     <Compile Include="Database\FluxoDeCaixaDatabase.cs" />
@@ -201,6 +203,18 @@
     </Compile>
     <Compile Include="Telas\Fluxo de Caixa\frmFluxoDeCaixa.Designer.cs">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Fornecedor\frmAlterarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fornecedor\frmAlterarFornecedor.Designer.cs">
+      <DependentUpon>frmAlterarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Fornecedor\frmDeletarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fornecedor\frmDeletarFornecedor.Designer.cs">
+      <DependentUpon>frmDeletarFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Funcionario_\frmDeletarFuncionario.cs">
       <SubType>Form</SubType>
@@ -355,6 +369,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Fluxo de Caixa\frmFluxoDeCaixa.resx">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fornecedor\frmAlterarFornecedor.resx">
+      <DependentUpon>frmAlterarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fornecedor\frmDeletarFornecedor.resx">
+      <DependentUpon>frmDeletarFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmAlterarFuncionario.resx">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
