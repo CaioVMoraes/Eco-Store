@@ -9,8 +9,6 @@ namespace WindowsFormsApp15.Utils
 {
     class Validacoes
     {
-        
-
         public static bool ValidarCPF(string cpf)
         {
             Regex regex = new Regex("^$");
