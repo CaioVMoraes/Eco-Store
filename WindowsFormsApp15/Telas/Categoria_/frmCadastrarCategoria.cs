@@ -21,6 +21,13 @@ namespace WindowsFormsApp15.Telas
         {
             Business.CategoriaBusiness business = new Business.CategoriaBusiness();
             Model.tb_categoria model = new Model.tb_categoria();
+
+            model.nm_categoria = txtNome.Text;
+            model.ds_categoria = txtDescricao.Text;
+
+            business.CadastrarCategoria(model);
+
+            MessageBox.Show("Cadastrado com sucesso");
         }
     }
 }
