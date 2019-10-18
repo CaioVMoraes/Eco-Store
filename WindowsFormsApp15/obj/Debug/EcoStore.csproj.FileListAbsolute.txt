@@ -239,3 +239,6 @@ C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsForms
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmFolhaPagamento.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Usuario.frmConsultarUsuario.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Usuario.frmDeletarUsuario.resources
+C:\Users\infob04\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config
+C:\Users\infob04\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
+C:\Users\infob04\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
