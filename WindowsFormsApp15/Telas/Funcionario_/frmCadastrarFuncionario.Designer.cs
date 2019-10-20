@@ -75,6 +75,8 @@
             this.txtNumRes = new System.Windows.Forms.TextBox();
             this.txtRg = new System.Windows.Forms.MaskedTextBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.panel1.SuspendLayout();
@@ -262,7 +264,7 @@
             this.btnCadastrarFuncionario.IconVisible = true;
             this.btnCadastrarFuncionario.IconZoom = 90D;
             this.btnCadastrarFuncionario.IsTab = true;
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(613, 547);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(613, 560);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnCadastrarFuncionario.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -532,7 +534,7 @@
             this.lblErro.BackColor = System.Drawing.Color.Transparent;
             this.lblErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblErro.ForeColor = System.Drawing.Color.Red;
-            this.lblErro.Location = new System.Drawing.Point(614, 620);
+            this.lblErro.Location = new System.Drawing.Point(614, 623);
             this.lblErro.Name = "lblErro";
             this.lblErro.Size = new System.Drawing.Size(0, 16);
             this.lblErro.TabIndex = 284;
@@ -636,6 +638,24 @@
             this.txtCpf.Size = new System.Drawing.Size(193, 24);
             this.txtCpf.TabIndex = 297;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Location = new System.Drawing.Point(31, 68);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(697, 249);
+            this.groupBox1.TabIndex = 298;
+            this.groupBox1.TabStop = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Location = new System.Drawing.Point(31, 370);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(555, 245);
+            this.groupBox2.TabIndex = 299;
+            this.groupBox2.TabStop = false;
+            // 
             // frmCadastrarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -686,6 +706,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastrarFuncionario";
             this.Text = "CadastrarFuncionario";
@@ -746,5 +768,7 @@
         private System.Windows.Forms.TextBox txtNumRes;
         private System.Windows.Forms.MaskedTextBox txtRg;
         private System.Windows.Forms.MaskedTextBox txtCpf;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }
