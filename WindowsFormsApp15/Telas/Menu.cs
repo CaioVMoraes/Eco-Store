@@ -4,14 +4,22 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp15.Telas
 {
+
     public partial class Menu : Form
     {
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
         public Menu()
         {
             InitializeComponent();
@@ -19,13 +27,20 @@ namespace WindowsFormsApp15.Telas
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            label1.Text = Objetos.Usuario.UsuarioLogado.Nome;
-            label2.Text = Objetos.Usuario.UsuarioLogado.RG;
-            label3.Text = Objetos.Usuario.UsuarioLogado.CPF;
-            label4.Text = Objetos.Usuario.UsuarioLogado.Email;
-            label5.Text = Objetos.Usuario.UsuarioLogado.Telefone;
-            label6.Text = Objetos.Usuario.UsuarioLogado.Endereco;
 
+        }
+
+        public static void Move_Form(IntPtr Handle, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Move_Form(Handle, e);
         }
     }
 }

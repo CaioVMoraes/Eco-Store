@@ -191,6 +191,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 28);
             this.panel1.TabIndex = 338;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // label28
             // 
@@ -305,7 +306,7 @@
             this.dtpContrat.BackColor = System.Drawing.Color.SkyBlue;
             this.dtpContrat.BorderRadius = 0;
             this.dtpContrat.ForeColor = System.Drawing.Color.White;
-            this.dtpContrat.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpContrat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpContrat.FormatCustom = null;
             this.dtpContrat.Location = new System.Drawing.Point(262, 531);
             this.dtpContrat.Name = "dtpContrat";
@@ -318,7 +319,7 @@
             this.dtpNascimento.BackColor = System.Drawing.Color.SkyBlue;
             this.dtpNascimento.BorderRadius = 0;
             this.dtpNascimento.ForeColor = System.Drawing.Color.White;
-            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNascimento.FormatCustom = null;
             this.dtpNascimento.Location = new System.Drawing.Point(262, 393);
             this.dtpNascimento.Name = "dtpNascimento";

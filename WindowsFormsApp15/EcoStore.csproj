@@ -71,8 +71,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Business\CategoriaBusiness.cs" />
+    <Compile Include="Business\ClienteBusiness.cs" />
     <Compile Include="Business\ControleDePontoBusiness.cs" />
     <Compile Include="Business\EstoqueBusiness.cs" />
+    <Compile Include="Business\FluxoDeCaixaBusiness.cs" />
     <Compile Include="Business\FornecedorBusiness.cs" />
     <Compile Include="Business\FuncionarioBusiness.cs" />
     <Compile Include="Business\LogBusiness.cs" />
@@ -80,8 +82,10 @@
     <Compile Include="Business\UsuarioBusiness.cs" />
     <Compile Include="Business\VendaBusiness.cs" />
     <Compile Include="Database\CategoriaDatabase.cs" />
+    <Compile Include="Database\ClienteDatabase.cs" />
     <Compile Include="Database\ControledePontoDatabase.cs" />
     <Compile Include="Database\EstoqueDatabase.cs" />
+    <Compile Include="Database\FluxoDeCaixaDatabase.cs" />
     <Compile Include="Database\FornecedorDatabase.cs" />
     <Compile Include="Database\FuncionarioDatabase.cs" />
     <Compile Include="Database\LogDatabase.cs" />
@@ -170,23 +174,47 @@
     <Compile Include="Telas\Categoria_\frmDeletarCategoria.Designer.cs">
       <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Estoque\frmAlterarEstoque.cs">
+    <Compile Include="Telas\Estoque_\frmAlterarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Estoque\frmAlterarEstoque.Designer.cs">
+    <Compile Include="Telas\Estoque_\frmAlterarEstoque.Designer.cs">
       <DependentUpon>frmAlterarEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Estoque\frmConsultarEstoque.cs">
+    <Compile Include="Telas\Estoque_\frmConsultarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Estoque\frmConsultarEstoque.Designer.cs">
+    <Compile Include="Telas\Estoque_\frmConsultarEstoque.Designer.cs">
       <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Fluxo de Caixa\frmTelaCaixa.cs">
+    <Compile Include="Telas\Estoque_\frmDeletarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Fluxo de Caixa\frmTelaCaixa.Designer.cs">
+    <Compile Include="Telas\Estoque_\frmDeletarEstoque.Designer.cs">
+      <DependentUpon>frmDeletarEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Caixa\frmTelaCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Caixa\frmTelaCaixa.Designer.cs">
       <DependentUpon>frmTelaCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Fluxo de Caixa\frmFluxoDeCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fluxo de Caixa\frmFluxoDeCaixa.Designer.cs">
+      <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Fornecedor_\frmAlterarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fornecedor_\frmAlterarFornecedor.Designer.cs">
+      <DependentUpon>frmAlterarFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Fornecedor_\frmDeletarFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fornecedor_\frmDeletarFornecedor.Designer.cs">
+      <DependentUpon>frmDeletarFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Funcionario_\frmDeletarFuncionario.cs">
       <SubType>Form</SubType>
@@ -212,10 +240,10 @@
     <Compile Include="Telas\Produto_\frmAlterarProdutos.Designer.cs">
       <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Estoque\frmCadastrarEstoque.cs">
+    <Compile Include="Telas\Estoque_\frmCadastrarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Estoque\frmCadastrarEstoque.Designer.cs">
+    <Compile Include="Telas\Estoque_\frmCadastrarEstoque.Designer.cs">
       <DependentUpon>frmCadastrarEstoque.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Funcionario_\frmCadastrarFuncionario.cs">
@@ -254,16 +282,16 @@
     <Compile Include="Telas\Usuario_\frmCadastrarUsuario.Designer.cs">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Fornecedor\frmCadastroFornecedores.cs">
+    <Compile Include="Telas\Fornecedor_\frmCadastroFornecedores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Fornecedor\frmCadastroFornecedores.Designer.cs">
+    <Compile Include="Telas\Fornecedor_\frmCadastroFornecedores.Designer.cs">
       <DependentUpon>frmCadastroFornecedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Fornecedor\frmConsultarFornecedor.cs">
+    <Compile Include="Telas\Fornecedor_\frmConsultarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Fornecedor\frmConsultarFornecedor.Designer.cs">
+    <Compile Include="Telas\Fornecedor_\frmConsultarFornecedor.Designer.cs">
       <DependentUpon>frmConsultarFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Funcionario_\frmConsultarFuncionario.cs">
@@ -316,6 +344,7 @@
     <Compile Include="Telas\Usuario_\frmDeletarUsuario.Designer.cs">
       <DependentUpon>frmDeletarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ConverterImagem.cs" />
     <Compile Include="Utils\Validacoes.cs" />
     <EmbeddedResource Include="Telas\Categoria_\frmAlterarCategoria.resx">
       <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
@@ -326,14 +355,26 @@
     <EmbeddedResource Include="Telas\Categoria_\frmDeletarCategoria.resx">
       <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Estoque\frmAlterarEstoque.resx">
+    <EmbeddedResource Include="Telas\Estoque_\frmAlterarEstoque.resx">
       <DependentUpon>frmAlterarEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Estoque\frmConsultarEstoque.resx">
+    <EmbeddedResource Include="Telas\Estoque_\frmConsultarEstoque.resx">
       <DependentUpon>frmConsultarEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Fluxo de Caixa\frmTelaCaixa.resx">
+    <EmbeddedResource Include="Telas\Estoque_\frmDeletarEstoque.resx">
+      <DependentUpon>frmDeletarEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Caixa\frmTelaCaixa.resx">
       <DependentUpon>frmTelaCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fluxo de Caixa\frmFluxoDeCaixa.resx">
+      <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fornecedor_\frmAlterarFornecedor.resx">
+      <DependentUpon>frmAlterarFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fornecedor_\frmDeletarFornecedor.resx">
+      <DependentUpon>frmDeletarFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmAlterarFuncionario.resx">
       <DependentUpon>frmAlterarFuncionario.cs</DependentUpon>
@@ -344,7 +385,7 @@
     <EmbeddedResource Include="Telas\Produto_\frmAlterarProdutos.resx">
       <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Estoque\frmCadastrarEstoque.resx">
+    <EmbeddedResource Include="Telas\Estoque_\frmCadastrarEstoque.resx">
       <DependentUpon>frmCadastrarEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmCadastrarFuncionario.resx">
@@ -365,10 +406,10 @@
     <EmbeddedResource Include="Telas\Usuario_\frmCadastrarUsuario.resx">
       <DependentUpon>frmCadastrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Fornecedor\frmCadastroFornecedores.resx">
+    <EmbeddedResource Include="Telas\Fornecedor_\frmCadastroFornecedores.resx">
       <DependentUpon>frmCadastroFornecedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Fornecedor\frmConsultarFornecedor.resx">
+    <EmbeddedResource Include="Telas\Fornecedor_\frmConsultarFornecedor.resx">
       <DependentUpon>frmConsultarFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmConsultarFuncionario.resx">
@@ -450,6 +491,7 @@
     <None Include="Resources\IconeRemover1.png" />
     <None Include="Resources\EditarFuncionario.png" />
     <None Include="Resources\860086.png" />
+    <None Include="Resources\Caminhão.png" />
     <Content Include="Resources\kkk.jpg" />
     <None Include="Resources\Logo Branco.png" />
     <None Include="Resources\Plano Verde1.png" />

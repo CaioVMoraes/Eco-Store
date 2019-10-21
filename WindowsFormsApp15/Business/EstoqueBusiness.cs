@@ -9,16 +9,55 @@ namespace WindowsFormsApp15.Business
 {
     class EstoqueBusiness
     {
-
+        Model.tb_estoque modelo = new tb_estoque();
         Database.EstoqueDatabase db = new Database.EstoqueDatabase();
         public void CadastrarEstoque(tb_estoque modelo)
         {
             db.CadastrarEstoque(modelo);
 
+            if (modelo.id_estoque == 0)
+            {
+                throw new ArgumentException("Id inválido");
+            }
+            if (modelo.dt_entrada == null)
+            {
+                throw new ArgumentException("O campo data de entrada é obrigatório");
+            }
+            if (modelo.vl_valor == 0)
+            {
+                throw new ArgumentException("O campo valor é obrigatório");
+            }
+
+
         }
         public List<tb_estoque> ConsultarEstoque()
         {
-           List<tb_estoque> lista = db.ConsultarEstoque();
+            List<tb_estoque> lista = db.ConsultarEstoque();
+
+            return lista;
+        }
+
+        public List<tb_estoque> ConsultarEstoqueId(int id)
+        {
+            List<tb_estoque> lista = db.ConsultarEstoqueId(id);
+
+            return lista;
+        }
+        public List<tb_estoque> ConsultarEstoqueVendidoSim(bool vendido)
+        {
+            List<tb_estoque> lista = db.ConsultarEstoqueVendidoSim(vendido);
+
+            return lista;
+        }
+        public List<tb_estoque> ConsultarEstoqueVendidoNao(bool vendido)
+        {
+            List<tb_estoque> lista = db.ConsultarEstoqueVendidoNao(vendido);
+
+            return lista;
+        }
+        public List<tb_estoque> ConsultarEstoqueData(DateTime data)
+        {
+            List<tb_estoque> lista = db.ConsultarEstoqueData(data);
 
             return lista;
         }
@@ -31,10 +70,38 @@ namespace WindowsFormsApp15.Business
         public void AlterarEstoque(tb_estoque modelo)
         {
             db.AlterarEstoque(modelo);
+
+            if (modelo.id_estoque == 0)
+            {
+                throw new ArgumentException("Id inválido");
+            }
+            if (modelo.dt_entrada == null)
+            {
+                throw new ArgumentException("O campo data de entrada é obrigatório");
+            }
+            if (modelo.vl_valor == 0)
+            {
+                throw new ArgumentException("O campo valor é obrigatório");
+            }
+
         }
         public void RemoverEstoque(int id)
         {
             db.RemoverEstoque(id);
+
+            if (modelo.id_estoque == 0)
+            {
+                throw new ArgumentException("Id inválido");
+            }
+            if (modelo.dt_entrada == null)
+            {
+                throw new ArgumentException("O campo data de entrada é obrigatório");
+            }
+            if (modelo.vl_valor == 0)
+            {
+                throw new ArgumentException("O campo valor é obrigatório");
+            }
+
         }
     }
 }

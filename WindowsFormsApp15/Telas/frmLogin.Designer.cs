@@ -64,8 +64,8 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEntrar.Activecolor = System.Drawing.Color.LightCoral;
+            this.btnEntrar.BackColor = System.Drawing.Color.LightCoral;
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEntrar.BorderRadius = 0;
             this.btnEntrar.ButtonText = "ENTRAR";
@@ -85,8 +85,8 @@
             this.btnEntrar.IsTab = false;
             this.btnEntrar.Location = new System.Drawing.Point(195, 331);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.Normalcolor = System.Drawing.Color.LightCoral;
+            this.btnEntrar.OnHovercolor = System.Drawing.Color.IndianRed;
             this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEntrar.selected = false;
             this.btnEntrar.Size = new System.Drawing.Size(123, 48);
@@ -100,9 +100,9 @@
             // txtSenha
             // 
             this.txtSenha.BackColor = System.Drawing.Color.White;
-            this.txtSenha.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtSenha.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtSenha.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
+            this.txtSenha.BorderColorFocused = System.Drawing.Color.LightCoral;
+            this.txtSenha.BorderColorIdle = System.Drawing.Color.Salmon;
+            this.txtSenha.BorderColorMouseHover = System.Drawing.Color.Firebrick;
             this.txtSenha.BorderThickness = 2;
             this.txtSenha.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -118,9 +118,9 @@
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.White;
-            this.txtUsuario.BorderColorFocused = System.Drawing.Color.SteelBlue;
-            this.txtUsuario.BorderColorIdle = System.Drawing.SystemColors.MenuHighlight;
-            this.txtUsuario.BorderColorMouseHover = System.Drawing.Color.RoyalBlue;
+            this.txtUsuario.BorderColorFocused = System.Drawing.Color.LightCoral;
+            this.txtUsuario.BorderColorIdle = System.Drawing.Color.Salmon;
+            this.txtUsuario.BorderColorMouseHover = System.Drawing.Color.Firebrick;
             this.txtUsuario.BorderThickness = 2;
             this.txtUsuario.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
@@ -184,11 +184,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(486, 28);
             this.panel1.TabIndex = 308;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // lblMinimizar
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -202,6 +204,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;

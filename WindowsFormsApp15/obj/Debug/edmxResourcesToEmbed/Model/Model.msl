@@ -120,6 +120,7 @@
     <EntitySetMapping Name="tb_funcionario">
       <EntityTypeMapping TypeName="ecostoreModel.tb_funcionario">
         <MappingFragment StoreEntitySet="tb_funcionario">
+          <ScalarProperty Name="img_foto" ColumnName="img_foto" />
           <ScalarProperty Name="dt_contratacao" ColumnName="dt_contratacao" />
           <ScalarProperty Name="vl_salario" ColumnName="vl_salario" />
           <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />

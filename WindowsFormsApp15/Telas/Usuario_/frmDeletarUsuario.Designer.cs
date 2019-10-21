@@ -42,15 +42,15 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboNivel = new System.Windows.Forms.ComboBox();
+            this.btnDeletar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnBuscar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
-            this.btnDeletar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.cboNivel = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -204,50 +204,6 @@
             this.groupBox1.TabIndex = 327;
             this.groupBox1.TabStop = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(171, 56);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(135, 20);
-            this.label5.TabIndex = 325;
-            this.label5.Text = "Deletar Usuario";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.cboNivel);
-            this.groupBox2.Controls.Add(this.txtFuncionario);
-            this.groupBox2.Controls.Add(this.btnDeletar);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtConfirmar);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtSenha);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.txtUsuario);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(12, 344);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(460, 320);
-            this.groupBox2.TabIndex = 324;
-            this.groupBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::WindowsFormsApp15.Properties.Resources.EditarFuncionario;
-            this.pictureBox1.Location = new System.Drawing.Point(164, 89);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(139, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 329;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Activecolor = System.Drawing.Color.RoyalBlue;
@@ -282,6 +238,99 @@
             this.btnBuscar.Textcolor = System.Drawing.Color.White;
             this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(171, 56);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(135, 20);
+            this.label5.TabIndex = 325;
+            this.label5.Text = "Deletar Usuario";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.cboNivel);
+            this.groupBox2.Controls.Add(this.txtFuncionario);
+            this.groupBox2.Controls.Add(this.btnDeletar);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.txtConfirmar);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtSenha);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.txtUsuario);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Location = new System.Drawing.Point(12, 344);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(460, 320);
+            this.groupBox2.TabIndex = 324;
+            this.groupBox2.TabStop = false;
+            // 
+            // cboNivel
+            // 
+            this.cboNivel.Enabled = false;
+            this.cboNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboNivel.FormattingEnabled = true;
+            this.cboNivel.Items.AddRange(new object[] {
+            "Baixo",
+            "Médio",
+            "Alto",
+            "Administrador"});
+            this.cboNivel.Location = new System.Drawing.Point(232, 167);
+            this.cboNivel.Name = "cboNivel";
+            this.cboNivel.Size = new System.Drawing.Size(183, 24);
+            this.cboNivel.TabIndex = 332;
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnDeletar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeletar.BorderRadius = 0;
+            this.btnDeletar.ButtonText = "DELETAR";
+            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDeletar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDeletar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Iconimage")));
+            this.btnDeletar.Iconimage_right = null;
+            this.btnDeletar.Iconimage_right_Selected = null;
+            this.btnDeletar.Iconimage_Selected = null;
+            this.btnDeletar.IconMarginLeft = 0;
+            this.btnDeletar.IconMarginRight = 0;
+            this.btnDeletar.IconRightVisible = true;
+            this.btnDeletar.IconRightZoom = 0D;
+            this.btnDeletar.IconVisible = true;
+            this.btnDeletar.IconZoom = 90D;
+            this.btnDeletar.IsTab = false;
+            this.btnDeletar.Location = new System.Drawing.Point(163, 258);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnDeletar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnDeletar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnDeletar.selected = false;
+            this.btnDeletar.Size = new System.Drawing.Size(138, 34);
+            this.btnDeletar.TabIndex = 171;
+            this.btnDeletar.Text = "DELETAR";
+            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeletar.Textcolor = System.Drawing.Color.White;
+            this.btnDeletar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::WindowsFormsApp15.Properties.Resources.EditarFuncionario;
+            this.pictureBox1.Location = new System.Drawing.Point(164, 89);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(139, 112);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 329;
+            this.pictureBox1.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -293,6 +342,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(493, 28);
             this.panel1.TabIndex = 328;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // lblMinimizar
             // 
@@ -320,62 +370,13 @@
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
             // 
-            // btnDeletar
-            // 
-            this.btnDeletar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnDeletar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDeletar.BorderRadius = 0;
-            this.btnDeletar.ButtonText = "DELETAR";
-            this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeletar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDeletar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDeletar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Iconimage")));
-            this.btnDeletar.Iconimage_right = null;
-            this.btnDeletar.Iconimage_right_Selected = null;
-            this.btnDeletar.Iconimage_Selected = null;
-            this.btnDeletar.IconMarginLeft = 0;
-            this.btnDeletar.IconMarginRight = 0;
-            this.btnDeletar.IconRightVisible = true;
-            this.btnDeletar.IconRightZoom = 0D;
-            this.btnDeletar.IconVisible = true;
-            this.btnDeletar.IconZoom = 90D;
-            this.btnDeletar.IsTab = false;
-            this.btnDeletar.Location = new System.Drawing.Point(277, 248);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnDeletar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnDeletar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnDeletar.selected = false;
-            this.btnDeletar.Size = new System.Drawing.Size(138, 34);
-            this.btnDeletar.TabIndex = 171;
-            this.btnDeletar.Text = "DELETAR";
-            this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeletar.Textcolor = System.Drawing.Color.White;
-            this.btnDeletar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // cboNivel
-            // 
-            this.cboNivel.Enabled = false;
-            this.cboNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboNivel.FormattingEnabled = true;
-            this.cboNivel.Items.AddRange(new object[] {
-            "Baixo",
-            "Médio",
-            "Alto",
-            "Administrador"});
-            this.cboNivel.Location = new System.Drawing.Point(232, 167);
-            this.cboNivel.Name = "cboNivel";
-            this.cboNivel.Size = new System.Drawing.Size(183, 24);
-            this.cboNivel.TabIndex = 332;
-            // 
             // frmDeletarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(493, 673);
+            this.ClientSize = new System.Drawing.Size(493, 679);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox1);
