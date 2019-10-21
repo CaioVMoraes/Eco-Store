@@ -23,33 +23,42 @@ namespace WindowsFormsApp15.Telas
 
         private void label15_Click(object sender, EventArgs e)
         {
-            Model.tb_produto produto = listBox1.SelectedItem as Model.tb_produto;
-
-            List<Model.tb_estoque> estoque = estoqueBusiness.ConsultarEstoqueId(produto.id_produto);
-
-            if(estoque != null)
+            try
             {
-                List<Model.tb_estoque> itens = dataGridView1.DataSource as List<Model.tb_estoque>;
-                if (itens == null)
-                    itens = new List<Model.tb_estoque>();
+                Model.tb_produto produto = listBox1.SelectedItem as Model.tb_produto;
 
+                List<Model.tb_estoque> estoque = estoqueBusiness.ConsultarEstoqueId(produto.id_produto);
 
-                /*tb_estoque estoque = null;*/ // business pega o primeiro item do produto onde o vendido eh falso...e ja aproveita p da update p true
+                if (estoque.Count != 0)
+                {
+                    List<Model.tb_estoque> itens = dataGridView1.DataSource as List<Model.tb_estoque>;
 
+                    if (itens == null)
+                    {
+                        itens = new List<Model.tb_estoque>();
+                    }
 
-                //itens.Add(estoque);
+                    tb_estoque estoqueModelo = estoqueBusiness.ListarAlterarNaoVendidos(produto.id_produto);
 
+                    itens.Add(estoqueModelo);
 
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = itens;
+                    dataGridView1.DataSource = null;
+                    dataGridView1.DataSource = itens;
 
-                decimal total = itens.Sum(x => x.vl_valor);
-                label1.Text = "R$" + total;
+                    decimal total = itens.Sum(x => x.vl_valor);
+
+                    label1.Text = "R$" + total;
+                }
+                else
+                {
+                    MessageBox.Show("Produto Indisponivel");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Produto Indisponivel");
+                MessageBox.Show(ex.Message);
             }
+            
         }
 
         private void frmFluxoCaixa_Load(object sender, EventArgs e)

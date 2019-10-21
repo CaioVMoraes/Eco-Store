@@ -54,6 +54,16 @@ namespace WindowsFormsApp15.Database
             return modelo;
         }
 
+        public tb_estoque ListarAlterarNaoVendidos(int id)
+        {
+            tb_estoque modelo = db.tb_estoque.FirstOrDefault(x => x.id_produto == id && x.bt_vendido == false);
+
+            modelo.bt_vendido = true;
+            db.SaveChanges();
+
+            return modelo;
+        }
+
         public void AlterarEstoque(tb_estoque modelo)
         {
             tb_estoque alterar = db.tb_estoque.FirstOrDefault(x => x.id_estoque == x.id_estoque);

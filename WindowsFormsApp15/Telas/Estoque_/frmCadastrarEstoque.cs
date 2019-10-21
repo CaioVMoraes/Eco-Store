@@ -36,7 +36,7 @@ namespace WindowsFormsApp15.Telas
                 Model.tb_estoque modelo = new Model.tb_estoque();
                 Business.EstoqueBusiness business = new Business.EstoqueBusiness();
 
-                modelo.id_estoque = Convert.ToInt32(txtID.Text);
+                modelo.id_produto = Convert.ToInt32(txtID.Text);
                 modelo.dt_entrada = dtpData.Value;
                 modelo.vl_valor = nudValor.Value;
 

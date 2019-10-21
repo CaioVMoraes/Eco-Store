@@ -144,11 +144,11 @@
     <Key>
       <PropertyRef Name="id_estoque" />
     </Key>
-    <Property Name="id_estoque" Type="Int32" Nullable="false" />
+    <Property Name="id_estoque" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_produto" Type="Int32" Nullable="false" />
     <Property Name="dt_entrada" Type="DateTime" Nullable="false" />
     <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-    <Property Name="bt_vendido" Type="Boolean" />
+    <Property Name="bt_vendido" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_estoque" ToRole="tb_produto" />
     <NavigationProperty Name="tb_venda_item" Relationship="ecostoreModel.tb_venda_item_ibfk_1" FromRole="tb_estoque" ToRole="tb_venda_item" />
   </EntityType>
@@ -214,7 +214,7 @@
     <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="vl_salario" Type="Decimal" Nullable="false" />
-    <Property Name="dt_contratacao" Type="DateTime" />
+    <Property Name="dt_contratacao" Type="DateTime" Nullable="false" />
     <Property Name="img_foto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
     <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
     <NavigationProperty Name="tb_folhapagamento" Relationship="ecostoreModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
@@ -227,7 +227,7 @@
     <Property Name="id_log" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_usuario" Type="Int32" Nullable="false" />
     <Property Name="dt_dataLogin" Type="DateTime" Nullable="false" />
-    <Property Name="ds_telaEntrou" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ds_telaEntrou" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <Property Name="ds_oqFez" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_log_ibfk_1" FromRole="tb_log" ToRole="tb_usuario" />
   </EntityType>

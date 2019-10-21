@@ -63,11 +63,11 @@
     <Key>
       <PropertyRef Name="id_estoque" />
     </Key>
-    <Property Name="id_estoque" Type="int" Nullable="false" />
+    <Property Name="id_estoque" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_produto" Type="int" Nullable="false" />
     <Property Name="dt_entrada" Type="datetime" Precision="0" Nullable="false" />
     <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="bt_vendido" Type="bool" />
+    <Property Name="bt_vendido" Type="bool" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
     <Key>
@@ -128,7 +128,7 @@
     <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="dt_contratacao" Type="date" />
+    <Property Name="dt_contratacao" Type="date" Nullable="false" />
     <Property Name="img_foto" Type="longblob" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_log">
@@ -138,7 +138,7 @@
     <Property Name="id_log" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_usuario" Type="int" Nullable="false" />
     <Property Name="dt_dataLogin" Type="datetime" Precision="0" Nullable="false" />
-    <Property Name="ds_telaEntrou" Type="varchar" MaxLength="15" />
+    <Property Name="ds_telaEntrou" Type="varchar" MaxLength="30" />
     <Property Name="ds_oqFez" Type="varchar" MaxLength="30" />
   </EntityType>
   <EntityType Name="tb_produto">

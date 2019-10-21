@@ -67,6 +67,19 @@ namespace WindowsFormsApp15.Business
 
             return modelo;
         }
+
+        public tb_estoque ListarAlterarNaoVendidos(int id)
+        {
+            tb_estoque modelo = db.ListarAlterarNaoVendidos(id);
+
+            if(modelo == null)
+            {
+                throw new ArgumentException("Produto Indisponível");
+            }
+
+            return modelo;
+        }
+
         public void AlterarEstoque(tb_estoque modelo)
         {
             db.AlterarEstoque(modelo);

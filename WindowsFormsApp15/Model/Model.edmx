@@ -68,11 +68,11 @@
           <Key>
             <PropertyRef Name="id_estoque" />
           </Key>
-          <Property Name="id_estoque" Type="int" Nullable="false" />
+          <Property Name="id_estoque" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_produto" Type="int" Nullable="false" />
           <Property Name="dt_entrada" Type="datetime" Precision="0" Nullable="false" />
           <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="bt_vendido" Type="bool" />
+          <Property Name="bt_vendido" Type="bool" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_folhapagamento">
           <Key>
@@ -133,7 +133,7 @@
           <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-          <Property Name="dt_contratacao" Type="date" />
+          <Property Name="dt_contratacao" Type="date" Nullable="false" />
           <Property Name="img_foto" Type="longblob" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_log">
@@ -143,7 +143,7 @@
           <Property Name="id_log" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_usuario" Type="int" Nullable="false" />
           <Property Name="dt_dataLogin" Type="datetime" Precision="0" Nullable="false" />
-          <Property Name="ds_telaEntrou" Type="varchar" MaxLength="15" />
+          <Property Name="ds_telaEntrou" Type="varchar" MaxLength="30" />
           <Property Name="ds_oqFez" Type="varchar" MaxLength="30" />
         </EntityType>
         <EntityType Name="tb_produto">
@@ -610,11 +610,11 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Key>
             <PropertyRef Name="id_estoque" />
           </Key>
-          <Property Name="id_estoque" Type="Int32" Nullable="false" />
+          <Property Name="id_estoque" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_produto" Type="Int32" Nullable="false" />
           <Property Name="dt_entrada" Type="DateTime" Nullable="false" />
           <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-          <Property Name="bt_vendido" Type="Boolean" />
+          <Property Name="bt_vendido" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_estoque" ToRole="tb_produto" />
           <NavigationProperty Name="tb_venda_item" Relationship="ecostoreModel.tb_venda_item_ibfk_1" FromRole="tb_estoque" ToRole="tb_venda_item" />
         </EntityType>
@@ -680,7 +680,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="vl_salario" Type="Decimal" Nullable="false" />
-          <Property Name="dt_contratacao" Type="DateTime" />
+          <Property Name="dt_contratacao" Type="DateTime" Nullable="false" />
           <Property Name="img_foto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
           <NavigationProperty Name="tb_folhapagamento" Relationship="ecostoreModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
@@ -693,7 +693,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="id_log" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_usuario" Type="Int32" Nullable="false" />
           <Property Name="dt_dataLogin" Type="DateTime" Nullable="false" />
-          <Property Name="ds_telaEntrou" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="ds_telaEntrou" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="ds_oqFez" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_log_ibfk_1" FromRole="tb_log" ToRole="tb_usuario" />
         </EntityType>

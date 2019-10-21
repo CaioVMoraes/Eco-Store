@@ -152,10 +152,10 @@
     <Compile Include="Model\tb_venda_item.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Autenticacao\Usuario.cs" />
     <Compile Include="Model\vw_fluxocaixa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Autenticacao\Usuario.cs" />
     <Compile Include="Telas\Categoria_\frmAlterarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
