@@ -145,6 +145,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(471, 28);
             this.panel1.TabIndex = 309;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // lblMinimizar
             // 
@@ -198,7 +199,7 @@
             this.dtpData.BackColor = System.Drawing.Color.SkyBlue;
             this.dtpData.BorderRadius = 0;
             this.dtpData.ForeColor = System.Drawing.Color.White;
-            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpData.FormatCustom = null;
             this.dtpData.Location = new System.Drawing.Point(215, 150);
             this.dtpData.Name = "dtpData";

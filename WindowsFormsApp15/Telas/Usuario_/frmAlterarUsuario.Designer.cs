@@ -90,6 +90,7 @@
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.Textcolor = System.Drawing.Color.White;
             this.btnAlterar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // lblMinimizar
             // 
@@ -115,6 +116,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(493, 28);
             this.panel1.TabIndex = 334;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove_1);
             // 
             // lblSair
             // 

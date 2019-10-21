@@ -40,6 +40,9 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.rdnNao = new System.Windows.Forms.RadioButton();
+            this.rdnSim = new System.Windows.Forms.RadioButton();
+            this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.dtpData = new Bunifu.Framework.UI.BunifuDatepicker();
             this.txtNomeProduto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,9 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnAlterar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.nudValor = new System.Windows.Forms.NumericUpDown();
-            this.rdnSim = new System.Windows.Forms.RadioButton();
-            this.rdnNao = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -68,6 +68,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(493, 28);
             this.panel1.TabIndex = 340;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // lblMinimizar
             // 
@@ -219,6 +220,40 @@
             this.groupBox2.TabIndex = 336;
             this.groupBox2.TabStop = false;
             // 
+            // rdnNao
+            // 
+            this.rdnNao.AutoSize = true;
+            this.rdnNao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdnNao.ForeColor = System.Drawing.Color.White;
+            this.rdnNao.Location = new System.Drawing.Point(305, 157);
+            this.rdnNao.Name = "rdnNao";
+            this.rdnNao.Size = new System.Drawing.Size(53, 20);
+            this.rdnNao.TabIndex = 325;
+            this.rdnNao.TabStop = true;
+            this.rdnNao.Text = "Não";
+            this.rdnNao.UseVisualStyleBackColor = true;
+            // 
+            // rdnSim
+            // 
+            this.rdnSim.AutoSize = true;
+            this.rdnSim.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdnSim.ForeColor = System.Drawing.Color.White;
+            this.rdnSim.Location = new System.Drawing.Point(205, 157);
+            this.rdnSim.Name = "rdnSim";
+            this.rdnSim.Size = new System.Drawing.Size(49, 20);
+            this.rdnSim.TabIndex = 324;
+            this.rdnSim.TabStop = true;
+            this.rdnSim.Text = "Sim";
+            this.rdnSim.UseVisualStyleBackColor = true;
+            // 
+            // nudValor
+            // 
+            this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nudValor.Location = new System.Drawing.Point(205, 117);
+            this.nudValor.Name = "nudValor";
+            this.nudValor.Size = new System.Drawing.Size(210, 20);
+            this.nudValor.TabIndex = 323;
+            // 
             // dtpData
             // 
             this.dtpData.BackColor = System.Drawing.Color.SkyBlue;
@@ -326,40 +361,6 @@
             this.btnAlterar.Textcolor = System.Drawing.Color.White;
             this.btnAlterar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
-            // 
-            // nudValor
-            // 
-            this.nudValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nudValor.Location = new System.Drawing.Point(205, 117);
-            this.nudValor.Name = "nudValor";
-            this.nudValor.Size = new System.Drawing.Size(210, 20);
-            this.nudValor.TabIndex = 323;
-            // 
-            // rdnSim
-            // 
-            this.rdnSim.AutoSize = true;
-            this.rdnSim.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdnSim.ForeColor = System.Drawing.Color.White;
-            this.rdnSim.Location = new System.Drawing.Point(205, 157);
-            this.rdnSim.Name = "rdnSim";
-            this.rdnSim.Size = new System.Drawing.Size(49, 20);
-            this.rdnSim.TabIndex = 324;
-            this.rdnSim.TabStop = true;
-            this.rdnSim.Text = "Sim";
-            this.rdnSim.UseVisualStyleBackColor = true;
-            // 
-            // rdnNao
-            // 
-            this.rdnNao.AutoSize = true;
-            this.rdnNao.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdnNao.ForeColor = System.Drawing.Color.White;
-            this.rdnNao.Location = new System.Drawing.Point(305, 157);
-            this.rdnNao.Name = "rdnNao";
-            this.rdnNao.Size = new System.Drawing.Size(53, 20);
-            this.rdnNao.TabIndex = 325;
-            this.rdnNao.TabStop = true;
-            this.rdnNao.Text = "Não";
-            this.rdnNao.UseVisualStyleBackColor = true;
             // 
             // frmAlterarEstoque
             // 

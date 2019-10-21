@@ -30,14 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblData = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.imgPerfil = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.imgPerfil = new System.Windows.Forms.PictureBox();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.lblData = new System.Windows.Forms.Label();
             this.btnCadastrarUsuario = new System.Windows.Forms.Button();
             this.btnConsultarUsuario = new System.Windows.Forms.Button();
             this.btnConsultarFuncionario = new System.Windows.Forms.Button();
@@ -51,7 +52,6 @@
             this.btnCaixa = new System.Windows.Forms.Button();
             this.btnConsultarFolhaPagamento = new System.Windows.Forms.Button();
             this.btnGerarFolhaPagamento = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
@@ -69,6 +69,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(884, 38);
             this.panel1.TabIndex = 325;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(403, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 24);
+            this.label3.TabIndex = 160;
+            this.label3.Text = "Menu";
             // 
             // lblMinimizar
             // 
@@ -111,6 +124,38 @@
             this.panel2.Size = new System.Drawing.Size(275, 566);
             this.panel2.TabIndex = 326;
             // 
+            // lblData
+            // 
+            this.lblData.AutoSize = true;
+            this.lblData.BackColor = System.Drawing.Color.Transparent;
+            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblData.Location = new System.Drawing.Point(12, 537);
+            this.lblData.Name = "lblData";
+            this.lblData.Size = new System.Drawing.Size(118, 20);
+            this.lblData.TabIndex = 159;
+            this.lblData.Text = "DATA E HORA";
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNome.Location = new System.Drawing.Point(21, 20);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(86, 29);
+            this.lblNome.TabIndex = 158;
+            this.lblNome.Text = "NOME";
+            // 
+            // imgPerfil
+            // 
+            this.imgPerfil.Location = new System.Drawing.Point(24, 53);
+            this.imgPerfil.Name = "imgPerfil";
+            this.imgPerfil.Size = new System.Drawing.Size(225, 211);
+            this.imgPerfil.TabIndex = 157;
+            this.imgPerfil.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -136,38 +181,6 @@
             this.label2.Size = new System.Drawing.Size(23, 23);
             this.label2.TabIndex = 155;
             this.label2.Text = "X";
-            // 
-            // imgPerfil
-            // 
-            this.imgPerfil.Location = new System.Drawing.Point(24, 53);
-            this.imgPerfil.Name = "imgPerfil";
-            this.imgPerfil.Size = new System.Drawing.Size(225, 211);
-            this.imgPerfil.TabIndex = 157;
-            this.imgPerfil.TabStop = false;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNome.Location = new System.Drawing.Point(21, 20);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(86, 29);
-            this.lblNome.TabIndex = 158;
-            this.lblNome.Text = "NOME";
-            // 
-            // lblData
-            // 
-            this.lblData.AutoSize = true;
-            this.lblData.BackColor = System.Drawing.Color.Transparent;
-            this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblData.Location = new System.Drawing.Point(12, 537);
-            this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(118, 20);
-            this.lblData.TabIndex = 159;
-            this.lblData.Text = "DATA E HORA";
             // 
             // btnCadastrarUsuario
             // 
@@ -363,18 +376,6 @@
             this.btnGerarFolhaPagamento.TabIndex = 339;
             this.btnGerarFolhaPagamento.Text = "Gerar Folha de Pagamento";
             this.btnGerarFolhaPagamento.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(403, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 24);
-            this.label3.TabIndex = 160;
-            this.label3.Text = "Menu";
             // 
             // Menu
             // 

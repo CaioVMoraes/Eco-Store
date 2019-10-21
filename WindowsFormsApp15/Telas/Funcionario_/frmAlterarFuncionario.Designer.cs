@@ -435,6 +435,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 28);
             this.panel1.TabIndex = 282;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // bunifuMetroTextbox2
             // 
