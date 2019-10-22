@@ -42,5 +42,94 @@ namespace WindowsFormsApp15.Telas
         {
             Move_Form(Handle, e);
         }
+
+        private void btnCadastrarUsuario_Click(object sender, EventArgs e)
+        {
+            Telas.frmCadastrarUsuario CadastrarUser = new frmCadastrarUsuario();
+            CadastrarUser.Show();
+        }
+
+        private void btnConsultarUsuario_Click(object sender, EventArgs e)
+        {
+            Telas.Usuario.frmConsultarUsuario ConsultarUser = new Usuario.frmConsultarUsuario();
+            ConsultarUser.Show();
+        }
+
+        private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
+        {
+            Telas.frmCadastrarFuncionario CadastrarFunc = new frmCadastrarFuncionario();
+            CadastrarFunc.Show();
+        }
+
+        private void btnConsultarFuncionario_Click(object sender, EventArgs e)
+        {
+            Telas.frmConsultarFuncionario ConsultarFunc = new frmConsultarFuncionario();
+            ConsultarFunc.Show();
+        }
+
+        private void btnCadastrarFornecedor_Click(object sender, EventArgs e)
+        {
+            Telas.frmCadastroFornecedores Forne = new frmCadastroFornecedores();
+            Forne.Show();
+        }
+
+        private void btnConsultarFornecedor_Click(object sender, EventArgs e)
+        {
+            Telas.frmConsultarFornecedor ConsulForne = new frmConsultarFornecedor();
+            ConsulForne.Show();
+        }
+
+        private void btnCadastrarProduto_Click(object sender, EventArgs e)
+        {
+            Telas.frmCadastrarProduto CadaProd = new frmCadastrarProduto();
+            CadaProd.Show();
+        }
+
+        private void btnConsultarProduto_Click(object sender, EventArgs e)
+        {
+            Telas.frmConsultarProduto ConsuProd = new frmConsultarProduto();
+            ConsuProd.Show();
+        }
+
+        private void btnEstoque_Click(object sender, EventArgs e)
+        {
+            Telas.frmCadastrarEstoque CadaEst = new frmCadastrarEstoque();
+            CadaEst.Show();
+        }
+
+        private void btnCaixa_Click(object sender, EventArgs e)
+        {
+            Telas.frmFluxoCaixa Caixa = new frmFluxoCaixa();
+            Caixa.Show();
+        }
+
+        private void btnConsultarEstoque_Click(object sender, EventArgs e)
+        {
+            Telas.Estoque.frmConsultarEstoque ConsuEsto = new Estoque.frmConsultarEstoque();
+            ConsuEsto.Show();
+        }
+
+        private void btnFluxoCaixa_Click(object sender, EventArgs e)
+        {
+            Telas.Fluxo_de_Caixa.frmFluxoDeCaixa Fluxo = new Fluxo_de_Caixa.frmFluxoDeCaixa();
+            Fluxo.Show();
+        }
+
+        private void btnGerarFolhaPagamento_Click(object sender, EventArgs e)
+        {
+            Telas.frmFolhaPagamento CadastrarFolha = new frmFolhaPagamento();
+            CadastrarFolha.Show();
+        }
+
+        private void btnDespesasEGastos_Click(object sender, EventArgs e)
+        {
+            Telas.Fluxo_de_Caixa.frmFluxoDeCaixa Fluxo = new Fluxo_de_Caixa.frmFluxoDeCaixa();
+            Fluxo.Show();
+        }
+
+        private void btnConsultarFolhaPagamento_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
