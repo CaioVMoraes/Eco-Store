@@ -96,9 +96,9 @@ namespace WindowsFormsApp15.Business
                 throw new ArgumentException("imagem do produto é obrigatório");
             }
         }
-        public void RemoverFuncionario(Model.tb_produto modelo)
+        public void RemoverProduto(int id)
         {
-            db.RemoverProduto(modelo);
+            db.RemoverProduto(id);
 
             if (modelo.id_fornecedor == 0)
             {

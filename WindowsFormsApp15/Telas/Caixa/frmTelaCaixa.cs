@@ -20,6 +20,7 @@ namespace WindowsFormsApp15.Telas
 
         Business.EstoqueBusiness estoqueBusiness = new Business.EstoqueBusiness();
         Business.ProdutoBusiness produtoBusiness = new Business.ProdutoBusiness();
+        Business.VendaBusiness vendaBusiness = new Business.VendaBusiness();
 
         private void label15_Click(object sender, EventArgs e)
         {
@@ -71,15 +72,27 @@ namespace WindowsFormsApp15.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //dataGridView1.
-
-
             List<Model.tb_estoque> itens = dataGridView1.DataSource as List<Model.tb_estoque>;
+
+            Model.tb_venda venda = new Model.tb_venda();
+            venda.id_usuario = Objetos.Usuario.UsuarioLogado.ID;
+            venda.id_cliente = null;
+            venda.dt_saida = DateTime.Now;
+            venda.vl_valorTotal = Convert.ToDecimal(label1.Text);
+
+            vendaBusiness.InserirVenda(venda);
+
+            Model.tb_venda_item vendaItem = new Model.tb_venda_item();
 
             foreach (var item in itens)
             {
-                
+                vendaItem.id_venda = venda.id_venda;
+                vendaItem.id_estoque = item.id_estoque;
+
+                vendaBusiness.InserirVendaItem(vendaItem);
             }
+
+            MessageBox.Show("Pedido finalizado com sucesso");
         }
     }
 }

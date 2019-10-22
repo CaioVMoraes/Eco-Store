@@ -120,6 +120,7 @@
           <Property Name="nm_funcionario" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="ds_rg" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="ds_cpf" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="img_foto" Type="longblob" />
           <Property Name="ds_telefone" Type="varchar" MaxLength="15" />
           <Property Name="ds_celular" Type="varchar" MaxLength="20" />
           <Property Name="ds_email" Type="varchar" MaxLength="50" Nullable="false" />
@@ -134,7 +135,6 @@
           <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="dt_contratacao" Type="date" Nullable="false" />
-          <Property Name="img_foto" Type="longblob" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_log">
           <Key>
@@ -173,7 +173,7 @@
           </Key>
           <Property Name="id_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_usuario" Type="int" Nullable="false" />
-          <Property Name="id_cliente" Type="int" Nullable="false" />
+          <Property Name="id_cliente" Type="int" />
           <Property Name="dt_saida" Type="datetime" Precision="0" Nullable="false" />
           <Property Name="vl_valorTotal" Type="decimal" Precision="10" Scale="2" Nullable="false" />
         </EntityType>
@@ -341,7 +341,7 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
           </ReferentialConstraint>
         </Association>
         <Association Name="tb_venda_ibfk_2">
-          <End Role="tb_cliente" Type="Self.tb_cliente" Multiplicity="1">
+          <End Role="tb_cliente" Type="Self.tb_cliente" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Role="tb_venda" Type="Self.tb_venda" Multiplicity="*" />
@@ -667,6 +667,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="nm_funcionario" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
           <Property Name="ds_rg" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="ds_cpf" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="img_foto" Type="Binary" MaxLength="Max" FixedLength="false" />
           <Property Name="ds_telefone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <Property Name="ds_celular" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ds_email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -681,7 +682,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="vl_salario" Type="Decimal" Nullable="false" />
           <Property Name="dt_contratacao" Type="DateTime" Nullable="false" />
-          <Property Name="img_foto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
           <NavigationProperty Name="tb_folhapagamento" Relationship="ecostoreModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
           <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_usuario_ibfk_1" FromRole="tb_funcionario" ToRole="tb_usuario" />
@@ -731,7 +731,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           </Key>
           <Property Name="id_venda" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_usuario" Type="Int32" Nullable="false" />
-          <Property Name="id_cliente" Type="Int32" Nullable="false" />
+          <Property Name="id_cliente" Type="Int32" />
           <Property Name="dt_saida" Type="DateTime" Nullable="false" />
           <Property Name="vl_valorTotal" Type="Decimal" Nullable="false" />
           <NavigationProperty Name="tb_cliente" Relationship="ecostoreModel.tb_venda_ibfk_2" FromRole="tb_venda" ToRole="tb_cliente" />
@@ -770,7 +770,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           </ReferentialConstraint>
         </Association>
         <Association Name="tb_venda_ibfk_2">
-          <End Type="ecostoreModel.tb_cliente" Role="tb_cliente" Multiplicity="1">
+          <End Type="ecostoreModel.tb_cliente" Role="tb_cliente" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
           </End>
           <End Type="ecostoreModel.tb_venda" Role="tb_venda" Multiplicity="*" />
@@ -1068,7 +1068,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <EntitySetMapping Name="tb_funcionario">
             <EntityTypeMapping TypeName="ecostoreModel.tb_funcionario">
               <MappingFragment StoreEntitySet="tb_funcionario">
-                <ScalarProperty Name="img_foto" ColumnName="img_foto" />
                 <ScalarProperty Name="dt_contratacao" ColumnName="dt_contratacao" />
                 <ScalarProperty Name="vl_salario" ColumnName="vl_salario" />
                 <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />
@@ -1083,6 +1082,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
                 <ScalarProperty Name="ds_email" ColumnName="ds_email" />
                 <ScalarProperty Name="ds_celular" ColumnName="ds_celular" />
                 <ScalarProperty Name="ds_telefone" ColumnName="ds_telefone" />
+                <ScalarProperty Name="img_foto" ColumnName="img_foto" />
                 <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
                 <ScalarProperty Name="ds_rg" ColumnName="ds_rg" />
                 <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />

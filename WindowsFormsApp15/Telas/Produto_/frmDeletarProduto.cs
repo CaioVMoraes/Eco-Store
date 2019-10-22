@@ -36,5 +36,22 @@ namespace WindowsFormsApp15.Telas
         {
             Move_Form(Handle, e);
         }
+        Business.ProdutoBusiness business = new Business.ProdutoBusiness();
+        Model.tb_produto modelo = new Model.tb_produto();
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int id = Convert.ToInt32(txtIDFornecedor.Text);
+
+               business.RemoverProduto(id);
+
+                MessageBox.Show("Deletado com Sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

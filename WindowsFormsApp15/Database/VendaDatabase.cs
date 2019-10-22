@@ -15,6 +15,7 @@ namespace WindowsFormsApp15.Database
             db.tb_venda.Add(modelo);
             db.SaveChanges();
         }
+
         public void InserirVendaitem(tb_venda_item modelo)
         {
             db.tb_venda_item.Add(modelo);

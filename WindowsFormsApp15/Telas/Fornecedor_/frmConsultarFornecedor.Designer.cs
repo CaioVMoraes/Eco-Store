@@ -123,6 +123,7 @@
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(287, 22);
             this.txtFornecedor.TabIndex = 201;
+            this.txtFornecedor.TextChanged += new System.EventHandler(this.txtFornecedor_TextChanged);
             // 
             // panel1
             // 
@@ -144,6 +145,7 @@
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(309, 22);
             this.txtEmpresa.TabIndex = 202;
+            this.txtEmpresa.TextChanged += new System.EventHandler(this.txtEmpresa_TextChanged);
             // 
             // frmConsultarFornecedor
             // 

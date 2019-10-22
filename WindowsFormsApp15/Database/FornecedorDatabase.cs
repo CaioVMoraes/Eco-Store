@@ -16,12 +16,18 @@ namespace WindowsFormsApp15.Database
 
             db.SaveChanges();
         }
-        public List<tb_fornecedor> ConsultarFornecedor()
+        public List<tb_fornecedor> ConsultarFornecedorNomeEmpresa(string NomeEmpresa)
         {
-            List<tb_fornecedor> lista = db.tb_fornecedor.ToList();
+            List<tb_fornecedor> lista = db.tb_fornecedor.Where(x => x.nm_empresa == NomeEmpresa).ToList();
 
             return lista;
         
+        }
+        public List<tb_fornecedor> ConsultarFornecedorNome(string Nome)
+        {
+            List<tb_fornecedor> lista = db.tb_fornecedor.Where(x => x.nm_fornecedor == Nome).ToList();
+
+            return lista;
         }
         public tb_fornecedor Listar(int id)
         {

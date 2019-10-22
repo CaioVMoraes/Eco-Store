@@ -26,6 +26,7 @@ namespace WindowsFormsApp15.Model
         public string nm_funcionario { get; set; }
         public string ds_rg { get; set; }
         public string ds_cpf { get; set; }
+        public byte[] img_foto { get; set; }
         public string ds_telefone { get; set; }
         public string ds_celular { get; set; }
         public string ds_email { get; set; }
@@ -40,7 +41,6 @@ namespace WindowsFormsApp15.Model
         public string ds_cargo { get; set; }
         public decimal vl_salario { get; set; }
         public System.DateTime dt_contratacao { get; set; }
-        public byte[] img_foto { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_controledeponto> tb_controledeponto { get; set; }

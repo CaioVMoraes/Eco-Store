@@ -54,10 +54,7 @@ namespace WindowsFormsApp15.Telas
                 txtCidade.Text = model.ds_cidade;
                 cboUF.Text = model.ds_UF;
                 txtComplemento.Text = model.ds_complemento;
-
-               //*Salario*
-
-                MessageBox.Show("Alterado com sucesso");
+                
             }
             catch (Exception ex)
             {
@@ -93,14 +90,12 @@ namespace WindowsFormsApp15.Telas
             model.ds_UF = cboUF.Text;
             model.ds_complemento = txtComplemento.Text;
             model.ds_numeroCasa = txtNumRes.Text;
+                    
+            business.AlterarFuncionario(model);
 
-            //*Beneficíos*
+            MessageBox.Show("Alterado com sucesso");
 
-           
 
-            business.CadastrarFuncionario(model);
-
-            MessageBox.Show("Cadastrado com Sucesso");
         }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {

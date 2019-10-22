@@ -14,9 +14,15 @@ namespace WindowsFormsApp15.Business
             db.CadastarFornecedor(modelo);
         }
 
-        public List<Model.tb_fornecedor> ConsultarFornecedor()
+        public List<Model.tb_fornecedor> ConsultarFornecedorNome(string Nome)
         {
-            List<Model.tb_fornecedor> lista = db.ConsultarFornecedor();
+            List<Model.tb_fornecedor> lista = db.ConsultarFornecedorNome(Nome);
+
+            return lista;
+        }
+        public List<Model.tb_fornecedor> ConsultarFornecedorNomeEmpresa(string NomeEmpresa)
+        {
+            List<Model.tb_fornecedor> lista = db.ConsultarFornecedorNomeEmpresa(NomeEmpresa);
 
             return lista;
         }

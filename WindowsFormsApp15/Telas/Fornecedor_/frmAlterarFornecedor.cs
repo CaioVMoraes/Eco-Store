@@ -24,9 +24,41 @@ namespace WindowsFormsApp15.Telas.Fornecedor
             InitializeComponent();
         }
 
+        Business.FornecedorBusiness business = new Business.FornecedorBusiness();
+        Model.tb_fornecedor modelo = new Model.tb_fornecedor();
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+                int id = Convert.ToInt32(txtID.Text);
+
+                id = modelo.id_fornecedor;
+
+                //*Informações básicas*
+
+                modelo.ds_celular = txtCelular.Text;
+                modelo.ds_cnpj = txtCNPJ.Text;
+                modelo.nm_empresa = txtEmpresa.Text;
+                modelo.nm_fornecedor = txtNome.Text;
+                modelo.ds_telefone = txtTelefone.Text;
+
+                //*Endereço*
+
+                modelo.ds_cep = txtCEP.Text;
+                modelo.ds_cidade = txtCidade.Text;
+                modelo.ds_complemento = txtComplemento.Text;
+                modelo.ds_endereco = txtEndereco.Text;
+              
+                modelo.ds_UF = txtUF.Text;
+              
+
+                business.AlterarFornecedor(modelo);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
@@ -40,6 +72,32 @@ namespace WindowsFormsApp15.Telas.Fornecedor
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             Move_Form(Handle, e);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtID.Text);
+
+            id = modelo.id_fornecedor;
+
+            business.Listar(id);
+
+
+            //*Informações básicas*
+
+            txtCelular.Text = modelo.ds_celular;
+            txtEmpresa.Text = modelo.nm_empresa;
+            txtNome.Text = modelo.nm_fornecedor;
+            txtTelefone.Text = modelo.ds_telefone;
+
+            //*Endereço*
+
+            txtCEP.Text = modelo.ds_cep;
+            txtCidade.Text = modelo.ds_cidade;
+            txtComplemento.Text = modelo.ds_complemento;
+            txtEndereco.Text = modelo.ds_endereco;
+            txtUF.Text = modelo.ds_UF;
+           
         }
     }
 }

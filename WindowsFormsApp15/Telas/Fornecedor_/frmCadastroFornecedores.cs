@@ -36,20 +36,25 @@ namespace WindowsFormsApp15.Telas
         {
             Business.FornecedorBusiness business = new Business.FornecedorBusiness();
 
-            Model.tb_fornecedor model = new Model.tb_fornecedor();
+            Model.tb_fornecedor modelo = new Model.tb_fornecedor();
 
-            model.nm_fornecedor = txtNome.Text;
-            model.nm_empresa = txtEmpresa.Text;
-            model.ds_celular = txtCelular.Text;
-            model.ds_cep = txtCEP.Text;
-            model.ds_cidade = txtCidade.Text;
-            model.ds_cnpj = txtCNPJ.Text;
-            model.ds_complemento = txtComplemento.Text;
-            model.ds_endereco = txtEndereco.Text;
-            model.ds_telefone = txtTelefone.Text;
-            model.ds_UF = txtUF.Text;
+            //*Informações básicas*
 
-            business.CadastrarFornecedor(model);
+            modelo.ds_celular = txtCelular.Text;
+            modelo.ds_cnpj = txtCNPJ.Text;
+            modelo.nm_empresa = txtEmpresa.Text;
+            modelo.nm_fornecedor = txtNome.Text;
+            modelo.ds_telefone = txtTelefone.Text;
+
+            //*Endereço*
+
+            modelo.ds_cep = txtCEP.Text;
+            modelo.ds_cidade = txtCidade.Text;
+            modelo.ds_complemento = txtComplemento.Text;
+            modelo.ds_endereco = txtEndereco.Text;
+            modelo.ds_UF = txtUF.Text;
+
+            business.CadastrarFornecedor(modelo);
 
             MessageBox.Show("Cadastrado com sucesso");
         }

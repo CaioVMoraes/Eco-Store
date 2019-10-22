@@ -63,7 +63,7 @@ namespace WindowsFormsApp15.Database
             db.SaveChanges();
           
         }
-        public void RemoverProduto(tb_produto modelo)
+        public void RemoverProduto(int id)
         {
            tb_produto deletar = db.tb_produto.FirstOrDefault(x => x.id_produto == x.id_produto);
 

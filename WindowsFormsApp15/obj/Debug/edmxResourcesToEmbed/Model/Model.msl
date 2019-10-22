@@ -120,7 +120,6 @@
     <EntitySetMapping Name="tb_funcionario">
       <EntityTypeMapping TypeName="ecostoreModel.tb_funcionario">
         <MappingFragment StoreEntitySet="tb_funcionario">
-          <ScalarProperty Name="img_foto" ColumnName="img_foto" />
           <ScalarProperty Name="dt_contratacao" ColumnName="dt_contratacao" />
           <ScalarProperty Name="vl_salario" ColumnName="vl_salario" />
           <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />
@@ -135,6 +134,7 @@
           <ScalarProperty Name="ds_email" ColumnName="ds_email" />
           <ScalarProperty Name="ds_celular" ColumnName="ds_celular" />
           <ScalarProperty Name="ds_telefone" ColumnName="ds_telefone" />
+          <ScalarProperty Name="img_foto" ColumnName="img_foto" />
           <ScalarProperty Name="ds_cpf" ColumnName="ds_cpf" />
           <ScalarProperty Name="ds_rg" ColumnName="ds_rg" />
           <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />

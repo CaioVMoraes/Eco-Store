@@ -170,6 +170,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(192, 23);
             this.txtNome.TabIndex = 297;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // frmConsultarProduto
             // 

@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas
 {
@@ -35,6 +36,25 @@ namespace WindowsFormsApp15.Telas
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             Move_Form(Handle, e);
+        }
+
+        Business.ProdutoBusiness business = new Business.ProdutoBusiness();
+        Model.tb_produto modelo = new Model.tb_produto();
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string nome = txtNome.Text;
+                nome = modelo.nm_produto;
+
+                List<tb_produto> lista = business.ConsultarProduto(nome);
+
+                dgvProduto.DataSource = lista;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

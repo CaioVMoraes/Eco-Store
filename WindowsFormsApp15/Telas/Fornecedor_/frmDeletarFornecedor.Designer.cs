@@ -229,6 +229,7 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Textcolor = System.Drawing.Color.White;
             this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtEndereco
             // 
@@ -540,6 +541,7 @@
             this.btnDeletar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeletar.Textcolor = System.Drawing.Color.White;
             this.btnDeletar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // label3
             // 
