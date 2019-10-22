@@ -294,3 +294,4 @@ C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\MySql.Data.dll
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\MySql.Data.Entity.EF6.dll
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\EntityFramework.xml
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\teste\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config

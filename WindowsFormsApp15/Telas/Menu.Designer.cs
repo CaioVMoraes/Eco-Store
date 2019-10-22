@@ -52,6 +52,7 @@
             this.btnCaixa = new System.Windows.Forms.Button();
             this.btnConsultarFolhaPagamento = new System.Windows.Forms.Button();
             this.btnGerarFolhaPagamento = new System.Windows.Forms.Button();
+            this.btnConsultarEstoque = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
@@ -196,6 +197,7 @@
             this.btnCadastrarUsuario.TabIndex = 327;
             this.btnCadastrarUsuario.Text = "Cadastrar Usuario";
             this.btnCadastrarUsuario.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
             // 
             // btnConsultarUsuario
             // 
@@ -211,6 +213,7 @@
             this.btnConsultarUsuario.TabIndex = 328;
             this.btnConsultarUsuario.Text = "Consultar Usuario";
             this.btnConsultarUsuario.UseVisualStyleBackColor = false;
+            this.btnConsultarUsuario.Click += new System.EventHandler(this.btnConsultarUsuario_Click);
             // 
             // btnConsultarFuncionario
             // 
@@ -226,6 +229,7 @@
             this.btnConsultarFuncionario.TabIndex = 330;
             this.btnConsultarFuncionario.Text = "Consultar Funcionario";
             this.btnConsultarFuncionario.UseVisualStyleBackColor = false;
+            this.btnConsultarFuncionario.Click += new System.EventHandler(this.btnConsultarFuncionario_Click);
             // 
             // btnCadastrarFuncionario
             // 
@@ -241,6 +245,7 @@
             this.btnCadastrarFuncionario.TabIndex = 329;
             this.btnCadastrarFuncionario.Text = "Cadastrar Funcionario";
             this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
             // 
             // btnConsultarFornecedor
             // 
@@ -256,6 +261,7 @@
             this.btnConsultarFornecedor.TabIndex = 332;
             this.btnConsultarFornecedor.Text = "Consultar Fornecedor";
             this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
+            this.btnConsultarFornecedor.Click += new System.EventHandler(this.btnConsultarFornecedor_Click);
             // 
             // btnCadastrarFornecedor
             // 
@@ -271,6 +277,7 @@
             this.btnCadastrarFornecedor.TabIndex = 331;
             this.btnCadastrarFornecedor.Text = "Cadastrar Fornecedor";
             this.btnCadastrarFornecedor.UseVisualStyleBackColor = false;
+            this.btnCadastrarFornecedor.Click += new System.EventHandler(this.btnCadastrarFornecedor_Click);
             // 
             // btnConsultarProduto
             // 
@@ -286,6 +293,7 @@
             this.btnConsultarProduto.TabIndex = 334;
             this.btnConsultarProduto.Text = "Consultar Produto";
             this.btnConsultarProduto.UseVisualStyleBackColor = false;
+            this.btnConsultarProduto.Click += new System.EventHandler(this.btnConsultarProduto_Click);
             // 
             // btnCadastrarProduto
             // 
@@ -301,6 +309,7 @@
             this.btnCadastrarProduto.TabIndex = 333;
             this.btnCadastrarProduto.Text = "Cadastrar Produto";
             this.btnCadastrarProduto.UseVisualStyleBackColor = false;
+            this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCadastrarProduto_Click);
             // 
             // btnDespesasEGastos
             // 
@@ -310,12 +319,13 @@
             this.btnDespesasEGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDespesasEGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDespesasEGastos.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDespesasEGastos.Location = new System.Drawing.Point(347, 492);
+            this.btnDespesasEGastos.Location = new System.Drawing.Point(588, 484);
             this.btnDespesasEGastos.Name = "btnDespesasEGastos";
-            this.btnDespesasEGastos.Size = new System.Drawing.Size(478, 43);
+            this.btnDespesasEGastos.Size = new System.Drawing.Size(237, 43);
             this.btnDespesasEGastos.TabIndex = 335;
             this.btnDespesasEGastos.Text = "Despesas e Gastos";
             this.btnDespesasEGastos.UseVisualStyleBackColor = false;
+            this.btnDespesasEGastos.Click += new System.EventHandler(this.btnDespesasEGastos_Click);
             // 
             // btnEstoque
             // 
@@ -329,8 +339,9 @@
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Size = new System.Drawing.Size(236, 43);
             this.btnEstoque.TabIndex = 337;
-            this.btnEstoque.Text = "Estoque";
+            this.btnEstoque.Text = "Cadastrar Estoque";
             this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
             // 
             // btnCaixa
             // 
@@ -340,12 +351,13 @@
             this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCaixa.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCaixa.Location = new System.Drawing.Point(588, 350);
+            this.btnCaixa.Location = new System.Drawing.Point(344, 484);
             this.btnCaixa.Name = "btnCaixa";
-            this.btnCaixa.Size = new System.Drawing.Size(236, 43);
+            this.btnCaixa.Size = new System.Drawing.Size(238, 43);
             this.btnCaixa.TabIndex = 338;
             this.btnCaixa.Text = "Caixa";
             this.btnCaixa.UseVisualStyleBackColor = false;
+            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
             // 
             // btnConsultarFolhaPagamento
             // 
@@ -355,12 +367,13 @@
             this.btnConsultarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarFolhaPagamento.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnConsultarFolhaPagamento.Location = new System.Drawing.Point(588, 408);
+            this.btnConsultarFolhaPagamento.Location = new System.Drawing.Point(589, 410);
             this.btnConsultarFolhaPagamento.Name = "btnConsultarFolhaPagamento";
             this.btnConsultarFolhaPagamento.Size = new System.Drawing.Size(236, 60);
             this.btnConsultarFolhaPagamento.TabIndex = 340;
             this.btnConsultarFolhaPagamento.Text = "Consultar Folha de Pagamento";
             this.btnConsultarFolhaPagamento.UseVisualStyleBackColor = false;
+            this.btnConsultarFolhaPagamento.Click += new System.EventHandler(this.btnConsultarFolhaPagamento_Click);
             // 
             // btnGerarFolhaPagamento
             // 
@@ -370,18 +383,36 @@
             this.btnGerarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarFolhaPagamento.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnGerarFolhaPagamento.Location = new System.Drawing.Point(346, 408);
+            this.btnGerarFolhaPagamento.Location = new System.Drawing.Point(346, 410);
             this.btnGerarFolhaPagamento.Name = "btnGerarFolhaPagamento";
             this.btnGerarFolhaPagamento.Size = new System.Drawing.Size(236, 60);
             this.btnGerarFolhaPagamento.TabIndex = 339;
             this.btnGerarFolhaPagamento.Text = "Gerar Folha de Pagamento";
             this.btnGerarFolhaPagamento.UseVisualStyleBackColor = false;
+            this.btnGerarFolhaPagamento.Click += new System.EventHandler(this.btnGerarFolhaPagamento_Click);
+            // 
+            // btnConsultarEstoque
+            // 
+            this.btnConsultarEstoque.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnConsultarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarEstoque.FlatAppearance.BorderSize = 0;
+            this.btnConsultarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarEstoque.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnConsultarEstoque.Location = new System.Drawing.Point(589, 350);
+            this.btnConsultarEstoque.Name = "btnConsultarEstoque";
+            this.btnConsultarEstoque.Size = new System.Drawing.Size(236, 43);
+            this.btnConsultarEstoque.TabIndex = 341;
+            this.btnConsultarEstoque.Text = "Consultar Estoque";
+            this.btnConsultarEstoque.UseVisualStyleBackColor = false;
+            this.btnConsultarEstoque.Click += new System.EventHandler(this.btnConsultarEstoque_Click);
             // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 604);
+            this.Controls.Add(this.btnConsultarEstoque);
             this.Controls.Add(this.btnConsultarFolhaPagamento);
             this.Controls.Add(this.btnGerarFolhaPagamento);
             this.Controls.Add(this.btnCaixa);
@@ -435,5 +466,6 @@
         private System.Windows.Forms.Button btnConsultarFolhaPagamento;
         private System.Windows.Forms.Button btnGerarFolhaPagamento;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnConsultarEstoque;
     }
 }
