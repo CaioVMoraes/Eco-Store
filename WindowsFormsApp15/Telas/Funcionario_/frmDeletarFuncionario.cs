@@ -99,7 +99,14 @@ namespace WindowsFormsApp15.Telas
             Move_Form(Handle, e);
         }
 
+        private void btnCadastrarFuncionario_Click_1(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtId.Text);
 
+            business.RemoverFuncionario(id);
+
+            MessageBox.Show("Funcionario removido com sucesso");
+        }
     }
            
     

@@ -25,15 +25,6 @@ namespace WindowsFormsApp15.Telas
             InitializeComponent();
         }
 
-        private void frmAlterarProdutos_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -92,9 +83,23 @@ namespace WindowsFormsApp15.Telas
 
             Image imagem = imageConverter.byteArrayToImage(modelo.img_produto);
 
-            txtIDFornecedor.Text = modelo.id_fornecedor.ToString();
+            txtIDFornecedor.Text = modelo.tb_fornecedor.nm_fornecedor;
             txtNome.Text = modelo.nm_produto;
             imgImagem.Image = imagem;
+            cboCategoria.Text = modelo.tb_categoria.nm_categoria;
+        }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|JPEG Files(*.jfif)|*.jfif";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string foto = dialog.FileName.ToString();
+                txtImagem.Text = foto;
+                imgImagem.ImageLocation = foto;
+            }
         }
     }
 }

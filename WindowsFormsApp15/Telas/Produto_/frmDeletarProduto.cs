@@ -44,7 +44,7 @@ namespace WindowsFormsApp15.Telas
             {
                 int id = Convert.ToInt32(txtIDFornecedor.Text);
 
-               business.RemoverProduto(id);
+                business.RemoverProduto(id);
 
                 MessageBox.Show("Deletado com Sucesso");
             }
@@ -52,6 +52,22 @@ namespace WindowsFormsApp15.Telas
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtIdProduto.Text);
+
+            Model.tb_produto modelo = business.Listar(id);
+
+            Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+
+            Image imagem = imageConverter.byteArrayToImage(modelo.img_produto);
+
+            txtIDFornecedor.Text = modelo.tb_fornecedor.nm_fornecedor;
+            txtNome.Text = modelo.nm_produto;
+            imgImagem.Image = imagem;
+            cboCategoria.Text = modelo.tb_categoria.nm_categoria;
         }
     }
 }

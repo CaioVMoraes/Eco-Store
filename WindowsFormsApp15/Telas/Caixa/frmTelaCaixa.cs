@@ -32,7 +32,7 @@ namespace WindowsFormsApp15.Telas
 
                 if (estoque.Count != 0)
                 {
-                    List<Model.tb_estoque> itens = dataGridView1.DataSource as List<Model.tb_estoque>;
+                    List<Model.tb_estoque> itens = dgvProdutos.DataSource as List<Model.tb_estoque>;
 
                     if (itens == null)
                     {
@@ -43,12 +43,12 @@ namespace WindowsFormsApp15.Telas
 
                     itens.Add(estoqueModelo);
 
-                    dataGridView1.DataSource = null;
-                    dataGridView1.DataSource = itens;
+                    dgvProdutos.DataSource = null;
+                    dgvProdutos.DataSource = itens;
 
                     decimal total = itens.Sum(x => x.vl_valor);
 
-                    label1.Text = "R$" + total;
+                    lblTotal.Text = total.ToString();
                 }
                 else
                 {
@@ -72,27 +72,49 @@ namespace WindowsFormsApp15.Telas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            List<Model.tb_estoque> itens = dataGridView1.DataSource as List<Model.tb_estoque>;
-
-            Model.tb_venda venda = new Model.tb_venda();
-            venda.id_usuario = Objetos.Usuario.UsuarioLogado.ID;
-            venda.id_cliente = null;
-            venda.dt_saida = DateTime.Now;
-            venda.vl_valorTotal = Convert.ToDecimal(label1.Text);
-
-            vendaBusiness.InserirVenda(venda);
-
-            Model.tb_venda_item vendaItem = new Model.tb_venda_item();
-
-            foreach (var item in itens)
+            try
             {
-                vendaItem.id_venda = venda.id_venda;
-                vendaItem.id_estoque = item.id_estoque;
+                List<Model.tb_estoque> itens = dgvProdutos.DataSource as List<Model.tb_estoque>;
 
-                vendaBusiness.InserirVendaItem(vendaItem);
+                Model.tb_venda venda = new Model.tb_venda();
+                venda.id_usuario = Objetos.Usuario.UsuarioLogado.ID;
+                venda.id_cliente = null;
+                venda.dt_saida = DateTime.Now;
+                venda.vl_valorTotal = Convert.ToDecimal(lblTotal.Text);
+
+                vendaBusiness.InserirVenda(venda);
+
+                Model.tb_venda_item vendaItem = new Model.tb_venda_item();
+
+                if (lblRestante.Text == "0,00")
+                {
+                    foreach (var item in itens)
+                    {
+                        vendaItem.id_venda = venda.id_venda;
+                        vendaItem.id_estoque = item.id_estoque;
+
+                        vendaBusiness.InserirVendaItem(vendaItem);
+                    }
+
+                    MessageBox.Show("Pedido finalizado com sucesso");
+                }
+                else
+                {
+                    MessageBox.Show("Valor Total não foi pago");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-            MessageBox.Show("Pedido finalizado com sucesso");
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            decimal total = Convert.ToDecimal(lblTotal.Text);
+            decimal pago = nudPago.Value;
+
+            lblRestante.Text = (total - pago).ToString();
         }
     }
 }

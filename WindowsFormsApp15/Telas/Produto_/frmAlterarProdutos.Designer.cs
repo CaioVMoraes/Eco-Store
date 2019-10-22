@@ -166,19 +166,19 @@
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(170, 61);
             this.txtNome.MaxLength = 45;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(183, 23);
+            this.txtNome.Size = new System.Drawing.Size(183, 22);
             this.txtNome.TabIndex = 302;
             // 
             // txtIDFornecedor
             // 
-            this.txtIDFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDFornecedor.Location = new System.Drawing.Point(170, 27);
             this.txtIDFornecedor.Name = "txtIDFornecedor";
-            this.txtIDFornecedor.Size = new System.Drawing.Size(183, 23);
+            this.txtIDFornecedor.Size = new System.Drawing.Size(183, 22);
             this.txtIDFornecedor.TabIndex = 301;
             // 
             // nudValor
@@ -197,11 +197,11 @@
             // 
             // cboCategoria
             // 
-            this.cboCategoria.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(170, 94);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(183, 25);
+            this.cboCategoria.Size = new System.Drawing.Size(183, 23);
             this.cboCategoria.TabIndex = 299;
             // 
             // label5
@@ -345,6 +345,7 @@
             this.btnProcurar.TabIndex = 301;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // btnLimpar
             // 
@@ -368,10 +369,10 @@
             // 
             // txtImagem
             // 
-            this.txtImagem.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtImagem.Location = new System.Drawing.Point(135, 216);
             this.txtImagem.Name = "txtImagem";
-            this.txtImagem.Size = new System.Drawing.Size(203, 23);
+            this.txtImagem.Size = new System.Drawing.Size(203, 22);
             this.txtImagem.TabIndex = 304;
             // 
             // frmAlterarProdutos
@@ -393,7 +394,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAlterarProdutos";
             this.Text = "frmAlterarProdutos";
-            this.Load += new System.EventHandler(this.frmAlterarProdutos_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();

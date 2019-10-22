@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeletarProduto));
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtIdProduto = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -48,21 +48,21 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgImagem = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgImagem)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txtIdProduto
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(137, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(118, 22);
-            this.textBox1.TabIndex = 284;
+            this.txtIdProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIdProduto.Location = new System.Drawing.Point(137, 43);
+            this.txtIdProduto.Name = "txtIdProduto";
+            this.txtIdProduto.Size = new System.Drawing.Size(118, 22);
+            this.txtIdProduto.TabIndex = 284;
             // 
             // label27
             // 
@@ -93,7 +93,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtIdProduto);
             this.groupBox1.Controls.Add(this.btnEntrar);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Location = new System.Drawing.Point(27, 192);
@@ -135,6 +135,7 @@
             this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntrar.Textcolor = System.Drawing.Color.White;
             this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // label5
             // 
@@ -143,7 +144,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(168, 38);
+            this.label5.Location = new System.Drawing.Point(184, 43);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(136, 20);
             this.label5.TabIndex = 291;
@@ -214,11 +215,11 @@
             // cboCategoria
             // 
             this.cboCategoria.Enabled = false;
-            this.cboCategoria.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(181, 94);
             this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(183, 25);
+            this.cboCategoria.Size = new System.Drawing.Size(183, 23);
             this.cboCategoria.TabIndex = 288;
             // 
             // groupBox2
@@ -242,19 +243,19 @@
             // txtNome
             // 
             this.txtNome.Enabled = false;
-            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(181, 61);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(183, 23);
+            this.txtNome.Size = new System.Drawing.Size(183, 22);
             this.txtNome.TabIndex = 298;
             // 
             // txtIDFornecedor
             // 
             this.txtIDFornecedor.Enabled = false;
-            this.txtIDFornecedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIDFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDFornecedor.Location = new System.Drawing.Point(181, 27);
             this.txtIDFornecedor.Name = "txtIDFornecedor";
-            this.txtIDFornecedor.Size = new System.Drawing.Size(183, 23);
+            this.txtIDFornecedor.Size = new System.Drawing.Size(183, 22);
             this.txtIDFornecedor.TabIndex = 297;
             // 
             // bunifuFlatButton1
@@ -331,16 +332,16 @@
             this.label3.TabIndex = 155;
             this.label3.Text = "X";
             // 
-            // pictureBox1
+            // imgImagem
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::WindowsFormsApp15.Properties.Resources.IconeRemover;
-            this.pictureBox1.Location = new System.Drawing.Point(172, 79);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 98);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 292;
-            this.pictureBox1.TabStop = false;
+            this.imgImagem.BackColor = System.Drawing.Color.Transparent;
+            this.imgImagem.Image = global::WindowsFormsApp15.Properties.Resources.IconeRemover;
+            this.imgImagem.Location = new System.Drawing.Point(191, 75);
+            this.imgImagem.Name = "imgImagem";
+            this.imgImagem.Size = new System.Drawing.Size(118, 98);
+            this.imgImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgImagem.TabIndex = 292;
+            this.imgImagem.TabStop = false;
             // 
             // frmDeletarProduto
             // 
@@ -352,7 +353,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imgImagem);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -365,7 +366,7 @@
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -376,12 +377,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtIdProduto;
         private Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgImagem;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown nudValor;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;

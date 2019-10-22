@@ -62,10 +62,24 @@ namespace WindowsFormsApp15.Telas
             }
         }
 
-        private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
+        public static void Move_Form(IntPtr Handle, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Move_Form(Handle, e);
+        }
+
+        private void btnCadastrarFuncionario_Click_1(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtId.Text);
-            
+
             id = model.id_funcionario;
 
 
@@ -90,25 +104,10 @@ namespace WindowsFormsApp15.Telas
             model.ds_UF = cboUF.Text;
             model.ds_complemento = txtComplemento.Text;
             model.ds_numeroCasa = txtNumRes.Text;
-                    
+
             business.AlterarFuncionario(model);
 
             MessageBox.Show("Alterado com sucesso");
-
-
-        }
-        public static void Move_Form(IntPtr Handle, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
-        }
-
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            Move_Form(Handle, e);
         }
     }
 }
