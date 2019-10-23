@@ -67,6 +67,24 @@ namespace WindowsFormsApp15.Business
 
             return lista;
         }
+        public tb_cliente ListarClienteCpf(string cpf)
+        {
+            if (cpf == string.Empty)
+            {
+                throw new ArgumentException("CPF Inválido");
+            }
+
+            tb_cliente model = db.ListarClienteCpf(cpf);
+
+            if(model == null)
+            {
+                throw new ArgumentException("CPF Inválido");
+            }
+            else
+            {
+                return model;
+            }
+        }
         public List<tb_cliente> ConsultarClienteRg(string RG)
         {
             List<tb_cliente> lista = db.ConsultarClienteRg(RG);

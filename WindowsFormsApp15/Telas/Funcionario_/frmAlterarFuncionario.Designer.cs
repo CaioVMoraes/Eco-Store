@@ -82,6 +82,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.btnCadastrarFuncionario = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtImagem = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -158,6 +159,7 @@
             this.btnProcurar.TabIndex = 246;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // label8
             // 
@@ -759,6 +761,14 @@
             this.btnCadastrarFuncionario.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click_1);
             // 
+            // txtImagem
+            // 
+            this.txtImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtImagem.Location = new System.Drawing.Point(780, 611);
+            this.txtImagem.Name = "txtImagem";
+            this.txtImagem.Size = new System.Drawing.Size(203, 22);
+            this.txtImagem.TabIndex = 331;
+            // 
             // frmAlterarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -767,6 +777,7 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1039, 820);
+            this.Controls.Add(this.txtImagem);
             this.Controls.Add(this.txtNumRes);
             this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.txtCep);
@@ -883,5 +894,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private Bunifu.Framework.UI.BunifuFlatButton btnCadastrarFuncionario;
+        private System.Windows.Forms.TextBox txtImagem;
     }
 }

@@ -92,6 +92,7 @@
     <Compile Include="Database\ProdutoDatabase.cs" />
     <Compile Include="Database\UsuarioDatabase.cs" />
     <Compile Include="Database\VendaDatabase.cs" />
+    <Compile Include="Model\CaixaEstendido.cs" />
     <Compile Include="Model\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -345,6 +346,7 @@
       <DependentUpon>frmDeletarUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\ConverterImagem.cs" />
+    <Compile Include="Utils\tb_estoque_produto.cs" />
     <Compile Include="Utils\Validacoes.cs" />
     <EmbeddedResource Include="Telas\Categoria_\frmAlterarCategoria.resx">
       <DependentUpon>frmAlterarCategoria.cs</DependentUpon>

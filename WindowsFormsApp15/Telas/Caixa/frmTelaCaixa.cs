@@ -18,9 +18,10 @@ namespace WindowsFormsApp15.Telas
             InitializeComponent();
         }
 
-        Business.EstoqueBusiness estoqueBusiness = new Business.EstoqueBusiness();
-        Business.ProdutoBusiness produtoBusiness = new Business.ProdutoBusiness();
-        Business.VendaBusiness vendaBusiness = new Business.VendaBusiness();
+        Business.EstoqueBusiness    estoqueBusiness =   new Business.EstoqueBusiness();
+        Business.ProdutoBusiness    produtoBusiness =   new Business.ProdutoBusiness();
+        Business.VendaBusiness      vendaBusiness =     new Business.VendaBusiness();
+        Business.ClienteBusiness    clienteBusiness =   new Business.ClienteBusiness();
 
         private void label15_Click(object sender, EventArgs e)
         {
@@ -43,12 +44,14 @@ namespace WindowsFormsApp15.Telas
 
                     itens.Add(estoqueModelo);
 
+                    dgvProdutos.AutoGenerateColumns = false;
                     dgvProdutos.DataSource = null;
                     dgvProdutos.DataSource = itens;
 
                     decimal total = itens.Sum(x => x.vl_valor);
 
                     lblTotal.Text = total.ToString();
+                    lblRestante.Text = total.ToString();
                 }
                 else
                 {
@@ -64,10 +67,25 @@ namespace WindowsFormsApp15.Telas
 
         private void frmFluxoCaixa_Load(object sender, EventArgs e)
         {
-            List<tb_produto> lista = produtoBusiness.ConsultarTodosProdutos();
+            try
+            {
+                //Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 
-            listBox1.DisplayMember = nameof(tb_produto.nm_produto);
-            listBox1.DataSource = lista;
+                //Image imagem = imageConverter.byteArrayToImage(Autenticacao.Usuario.UsuarioLogado.Foto);
+
+                //imgUsuario.Image = imagem;
+
+                lblUsuario.Text = Autenticacao.Usuario.UsuarioLogado.Nome;
+
+                List<tb_produto> lista = produtoBusiness.ConsultarTodosProdutos();
+
+                listBox1.DisplayMember = nameof(tb_produto.nm_produto);
+                listBox1.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -75,10 +93,17 @@ namespace WindowsFormsApp15.Telas
             try
             {
                 List<Model.tb_estoque> itens = dgvProdutos.DataSource as List<Model.tb_estoque>;
+                tb_cliente cliente = clienteBusiness.ListarClienteCpf(txtCPFCliente.Text);
 
                 Model.tb_venda venda = new Model.tb_venda();
-                venda.id_usuario = Objetos.Usuario.UsuarioLogado.ID;
-                venda.id_cliente = null;
+
+                if (txtCPFCliente.Visible == true)
+                    venda.id_cliente = cliente.id_cliente;
+
+                else
+                    venda.id_cliente = null;
+
+                venda.id_usuario = Autenticacao.Usuario.UsuarioLogado.IDUsuario;
                 venda.dt_saida = DateTime.Now;
                 venda.vl_valorTotal = Convert.ToDecimal(lblTotal.Text);
 
@@ -97,10 +122,18 @@ namespace WindowsFormsApp15.Telas
                     }
 
                     MessageBox.Show("Pedido finalizado com sucesso");
+
+                    dgvProdutos.DataSource = null;
+
+                    lblTotal.Text = "0,00";
+                    lblTroco.Text = "0,00";
+                    lblRestante.Text = "0,00";
+                    nudPago.Value = 0;
+                    txtCPFCliente.Text = string.Empty;
                 }
                 else
                 {
-                    MessageBox.Show("Valor Total não foi pago");
+                    MessageBox.Show("Valor não foi liquidado");
                 }
             }
             catch (Exception ex)
@@ -109,12 +142,43 @@ namespace WindowsFormsApp15.Telas
             }
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            decimal total = Convert.ToDecimal(lblTotal.Text);
-            decimal pago = nudPago.Value;
+            if(txtCPFCliente.Visible == true)
+            {
+                txtCPFCliente.Visible = false;
+            }
 
-            lblRestante.Text = (total - pago).ToString();
+            else
+            {
+                txtCPFCliente.Visible = true;
+            }
+        }
+
+        private void nudPago_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal total = Convert.ToDecimal(lblTotal.Text);
+                decimal pago = nudPago.Value;
+
+                lblRestante.Text = (total - pago).ToString();
+
+                if (pago == total)
+                {
+                    lblTroco.Text = "0,00";
+                }
+
+                if (pago > total)
+                {
+                    lblRestante.Text = "0,00";
+                    lblTroco.Text = (pago - total).ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

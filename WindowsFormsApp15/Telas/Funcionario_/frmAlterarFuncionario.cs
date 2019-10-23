@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas
 {
@@ -24,15 +26,16 @@ namespace WindowsFormsApp15.Telas
             InitializeComponent();
         }
 
-        Model.tb_funcionario model = new Model.tb_funcionario();
         Business.FuncionarioBusiness business = new Business.FuncionarioBusiness();
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             try
             {
+                Model.tb_funcionario model = new Model.tb_funcionario();
+
                 int id = Convert.ToInt32(txtId.Text);
 
-                business.Listar(id);
+                model = business.Listar(id);
 
                 //*Informações Pessoais*
 
@@ -54,7 +57,8 @@ namespace WindowsFormsApp15.Telas
                 txtCidade.Text = model.ds_cidade;
                 cboUF.Text = model.ds_UF;
                 txtComplemento.Text = model.ds_complemento;
-                
+                //picFoto.Image = model.img_foto;
+
             }
             catch (Exception ex)
             {
@@ -78,10 +82,13 @@ namespace WindowsFormsApp15.Telas
 
         private void btnCadastrarFuncionario_Click_1(object sender, EventArgs e)
         {
+            Model.tb_funcionario model = new Model.tb_funcionario();
+
             int id = Convert.ToInt32(txtId.Text);
 
             id = model.id_funcionario;
 
+           tb_funcionario func = business.Listar(id);
 
             //*Informações Pessoais*
 
@@ -105,9 +112,39 @@ namespace WindowsFormsApp15.Telas
             model.ds_complemento = txtComplemento.Text;
             model.ds_numeroCasa = txtNumRes.Text;
 
+            byte[] imagem_byte = null;
+
+            FileStream fstream = new FileStream(this.txtImagem.Text, FileMode.Open, FileAccess.Read);
+
+            BinaryReader br = new BinaryReader(fstream);
+
+            imagem_byte = br.ReadBytes((int)fstream.Length);
+
+            if(txtImagem.Text == string.Empty)
+            {
+                model.img_foto = func.img_foto;
+            }
+            else
+            {
+                model.img_foto = imagem_byte;
+            }
+
             business.AlterarFuncionario(model);
 
             MessageBox.Show("Alterado com sucesso");
+        }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|JPEG Files(*.jfif)|*.jfif";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string foto = dialog.FileName.ToString();
+                txtImagem.Text = foto;
+                picFoto.ImageLocation = foto;
+            }
         }
     }
 }

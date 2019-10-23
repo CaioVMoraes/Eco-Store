@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -52,7 +53,16 @@ namespace WindowsFormsApp15.Telas
                 model.ds_UF = cboUF.Text;
                 model.ds_complemento = txtComplemento.Text;
                 model.ds_numeroCasa = txtNumRes.Text;
-                //model.img_foto = null;
+
+                byte[] imagem_byte = null;
+
+                FileStream fstream = new FileStream(this.txtImagem.Text, FileMode.Open, FileAccess.Read);
+
+                BinaryReader br = new BinaryReader(fstream);
+
+                imagem_byte = br.ReadBytes((int)fstream.Length);
+
+                model.img_foto = imagem_byte;
 
                 business.CadastrarFuncionario(model);
 
@@ -81,6 +91,19 @@ namespace WindowsFormsApp15.Telas
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             Move_Form(Handle, e);
+        }
+
+        private void btnProcurar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "JPG Files(*.jpg)|*.jpg|PNG Files(*.png)|*.png|JPEG Files(*.jfif)|*.jfif";
+
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                string foto = dialog.FileName.ToString();
+                txtImagem.Text = foto;
+                picFoto.ImageLocation = foto;
+            }
         }
     }
 }

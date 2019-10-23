@@ -52,7 +52,7 @@
             // 
             this.dgvConsultarFuncionario.BackgroundColor = System.Drawing.Color.White;
             this.dgvConsultarFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarFuncionario.Location = new System.Drawing.Point(12, 236);
+            this.dgvConsultarFuncionario.Location = new System.Drawing.Point(12, 190);
             this.dgvConsultarFuncionario.Name = "dgvConsultarFuncionario";
             this.dgvConsultarFuncionario.Size = new System.Drawing.Size(1256, 464);
             this.dgvConsultarFuncionario.TabIndex = 165;
@@ -77,7 +77,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(29, 201);
+            this.label1.Location = new System.Drawing.Point(465, 158);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 20);
             this.label1.TabIndex = 172;
@@ -90,7 +90,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(406, 165);
+            this.label2.Location = new System.Drawing.Point(288, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 20);
             this.label2.TabIndex = 170;
@@ -103,7 +103,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(29, 165);
+            this.label7.Location = new System.Drawing.Point(21, 161);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(60, 20);
             this.label7.TabIndex = 167;
@@ -116,7 +116,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(406, 201);
+            this.label6.Location = new System.Drawing.Point(901, 158);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(182, 20);
             this.label6.TabIndex = 174;
@@ -125,20 +125,20 @@
             // txtRg
             // 
             this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRg.Location = new System.Drawing.Point(92, 201);
+            this.txtRg.Location = new System.Drawing.Point(512, 155);
             this.txtRg.Mask = "00.000.000-0";
             this.txtRg.Name = "txtRg";
-            this.txtRg.Size = new System.Drawing.Size(287, 24);
+            this.txtRg.Size = new System.Drawing.Size(99, 24);
             this.txtRg.TabIndex = 177;
             this.txtRg.TextChanged += new System.EventHandler(this.txtRg_TextChanged);
             // 
             // txtCPF
             // 
             this.txtCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCPF.Location = new System.Drawing.Point(611, 161);
+            this.txtCPF.Location = new System.Drawing.Point(342, 157);
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
-            this.txtCPF.Size = new System.Drawing.Size(287, 24);
+            this.txtCPF.Size = new System.Drawing.Size(115, 24);
             this.txtCPF.TabIndex = 178;
             this.txtCPF.TextChanged += new System.EventHandler(this.txtCPF_TextChanged);
             // 
@@ -149,9 +149,9 @@
             this.dtpContrat.ForeColor = System.Drawing.Color.White;
             this.dtpContrat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpContrat.FormatCustom = null;
-            this.dtpContrat.Location = new System.Drawing.Point(611, 194);
+            this.dtpContrat.Location = new System.Drawing.Point(1089, 155);
             this.dtpContrat.Name = "dtpContrat";
-            this.dtpContrat.Size = new System.Drawing.Size(287, 27);
+            this.dtpContrat.Size = new System.Drawing.Size(161, 27);
             this.dtpContrat.TabIndex = 179;
             this.dtpContrat.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
             this.dtpContrat.onValueChanged += new System.EventHandler(this.dtpContrat_onValueChanged);
@@ -160,7 +160,7 @@
             // 
             this.cboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(1019, 161);
+            this.cboCargo.Location = new System.Drawing.Point(698, 154);
             this.cboCargo.Name = "cboCargo";
             this.cboCargo.Size = new System.Drawing.Size(197, 24);
             this.cboCargo.TabIndex = 186;
@@ -173,7 +173,7 @@
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(914, 167);
+            this.label9.Location = new System.Drawing.Point(630, 157);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 185;
@@ -220,9 +220,9 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(92, 163);
+            this.txtNome.Location = new System.Drawing.Point(90, 159);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(287, 20);
+            this.txtNome.Size = new System.Drawing.Size(189, 20);
             this.txtNome.TabIndex = 188;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
@@ -231,7 +231,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
-            this.ClientSize = new System.Drawing.Size(1280, 712);
+            this.ClientSize = new System.Drawing.Size(1280, 662);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.label9);

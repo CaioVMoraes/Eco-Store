@@ -11,6 +11,7 @@ namespace WindowsFormsApp15.Database
     {
 
         Model.ecostoreEntities db = new ecostoreEntities();
+
         public void InserirCliente(tb_cliente modelo)
         {
             db.tb_cliente.Add(modelo);
@@ -39,6 +40,12 @@ namespace WindowsFormsApp15.Database
             List<tb_cliente> lista = db.tb_cliente.Where(x => x.ds_cpf == cpf).ToList();
 
             return lista;
+        }
+        public tb_cliente ListarClienteCpf(string cpf)
+        {
+            tb_cliente model = db.tb_cliente.FirstOrDefault(x => x.ds_cpf == cpf);
+
+            return model;
         }
         public List<tb_cliente> ConsultarClienteRg(string RG)
         {
