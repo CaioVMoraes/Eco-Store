@@ -76,18 +76,18 @@ namespace WindowsFormsApp15.Telas
         {
             try
             {
-                //Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
-
-                //Image imagem = imageConverter.byteArrayToImage(Autenticacao.Usuario.UsuarioLogado.Foto);
-
-                //imgUsuario.Image = imagem;
-
                 lblUsuario.Text = Autenticacao.Usuario.UsuarioLogado.Nome;
 
                 List<tb_produto> lista = produtoBusiness.ConsultarTodosProdutos();
 
                 listBox1.DisplayMember = nameof(tb_produto.nm_produto);
                 listBox1.DataSource = lista;
+
+                Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+
+                Image imagem = imageConverter.byteArrayToImage(Autenticacao.Usuario.UsuarioLogado.Foto);
+
+                imgUsuario.Image = imagem;
             }
             catch (Exception ex)
             {
@@ -133,9 +133,9 @@ namespace WindowsFormsApp15.Telas
                     dgvProdutos.DataSource = null;
 
                     lblTotal.Text = "0,00";
-                    lblTroco.Text = "0,00";
+                    lblTotal.Text = "0,00";
                     lblRestante.Text = "0,00";
-                    nudPago.Value = 0;
+                    txtPago.Text = "0,00";
                     txtCPFCliente.Text = string.Empty;
                 }
                 else
@@ -162,24 +162,24 @@ namespace WindowsFormsApp15.Telas
             }
         }
 
-        private void nudPago_ValueChanged(object sender, EventArgs e)
+        private void txtPago_TextChanged(object sender, EventArgs e)
         {
             try
             {
                 decimal total = Convert.ToDecimal(lblTotal.Text);
-                decimal pago = nudPago.Value;
+                decimal pago = Convert.ToDecimal(txtPago.Text);
 
                 lblRestante.Text = (total - pago).ToString();
 
                 if (pago == total)
                 {
-                    lblTroco.Text = "0,00";
+                    lblTotal.Text = "0,00";
                 }
 
                 if (pago > total)
                 {
                     lblRestante.Text = "0,00";
-                    lblTroco.Text = (pago - total).ToString();
+                    lblTotal.Text = (pago - total).ToString();
                 }
             }
             catch (Exception ex)

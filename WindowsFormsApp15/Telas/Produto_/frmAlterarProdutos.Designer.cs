@@ -397,6 +397,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAlterarProdutos";
             this.Text = "frmAlterarProdutos";
+            this.Load += new System.EventHandler(this.frmAlterarProdutos_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();

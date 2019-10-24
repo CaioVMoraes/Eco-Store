@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas
 {
@@ -92,15 +93,56 @@ namespace WindowsFormsApp15.Telas
 
         private void dgvConsultarFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //if(e.ColumnIndex == 0)
-            //{
+            if (e.ColumnIndex == 0)
+            {
+                try
+                {
+                    tb_funcionario funcionario = dgvConsultarFuncionario.CurrentRow.DataBoundItem as tb_funcionario;
 
-            //}
+                    Telas.frmAlterarFuncionario alterar = new Telas.frmAlterarFuncionario();
+                    alterar.CarregarTela(funcionario);
+                    alterar.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+
+            if (e.ColumnIndex == 1)
+            {
+                try
+                {
+                    tb_funcionario funcionario = dgvConsultarFuncionario.CurrentRow.DataBoundItem as tb_funcionario;
+
+                    Telas.frmDeletarFuncionario deletar = new Telas.frmDeletarFuncionario();
+                    deletar.CarregarTela(funcionario);
+                    deletar.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
         }
 
         private void dgvConsultarFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            try
+            {
+                tb_funcionario livro = dgvConsultarFuncionario.CurrentRow.DataBoundItem as tb_funcionario;
 
+                Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+
+                Image imagem = imageConverter.byteArrayToImage(livro.img_image);
+
+                picFoto.Image = imagem;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

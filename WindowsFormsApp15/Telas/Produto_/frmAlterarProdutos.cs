@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas
 {
@@ -110,6 +111,21 @@ namespace WindowsFormsApp15.Telas
         private void lblSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void CarregarCategoria()
+        {
+            Business.CategoriaBusiness business = new Business.CategoriaBusiness();
+
+            List<tb_categoria> lista = business.ConsultarCategoria();
+
+            cboCategoria.DisplayMember = nameof(tb_categoria.nm_categoria);
+            cboCategoria.DataSource = lista;
+        }
+
+        private void frmAlterarProdutos_Load(object sender, EventArgs e)
+        {
+            this.CarregarCategoria();
         }
     }
 }

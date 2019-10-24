@@ -49,6 +49,7 @@ namespace WindowsFormsApp15.Telas
                 txtCelular.Text = model.ds_celular;
                 txtTelefone.Text = model.ds_telefone;
                 nudSalario.Value = model.vl_salario;
+                txtCpf.Text = model.ds_cpf;
 
                 //*Endereço*
 
@@ -85,9 +86,44 @@ namespace WindowsFormsApp15.Telas
             Move_Form(Handle, e);
         }
 
+        public void CarregarTela(tb_funcionario model)
+        {
+            //*Informações Pessoais*
+
+            txtNome.Text = model.nm_funcionario;
+            dtpNascimento.Value = model.dt_nascimento;
+            txtRg.Text = model.ds_rg;
+            txtEmail.Text = model.ds_email;
+            dtpContrat.Value = model.dt_contratacao;
+            cboGen.Text = model.ds_genero;
+            cboCargo.Text = model.ds_cargo;
+            txtCelular.Text = model.ds_celular;
+            txtTelefone.Text = model.ds_telefone;
+            nudSalario.Value = model.vl_salario;
+            txtCpf.Text = model.ds_cpf;
+
+            //*Endereço*
+
+            txtEndereço.Text = model.ds_endereco;
+            txtCep.Text = model.ds_cep;
+            txtCidade.Text = model.ds_cidade;
+            cboUF.Text = model.ds_UF;
+            txtComplemento.Text = model.ds_complemento;
+
+            Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+
+            Image imagem = imageConverter.byteArrayToImage(model.img_foto);
+
+            picFoto.Image = imagem;
+        }
+
         private void btnCadastrarFuncionario_Click_1(object sender, EventArgs e)
         {
+            try
+            {
                 Model.tb_funcionario model = new Model.tb_funcionario();
+
+                tb_funcionario func = business.Listar(Convert.ToInt32(txtId.Text));
 
                 //*Informações Pessoais*
 
@@ -113,6 +149,7 @@ namespace WindowsFormsApp15.Telas
                 model.ds_complemento = txtComplemento.Text;
                 model.ds_numeroCasa = txtNumRes.Text;
 
+
                 byte[] imagem_byte = null;
 
                 FileStream fstream = new FileStream(this.txtImagem.Text, FileMode.Open, FileAccess.Read);
@@ -121,13 +158,23 @@ namespace WindowsFormsApp15.Telas
 
                 imagem_byte = br.ReadBytes((int)fstream.Length);
 
-                model.img_foto = imagem_byte;
+                if (txtImagem.Text == string.Empty)
+                {
+                    model.img_foto = func.img_foto;
+                }
+                else
+                {
+                    model.img_foto = imagem_byte;
+                }
 
                 business.AlterarFuncionario(model);
 
                 MessageBox.Show("Alterado com sucesso");
-            
-           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnProcurar_Click(object sender, EventArgs e)

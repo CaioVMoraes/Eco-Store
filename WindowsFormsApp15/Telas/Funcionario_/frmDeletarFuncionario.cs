@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas
 {
@@ -26,6 +27,38 @@ namespace WindowsFormsApp15.Telas
 
         Model.tb_funcionario model = new Model.tb_funcionario();
         Business.FuncionarioBusiness business = new Business.FuncionarioBusiness();
+
+        public void CarregarTela(tb_funcionario model)
+        {
+            //*Informações Pessoais*
+
+            txtNome.Text = model.nm_funcionario;
+            dtpNascimento.Value = model.dt_nascimento;
+            txtRg.Text = model.ds_rg;
+            txtEmail.Text = model.ds_email;
+            dtpContrat.Value = model.dt_contratacao;
+            cboGen.Text = model.ds_genero;
+            cboCargo.Text = model.ds_cargo;
+            txtCelular.Text = model.ds_celular;
+            txtTelefone.Text = model.ds_telefone;
+            nudSalario.Value = model.vl_salario;
+            txtCpf.Text = model.ds_cpf;
+
+            //*Endereço*
+
+            txtEndereço.Text = model.ds_endereco;
+            txtCep.Text = model.ds_cep;
+            txtCidade.Text = model.ds_cidade;
+            cboUF.Text = model.ds_UF;
+            txtComplemento.Text = model.ds_complemento;
+
+            Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+
+            Image imagem = imageConverter.byteArrayToImage(model.img_foto);
+
+            picFoto.Image = imagem;
+        }
+
         private void btnCadastrarFuncionario_Click(object sender, EventArgs e)
         {
             try
@@ -66,6 +99,7 @@ namespace WindowsFormsApp15.Telas
                 txtCelular.Text = model.ds_celular;
                 txtTelefone.Text = model.ds_telefone;
                 nudSalario.Value = model.vl_salario;
+                txtCpf.Text = model.ds_cpf;
 
                 //*Endereço*
 
