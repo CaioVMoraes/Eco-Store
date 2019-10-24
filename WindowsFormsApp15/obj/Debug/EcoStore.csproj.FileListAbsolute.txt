@@ -295,3 +295,5 @@ C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\MySql.Data.Enti
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\EntityFramework.xml
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\teste\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Fornecedor.frmAlterarFornecedor.resources
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Fornecedor.frmDeletarFornecedor.resources

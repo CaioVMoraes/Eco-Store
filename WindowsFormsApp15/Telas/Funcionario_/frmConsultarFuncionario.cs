@@ -34,6 +34,7 @@ namespace WindowsFormsApp15.Telas
 
             List<Model.tb_funcionario> lista = business.ConsultarFuncionarioNome(nome);
 
+            dgvConsultarFuncionario.AutoGenerateColumns = false;
             dgvConsultarFuncionario.DataSource = lista;
         }
         private void txtRg_TextChanged(object sender, EventArgs e)
@@ -42,6 +43,7 @@ namespace WindowsFormsApp15.Telas
 
             List<Model.tb_funcionario> lista = business.ConsultarFuncionarioRg(rg);
 
+            dgvConsultarFuncionario.AutoGenerateColumns = false;
             dgvConsultarFuncionario.DataSource = lista;
         }
 
@@ -51,6 +53,7 @@ namespace WindowsFormsApp15.Telas
 
             List<Model.tb_funcionario> lista = business.ConsultarFuncionarioCpf(cpf);
 
+            dgvConsultarFuncionario.AutoGenerateColumns = false;
             dgvConsultarFuncionario.DataSource = lista;
         }
 
@@ -60,6 +63,7 @@ namespace WindowsFormsApp15.Telas
 
             List<Model.tb_funcionario> lista = business.ConsultarFuncionarioCargo(cargo);
 
+            dgvConsultarFuncionario.AutoGenerateColumns = false;
             dgvConsultarFuncionario.DataSource = lista;
         }
 
@@ -69,6 +73,7 @@ namespace WindowsFormsApp15.Telas
 
             List<Model.tb_funcionario> lista = business.ConsultarFuncionarioContratacao(contrat);
 
+            dgvConsultarFuncionario.AutoGenerateColumns = false;
             dgvConsultarFuncionario.DataSource = lista;
         }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
