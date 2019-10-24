@@ -129,7 +129,7 @@
     <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="dt_contratacao" Type="date" />
+    <Property Name="dt_contratacao" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_log">
     <Key>

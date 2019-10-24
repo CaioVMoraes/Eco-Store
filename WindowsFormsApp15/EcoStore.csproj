@@ -175,6 +175,12 @@
     <Compile Include="Telas\Categoria_\frmDeletarCategoria.Designer.cs">
       <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Compra\frmTelaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Compra\frmTelaCompra.Designer.cs">
+      <DependentUpon>frmTelaCompra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Estoque_\frmAlterarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,12 +258,6 @@
     </Compile>
     <Compile Include="Telas\Funcionario_\frmCadastrarFuncionario.Designer.cs">
       <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Pedido\frmCadastrarPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Pedido\frmCadastrarPedido.Designer.cs">
-      <DependentUpon>frmCadastrarPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Controle de Ponto\frmCadastrarPonto.cs">
       <SubType>Form</SubType>
@@ -357,6 +357,9 @@
     <EmbeddedResource Include="Telas\Categoria_\frmDeletarCategoria.resx">
       <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Compra\frmTelaCompra.resx">
+      <DependentUpon>frmTelaCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Estoque_\frmAlterarEstoque.resx">
       <DependentUpon>frmAlterarEstoque.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,9 +395,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmCadastrarFuncionario.resx">
       <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Pedido\frmCadastrarPedido.resx">
-      <DependentUpon>frmCadastrarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle de Ponto\frmCadastrarPonto.resx">
       <DependentUpon>frmCadastrarPonto.cs</DependentUpon>
