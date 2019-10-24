@@ -76,5 +76,15 @@ namespace WindowsFormsApp15.Telas
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

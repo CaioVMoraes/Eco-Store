@@ -318,6 +318,7 @@
             this.label1.Size = new System.Drawing.Size(21, 23);
             this.label1.TabIndex = 156;
             this.label1.Text = "_";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label3
             // 
@@ -331,6 +332,7 @@
             this.label3.Size = new System.Drawing.Size(23, 23);
             this.label3.TabIndex = 155;
             this.label3.Text = "X";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // imgImagem
             // 

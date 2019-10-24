@@ -9,9 +9,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp15.Telas.Usuario
+namespace WindowsFormsApp15.Telas.Compra
 {
-    public partial class frmConsultarUsuario : Form
+    public partial class frmTelaCompra : Form
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -19,18 +19,9 @@ namespace WindowsFormsApp15.Telas.Usuario
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-
-        public frmConsultarUsuario()
+        public frmTelaCompra()
         {
             InitializeComponent();
-        }
-
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-            Database.UsuarioDatabase database = new Database.UsuarioDatabase();
-            List<Model.tb_usuario> lista = database.ListaDeUsuarios();
-
-            dataGridView1.DataSource = lista;
         }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
@@ -46,12 +37,12 @@ namespace WindowsFormsApp15.Telas.Usuario
             Move_Form(Handle, e);
         }
 
-        private void lblSair_Click(object sender, EventArgs e)
+        private void label14_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void lblMinimizar_Click(object sender, EventArgs e)
+        private void label13_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }

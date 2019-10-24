@@ -78,5 +78,15 @@ namespace WindowsFormsApp15.Telas.Fornecedor
             txtEndereco.Text = modelo.ds_endereco;
             txtUF.Text = modelo.ds_UF;
         }
+
+        private void lblMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

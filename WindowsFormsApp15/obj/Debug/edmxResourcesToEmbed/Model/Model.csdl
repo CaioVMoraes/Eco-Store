@@ -215,7 +215,7 @@
     <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="vl_salario" Type="Decimal" Nullable="false" />
-    <Property Name="dt_contratacao" Type="DateTime" />
+    <Property Name="dt_contratacao" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="tb_controledeponto" Relationship="ecostoreModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
     <NavigationProperty Name="tb_folhapagamento" Relationship="ecostoreModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
     <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_usuario_ibfk_1" FromRole="tb_funcionario" ToRole="tb_usuario" />
