@@ -147,10 +147,10 @@ namespace WindowsFormsApp15.Business
             {
                 throw new Exception("idade inválida");
             }
-            if (idade > 100)
-            {
-                throw new Exception("idade inválida");
-            }
+            //if (idade > 100)
+            //{
+            //    throw new Exception("idade inválida");
+            //}
             if (model.ds_rg == string.Empty)
             {
                 throw new Exception("Rg do funcionário é obrigatório");
@@ -184,10 +184,10 @@ namespace WindowsFormsApp15.Business
             {
                 throw new Exception("Numero de celular é obrigatório");
             }
-            if (model.vl_salario == 0)
-            {
-                throw new Exception("Salário é obrigatório");
-            }
+            //if (model.vl_salario == 0)
+            //{
+            //    throw new Exception("Salário é obrigatório");
+            //}
 
             //*Endereço*
 

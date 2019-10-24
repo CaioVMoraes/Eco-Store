@@ -29,7 +29,7 @@ namespace WindowsFormsApp15.Telas
         Model.tb_funcionario modelo = new Model.tb_funcionario();
        
         private void txtNome_TextChanged(object sender, EventArgs e)
-        {
+      {
             string nome = txtNome.Text;
 
             List<Model.tb_funcionario> lista = business.ConsultarFuncionarioNome(nome);
@@ -71,7 +71,7 @@ namespace WindowsFormsApp15.Telas
         {
             DateTime contrat = dtpContrat.Value;
 
-            List<Model.tb_funcionario> lista = business.ConsultarFuncionarioContratacao(contrat);
+            List<Model.tb_funcionario> lista = business.ConsultarFuncionarioContratacao(contrat.Date);
 
             dgvConsultarFuncionario.AutoGenerateColumns = false;
             dgvConsultarFuncionario.DataSource = lista;
@@ -88,6 +88,19 @@ namespace WindowsFormsApp15.Telas
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
             Move_Form(Handle, e);
+        }
+
+        private void dgvConsultarFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //if(e.ColumnIndex == 0)
+            //{
+
+            //}
+        }
+
+        private void dgvConsultarFuncionario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

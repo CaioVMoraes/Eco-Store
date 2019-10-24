@@ -19,25 +19,25 @@ namespace WindowsFormsApp15.Database
         }
         public List<tb_funcionario> ConsultarFuncionarioNome(string Nome)
         {
-            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.nm_funcionario == Nome).ToList();
+            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.nm_funcionario.Contains(Nome)).ToList();
 
             return lista;
         }
         public List<tb_funcionario> ConsultarFuncionarioRg(string Rg)
         {
-            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_rg == Rg).ToList();
+            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_rg.Contains(Rg)).ToList();
 
             return lista;
         }
         public List<tb_funcionario> ConsultarFuncionarioCpf(string cpf)
         {
-            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_cpf == cpf).ToList();
+            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_cpf.Contains(cpf)).ToList();
 
             return lista;
         }
         public List<tb_funcionario> ConsultarFuncionarioCargo(string Cargo)
         {
-            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_cargo == Cargo).ToList();
+            List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_cargo.Contains(Cargo)).ToList();
 
             return lista;
         }
@@ -57,25 +57,27 @@ namespace WindowsFormsApp15.Database
 
         public void AlterarFuncionario(tb_funcionario modelo)
         {
-            tb_funcionario alterar = db.tb_funcionario.FirstOrDefault(x => x.nm_funcionario == x.nm_funcionario);
+            tb_funcionario alterar = db.tb_funcionario.FirstOrDefault(x => x.id_funcionario == modelo.id_funcionario);
 
-            modelo.nm_funcionario = alterar.nm_funcionario;
-            modelo.vl_salario = alterar.vl_salario;
-            modelo.ds_cargo = alterar.ds_cargo;
-            modelo.ds_celular = alterar.ds_celular;
-            modelo.ds_cep = alterar.ds_cep;
-            modelo.ds_cidade = alterar.ds_cidade;
-            modelo.ds_complemento = alterar.ds_complemento;
-            modelo.ds_cpf = alterar.ds_cpf;
-            modelo.ds_email = alterar.ds_email;
-            modelo.ds_endereco = alterar.ds_endereco;
-            modelo.ds_genero = alterar.ds_genero;
-            modelo.ds_numeroCasa = alterar.ds_numeroCasa;
-            modelo.ds_rg = alterar.ds_rg;
-            modelo.ds_telefone = alterar.ds_telefone;
-            modelo.ds_UF = alterar.ds_UF;
-            modelo.dt_contratacao = alterar.dt_contratacao;
-            modelo.dt_nascimento = alterar.dt_nascimento;
+            alterar.id_funcionario = modelo.id_funcionario;
+            alterar.nm_funcionario = modelo.nm_funcionario;
+            alterar.vl_salario = modelo.vl_salario;
+            alterar.ds_cargo = modelo.ds_cargo;
+            alterar.ds_celular = modelo.ds_celular;
+            alterar.ds_cep = modelo.ds_cep;
+            alterar.ds_cidade = modelo.ds_cidade;
+            alterar.ds_complemento = modelo.ds_complemento;
+            alterar.ds_cpf = modelo.ds_cpf;
+            alterar.ds_email = modelo.ds_email;
+            alterar.ds_endereco = modelo.ds_endereco;
+            alterar.ds_genero = modelo.ds_genero;
+            alterar.ds_numeroCasa = modelo.ds_numeroCasa;
+            alterar.ds_rg = modelo.ds_rg;
+            alterar.ds_telefone = modelo.ds_telefone;
+            alterar.ds_UF = modelo.ds_UF;
+            alterar.dt_contratacao = modelo.dt_contratacao;
+            alterar.dt_nascimento = modelo.dt_nascimento;
+            alterar.img_foto = modelo.img_foto;
 
             db.SaveChanges();
 

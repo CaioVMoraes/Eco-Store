@@ -285,6 +285,11 @@
             this.nudSalario.Enabled = false;
             this.nudSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudSalario.Location = new System.Drawing.Point(563, 491);
+            this.nudSalario.Maximum = new decimal(new int[] {
+            99999999,
+            0,
+            0,
+            0});
             this.nudSalario.Name = "nudSalario";
             this.nudSalario.Size = new System.Drawing.Size(148, 22);
             this.nudSalario.TabIndex = 379;

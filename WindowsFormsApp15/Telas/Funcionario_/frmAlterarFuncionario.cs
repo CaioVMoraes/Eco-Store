@@ -87,56 +87,47 @@ namespace WindowsFormsApp15.Telas
 
         private void btnCadastrarFuncionario_Click_1(object sender, EventArgs e)
         {
-            Model.tb_funcionario model = new Model.tb_funcionario();
+                Model.tb_funcionario model = new Model.tb_funcionario();
 
-            int id = Convert.ToInt32(txtId.Text);
+                //*Informações Pessoais*
 
-            id = model.id_funcionario;
+                model.id_funcionario = Convert.ToInt32(txtId.Text);
+                model.nm_funcionario = txtNome.Text;
+                model.dt_nascimento = dtpNascimento.Value;
+                model.ds_rg = txtRg.Text;
+                model.ds_email = txtEmail.Text;
+                model.dt_contratacao = dtpContrat.Value;
+                model.ds_genero = cboGen.Text;
+                model.ds_cargo = cboCargo.Text;
+                model.ds_celular = txtCelular.Text;
+                model.ds_telefone = txtTelefone.Text;
+                model.vl_salario = nudSalario.Value;
+                model.ds_cpf = txtCpf.Text;
 
-           tb_funcionario func = business.Listar(id);
+                //*Endereço*
 
-            //*Informações Pessoais*
+                model.ds_endereco = txtEndereço.Text;
+                model.ds_cep = txtCep.Text;
+                model.ds_cidade = txtCidade.Text;
+                model.ds_UF = cboUF.Text;
+                model.ds_complemento = txtComplemento.Text;
+                model.ds_numeroCasa = txtNumRes.Text;
 
-            model.nm_funcionario = txtNome.Text;
-            model.dt_nascimento = dtpNascimento.Value;
-            model.ds_rg = txtRg.Text;
-            model.ds_email = txtEmail.Text;
-            model.dt_contratacao = dtpContrat.Value;
-            model.ds_genero = cboGen.Text;
-            model.ds_cargo = cboCargo.Text;
-            model.ds_celular = txtCelular.Text;
-            model.ds_telefone = txtTelefone.Text;
-            model.vl_salario = nudSalario.Value;
+                byte[] imagem_byte = null;
 
-            //*Endereço*
+                FileStream fstream = new FileStream(this.txtImagem.Text, FileMode.Open, FileAccess.Read);
 
-            model.ds_endereco = txtEndereço.Text;
-            model.ds_cep = txtCep.Text;
-            model.ds_cidade = txtCidade.Text;
-            model.ds_UF = cboUF.Text;
-            model.ds_complemento = txtComplemento.Text;
-            model.ds_numeroCasa = txtNumRes.Text;
+                BinaryReader br = new BinaryReader(fstream);
 
-            byte[] imagem_byte = null;
+                imagem_byte = br.ReadBytes((int)fstream.Length);
 
-            FileStream fstream = new FileStream(this.txtImagem.Text, FileMode.Open, FileAccess.Read);
-
-            BinaryReader br = new BinaryReader(fstream);
-
-            imagem_byte = br.ReadBytes((int)fstream.Length);
-
-            if(txtImagem.Text == string.Empty)
-            {
-                model.img_foto = func.img_foto;
-            }
-            else
-            {
                 model.img_foto = imagem_byte;
-            }
 
-            business.AlterarFuncionario(model);
+                business.AlterarFuncionario(model);
 
-            MessageBox.Show("Alterado com sucesso");
+                MessageBox.Show("Alterado com sucesso");
+            
+           
         }
 
         private void btnProcurar_Click(object sender, EventArgs e)

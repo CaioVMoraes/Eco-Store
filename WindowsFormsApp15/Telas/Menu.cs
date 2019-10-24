@@ -27,7 +27,13 @@ namespace WindowsFormsApp15.Telas
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            lblNome.Text = Autenticacao.Usuario.UsuarioLogado.Nome;
 
+            Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+
+            Image imagem = imageConverter.byteArrayToImage(Autenticacao.Usuario.UsuarioLogado.Foto);
+
+            imgPerfil.Image = imagem;
         }
 
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
@@ -130,6 +136,23 @@ namespace WindowsFormsApp15.Telas
         private void btnConsultarFolhaPagamento_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Telas.frmAlterarFuncionario CadastrarFunc = new frmAlterarFuncionario();
+            CadastrarFunc.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Telas.frmDeletarFuncionario CadastrarFunc = new frmDeletarFuncionario();
+            CadastrarFunc.Show();
         }
     }
 }
