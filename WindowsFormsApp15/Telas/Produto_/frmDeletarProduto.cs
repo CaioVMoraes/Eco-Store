@@ -69,5 +69,15 @@ namespace WindowsFormsApp15.Telas
             imgImagem.Image = imagem;
             cboCategoria.Text = modelo.tb_categoria.nm_categoria;
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

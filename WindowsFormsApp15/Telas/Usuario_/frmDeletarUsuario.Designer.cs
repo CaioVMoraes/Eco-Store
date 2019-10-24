@@ -356,6 +356,7 @@
             this.lblMinimizar.Size = new System.Drawing.Size(21, 23);
             this.lblMinimizar.TabIndex = 156;
             this.lblMinimizar.Text = "_";
+            this.lblMinimizar.Click += new System.EventHandler(this.lblMinimizar_Click);
             // 
             // lblSair
             // 
@@ -369,6 +370,7 @@
             this.lblSair.Size = new System.Drawing.Size(23, 23);
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // frmDeletarUsuario
             // 
