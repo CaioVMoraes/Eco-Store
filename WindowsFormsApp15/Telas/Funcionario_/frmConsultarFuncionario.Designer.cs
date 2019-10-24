@@ -44,6 +44,24 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNome = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columm4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ds_telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ds_celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ds_email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFuncionario)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -52,6 +70,25 @@
             // 
             this.dgvConsultarFuncionario.BackgroundColor = System.Drawing.Color.White;
             this.dgvConsultarFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvConsultarFuncionario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Columm4,
+            this.ds_telefone,
+            this.ds_celular,
+            this.ds_email,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11,
+            this.Column12,
+            this.Column13,
+            this.Column14});
             this.dgvConsultarFuncionario.Location = new System.Drawing.Point(12, 190);
             this.dgvConsultarFuncionario.Name = "dgvConsultarFuncionario";
             this.dgvConsultarFuncionario.Size = new System.Drawing.Size(1256, 464);
@@ -226,6 +263,114 @@
             this.txtNome.TabIndex = 188;
             this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "id_funcionario";
+            this.Column1.HeaderText = "id_funcionario";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "nm_funcionario";
+            this.Column2.HeaderText = "nm_funcionario";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ds_rg";
+            this.Column3.HeaderText = "ds_rg";
+            this.Column3.Name = "Column3";
+            // 
+            // Columm4
+            // 
+            this.Columm4.DataPropertyName = "ds_cpf";
+            this.Columm4.HeaderText = "ds_cpf";
+            this.Columm4.Name = "Columm4";
+            // 
+            // ds_telefone
+            // 
+            this.ds_telefone.DataPropertyName = "ds_telefone";
+            this.ds_telefone.HeaderText = "ds_telefone";
+            this.ds_telefone.Name = "ds_telefone";
+            // 
+            // ds_celular
+            // 
+            this.ds_celular.DataPropertyName = "ds_celular";
+            this.ds_celular.HeaderText = "ds_celular";
+            this.ds_celular.Name = "ds_celular";
+            // 
+            // ds_email
+            // 
+            this.ds_email.DataPropertyName = "ds_email";
+            this.ds_email.HeaderText = "ds_email";
+            this.ds_email.Name = "ds_email";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "dt_nascimento";
+            this.Column4.HeaderText = "dt_nascimento";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ds_genero";
+            this.Column5.HeaderText = "ds_genero";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "ds_endereco";
+            this.Column6.HeaderText = "ds_endereco";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "ds_cep";
+            this.Column7.HeaderText = "ds_cep";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "ds_cidade";
+            this.Column8.HeaderText = "ds_cidade";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "ds_uf";
+            this.Column9.HeaderText = "ds_uf";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "ds_complemento";
+            this.Column10.HeaderText = "ds_complemento";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "ds_numeroCasa";
+            this.Column11.HeaderText = "ds_numeroCasa";
+            this.Column11.Name = "Column11";
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "ds_cargo";
+            this.Column12.HeaderText = "ds_cargo";
+            this.Column12.Name = "Column12";
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "vl_salario";
+            this.Column13.HeaderText = "vl_salario";
+            this.Column13.Name = "Column13";
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "dt_contratacao";
+            this.Column14.HeaderText = "dt_contratacao";
+            this.Column14.Name = "Column14";
+            // 
             // frmConsultarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -272,5 +417,23 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columm4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ds_telefone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ds_celular;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ds_email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
     }
 }

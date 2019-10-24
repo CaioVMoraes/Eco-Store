@@ -150,6 +150,7 @@
             this.btnLimpar.TabIndex = 247;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnProcurar
             // 
@@ -763,6 +764,7 @@
             // 
             // txtImagem
             // 
+            this.txtImagem.Enabled = false;
             this.txtImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtImagem.Location = new System.Drawing.Point(780, 611);
             this.txtImagem.Name = "txtImagem";

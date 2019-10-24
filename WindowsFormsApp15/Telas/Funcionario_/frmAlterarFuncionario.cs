@@ -57,7 +57,12 @@ namespace WindowsFormsApp15.Telas
                 txtCidade.Text = model.ds_cidade;
                 cboUF.Text = model.ds_UF;
                 txtComplemento.Text = model.ds_complemento;
-                //picFoto.Image = model.img_foto;
+
+                Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+
+                Image imagem = imageConverter.byteArrayToImage(model.img_foto);
+
+                picFoto.Image = imagem;
 
             }
             catch (Exception ex)
@@ -145,6 +150,11 @@ namespace WindowsFormsApp15.Telas
                 txtImagem.Text = foto;
                 picFoto.ImageLocation = foto;
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            picFoto.Image = WindowsFormsApp15.Properties.Resources.collaborator_male;
         }
     }
 }

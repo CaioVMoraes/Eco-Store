@@ -75,11 +75,6 @@ namespace WindowsFormsApp15.Telas
 
         }
 
-        private void frmCadastrarFuncionario_Load(object sender, EventArgs e)
-        {
-
-        }
-
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -104,6 +99,11 @@ namespace WindowsFormsApp15.Telas
                 txtImagem.Text = foto;
                 picFoto.ImageLocation = foto;
             }
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            picFoto.Image = WindowsFormsApp15.Properties.Resources.collaborator_male;
         }
     }
 }

@@ -48,9 +48,11 @@ namespace WindowsFormsApp15.Telas
         {
             try
             {
+                Model.tb_funcionario model = new Model.tb_funcionario();
+
                 int id = Convert.ToInt32(txtId.Text);
 
-                business.Listar(id);
+                model = business.Listar(id);
 
                 //*Informações Pessoais*
 
@@ -72,18 +74,18 @@ namespace WindowsFormsApp15.Telas
                 txtCidade.Text = model.ds_cidade;
                 cboUF.Text = model.ds_UF;
                 txtComplemento.Text = model.ds_complemento;
-                txtNumRes.Text = model.ds_numeroCasa;
 
-                //*Beneficíos*
+                Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 
-               
+                Image imagem = imageConverter.byteArrayToImage(model.img_foto);
+
+                picFoto.Image = imagem;
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
-            
         }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
@@ -101,11 +103,19 @@ namespace WindowsFormsApp15.Telas
 
         private void btnCadastrarFuncionario_Click_1(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(txtId.Text);
+            try
+            {
+                int id = Convert.ToInt32(txtId.Text);
 
-            business.RemoverFuncionario(id);
+                business.RemoverFuncionario(id);
 
-            MessageBox.Show("Funcionario removido com sucesso");
+                MessageBox.Show("Funcionario removido com sucesso");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
            
