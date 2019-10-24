@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp15.Telas.Compra
 {
-    public partial class frmTelaCompra : Form
+    public partial class frmConsultarCompra : Form
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -19,7 +19,7 @@ namespace WindowsFormsApp15.Telas.Compra
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [DllImportAttribute("user32.dll")]
         public static extern bool ReleaseCapture();
-        public frmTelaCompra()
+        public frmConsultarCompra()
         {
             InitializeComponent();
         }
@@ -37,14 +37,14 @@ namespace WindowsFormsApp15.Telas.Compra
             Move_Form(Handle, e);
         }
 
-        private void label14_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void label13_Click(object sender, EventArgs e)
+        private void lblMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

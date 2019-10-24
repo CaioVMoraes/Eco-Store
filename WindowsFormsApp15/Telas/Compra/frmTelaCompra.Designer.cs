@@ -46,32 +46,30 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.lblTroco = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblRestante = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblRestante = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTroco = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvProdutos
@@ -87,7 +85,7 @@
             this.dgvProdutos.Location = new System.Drawing.Point(12, 138);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.ReadOnly = true;
-            this.dgvProdutos.Size = new System.Drawing.Size(724, 293);
+            this.dgvProdutos.Size = new System.Drawing.Size(724, 302);
             this.dgvProdutos.TabIndex = 168;
             // 
             // Column1
@@ -164,7 +162,7 @@
             this.btnFinalizarPedido.Name = "btnFinalizarPedido";
             this.btnFinalizarPedido.Size = new System.Drawing.Size(310, 88);
             this.btnFinalizarPedido.TabIndex = 166;
-            this.btnFinalizarPedido.Text = "Finalizar Pedido";
+            this.btnFinalizarPedido.Text = "Finalizar Compra";
             this.btnFinalizarPedido.UseVisualStyleBackColor = true;
             // 
             // panel5
@@ -183,7 +181,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(118, 12);
+            this.label3.Location = new System.Drawing.Point(118, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 57;
@@ -201,6 +199,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1063, 77);
             this.panel1.TabIndex = 160;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // label13
             // 
@@ -214,6 +213,7 @@
             this.label13.Size = new System.Drawing.Size(21, 23);
             this.label13.TabIndex = 158;
             this.label13.Text = "_";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
@@ -227,6 +227,7 @@
             this.label14.Size = new System.Drawing.Size(23, 23);
             this.label14.TabIndex = 157;
             this.label14.Text = "X";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // imgUsuario
             // 
@@ -274,169 +275,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(724, 203);
             this.panel3.TabIndex = 162;
-            // 
-            // panel4
-            // 
-            this.panel4.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
-            this.panel4.Controls.Add(this.label5);
-            this.panel4.Controls.Add(this.label17);
-            this.panel4.Controls.Add(this.lblTroco);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label16);
-            this.panel4.Controls.Add(this.label11);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.lblRestante);
-            this.panel4.Controls.Add(this.label10);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.lblTotal);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(0, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(724, 196);
-            this.panel4.TabIndex = 55;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(497, 139);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(68, 42);
-            this.label17.TabIndex = 76;
-            this.label17.Text = "R$";
-            // 
-            // lblTroco
-            // 
-            this.lblTroco.AutoSize = true;
-            this.lblTroco.BackColor = System.Drawing.Color.Transparent;
-            this.lblTroco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTroco.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTroco.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTroco.Location = new System.Drawing.Point(560, 139);
-            this.lblTroco.Name = "lblTroco";
-            this.lblTroco.Size = new System.Drawing.Size(95, 42);
-            this.lblTroco.TabIndex = 74;
-            this.lblTroco.Text = "0,00";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(19, 152);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(88, 20);
-            this.label9.TabIndex = 75;
-            this.label9.Text = "Troco (R$):";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(503, 90);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 37);
-            this.label16.TabIndex = 73;
-            this.label16.Text = "R$";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(503, 49);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(59, 37);
-            this.label11.TabIndex = 72;
-            this.label11.Text = "R$";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(503, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 37);
-            this.label1.TabIndex = 71;
-            this.label1.Text = "R$";
-            // 
-            // lblRestante
-            // 
-            this.lblRestante.AutoSize = true;
-            this.lblRestante.BackColor = System.Drawing.Color.Transparent;
-            this.lblRestante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblRestante.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRestante.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblRestante.Location = new System.Drawing.Point(561, 90);
-            this.lblRestante.Name = "lblRestante";
-            this.lblRestante.Size = new System.Drawing.Size(84, 37);
-            this.lblRestante.TabIndex = 68;
-            this.lblRestante.Text = "0,00";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(19, 103);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(173, 20);
-            this.label10.TabIndex = 69;
-            this.label10.Text = "Restante a Pagar (R$):";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(19, 61);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 20);
-            this.label8.TabIndex = 67;
-            this.label8.Text = "Valor Pago (R$):";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.BackColor = System.Drawing.Color.Transparent;
-            this.lblTotal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTotal.Location = new System.Drawing.Point(561, 9);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(84, 37);
-            this.lblTotal.TabIndex = 65;
-            this.lblTotal.Text = "0,00";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(19, 22);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 20);
-            this.label12.TabIndex = 66;
-            this.label12.Text = "Subtotal (R$):";
             // 
             // listBox1
             // 
@@ -491,27 +329,143 @@
             this.listBox2.Size = new System.Drawing.Size(309, 104);
             this.listBox2.TabIndex = 170;
             // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
+            this.panel4.Controls.Add(this.label11);
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.lblRestante);
+            this.panel4.Controls.Add(this.label10);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Location = new System.Drawing.Point(0, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(724, 196);
+            this.panel4.TabIndex = 56;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(561, 49);
+            this.label5.Location = new System.Drawing.Point(562, 102);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 37);
-            this.label5.TabIndex = 77;
+            this.label5.Size = new System.Drawing.Size(75, 33);
+            this.label5.TabIndex = 71;
             this.label5.Text = "0,00";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label9.Location = new System.Drawing.Point(19, 113);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(88, 20);
+            this.label9.TabIndex = 72;
+            this.label9.Text = "Troco (R$):";
+            // 
+            // lblRestante
+            // 
+            this.lblRestante.AutoSize = true;
+            this.lblRestante.BackColor = System.Drawing.Color.Transparent;
+            this.lblRestante.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblRestante.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRestante.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRestante.Location = new System.Drawing.Point(562, 60);
+            this.lblRestante.Name = "lblRestante";
+            this.lblRestante.Size = new System.Drawing.Size(75, 33);
+            this.lblRestante.TabIndex = 68;
+            this.lblRestante.Text = "0,00";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label10.Location = new System.Drawing.Point(19, 70);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(173, 20);
+            this.label10.TabIndex = 69;
+            this.label10.Text = "Restante a Pagar (R$):";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label8.Location = new System.Drawing.Point(19, 28);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(126, 20);
+            this.label8.TabIndex = 67;
+            this.label8.Text = "Valor Pago (R$):";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel7.Controls.Add(this.label1);
+            this.panel7.Controls.Add(this.lblTroco);
+            this.panel7.Location = new System.Drawing.Point(0, 144);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(724, 41);
+            this.panel7.TabIndex = 72;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(19, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 20);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Total (R$):";
+            // 
+            // lblTroco
+            // 
+            this.lblTroco.AutoSize = true;
+            this.lblTroco.BackColor = System.Drawing.Color.Transparent;
+            this.lblTroco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblTroco.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTroco.ForeColor = System.Drawing.Color.Black;
+            this.lblTroco.Location = new System.Drawing.Point(562, 6);
+            this.lblTroco.Name = "lblTroco";
+            this.lblTroco.Size = new System.Drawing.Size(71, 33);
+            this.lblTroco.TabIndex = 74;
+            this.lblTroco.Text = "0,00";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label11.Location = new System.Drawing.Point(562, 17);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 33);
+            this.label11.TabIndex = 73;
+            this.label11.Text = "0,00";
             // 
             // frmTelaCompra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1063, 644);
+            this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.listBox2);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.btnFinalizarPedido);
             this.Controls.Add(this.panel5);
@@ -529,12 +483,14 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -559,23 +515,20 @@
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label lblTroco;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblRestante;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblRestante;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblTroco;
+        private System.Windows.Forms.Label label11;
     }
 }
