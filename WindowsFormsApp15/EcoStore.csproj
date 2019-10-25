@@ -72,6 +72,7 @@
   <ItemGroup>
     <Compile Include="Business\CategoriaBusiness.cs" />
     <Compile Include="Business\ClienteBusiness.cs" />
+    <Compile Include="Business\CompraBusiness.cs" />
     <Compile Include="Business\ControleDePontoBusiness.cs" />
     <Compile Include="Business\EstoqueBusiness.cs" />
     <Compile Include="Business\FluxoDeCaixaBusiness.cs" />
@@ -83,6 +84,7 @@
     <Compile Include="Business\VendaBusiness.cs" />
     <Compile Include="Database\CategoriaDatabase.cs" />
     <Compile Include="Database\ClienteDatabase.cs" />
+    <Compile Include="Database\CompraDatabase.cs" />
     <Compile Include="Database\ControledePontoDatabase.cs" />
     <Compile Include="Database\EstoqueDatabase.cs" />
     <Compile Include="Database\FluxoDeCaixaDatabase.cs" />

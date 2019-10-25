@@ -54,7 +54,6 @@ namespace WindowsFormsApp15.Business
             {
                 throw new Exception("A data de contrataçao é obrigatória");
             }
-
             if (model.dt_contratacao.Year > DateTime.Now.Year)
             {
                 throw new Exception("Data de contratação inválida");
