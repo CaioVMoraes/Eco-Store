@@ -70,7 +70,7 @@ namespace WindowsFormsApp15.Telas
 
         private void dtpContrat_onValueChanged(object sender, EventArgs e)
         {
-            DateTime contrat = dtpContrat.Value;
+            DateTime contrat = dtpContrat.Value.Date;
 
             List<Model.tb_funcionario> lista = business.ConsultarFuncionarioContratacao(contrat.Date);
 
@@ -101,6 +101,7 @@ namespace WindowsFormsApp15.Telas
 
                     Telas.frmAlterarFuncionario alterar = new Telas.frmAlterarFuncionario();
                     alterar.CarregarTela(funcionario);
+
                     alterar.ShowDialog();
                 }
                 catch (Exception ex)
@@ -131,11 +132,11 @@ namespace WindowsFormsApp15.Telas
         {
             try
             {
-                tb_funcionario livro = dgvConsultarFuncionario.CurrentRow.DataBoundItem as tb_funcionario;
+                tb_funcionario funcionario = dgvConsultarFuncionario.CurrentRow.DataBoundItem as tb_funcionario;
 
                 Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 
-                Image imagem = imageConverter.byteArrayToImage(livro.img_image);
+                Image imagem = imageConverter.byteArrayToImage(funcionario.img_foto);
 
                 picFoto.Image = imagem;
             }

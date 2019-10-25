@@ -223,7 +223,6 @@ C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsForms
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmAlterarProdutos.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmCadastrarEstoque.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmCadastrarFuncionario.resources
-C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmCadastrarPedido.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmCadastrarPonto.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.frmCadastrarProduto.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Usuario.frmAlterarUsuario.resources
@@ -299,3 +298,5 @@ C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsForms
 C:\Users\infob08\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmTelaCompra.resources
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmConsultarCompra.resources
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmTelaCompra.resources
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmConsultarCompra.resources
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmTelaCompra.resources

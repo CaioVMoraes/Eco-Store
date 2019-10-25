@@ -100,15 +100,18 @@ namespace WindowsFormsApp15.Telas
             try
             {
                 List<Model.tb_estoque> itens = dgvProdutos.DataSource as List<Model.tb_estoque>;
-                tb_cliente cliente = clienteBusiness.ListarClienteCpf(txtCPFCliente.Text);
 
                 Model.tb_venda venda = new Model.tb_venda();
 
                 if (txtCPFCliente.Visible == true)
+                {
+                    tb_cliente cliente = clienteBusiness.ListarClienteCpf(txtCPFCliente.Text);
                     venda.id_cliente = cliente.id_cliente;
-
+                }
                 else
+                {
                     venda.id_cliente = null;
+                }
 
                 venda.id_usuario = Autenticacao.Usuario.UsuarioLogado.IDUsuario;
                 venda.dt_saida = DateTime.Now;
@@ -133,9 +136,9 @@ namespace WindowsFormsApp15.Telas
                     dgvProdutos.DataSource = null;
 
                     lblTotal.Text = "0,00";
-                    lblTotal.Text = "0,00";
+                    lblTroco.Text = "0,00";
                     lblRestante.Text = "0,00";
-                    txtPago.Text = "0,00";
+                    nudPago.Value = 0;
                     txtCPFCliente.Text = string.Empty;
                 }
                 else
@@ -162,31 +165,6 @@ namespace WindowsFormsApp15.Telas
             }
         }
 
-        private void txtPago_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                decimal total = Convert.ToDecimal(lblTotal.Text);
-                decimal pago = Convert.ToDecimal(txtPago.Text);
-
-                lblRestante.Text = (total - pago).ToString();
-
-                if (pago == total)
-                {
-                    lblTotal.Text = "0,00";
-                }
-
-                if (pago > total)
-                {
-                    lblRestante.Text = "0,00";
-                    lblTotal.Text = (pago - total).ToString();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -209,6 +187,35 @@ namespace WindowsFormsApp15.Telas
         private void label13_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                decimal total = Convert.ToDecimal(lblTotal.Text);
+                decimal pago = nudPago.Value;
+                decimal restante = Convert.ToDecimal(lblRestante.Text);
+
+                lblRestante.Text = (total - pago).ToString();
+
+                if (pago > total)
+                {
+                    lblRestante.Text = "0,00";
+                    lblTroco.Text = (pago - total).ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 3)
+            {
+            }
         }
     }
 }

@@ -69,7 +69,7 @@ namespace WindowsFormsApp15.Business
         }
         public tb_cliente ListarClienteCpf(string cpf)
         {
-            if (cpf == string.Empty)
+            if(cpf == string.Empty)
             {
                 throw new ArgumentException("CPF Inválido");
             }

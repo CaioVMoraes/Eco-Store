@@ -64,6 +64,13 @@ namespace WindowsFormsApp15.Business
             return lista;
         }
 
+        public List<tb_produto> ConsultarProdutoID(int id)
+        {
+            List<tb_produto> lista = db.tb_produto.Where(x => x.id_produto == id).ToList();
+
+            return lista;
+        }
+
         public Model.tb_produto Listar(int id)
         {
             Model.tb_produto modelo = db.Listar(id);

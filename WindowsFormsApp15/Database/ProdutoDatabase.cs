@@ -43,6 +43,13 @@ namespace WindowsFormsApp15.Database
             return lista;
         }
 
+        public List<tb_produto> ConsultarProdutoID(int id)
+        {
+            List<tb_produto> lista = db.tb_produto.Where(x => x.id_produto == id).ToList();
+
+            return lista;
+        }
+
         public tb_produto Listar(int id)
         {
             tb_produto modelo = db.tb_produto.FirstOrDefault(x => x.id_produto == id);

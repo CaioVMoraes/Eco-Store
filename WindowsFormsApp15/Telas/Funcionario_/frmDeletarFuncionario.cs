@@ -32,6 +32,7 @@ namespace WindowsFormsApp15.Telas
         {
             //*Informações Pessoais*
 
+            txtId.Text = model.id_funcionario.ToString();
             txtNome.Text = model.nm_funcionario;
             dtpNascimento.Value = model.dt_nascimento;
             txtRg.Text = model.ds_rg;
@@ -43,6 +44,7 @@ namespace WindowsFormsApp15.Telas
             txtTelefone.Text = model.ds_telefone;
             nudSalario.Value = model.vl_salario;
             txtCpf.Text = model.ds_cpf;
+            cboGen.Text = model.ds_genero;
 
             //*Endereço*
 
@@ -51,6 +53,7 @@ namespace WindowsFormsApp15.Telas
             txtCidade.Text = model.ds_cidade;
             cboUF.Text = model.ds_UF;
             txtComplemento.Text = model.ds_complemento;
+            txtNumRes.Text = model.ds_numeroCasa;
 
             Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 
@@ -89,6 +92,7 @@ namespace WindowsFormsApp15.Telas
 
                 //*Informações Pessoais*
 
+                txtId.Text = model.id_funcionario.ToString();
                 txtNome.Text = model.nm_funcionario;
                 dtpNascimento.Value = model.dt_nascimento;
                 txtRg.Text = model.ds_rg;
@@ -100,6 +104,7 @@ namespace WindowsFormsApp15.Telas
                 txtTelefone.Text = model.ds_telefone;
                 nudSalario.Value = model.vl_salario;
                 txtCpf.Text = model.ds_cpf;
+                cboGen.Text = model.ds_genero;
 
                 //*Endereço*
 
@@ -108,6 +113,7 @@ namespace WindowsFormsApp15.Telas
                 txtCidade.Text = model.ds_cidade;
                 cboUF.Text = model.ds_UF;
                 txtComplemento.Text = model.ds_complemento;
+                txtNumRes.Text = model.ds_numeroCasa;
 
                 Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 

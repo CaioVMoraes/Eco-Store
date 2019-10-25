@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFluxoCaixa));
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtPago = new System.Windows.Forms.TextBox();
+            this.nudPago = new System.Windows.Forms.NumericUpDown();
             this.lblTroco = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.lblRestante = new System.Windows.Forms.Label();
@@ -44,14 +44,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label15 = new System.Windows.Forms.Label();
             this.btnFinalizarPedido = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,12 +58,16 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPago)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
@@ -86,7 +86,7 @@
             // panel4
             // 
             this.panel4.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
-            this.panel4.Controls.Add(this.txtPago);
+            this.panel4.Controls.Add(this.nudPago);
             this.panel4.Controls.Add(this.lblTroco);
             this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.lblRestante);
@@ -97,16 +97,20 @@
             this.panel4.Size = new System.Drawing.Size(724, 196);
             this.panel4.TabIndex = 55;
             // 
-            // txtPago
+            // nudPago
             // 
-            this.txtPago.BackColor = System.Drawing.Color.White;
-            this.txtPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPago.Location = new System.Drawing.Point(495, 14);
-            this.txtPago.Name = "txtPago";
-            this.txtPago.Size = new System.Drawing.Size(138, 40);
-            this.txtPago.TabIndex = 73;
-            this.txtPago.Text = "0,00";
-            this.txtPago.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.nudPago.DecimalPlaces = 2;
+            this.nudPago.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F);
+            this.nudPago.Location = new System.Drawing.Point(568, 15);
+            this.nudPago.Maximum = new decimal(new int[] {
+            99999,
+            0,
+            0,
+            0});
+            this.nudPago.Name = "nudPago";
+            this.nudPago.Size = new System.Drawing.Size(120, 40);
+            this.nudPago.TabIndex = 73;
+            this.nudPago.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // lblTroco
             // 
@@ -206,7 +210,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(363, 14);
+            this.label6.Location = new System.Drawing.Point(346, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(82, 20);
             this.label6.TabIndex = 37;
@@ -230,7 +234,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(589, 14);
+            this.label4.Location = new System.Drawing.Point(564, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 20);
             this.label4.TabIndex = 46;
@@ -255,47 +259,25 @@
             this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
-            this.Column3});
+            this.Column3,
+            this.Column4});
             this.dgvProdutos.Location = new System.Drawing.Point(12, 134);
             this.dgvProdutos.Name = "dgvProdutos";
             this.dgvProdutos.ReadOnly = true;
             this.dgvProdutos.Size = new System.Drawing.Size(724, 302);
             this.dgvProdutos.TabIndex = 80;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "nm_produto";
-            this.Column1.HeaderText = "";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 325;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "nm_categoria";
-            this.Column2.HeaderText = "";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 225;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "vl_valor";
-            this.Column3.HeaderText = "";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 130;
+            this.dgvProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProdutos_CellContentClick);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.White;
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Green;
-            this.label15.Location = new System.Drawing.Point(1020, 493);
+            this.label15.Location = new System.Drawing.Point(998, 486);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 31);
+            this.label15.Size = new System.Drawing.Size(53, 55);
             this.label15.TabIndex = 159;
             this.label15.Text = "+";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -307,7 +289,7 @@
             this.btnFinalizarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnFinalizarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizarPedido.ForeColor = System.Drawing.Color.White;
-            this.btnFinalizarPedido.Location = new System.Drawing.Point(742, 529);
+            this.btnFinalizarPedido.Location = new System.Drawing.Point(741, 544);
             this.btnFinalizarPedido.Name = "btnFinalizarPedido";
             this.btnFinalizarPedido.Size = new System.Drawing.Size(310, 88);
             this.btnFinalizarPedido.TabIndex = 77;
@@ -336,15 +318,6 @@
             this.label3.Size = new System.Drawing.Size(73, 20);
             this.label3.TabIndex = 57;
             this.label3.Text = "Produtos";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.pictureBox2.Location = new System.Drawing.Point(742, 248);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(310, 388);
-            this.pictureBox2.TabIndex = 73;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -474,6 +447,37 @@
             this.label1.TabIndex = 47;
             this.label1.Text = "Total (R$):";
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "nm_produto";
+            this.Column1.HeaderText = "";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 300;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "nm_categoria";
+            this.Column2.HeaderText = "";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 225;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "vl_valor";
+            this.Column3.HeaderText = "";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 130;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 25;
+            // 
             // frmFluxoCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -488,7 +492,6 @@
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.btnFinalizarPedido);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -499,12 +502,12 @@
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPago)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -525,7 +528,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox imgUsuario;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -543,13 +545,14 @@
         private System.Windows.Forms.Label lblRestante;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.Label lblTroco;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtPago;
+        private System.Windows.Forms.NumericUpDown nudPago;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewImageColumn Column4;
     }
 }

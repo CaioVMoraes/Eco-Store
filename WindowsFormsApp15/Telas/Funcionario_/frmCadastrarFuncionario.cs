@@ -34,17 +34,17 @@ namespace WindowsFormsApp15.Telas
                 //*Informações Pessoais*
 
                 model.nm_funcionario = txtNome.Text;
-                model.dt_nascimento = dtpNascimento.Value;
+                model.dt_nascimento = dtpNascimento.Value.Date;
                 model.ds_rg = txtRg.Text;
                 model.ds_cpf = txtCpf.Text;
                 model.ds_email = txtEmail.Text;
-                model.dt_contratacao = dtpContrat.Value;
+                model.dt_contratacao = dtpContrat.Value.Date;
                 model.ds_genero = cboGen.Text;
                 model.ds_cargo = cboCargo.Text;
                 model.ds_celular = txtCelular.Text;
                 model.ds_telefone = txtTelefone.Text;
                 model.vl_salario = nudSalario.Value;
-
+                
                 //*Endereço*
 
                 model.ds_endereco = txtEndereço.Text;

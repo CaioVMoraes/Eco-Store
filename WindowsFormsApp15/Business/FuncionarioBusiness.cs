@@ -10,18 +10,17 @@ namespace WindowsFormsApp15.Business
     {
 
         Database.FuncionarioDatabase db = new Database.FuncionarioDatabase();
-        Model.tb_funcionario model = new Model.tb_funcionario();
 
         public void CadastrarFuncionario(Model.tb_funcionario funcionario)
         {
             //*Dados Pessoais*
 
-            if (model.nm_funcionario == string.Empty)
+            if (funcionario.nm_funcionario == string.Empty)
             {
                 throw new Exception("Nome do Funcionário é obrigatório");
             }
 
-            int idade = DateTime.Now.Year - model.dt_nascimento.Year;
+            int idade = DateTime.Now.Year - funcionario.dt_nascimento.Year;
 
             if (idade < 14)
             {
@@ -31,63 +30,63 @@ namespace WindowsFormsApp15.Business
             {
                 throw new Exception("idade inválida");
             }
-            if (model.ds_rg == string.Empty)
+            if (funcionario.ds_rg == string.Empty)
             {
                 throw new Exception("Rg do funcionário é obrigatório");
             }
-            if (model.ds_email == string.Empty)
+            if (funcionario.ds_email == string.Empty)
             {
                 throw new Exception("E-mail do funcionário é obrigatório");
             }
-            if (model.dt_contratacao == null)
+            if (funcionario.dt_contratacao == null)
             {
                 throw new Exception("A data de contrataçao é obrigatória");
             }
 
-            if (model.dt_contratacao.Year > DateTime.Now.Year)
+            if (funcionario.dt_contratacao.Year > DateTime.Now.Year)
             {
                 throw new Exception("Data de contratação inválida");
             }
-            if (model.ds_genero == string.Empty)
+            if (funcionario.ds_genero == string.Empty)
             {
                 throw new Exception("Genero é obrigatório");
             }
-            if (model.ds_cargo == string.Empty)
+            if (funcionario.ds_cargo == string.Empty)
             {
                 throw new Exception("O Cargo é obrigatório");
             }
-            if (model.ds_celular == string.Empty)
+            if (funcionario.ds_celular == string.Empty)
             {
                 throw new Exception("Numero de celular é obrigatório");
             }
-            if (model.ds_telefone == string.Empty)
+            if (funcionario.ds_telefone == string.Empty)
             {
                 throw new Exception("Numero de celular é obrigatório");
             }
-            if (model.vl_salario == 0)
+            if (funcionario.vl_salario == 0)
             {
                 throw new Exception("Salário é obrigatório");
             }
 
             //*Endereço*
 
-            if (model.ds_endereco == string.Empty)
+            if (funcionario.ds_endereco == string.Empty)
             {
                 throw new Exception("Endereço é obrigatório");
             }
-            if (model.ds_cep == string.Empty)
+            if (funcionario.ds_cep == string.Empty)
             {
                 throw new Exception("CEP é obrigatório");
             }
-            if (model.ds_cidade == string.Empty)
+            if (funcionario.ds_cidade == string.Empty)
             {
                 throw new Exception("Cidade é obrigatório");
             }
-            if (model.ds_UF == string.Empty)
+            if (funcionario.ds_UF == string.Empty)
             {
                 throw new Exception("Estado é obrigatório");
             }
-            if (model.ds_UF == string.Empty)
+            if (funcionario.ds_UF == string.Empty)
             {
                 throw new Exception("NumeroEnder é obrigatório");
             }
@@ -136,12 +135,12 @@ namespace WindowsFormsApp15.Business
             
             //*Dados Pessoais*
 
-            if (model.nm_funcionario == string.Empty)
+            if (funcionario.nm_funcionario == string.Empty)
             {
                 throw new Exception("Nome do Funcionário é obrigatório");
             }
 
-            int idade = DateTime.Now.Year - model.dt_nascimento.Year;
+            int idade = DateTime.Now.Year - funcionario.dt_nascimento.Year;
 
             if (idade < 14)
             {
@@ -151,63 +150,63 @@ namespace WindowsFormsApp15.Business
             {
                 throw new Exception("idade inválida");
             }
-            if (model.ds_rg == string.Empty)
+            if (funcionario.ds_rg == string.Empty)
             {
                 throw new Exception("Rg do funcionário é obrigatório");
             }
-            if (model.ds_email == string.Empty)
+            if (funcionario.ds_email == string.Empty)
             {
                 throw new Exception("E-mail do funcionário é obrigatório");
             }
-            if (model.dt_contratacao == null)
+            if (funcionario.dt_contratacao == null)
             {
                 throw new Exception("A data de contrataçao é obrigatória");
             }
 
-            if (model.dt_contratacao.Year > DateTime.Now.Year)
+            if (funcionario.dt_contratacao.Year > DateTime.Now.Year)
             {
                 throw new Exception("Data de contratação inválida");
             }
-            if (model.ds_genero == string.Empty)
+            if (funcionario.ds_genero == string.Empty)
             {
                 throw new Exception("Genero é obrigatório");
             }
-            if (model.ds_cargo == string.Empty)
+            if (funcionario.ds_cargo == string.Empty)
             {
                 throw new Exception("O Cargo é obrigatório");
             }
-            if (model.ds_celular == string.Empty)
+            if (funcionario.ds_celular == string.Empty)
             {
                 throw new Exception("Numero de celular é obrigatório");
             }
-            if (model.ds_telefone == string.Empty)
+            if (funcionario.ds_telefone == string.Empty)
             {
                 throw new Exception("Numero de celular é obrigatório");
             }
-            if (model.vl_salario == 0)
+            if (funcionario.vl_salario == 0)
             {
                 throw new Exception("Salário é obrigatório");
             }
 
             //*Endereço*
 
-            if (model.ds_endereco == string.Empty)
+            if (funcionario.ds_endereco == string.Empty)
             {
                 throw new Exception("Endereço é obrigatório");
             }
-            if (model.ds_cep == string.Empty)
+            if (funcionario.ds_cep == string.Empty)
             {
                 throw new Exception("CEP é obrigatório");
             }
-            if (model.ds_cidade == string.Empty)
+            if (funcionario.ds_cidade == string.Empty)
             {
                 throw new Exception("Cidade é obrigatório");
             }
-            if (model.ds_UF == string.Empty)
+            if (funcionario.ds_UF == string.Empty)
             {
                 throw new Exception("Estado é obrigatório");
             }
-            if (model.ds_UF == string.Empty)
+            if (funcionario.ds_UF == string.Empty)
             {
                 throw new Exception("NumeroEnder é obrigatório");
             }
