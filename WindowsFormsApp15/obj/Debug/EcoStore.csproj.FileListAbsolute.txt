@@ -299,3 +299,4 @@ C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsForms
 C:\Users\infob08\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmTelaCompra.resources
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmConsultarCompra.resources
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmTelaCompra.resources
+C:\Users\infob04\Source\Repos\eco-store4\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config

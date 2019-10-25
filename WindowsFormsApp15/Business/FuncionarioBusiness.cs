@@ -25,12 +25,23 @@ namespace WindowsFormsApp15.Business
 
             if (idade < 14)
             {
-                throw new Exception("idade inválida");
+                throw new Exception("válida");
             }
             if (idade > 100)
             {
                 throw new Exception("idade inválida");
             }
+
+            if(model.ds_rg.Length < 12)
+            {
+                throw new Exception("Rg inválido");
+            }
+
+            if (model.ds_cpf.Length < 14)
+            {
+                throw new Exception("cpf inválido");
+            }
+
             if (model.ds_rg == string.Empty)
             {
                 throw new Exception("Rg do funcionário é obrigatório");
