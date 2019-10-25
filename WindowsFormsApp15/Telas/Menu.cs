@@ -154,5 +154,11 @@ namespace WindowsFormsApp15.Telas
             Telas.frmDeletarFuncionario CadastrarFunc = new frmDeletarFuncionario();
             CadastrarFunc.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Telas.Compra.frmTelaCompra CadastrarFunc = new Telas.Compra.frmTelaCompra();
+            CadastrarFunc.Show();
+        }
     }
 }

@@ -10,5 +10,6 @@ namespace WindowsFormsApp15.Model
     {
         public string nm_produto { get { return tb_produto.nm_produto; } }
         public string nm_categoria { get { return tb_produto.tb_categoria.nm_categoria; } }
+        public decimal vl_valor { get { return tb_produto.vl_valor; } }
     }
 }

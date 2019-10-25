@@ -36,7 +36,6 @@ namespace WindowsFormsApp15.Telas.Estoque
 
                 modelo.id_produto = Convert.ToInt32(txtNomeProduto.Text);
                 modelo.dt_entrada = dtpData.Value;
-                modelo.vl_valor = nudValor.Value;
 
                 if (rdnSim.Checked == true)
                 {

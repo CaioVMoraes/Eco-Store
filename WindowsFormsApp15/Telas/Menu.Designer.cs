@@ -52,6 +52,7 @@
             this.btnConsultarFolhaPagamento = new System.Windows.Forms.Button();
             this.btnGerarFolhaPagamento = new System.Windows.Forms.Button();
             this.btnConsultarEstoque = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
@@ -397,11 +398,28 @@
             this.btnConsultarEstoque.UseVisualStyleBackColor = false;
             this.btnConsultarEstoque.Click += new System.EventHandler(this.btnConsultarEstoque_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(351, 543);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(238, 43);
+            this.button1.TabIndex = 342;
+            this.button1.Text = "Caixa";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 604);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnConsultarEstoque);
             this.Controls.Add(this.btnConsultarFolhaPagamento);
             this.Controls.Add(this.btnGerarFolhaPagamento);
@@ -456,5 +474,6 @@
         private System.Windows.Forms.Button btnGerarFolhaPagamento;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnConsultarEstoque;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -11,35 +11,36 @@ namespace WindowsFormsApp15.Business
     {
         Database.CompraDatabase db = new Database.CompraDatabase();
 
-        public void InserirVenda(tb_compra modelo)
+        public void InserirCompra(tb_compra modelo)
         {
-            db.InserirVenda(modelo);
+            db.InserirCompra(modelo);
+
         }
-        public void InserirVendaItem(tb_venda_item modelo)
+        public void InserirCompraItem(tb_compra_item modelo)
         {
-            db.InserirVendaitem(modelo);
+            db.InserirCompraitem(modelo);
         }
 
-        public List<tb_venda> ConsultarVenda()
+        public List<tb_compra> ConsultarCompra()
         {
-            List<tb_venda> lista = db.ConsultarVenda();
+            List<tb_compra> lista = db.ConsultarCompra();
 
             return lista;
         }
-        public tb_venda Listar(int id)
+        public tb_compra Listar(int id)
         {
-            tb_venda modelo = db.Listar(id);
+            tb_compra modelo = db.Listar(id);
 
             return modelo;
         }
 
-        public void AlterarVenda(tb_venda modelo)
+        public void AlterarCompra(tb_compra modelo)
         {
-            db.AlterarVenda(modelo);
+            db.AlterarCompra(modelo);
         }
-        public void RemoverVenda(int id)
+        public void RemoverCompra(int id)
         {
-            db.RemoverVenda(id);
+            db.RemoverCompra(id);
         }
     }
 }

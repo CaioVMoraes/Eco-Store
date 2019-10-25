@@ -70,7 +70,6 @@
       <EntityTypeMapping TypeName="ecostoreModel.tb_estoque">
         <MappingFragment StoreEntitySet="tb_estoque">
           <ScalarProperty Name="bt_vendido" ColumnName="bt_vendido" />
-          <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
           <ScalarProperty Name="dt_entrada" ColumnName="dt_entrada" />
           <ScalarProperty Name="id_produto" ColumnName="id_produto" />
           <ScalarProperty Name="id_estoque" ColumnName="id_estoque" />
@@ -156,8 +155,8 @@
     <EntitySetMapping Name="tb_produto">
       <EntityTypeMapping TypeName="ecostoreModel.tb_produto">
         <MappingFragment StoreEntitySet="tb_produto">
-          <ScalarProperty Name="img_produto" ColumnName="img_produto" />
           <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
+          <ScalarProperty Name="img_produto" ColumnName="img_produto" />
           <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
           <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
           <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />

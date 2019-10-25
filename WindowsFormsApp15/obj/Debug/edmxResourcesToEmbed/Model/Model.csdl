@@ -101,7 +101,7 @@
     <Key>
       <PropertyRef Name="id_compra" />
     </Key>
-    <Property Name="id_compra" Type="Int32" Nullable="false" />
+    <Property Name="id_compra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="dt_compra" Type="DateTime" Nullable="false" />
     <Property Name="vl_valorTotal" Type="Decimal" Nullable="false" />
     <NavigationProperty Name="tb_compra_item" Relationship="ecostoreModel.tb_compra_item_ibfk_1" FromRole="tb_compra" ToRole="tb_compra_item" />
@@ -110,7 +110,7 @@
     <Key>
       <PropertyRef Name="id_compra_item" />
     </Key>
-    <Property Name="id_compra_item" Type="Int32" Nullable="false" />
+    <Property Name="id_compra_item" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_compra" Type="Int32" Nullable="false" />
     <Property Name="id_produto" Type="Int32" Nullable="false" />
     <NavigationProperty Name="tb_compra" Relationship="ecostoreModel.tb_compra_item_ibfk_1" FromRole="tb_compra_item" ToRole="tb_compra" />
@@ -147,7 +147,6 @@
     <Property Name="id_estoque" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_produto" Type="Int32" Nullable="false" />
     <Property Name="dt_entrada" Type="DateTime" Nullable="false" />
-    <Property Name="vl_valor" Type="Decimal" Nullable="false" />
     <Property Name="bt_vendido" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_estoque" ToRole="tb_produto" />
     <NavigationProperty Name="tb_venda_item" Relationship="ecostoreModel.tb_venda_item_ibfk_1" FromRole="tb_estoque" ToRole="tb_venda_item" />
@@ -190,7 +189,7 @@
     <Property Name="ds_cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ds_UF" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
     <Property Name="ds_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="ds_cnpj" Type="String" Nullable="false" MaxLength="17" FixedLength="false" Unicode="false" />
+    <Property Name="ds_cnpj" Type="String" Nullable="false" MaxLength="18" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_produto_ibfk_1" FromRole="tb_fornecedor" ToRole="tb_produto" />
   </EntityType>
   <EntityType Name="tb_funcionario">
@@ -239,8 +238,8 @@
     <Property Name="id_fornecedor" Type="Int32" Nullable="false" />
     <Property Name="id_categoria" Type="Int32" Nullable="false" />
     <Property Name="nm_produto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="img_produto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
     <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-    <Property Name="img_produto" Type="Binary" MaxLength="Max" FixedLength="false" />
     <NavigationProperty Name="tb_categoria" Relationship="ecostoreModel.tb_produto_ibfk_2" FromRole="tb_produto" ToRole="tb_categoria" />
     <NavigationProperty Name="tb_compra_item" Relationship="ecostoreModel.tb_compra_item_ibfk_2" FromRole="tb_produto" ToRole="tb_compra_item" />
     <NavigationProperty Name="tb_estoque" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_produto" ToRole="tb_estoque" />

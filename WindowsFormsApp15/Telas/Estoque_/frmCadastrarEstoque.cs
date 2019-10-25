@@ -38,7 +38,6 @@ namespace WindowsFormsApp15.Telas
 
                 modelo.id_produto = Convert.ToInt32(txtID.Text);
                 modelo.dt_entrada = dtpData.Value;
-                modelo.vl_valor = nudValor.Value;
 
                 if (rdnSim.Checked == true)
                 {

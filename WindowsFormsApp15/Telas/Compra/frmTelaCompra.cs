@@ -53,87 +53,89 @@ namespace WindowsFormsApp15.Telas.Compra
         {
             try
             {
-                Model.tb_produto produto = listProduto.SelectedItem as Model.tb_produto;
+                lblUsuario.Text = Autenticacao.Usuario.UsuarioLogado.Nome;
 
-                List<Model.tb_produto> itens = dgvProdutos.DataSource as List<Model.tb_produto>;
+                List<tb_produto> lista = produtoBusiness.ConsultarTodosProdutos();
 
-                    if (itens == null)
-                    {
-                        itens = new List<Model.tb_produto>();
-                    }
+                listProduto.DisplayMember = nameof(tb_produto.nm_produto);
+                listProduto.DataSource = lista;
 
-                    tb_produto produtoModelo = produtoBusiness.Listar(produto.id_produto);
+                Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 
-                    itens.Add(produtoModelo);
+                Image imagem = imageConverter.byteArrayToImage(Autenticacao.Usuario.UsuarioLogado.Foto);
 
-                    dgvProdutos.AutoGenerateColumns = false;
-                    dgvProdutos.DataSource = null;
-                    dgvProdutos.DataSource = itens;
-
-                    decimal total = itens.Sum(x => x.vl_valor);
-
-                    lblTotal.Text = total.ToString();
+                imgUsuario.Image = imagem;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void btnFinalizarPedido_Click(object sender, EventArgs e)
         {
+            try
             {
-                //try
-                //{
-                //    Business.c
-                //    List<Model.tb_estoque> itens = dgvProdutos.DataSource as List<Model.tb_estoque>;
+                Business.CompraBusiness compraBusiness = new Business.CompraBusiness();
 
-                //    Model.tb_venda venda = new Model.tb_venda();
+                Model.tb_compra compra = new Model.tb_compra();
 
-                //    if (txtCPFCliente.Visible == true)
-                //    {
-                //        tb_cliente cliente = clienteBusiness.ListarClienteCpf(txtCPFCliente.Text);
-                //        venda.id_cliente = cliente.id_cliente;
-                //    }
-                //    else
-                //    {
-                //        venda.id_cliente = null;
-                //    }
+                compra.dt_compra = DateTime.Now.Date;
+                compra.vl_valorTotal = Convert.ToDecimal(lblTotal.Text);
 
-                //    venda.id_usuario = Autenticacao.Usuario.UsuarioLogado.IDUsuario;
-                //    venda.dt_saida = DateTime.Now;
-                //    venda.vl_valorTotal = Convert.ToDecimal(lblTotal.Text);
+                compraBusiness.InserirCompra(compra);
 
-                //    .InserirVenda(venda);
+                Model.tb_compra_item compraItem = new Model.tb_compra_item();
 
-                //    Model.tb_venda_item vendaItem = new Model.tb_venda_item();
+                List<Model.tb_produto> itens = dgvProdutos.DataSource as List<Model.tb_produto>;
 
-                //    if (lblRestante.Text == "0,00")
-                //    {
-                //        foreach (var item in itens)
-                //        {
-                //            vendaItem.id_venda = venda.id_venda;
-                //            vendaItem.id_estoque = item.id_estoque;
+                foreach (var item in itens)
+                {
+                    compraItem.id_compra = compra.id_compra;
+                    compraItem.id_produto = item.id_produto;
 
-                //            vendaBusiness.InserirVendaItem(vendaItem);
-                //        }
+                    compraBusiness.InserirCompraItem(compraItem);
+                }
 
-                //        MessageBox.Show("Pedido finalizado com sucesso");
+                MessageBox.Show("Compra finalizada com sucesso");
 
-                //        dgvProdutos.DataSource = null;
+                dgvProdutos.DataSource = null;
 
-                //        lblTotal.Text = "0,00";
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("Valor não foi liquidado");
-                //    }
-                //}
-                //catch (Exception ex)
-                //{
-                //    MessageBox.Show(ex.Message);
-                //}
+                lblTotal.Text = "0,00";
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Model.tb_produto produto = listProduto.SelectedItem as Model.tb_produto;
+
+                List<Model.tb_produto> itens = dgvProdutos.DataSource as List<Model.tb_produto>;
+
+                if (itens == null)
+                {
+                    itens = new List<Model.tb_produto>();
+                }
+
+                itens.Add(produto);
+
+                dgvProdutos.AutoGenerateColumns = false;
+                dgvProdutos.DataSource = null;
+                dgvProdutos.DataSource = itens;
+
+                decimal total = itens.Sum(x => x.vl_valor);
+
+                lblTotal.Text = total.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

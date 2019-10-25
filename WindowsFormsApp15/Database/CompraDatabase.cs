@@ -10,6 +10,7 @@ namespace WindowsFormsApp15.Database
     class CompraDatabase
     {
         Model.ecostoreEntities db = new Model.ecostoreEntities();
+
         public void InserirCompra(tb_compra modelo)
         {
             db.tb_compra.Add(modelo);

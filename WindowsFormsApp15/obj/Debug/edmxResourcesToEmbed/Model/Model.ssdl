@@ -25,7 +25,7 @@
     <Key>
       <PropertyRef Name="id_compra" />
     </Key>
-    <Property Name="id_compra" Type="int" Nullable="false" />
+    <Property Name="id_compra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="dt_compra" Type="date" Nullable="false" />
     <Property Name="vl_valorTotal" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
@@ -33,7 +33,7 @@
     <Key>
       <PropertyRef Name="id_compra_item" />
     </Key>
-    <Property Name="id_compra_item" Type="int" Nullable="false" />
+    <Property Name="id_compra_item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_compra" Type="int" Nullable="false" />
     <Property Name="id_produto" Type="int" Nullable="false" />
   </EntityType>
@@ -66,7 +66,6 @@
     <Property Name="id_estoque" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_produto" Type="int" Nullable="false" />
     <Property Name="dt_entrada" Type="datetime" Precision="0" Nullable="false" />
-    <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="bt_vendido" Type="bool" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_folhapagamento">
@@ -105,7 +104,7 @@
     <Property Name="ds_cidade" Type="varchar" MaxLength="50" />
     <Property Name="ds_UF" Type="varchar" MaxLength="15" />
     <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
-    <Property Name="ds_cnpj" Type="varchar" MaxLength="17" Nullable="false" />
+    <Property Name="ds_cnpj" Type="varchar" MaxLength="18" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_funcionario">
     <Key>
@@ -149,8 +148,8 @@
     <Property Name="id_fornecedor" Type="int" Nullable="false" />
     <Property Name="id_categoria" Type="int" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="img_produto" Type="longblob" Nullable="false" />
     <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="img_produto" Type="longblob" />
   </EntityType>
   <EntityType Name="tb_usuario">
     <Key>
