@@ -259,7 +259,7 @@
             this.dtpData.BackColor = System.Drawing.Color.SkyBlue;
             this.dtpData.BorderRadius = 0;
             this.dtpData.ForeColor = System.Drawing.Color.White;
-            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpData.FormatCustom = null;
             this.dtpData.Location = new System.Drawing.Point(205, 67);
             this.dtpData.Name = "dtpData";

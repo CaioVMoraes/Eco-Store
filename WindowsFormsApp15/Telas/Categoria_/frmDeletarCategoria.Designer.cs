@@ -185,7 +185,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(212, 56);
+            this.label5.Location = new System.Drawing.Point(222, 56);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(151, 20);
             this.label5.TabIndex = 317;
@@ -269,7 +269,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WindowsFormsApp15.Properties.Resources.Etiqueta;
-            this.pictureBox1.Location = new System.Drawing.Point(211, 83);
+            this.pictureBox1.Location = new System.Drawing.Point(221, 91);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(139, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

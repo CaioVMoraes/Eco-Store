@@ -46,7 +46,7 @@
             // 
             this.dgvConsultarFuncionario.BackgroundColor = System.Drawing.Color.White;
             this.dgvConsultarFuncionario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvConsultarFuncionario.Location = new System.Drawing.Point(12, 215);
+            this.dgvConsultarFuncionario.Location = new System.Drawing.Point(12, 186);
             this.dgvConsultarFuncionario.Name = "dgvConsultarFuncionario";
             this.dgvConsultarFuncionario.Size = new System.Drawing.Size(936, 491);
             this.dgvConsultarFuncionario.TabIndex = 189;
@@ -71,7 +71,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(489, 169);
+            this.label2.Location = new System.Drawing.Point(489, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 20);
             this.label2.TabIndex = 192;
@@ -84,7 +84,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(24, 167);
+            this.label7.Location = new System.Drawing.Point(24, 138);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 191;
@@ -121,7 +121,7 @@
             // txtFornecedor
             // 
             this.txtFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFornecedor.Location = new System.Drawing.Point(155, 165);
+            this.txtFornecedor.Location = new System.Drawing.Point(155, 136);
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(287, 22);
             this.txtFornecedor.TabIndex = 201;
@@ -143,7 +143,7 @@
             // txtEmpresa
             // 
             this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmpresa.Location = new System.Drawing.Point(585, 165);
+            this.txtEmpresa.Location = new System.Drawing.Point(585, 136);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(309, 22);
             this.txtEmpresa.TabIndex = 202;
@@ -156,7 +156,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(966, 712);
+            this.ClientSize = new System.Drawing.Size(966, 688);
             this.Controls.Add(this.txtEmpresa);
             this.Controls.Add(this.dgvConsultarFuncionario);
             this.Controls.Add(this.label4);

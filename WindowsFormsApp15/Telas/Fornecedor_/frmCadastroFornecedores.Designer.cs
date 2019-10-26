@@ -36,7 +36,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,6 +60,8 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.lblErro = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -162,7 +163,7 @@
             this.btnEntrar.IconVisible = true;
             this.btnEntrar.IconZoom = 90D;
             this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(611, 517);
+            this.btnEntrar.Location = new System.Drawing.Point(611, 492);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -175,19 +176,6 @@
             this.btnEntrar.Textcolor = System.Drawing.Color.White;
             this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click_1);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(316, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(204, 20);
-            this.label3.TabIndex = 332;
-            this.label3.Text = "Cadastrar Fornecedores";
             // 
             // label1
             // 
@@ -447,6 +435,27 @@
             this.pictureBox1.TabIndex = 362;
             this.pictureBox1.TabStop = false;
             // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.label19.Location = new System.Drawing.Point(319, 59);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(269, 29);
+            this.label19.TabIndex = 363;
+            this.label19.Text = "Cadastrar Fornecedor";
+            // 
+            // lblErro
+            // 
+            this.lblErro.AutoSize = true;
+            this.lblErro.Location = new System.Drawing.Point(608, 565);
+            this.lblErro.Name = "lblErro";
+            this.lblErro.Size = new System.Drawing.Size(0, 13);
+            this.lblErro.TabIndex = 422;
+            // 
             // frmCadastroFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -455,6 +464,8 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(857, 613);
+            this.Controls.Add(this.lblErro);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtComplemento);
             this.Controls.Add(this.txtUF);
@@ -479,7 +490,6 @@
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnEntrar);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -507,7 +517,6 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label6;
         private Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
@@ -532,5 +541,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MaskedTextBox txtCEP;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblErro;
     }
 }
