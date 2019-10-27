@@ -141,3 +141,4 @@ C:\Users\Seu\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\EntityFramework.
 C:\Users\Seu\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csproj.CopyComplete
 C:\Users\Seu\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
 C:\Users\Seu\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
+C:\Users\FelipeAndrade\Source\Repos\eco-store4\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Splash.resources
