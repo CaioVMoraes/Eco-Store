@@ -157,6 +157,13 @@ namespace WindowsFormsApp15.Telas
             }
             
         }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+            Menu tela = new Menu();
+            tela.Show();
+            this.Hide();
+        }
     }
            
     

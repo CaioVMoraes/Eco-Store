@@ -160,5 +160,12 @@ namespace WindowsFormsApp15.Telas
             Telas.Compra.frmTelaCompra CadastrarFunc = new Telas.Compra.frmTelaCompra();
             CadastrarFunc.Show();
         }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            Form1 tela = new Form1();
+            tela.Show();
+            this.Hide();
+        }
     }
 }

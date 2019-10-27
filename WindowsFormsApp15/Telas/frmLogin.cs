@@ -102,5 +102,10 @@ namespace WindowsFormsApp15
         {
             Move_Form(Handle, e);
         }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

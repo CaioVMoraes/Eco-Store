@@ -213,6 +213,7 @@
             this.lblSair.Size = new System.Drawing.Size(23, 23);
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // label2
             // 

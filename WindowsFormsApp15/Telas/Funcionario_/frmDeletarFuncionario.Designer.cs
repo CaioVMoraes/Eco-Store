@@ -220,6 +220,7 @@
             this.label29.Size = new System.Drawing.Size(23, 23);
             this.label29.TabIndex = 155;
             this.label29.Text = "X";
+            this.label29.Click += new System.EventHandler(this.label29_Click);
             // 
             // pictureBox1
             // 

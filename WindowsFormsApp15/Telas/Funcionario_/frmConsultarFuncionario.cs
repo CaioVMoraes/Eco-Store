@@ -145,5 +145,12 @@ namespace WindowsFormsApp15.Telas
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Menu tela = new Menu();
+            tela.Show();
+            this.Hide();
+        }
     }
 }

@@ -10,6 +10,15 @@ namespace WindowsFormsApp15.Utils
 {
     class ConverterImagem
     {
+        public Image byteArrayToImage(byte[] byteArrayIn)
 
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+
+            Image returnImage = Image.FromStream(ms);
+
+            return returnImage;
+
+        }
     }
 }

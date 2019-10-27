@@ -109,6 +109,7 @@
             this.lblSair.Size = new System.Drawing.Size(23, 23);
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // panel2
             // 
@@ -178,6 +179,7 @@
             // 
             this.btnCadastrarUsuario.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarUsuario.Enabled = false;
             this.btnCadastrarUsuario.FlatAppearance.BorderSize = 0;
             this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,6 +196,7 @@
             // 
             this.btnConsultarUsuario.BackColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarUsuario.Enabled = false;
             this.btnConsultarUsuario.FlatAppearance.BorderSize = 0;
             this.btnConsultarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -242,6 +245,7 @@
             // 
             this.btnConsultarFornecedor.BackColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFornecedor.Enabled = false;
             this.btnConsultarFornecedor.FlatAppearance.BorderSize = 0;
             this.btnConsultarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -258,6 +262,7 @@
             // 
             this.btnCadastrarFornecedor.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarFornecedor.Enabled = false;
             this.btnCadastrarFornecedor.FlatAppearance.BorderSize = 0;
             this.btnCadastrarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -274,6 +279,7 @@
             // 
             this.btnConsultarProduto.BackColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarProduto.Enabled = false;
             this.btnConsultarProduto.FlatAppearance.BorderSize = 0;
             this.btnConsultarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -290,6 +296,7 @@
             // 
             this.btnCadastrarProduto.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarProduto.Enabled = false;
             this.btnCadastrarProduto.FlatAppearance.BorderSize = 0;
             this.btnCadastrarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -306,6 +313,7 @@
             // 
             this.btnDespesasEGastos.BackColor = System.Drawing.Color.SeaGreen;
             this.btnDespesasEGastos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDespesasEGastos.Enabled = false;
             this.btnDespesasEGastos.FlatAppearance.BorderSize = 0;
             this.btnDespesasEGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDespesasEGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -322,6 +330,7 @@
             // 
             this.btnEstoque.BackColor = System.Drawing.Color.SeaGreen;
             this.btnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEstoque.Enabled = false;
             this.btnEstoque.FlatAppearance.BorderSize = 0;
             this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,6 +347,7 @@
             // 
             this.btnCaixa.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCaixa.Enabled = false;
             this.btnCaixa.FlatAppearance.BorderSize = 0;
             this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -354,6 +364,7 @@
             // 
             this.btnConsultarFolhaPagamento.BackColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFolhaPagamento.Enabled = false;
             this.btnConsultarFolhaPagamento.FlatAppearance.BorderSize = 0;
             this.btnConsultarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -370,6 +381,7 @@
             // 
             this.btnGerarFolhaPagamento.BackColor = System.Drawing.Color.SeaGreen;
             this.btnGerarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGerarFolhaPagamento.Enabled = false;
             this.btnGerarFolhaPagamento.FlatAppearance.BorderSize = 0;
             this.btnGerarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -386,6 +398,7 @@
             // 
             this.btnConsultarEstoque.BackColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarEstoque.Enabled = false;
             this.btnConsultarEstoque.FlatAppearance.BorderSize = 0;
             this.btnConsultarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -402,6 +415,7 @@
             // 
             this.button1.BackColor = System.Drawing.Color.SeaGreen;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

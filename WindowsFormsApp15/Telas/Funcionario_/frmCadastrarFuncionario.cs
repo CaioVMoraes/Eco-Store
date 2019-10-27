@@ -105,5 +105,12 @@ namespace WindowsFormsApp15.Telas
         {
             picFoto.Image = WindowsFormsApp15.Properties.Resources.collaborator_male;
         }
+
+        private void label29_Click(object sender, EventArgs e)
+        {
+            Menu tela = new Menu();
+            tela.Show();
+            this.Hide();
+        }
     }
 }
