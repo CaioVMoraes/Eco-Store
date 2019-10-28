@@ -23,9 +23,9 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
-        public List<tb_produto> ConsultarProdutoCategoria(int idcategoria)
+        public List<tb_produto> ConsultarProdutoCategoria(string categoria)
         {
-            List<tb_produto> lista = db.tb_produto.Where(x => x.id_categoria == idcategoria).ToList();
+            List<tb_produto> lista = db.tb_produto.Where(x => x.ds_categoria == categoria).ToList();
 
             return lista;
         }
@@ -63,7 +63,7 @@ namespace WindowsFormsApp15.Database
 
             modelo.nm_produto = alterar.nm_produto;
             modelo.vl_valor = alterar.vl_valor;
-            modelo.id_categoria = alterar.id_categoria;
+            modelo.ds_categoria = alterar.ds_categoria;
             modelo.id_fornecedor = alterar.id_fornecedor;
             modelo.img_produto = alterar.img_produto;
             

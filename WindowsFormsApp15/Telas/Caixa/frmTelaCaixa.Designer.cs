@@ -457,7 +457,7 @@
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "nm_categoria";
+            this.Column2.DataPropertyName = "ds_categoria";
             this.Column2.HeaderText = "";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;

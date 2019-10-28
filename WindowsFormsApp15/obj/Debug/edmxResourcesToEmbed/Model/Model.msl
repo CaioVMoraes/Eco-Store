@@ -1,15 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="ecostoreModelStoreContainer" CdmEntityContainer="ecostoreEntities">
-    <EntitySetMapping Name="tb_categoria">
-      <EntityTypeMapping TypeName="ecostoreModel.tb_categoria">
-        <MappingFragment StoreEntitySet="tb_categoria">
-          <ScalarProperty Name="ds_categoria" ColumnName="ds_categoria" />
-          <ScalarProperty Name="nm_categoria" ColumnName="nm_categoria" />
-          <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tb_cliente">
       <EntityTypeMapping TypeName="ecostoreModel.tb_cliente">
         <MappingFragment StoreEntitySet="tb_cliente">
@@ -158,7 +149,7 @@
           <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
           <ScalarProperty Name="img_produto" ColumnName="img_produto" />
           <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
-          <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+          <ScalarProperty Name="ds_categoria" ColumnName="ds_categoria" />
           <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
           <ScalarProperty Name="id_produto" ColumnName="id_produto" />
         </MappingFragment>

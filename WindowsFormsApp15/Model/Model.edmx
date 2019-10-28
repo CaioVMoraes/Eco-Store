@@ -5,14 +5,6 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ecostoreModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="tb_categoria">
-          <Key>
-            <PropertyRef Name="id_categoria" />
-          </Key>
-          <Property Name="id_categoria" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="nm_categoria" Type="varchar" MaxLength="20" Nullable="false" />
-          <Property Name="ds_categoria" Type="varchar" MaxLength="45" />
-        </EntityType>
         <EntityType Name="tb_cliente">
           <Key>
             <PropertyRef Name="id_cliente" />
@@ -151,7 +143,7 @@
           </Key>
           <Property Name="id_produto" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_fornecedor" Type="int" Nullable="false" />
-          <Property Name="id_categoria" Type="int" Nullable="false" />
+          <Property Name="ds_categoria" Type="varchar" MaxLength="70" Nullable="false" />
           <Property Name="nm_produto" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="img_produto" Type="longblob" Nullable="false" />
           <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
@@ -301,18 +293,6 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="tb_produto_ibfk_2">
-          <End Role="tb_categoria" Type="Self.tb_categoria" Multiplicity="1" />
-          <End Role="tb_produto" Type="Self.tb_produto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_categoria">
-              <PropertyRef Name="id_categoria" />
-            </Principal>
-            <Dependent Role="tb_produto">
-              <PropertyRef Name="id_categoria" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="tb_usuario_ibfk_1">
           <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="1" />
           <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="*" />
@@ -382,7 +362,6 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="ecostoreModelStoreContainer">
-          <EntitySet Name="tb_categoria" EntityType="Self.tb_categoria" Schema="db_a4e776_ecostor" store:Type="Tables" />
           <EntitySet Name="tb_cliente" EntityType="Self.tb_cliente" Schema="db_a4e776_ecostor" store:Type="Tables" />
           <EntitySet Name="tb_compra" EntityType="Self.tb_compra" Schema="db_a4e776_ecostor" store:Type="Tables" />
           <EntitySet Name="tb_compra_item" EntityType="Self.tb_compra_item" Schema="db_a4e776_ecostor" store:Type="Tables" />
@@ -436,10 +415,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
             <End Role="tb_fornecedor" EntitySet="tb_fornecedor" />
             <End Role="tb_produto" EntitySet="tb_produto" />
           </AssociationSet>
-          <AssociationSet Name="tb_produto_ibfk_2" Association="Self.tb_produto_ibfk_2">
-            <End Role="tb_categoria" EntitySet="tb_categoria" />
-            <End Role="tb_produto" EntitySet="tb_produto" />
-          </AssociationSet>
           <AssociationSet Name="tb_usuario_ibfk_1" Association="Self.tb_usuario_ibfk_1">
             <End Role="tb_funcionario" EntitySet="tb_funcionario" />
             <End Role="tb_usuario" EntitySet="tb_usuario" />
@@ -466,7 +441,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
     <edmx:ConceptualModels>
       <Schema Namespace="ecostoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="ecostoreEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="tb_categoria" EntityType="ecostoreModel.tb_categoria" />
           <EntitySet Name="tb_cliente" EntityType="ecostoreModel.tb_cliente" />
           <EntitySet Name="tb_compra" EntityType="ecostoreModel.tb_compra" />
           <EntitySet Name="tb_compra_item" EntityType="ecostoreModel.tb_compra_item" />
@@ -482,10 +456,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <EntitySet Name="tb_venda" EntityType="ecostoreModel.tb_venda" />
           <EntitySet Name="tb_venda_item" EntityType="ecostoreModel.tb_venda_item" />
           <EntitySet Name="vw_fluxocaixa" EntityType="ecostoreModel.vw_fluxocaixa" />
-          <AssociationSet Name="tb_produto_ibfk_2" Association="ecostoreModel.tb_produto_ibfk_2">
-            <End Role="tb_categoria" EntitySet="tb_categoria" />
-            <End Role="tb_produto" EntitySet="tb_produto" />
-          </AssociationSet>
           <AssociationSet Name="tb_venda_ibfk_2" Association="ecostoreModel.tb_venda_ibfk_2">
             <End Role="tb_cliente" EntitySet="tb_cliente" />
             <End Role="tb_venda" EntitySet="tb_venda" />
@@ -539,15 +509,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
             <End Role="tb_venda_item" EntitySet="tb_venda_item" />
           </AssociationSet>
         </EntityContainer>
-        <EntityType Name="tb_categoria">
-          <Key>
-            <PropertyRef Name="id_categoria" />
-          </Key>
-          <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="nm_categoria" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ds_categoria" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_produto_ibfk_2" FromRole="tb_categoria" ToRole="tb_produto" />
-        </EntityType>
         <EntityType Name="tb_cliente">
           <Key>
             <PropertyRef Name="id_cliente" />
@@ -701,11 +662,10 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           </Key>
           <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_fornecedor" Type="Int32" Nullable="false" />
-          <Property Name="id_categoria" Type="Int32" Nullable="false" />
+          <Property Name="ds_categoria" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
           <Property Name="nm_produto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="img_produto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
           <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-          <NavigationProperty Name="tb_categoria" Relationship="ecostoreModel.tb_produto_ibfk_2" FromRole="tb_produto" ToRole="tb_categoria" />
           <NavigationProperty Name="tb_compra_item" Relationship="ecostoreModel.tb_compra_item_ibfk_2" FromRole="tb_produto" ToRole="tb_compra_item" />
           <NavigationProperty Name="tb_estoque" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_produto" ToRole="tb_estoque" />
           <NavigationProperty Name="tb_fornecedor" Relationship="ecostoreModel.tb_produto_ibfk_1" FromRole="tb_produto" ToRole="tb_fornecedor" />
@@ -755,18 +715,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="vl_operacao" Type="Decimal" />
           <Property Name="tp_operacao" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
         </EntityType>
-        <Association Name="tb_produto_ibfk_2">
-          <End Type="ecostoreModel.tb_categoria" Role="tb_categoria" Multiplicity="1" />
-          <End Type="ecostoreModel.tb_produto" Role="tb_produto" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="tb_categoria">
-              <PropertyRef Name="id_categoria" />
-            </Principal>
-            <Dependent Role="tb_produto">
-              <PropertyRef Name="id_categoria" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="tb_venda_ibfk_2">
           <End Type="ecostoreModel.tb_cliente" Role="tb_cliente" Multiplicity="0..1">
             <OnDelete Action="Cascade" />
@@ -947,15 +895,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ecostoreModelStoreContainer" CdmEntityContainer="ecostoreEntities">
-          <EntitySetMapping Name="tb_categoria">
-            <EntityTypeMapping TypeName="ecostoreModel.tb_categoria">
-              <MappingFragment StoreEntitySet="tb_categoria">
-                <ScalarProperty Name="ds_categoria" ColumnName="ds_categoria" />
-                <ScalarProperty Name="nm_categoria" ColumnName="nm_categoria" />
-                <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="tb_cliente">
             <EntityTypeMapping TypeName="ecostoreModel.tb_cliente">
               <MappingFragment StoreEntitySet="tb_cliente">
@@ -1104,7 +1043,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
                 <ScalarProperty Name="vl_valor" ColumnName="vl_valor" />
                 <ScalarProperty Name="img_produto" ColumnName="img_produto" />
                 <ScalarProperty Name="nm_produto" ColumnName="nm_produto" />
-                <ScalarProperty Name="id_categoria" ColumnName="id_categoria" />
+                <ScalarProperty Name="ds_categoria" ColumnName="ds_categoria" />
                 <ScalarProperty Name="id_fornecedor" ColumnName="id_fornecedor" />
                 <ScalarProperty Name="id_produto" ColumnName="id_produto" />
               </MappingFragment>

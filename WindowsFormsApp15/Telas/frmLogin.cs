@@ -64,6 +64,8 @@ namespace WindowsFormsApp15
                 if (login == true)
                 {
                     Telas.Menu tela = new Telas.Menu();
+                    Telas.frmCadastrarPonto ponto = new Telas.frmCadastrarPonto();
+                    ponto.Show();
                     tela.Show();
                 }
                 else
@@ -106,6 +108,11 @@ namespace WindowsFormsApp15
         private void lblSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lblMinimizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

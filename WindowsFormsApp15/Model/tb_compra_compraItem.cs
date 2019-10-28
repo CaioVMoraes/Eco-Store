@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp15.Model
 {
-    public partial class tb_estoque
+    public partial class tb_compra_item
     {
         public string nm_produto { get { return tb_produto.nm_produto; } }
-        public string nm_categoria { get { return tb_produto.ds_categoria; } }
-        public decimal vl_valor { get { return tb_produto.vl_valor; } }
+        public DateTime dt_compra { get { return tb_compra.dt_compra; } }
+        public decimal vl_valorTotal { get { return tb_compra.vl_valorTotal; } }
     }
 }

@@ -29,6 +29,12 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
+        public List<tb_compra_item> ConsultarCompraItem(DateTime data)
+        {
+            List<tb_compra_item> lista = db.tb_compra_item.Where(x => x.tb_compra.dt_compra == data).ToList();
+
+            return lista;
+        }
         public tb_compra Listar(int id)
         {
             tb_compra modelo = db.tb_compra.FirstOrDefault(x => x.id_compra == id);

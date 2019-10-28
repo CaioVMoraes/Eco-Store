@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ecostoreModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityContainer Name="ecostoreEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="tb_categoria" EntityType="ecostoreModel.tb_categoria" />
     <EntitySet Name="tb_cliente" EntityType="ecostoreModel.tb_cliente" />
     <EntitySet Name="tb_compra" EntityType="ecostoreModel.tb_compra" />
     <EntitySet Name="tb_compra_item" EntityType="ecostoreModel.tb_compra_item" />
@@ -17,10 +16,6 @@
     <EntitySet Name="tb_venda" EntityType="ecostoreModel.tb_venda" />
     <EntitySet Name="tb_venda_item" EntityType="ecostoreModel.tb_venda_item" />
     <EntitySet Name="vw_fluxocaixa" EntityType="ecostoreModel.vw_fluxocaixa" />
-    <AssociationSet Name="tb_produto_ibfk_2" Association="ecostoreModel.tb_produto_ibfk_2">
-      <End Role="tb_categoria" EntitySet="tb_categoria" />
-      <End Role="tb_produto" EntitySet="tb_produto" />
-    </AssociationSet>
     <AssociationSet Name="tb_venda_ibfk_2" Association="ecostoreModel.tb_venda_ibfk_2">
       <End Role="tb_cliente" EntitySet="tb_cliente" />
       <End Role="tb_venda" EntitySet="tb_venda" />
@@ -74,15 +69,6 @@
       <End Role="tb_venda_item" EntitySet="tb_venda_item" />
     </AssociationSet>
   </EntityContainer>
-  <EntityType Name="tb_categoria">
-    <Key>
-      <PropertyRef Name="id_categoria" />
-    </Key>
-    <Property Name="id_categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="nm_categoria" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-    <Property Name="ds_categoria" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tb_produto" Relationship="ecostoreModel.tb_produto_ibfk_2" FromRole="tb_categoria" ToRole="tb_produto" />
-  </EntityType>
   <EntityType Name="tb_cliente">
     <Key>
       <PropertyRef Name="id_cliente" />
@@ -236,11 +222,10 @@
     </Key>
     <Property Name="id_produto" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="id_fornecedor" Type="Int32" Nullable="false" />
-    <Property Name="id_categoria" Type="Int32" Nullable="false" />
+    <Property Name="ds_categoria" Type="String" Nullable="false" MaxLength="70" FixedLength="false" Unicode="false" />
     <Property Name="nm_produto" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="img_produto" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
     <Property Name="vl_valor" Type="Decimal" Nullable="false" />
-    <NavigationProperty Name="tb_categoria" Relationship="ecostoreModel.tb_produto_ibfk_2" FromRole="tb_produto" ToRole="tb_categoria" />
     <NavigationProperty Name="tb_compra_item" Relationship="ecostoreModel.tb_compra_item_ibfk_2" FromRole="tb_produto" ToRole="tb_compra_item" />
     <NavigationProperty Name="tb_estoque" Relationship="ecostoreModel.tb_estoque_ibfk_1" FromRole="tb_produto" ToRole="tb_estoque" />
     <NavigationProperty Name="tb_fornecedor" Relationship="ecostoreModel.tb_produto_ibfk_1" FromRole="tb_produto" ToRole="tb_fornecedor" />
@@ -290,18 +275,6 @@
     <Property Name="vl_operacao" Type="Decimal" />
     <Property Name="tp_operacao" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
   </EntityType>
-  <Association Name="tb_produto_ibfk_2">
-    <End Type="ecostoreModel.tb_categoria" Role="tb_categoria" Multiplicity="1" />
-    <End Type="ecostoreModel.tb_produto" Role="tb_produto" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_categoria">
-        <PropertyRef Name="id_categoria" />
-      </Principal>
-      <Dependent Role="tb_produto">
-        <PropertyRef Name="id_categoria" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="tb_venda_ibfk_2">
     <End Type="ecostoreModel.tb_cliente" Role="tb_cliente" Multiplicity="0..1">
       <OnDelete Action="Cascade" />

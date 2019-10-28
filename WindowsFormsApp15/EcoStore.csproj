@@ -70,7 +70,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\CategoriaBusiness.cs" />
     <Compile Include="Business\ClienteBusiness.cs" />
     <Compile Include="Business\CompraBusiness.cs" />
     <Compile Include="Business\ControleDePontoBusiness.cs" />
@@ -82,7 +81,6 @@
     <Compile Include="Business\ProdutoBusiness.cs" />
     <Compile Include="Business\UsuarioBusiness.cs" />
     <Compile Include="Business\VendaBusiness.cs" />
-    <Compile Include="Database\CategoriaDatabase.cs" />
     <Compile Include="Database\ClienteDatabase.cs" />
     <Compile Include="Database\CompraDatabase.cs" />
     <Compile Include="Database\ControledePontoDatabase.cs" />
@@ -94,6 +92,7 @@
     <Compile Include="Database\ProdutoDatabase.cs" />
     <Compile Include="Database\UsuarioDatabase.cs" />
     <Compile Include="Database\VendaDatabase.cs" />
+    <Compile Include="Model\tb_compra_compraItem.cs" />
     <Compile Include="Model\tb_estoque_compra.cs" />
     <Compile Include="Model\Model.Context.cs">
       <AutoGen>True</AutoGen>
@@ -109,9 +108,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Model\tb_categoria.cs">
-      <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tb_cliente.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -158,24 +154,6 @@
     <Compile Include="Autenticacao\Usuario.cs" />
     <Compile Include="Model\vw_fluxocaixa.cs">
       <DependentUpon>Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Categoria_\frmAlterarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Categoria_\frmAlterarCategoria.Designer.cs">
-      <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Categoria_\frmCadastrarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Categoria_\frmCadastrarCategoria.Designer.cs">
-      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Categoria_\frmDeletarCategoria.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Categoria_\frmDeletarCategoria.Designer.cs">
-      <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Compra\frmConsultarCompra.cs">
       <SubType>Form</SubType>
@@ -254,12 +232,6 @@
     </Compile>
     <Compile Include="Telas\Produto_\frmAlterarProdutos.Designer.cs">
       <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Estoque_\frmCadastrarEstoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Estoque_\frmCadastrarEstoque.Designer.cs">
-      <DependentUpon>frmCadastrarEstoque.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Funcionario_\frmCadastrarFuncionario.cs">
       <SubType>Form</SubType>
@@ -361,15 +333,6 @@
     </Compile>
     <Compile Include="Utils\ConverterImagem.cs" />
     <Compile Include="Utils\Validacoes.cs" />
-    <EmbeddedResource Include="Telas\Categoria_\frmAlterarCategoria.resx">
-      <DependentUpon>frmAlterarCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Categoria_\frmCadastrarCategoria.resx">
-      <DependentUpon>frmCadastrarCategoria.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Categoria_\frmDeletarCategoria.resx">
-      <DependentUpon>frmDeletarCategoria.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Compra\frmConsultarCompra.resx">
       <DependentUpon>frmConsultarCompra.cs</DependentUpon>
     </EmbeddedResource>
@@ -405,9 +368,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Produto_\frmAlterarProdutos.resx">
       <DependentUpon>frmAlterarProdutos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Estoque_\frmCadastrarEstoque.resx">
-      <DependentUpon>frmCadastrarEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Funcionario_\frmCadastrarFuncionario.resx">
       <DependentUpon>frmCadastrarFuncionario.cs</DependentUpon>
