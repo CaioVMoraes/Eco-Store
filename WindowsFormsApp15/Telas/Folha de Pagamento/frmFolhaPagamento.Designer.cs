@@ -62,6 +62,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
@@ -74,6 +78,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEntrar
@@ -97,7 +102,7 @@
             this.btnEntrar.IconVisible = true;
             this.btnEntrar.IconZoom = 90D;
             this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(473, 518);
+            this.btnEntrar.Location = new System.Drawing.Point(464, 811);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -118,7 +123,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(56, 49);
+            this.label7.Location = new System.Drawing.Point(86, 148);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(132, 20);
             this.label7.TabIndex = 118;
@@ -127,7 +132,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(284, 51);
+            this.comboBox2.Location = new System.Drawing.Point(314, 150);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(192, 21);
             this.comboBox2.TabIndex = 133;
@@ -139,7 +144,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(125, 241);
+            this.label2.Location = new System.Drawing.Point(116, 534);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 20);
             this.label2.TabIndex = 143;
@@ -152,7 +157,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(124, 204);
+            this.label3.Location = new System.Drawing.Point(115, 497);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(35, 20);
             this.label3.TabIndex = 144;
@@ -165,7 +170,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(124, 175);
+            this.label4.Location = new System.Drawing.Point(115, 468);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 20);
             this.label4.TabIndex = 145;
@@ -178,7 +183,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(124, 143);
+            this.label5.Location = new System.Drawing.Point(115, 436);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(173, 20);
             this.label5.TabIndex = 146;
@@ -191,7 +196,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(125, 461);
+            this.label6.Location = new System.Drawing.Point(116, 754);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(133, 20);
             this.label6.TabIndex = 147;
@@ -204,7 +209,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(125, 428);
+            this.label8.Location = new System.Drawing.Point(116, 721);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(141, 20);
             this.label8.TabIndex = 148;
@@ -217,7 +222,7 @@
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(124, 275);
+            this.label9.Location = new System.Drawing.Point(115, 568);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(154, 20);
             this.label9.TabIndex = 149;
@@ -230,7 +235,7 @@
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(124, 399);
+            this.label10.Location = new System.Drawing.Point(115, 692);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 20);
             this.label10.TabIndex = 150;
@@ -243,7 +248,7 @@
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(124, 373);
+            this.label12.Location = new System.Drawing.Point(115, 666);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 20);
             this.label12.TabIndex = 151;
@@ -256,7 +261,7 @@
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(124, 340);
+            this.label13.Location = new System.Drawing.Point(115, 633);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(142, 20);
             this.label13.TabIndex = 152;
@@ -269,7 +274,7 @@
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(124, 308);
+            this.label14.Location = new System.Drawing.Point(115, 601);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(127, 20);
             this.label14.TabIndex = 153;
@@ -277,70 +282,70 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(352, 308);
+            this.numericUpDown2.Location = new System.Drawing.Point(343, 601);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown2.TabIndex = 155;
             // 
             // numericUpDown3
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(352, 207);
+            this.numericUpDown3.Location = new System.Drawing.Point(343, 500);
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown3.TabIndex = 156;
             // 
             // numericUpDown4
             // 
-            this.numericUpDown4.Location = new System.Drawing.Point(352, 275);
+            this.numericUpDown4.Location = new System.Drawing.Point(343, 568);
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown4.TabIndex = 157;
             // 
             // numericUpDown5
             // 
-            this.numericUpDown5.Location = new System.Drawing.Point(352, 241);
+            this.numericUpDown5.Location = new System.Drawing.Point(343, 534);
             this.numericUpDown5.Name = "numericUpDown5";
             this.numericUpDown5.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown5.TabIndex = 158;
             // 
             // numericUpDown6
             // 
-            this.numericUpDown6.Location = new System.Drawing.Point(352, 343);
+            this.numericUpDown6.Location = new System.Drawing.Point(343, 636);
             this.numericUpDown6.Name = "numericUpDown6";
             this.numericUpDown6.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown6.TabIndex = 159;
             // 
             // numericUpDown7
             // 
-            this.numericUpDown7.Location = new System.Drawing.Point(352, 178);
+            this.numericUpDown7.Location = new System.Drawing.Point(343, 471);
             this.numericUpDown7.Name = "numericUpDown7";
             this.numericUpDown7.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown7.TabIndex = 160;
             // 
             // numericUpDown8
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(352, 402);
+            this.numericUpDown8.Location = new System.Drawing.Point(343, 695);
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown8.TabIndex = 161;
             // 
             // numericUpDown9
             // 
-            this.numericUpDown9.Location = new System.Drawing.Point(352, 376);
+            this.numericUpDown9.Location = new System.Drawing.Point(343, 669);
             this.numericUpDown9.Name = "numericUpDown9";
             this.numericUpDown9.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown9.TabIndex = 162;
             // 
             // numericUpDown10
             // 
-            this.numericUpDown10.Location = new System.Drawing.Point(352, 428);
+            this.numericUpDown10.Location = new System.Drawing.Point(343, 721);
             this.numericUpDown10.Name = "numericUpDown10";
             this.numericUpDown10.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown10.TabIndex = 163;
             // 
             // numericUpDown11
             // 
-            this.numericUpDown11.Location = new System.Drawing.Point(352, 461);
+            this.numericUpDown11.Location = new System.Drawing.Point(343, 754);
             this.numericUpDown11.Name = "numericUpDown11";
             this.numericUpDown11.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown11.TabIndex = 164;
@@ -352,7 +357,7 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(124, 488);
+            this.label11.Location = new System.Drawing.Point(115, 781);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(64, 20);
             this.label11.TabIndex = 165;
@@ -365,7 +370,7 @@
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(125, 554);
+            this.label15.Location = new System.Drawing.Point(116, 847);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(133, 20);
             this.label15.TabIndex = 166;
@@ -373,14 +378,14 @@
             // 
             // numericUpDown12
             // 
-            this.numericUpDown12.Location = new System.Drawing.Point(352, 488);
+            this.numericUpDown12.Location = new System.Drawing.Point(343, 781);
             this.numericUpDown12.Name = "numericUpDown12";
             this.numericUpDown12.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown12.TabIndex = 167;
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(352, 143);
+            this.dateTimePicker1.Location = new System.Drawing.Point(343, 436);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 169;
@@ -392,7 +397,7 @@
             this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(124, 518);
+            this.label16.Location = new System.Drawing.Point(115, 811);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(114, 20);
             this.label16.TabIndex = 171;
@@ -405,7 +410,7 @@
             this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label17.Location = new System.Drawing.Point(295, 554);
+            this.label17.Location = new System.Drawing.Point(286, 847);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(19, 20);
             this.label17.TabIndex = 172;
@@ -449,12 +454,79 @@
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(265, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(264, 20);
+            this.label1.TabIndex = 309;
+            this.label1.Text = "Cadastrar Folha de Pagamento:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(563, 122);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(126, 112);
+            this.pictureBox1.TabIndex = 310;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "BUSCAR";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(368, 200);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(138, 34);
+            this.bunifuFlatButton1.TabIndex = 311;
+            this.bunifuFlatButton1.Text = "BUSCAR";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(74, 91);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(650, 181);
+            this.groupBox1.TabIndex = 312;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // frmFolhaPagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(806, 740);
+            this.ClientSize = new System.Drawing.Size(806, 903);
+            this.Controls.Add(this.bunifuFlatButton1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -486,6 +558,7 @@
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.groupBox1);
             this.Name = "frmFolhaPagamento";
             this.Text = "Folha de Pagamento";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -501,6 +574,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -540,5 +614,9 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblSair;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
