@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -29,7 +30,7 @@ namespace WindowsFormsApp15.Telas
         private void EnviarWhatsapp(string telPara, string Mensagem)
         {
             telPara = telPara.Replace("(", "").Replace(")", "").Replace(" ", "").Replace("-", "");
-
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             TwilioClient.Init("AC70b9b67a32b116779d34b9097e5cd9d1", "3c9bb04fa8e721cb0788430da93c5d85");
             var message = MessageResource.Create(
              new PhoneNumber("whatsapp:" + telPara),
