@@ -185,3 +185,4 @@ C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csp
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csprojResolveAssemblyReference.cache
+C:\Users\infob04\Source\Repos\eco-store5\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config
