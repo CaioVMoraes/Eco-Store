@@ -33,6 +33,8 @@
         <AssociationConnector Association="ecostoreModel.tb_log_ibfk_1" />
         <AssociationConnector Association="ecostoreModel.tb_venda_ibfk_1" />
         <AssociationConnector Association="ecostoreModel.tb_venda_item_ibfk_2" />
+        <EntityTypeShape EntityType="ecostoreModel.tb_recuperacao" Width="1.5" PointX="5.25" PointY="22.25" />
+        <AssociationConnector Association="ecostoreModel.tb_recuperacao_ibfk_1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

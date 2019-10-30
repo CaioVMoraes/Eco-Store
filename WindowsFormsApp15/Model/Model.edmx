@@ -148,6 +148,15 @@
           <Property Name="img_produto" Type="longblob" Nullable="false" />
           <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
         </EntityType>
+        <EntityType Name="tb_recuperacao">
+          <Key>
+            <PropertyRef Name="id_recuperacao" />
+          </Key>
+          <Property Name="id_recuperacao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_usuario" Type="int" Nullable="false" />
+          <Property Name="ds_codigo" Type="varchar" MaxLength="6" Nullable="false" />
+          <Property Name="dt_data" Type="date" Nullable="false" />
+        </EntityType>
         <EntityType Name="tb_usuario">
           <Key>
             <PropertyRef Name="id_usuario" />
@@ -293,6 +302,20 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="tb_recuperacao_ibfk_1">
+          <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="tb_recuperacao" Type="Self.tb_recuperacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="tb_recuperacao">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="tb_usuario_ibfk_1">
           <End Role="tb_funcionario" Type="Self.tb_funcionario" Multiplicity="1" />
           <End Role="tb_usuario" Type="Self.tb_usuario" Multiplicity="*" />
@@ -373,6 +396,7 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
           <EntitySet Name="tb_funcionario" EntityType="Self.tb_funcionario" Schema="db_a4e776_ecostor" store:Type="Tables" />
           <EntitySet Name="tb_log" EntityType="Self.tb_log" Schema="db_a4e776_ecostor" store:Type="Tables" />
           <EntitySet Name="tb_produto" EntityType="Self.tb_produto" Schema="db_a4e776_ecostor" store:Type="Tables" />
+          <EntitySet Name="tb_recuperacao" EntityType="Self.tb_recuperacao" Schema="db_a4e776_ecostor" store:Type="Tables" />
           <EntitySet Name="tb_usuario" EntityType="Self.tb_usuario" Schema="db_a4e776_ecostor" store:Type="Tables" />
           <EntitySet Name="tb_venda" EntityType="Self.tb_venda" Schema="db_a4e776_ecostor" store:Type="Tables" />
           <EntitySet Name="tb_venda_item" EntityType="Self.tb_venda_item" Schema="db_a4e776_ecostor" store:Type="Tables" />
@@ -414,6 +438,10 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <AssociationSet Name="tb_produto_ibfk_1" Association="Self.tb_produto_ibfk_1">
             <End Role="tb_fornecedor" EntitySet="tb_fornecedor" />
             <End Role="tb_produto" EntitySet="tb_produto" />
+          </AssociationSet>
+          <AssociationSet Name="tb_recuperacao_ibfk_1" Association="Self.tb_recuperacao_ibfk_1">
+            <End Role="tb_usuario" EntitySet="tb_usuario" />
+            <End Role="tb_recuperacao" EntitySet="tb_recuperacao" />
           </AssociationSet>
           <AssociationSet Name="tb_usuario_ibfk_1" Association="Self.tb_usuario_ibfk_1">
             <End Role="tb_funcionario" EntitySet="tb_funcionario" />
@@ -507,6 +535,11 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <AssociationSet Name="tb_venda_item_ibfk_2" Association="ecostoreModel.tb_venda_item_ibfk_2">
             <End Role="tb_venda" EntitySet="tb_venda" />
             <End Role="tb_venda_item" EntitySet="tb_venda_item" />
+          </AssociationSet>
+          <EntitySet Name="tb_recuperacao" EntityType="ecostoreModel.tb_recuperacao" />
+          <AssociationSet Name="tb_recuperacao_ibfk_1" Association="ecostoreModel.tb_recuperacao_ibfk_1">
+            <End Role="tb_usuario" EntitySet="tb_usuario" />
+            <End Role="tb_recuperacao" EntitySet="tb_recuperacao" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="tb_cliente">
@@ -682,6 +715,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <NavigationProperty Name="tb_funcionario" Relationship="ecostoreModel.tb_usuario_ibfk_1" FromRole="tb_usuario" ToRole="tb_funcionario" />
           <NavigationProperty Name="tb_log" Relationship="ecostoreModel.tb_log_ibfk_1" FromRole="tb_usuario" ToRole="tb_log" />
           <NavigationProperty Name="tb_venda" Relationship="ecostoreModel.tb_venda_ibfk_1" FromRole="tb_usuario" ToRole="tb_venda" />
+          <NavigationProperty Name="tb_recuperacao" Relationship="ecostoreModel.tb_recuperacao_ibfk_1" FromRole="tb_usuario" ToRole="tb_recuperacao" />
         </EntityType>
         <EntityType Name="tb_venda">
           <Key>
@@ -889,6 +923,30 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="tb_recuperacao">
+          <Key>
+            <PropertyRef Name="id_recuperacao" />
+          </Key>
+          <Property Name="id_recuperacao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_usuario" Type="Int32" Nullable="false" />
+          <Property Name="ds_codigo" Type="String" Nullable="false" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="dt_data" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="tb_usuario" Relationship="ecostoreModel.tb_recuperacao_ibfk_1" FromRole="tb_recuperacao" ToRole="tb_usuario" />
+        </EntityType>
+        <Association Name="tb_recuperacao_ibfk_1">
+          <End Type="ecostoreModel.tb_usuario" Role="tb_usuario" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ecostoreModel.tb_recuperacao" Role="tb_recuperacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tb_usuario">
+              <PropertyRef Name="id_usuario" />
+            </Principal>
+            <Dependent Role="tb_recuperacao">
+              <PropertyRef Name="id_usuario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1086,6 +1144,16 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
                 <ScalarProperty Name="tp_operacao" ColumnName="tp_operacao" />
                 <ScalarProperty Name="vl_operacao" ColumnName="vl_operacao" />
                 <ScalarProperty Name="dt_pagamento" ColumnName="dt_pagamento" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_recuperacao">
+            <EntityTypeMapping TypeName="ecostoreModel.tb_recuperacao">
+              <MappingFragment StoreEntitySet="tb_recuperacao">
+                <ScalarProperty Name="dt_data" ColumnName="dt_data" />
+                <ScalarProperty Name="ds_codigo" ColumnName="ds_codigo" />
+                <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
+                <ScalarProperty Name="id_recuperacao" ColumnName="id_recuperacao" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

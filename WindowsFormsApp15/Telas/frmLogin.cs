@@ -80,17 +80,6 @@ namespace WindowsFormsApp15
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-            Telas.frmCadastrarUsuario tela = new Telas.frmCadastrarUsuario();
-            tela.Show();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-            Telas.frmCadastrarFuncionario tela = new Telas.frmCadastrarFuncionario();
-            tela.Show();
-        }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -111,6 +100,11 @@ namespace WindowsFormsApp15
         }
 
         private void lblMinimizar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

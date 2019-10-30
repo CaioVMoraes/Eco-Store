@@ -90,5 +90,12 @@ namespace WindowsFormsApp15.Database
 
             db.SaveChanges();
         }
+
+        public tb_funcionario ConfirmarEmail(string email)
+        {
+            tb_funcionario funcionario = db.tb_funcionario.FirstOrDefault(x => x.ds_email == email);
+
+            return funcionario;
+        }
     }
 }

@@ -19,6 +19,7 @@ namespace WindowsFormsApp15.Model
         {
             this.tb_log = new HashSet<tb_log>();
             this.tb_venda = new HashSet<tb_venda>();
+            this.tb_recuperacao = new HashSet<tb_recuperacao>();
         }
     
         public int id_usuario { get; set; }
@@ -32,5 +33,7 @@ namespace WindowsFormsApp15.Model
         public virtual ICollection<tb_log> tb_log { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_venda> tb_venda { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tb_recuperacao> tb_recuperacao { get; set; }
     }
 }

@@ -40,5 +40,6 @@ namespace WindowsFormsApp15.Model
         public virtual DbSet<tb_venda> tb_venda { get; set; }
         public virtual DbSet<tb_venda_item> tb_venda_item { get; set; }
         public virtual DbSet<vw_fluxocaixa> vw_fluxocaixa { get; set; }
+        public virtual DbSet<tb_recuperacao> tb_recuperacao { get; set; }
     }
 }

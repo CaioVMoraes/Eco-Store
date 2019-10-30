@@ -100,6 +100,7 @@
     <Compile Include="Business\FuncionarioBusiness.cs" />
     <Compile Include="Business\LogBusiness.cs" />
     <Compile Include="Business\ProdutoBusiness.cs" />
+    <Compile Include="Business\RecuperacaoBusiness.cs" />
     <Compile Include="Business\UsuarioBusiness.cs" />
     <Compile Include="Business\VendaBusiness.cs" />
     <Compile Include="Database\ClienteDatabase.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="Database\FuncionarioDatabase.cs" />
     <Compile Include="Database\LogDatabase.cs" />
     <Compile Include="Database\ProdutoDatabase.cs" />
+    <Compile Include="Database\RecuperacaoDatabase.cs" />
     <Compile Include="Database\UsuarioDatabase.cs" />
     <Compile Include="Database\VendaDatabase.cs" />
     <Compile Include="Model\tb_compra_compraItem.cs" />
@@ -163,6 +165,9 @@
     <Compile Include="Model\tb_produto.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tb_recuperacao.cs">
+      <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\tb_usuario.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -175,6 +180,12 @@
     <Compile Include="Autenticacao\Usuario.cs" />
     <Compile Include="Model\vw_fluxocaixa.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Recuperação de Senha\ConfirmarEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recuperação de Senha\ConfirmarEmail.Designer.cs">
+      <DependentUpon>ConfirmarEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Compra\frmConsultarCompra.cs">
       <SubType>Form</SubType>
@@ -359,7 +370,11 @@
       <DependentUpon>Whatsapp.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\ConverterImagem.cs" />
+    <Compile Include="Utils\GmailSender.cs" />
     <Compile Include="Utils\Validacoes.cs" />
+    <EmbeddedResource Include="Recuperação de Senha\ConfirmarEmail.resx">
+      <DependentUpon>ConfirmarEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Compra\frmConsultarCompra.resx">
       <DependentUpon>frmConsultarCompra.cs</DependentUpon>
     </EmbeddedResource>
