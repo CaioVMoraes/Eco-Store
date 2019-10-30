@@ -229,6 +229,12 @@
     <Compile Include="Telas\Fluxo de Caixa\frmFluxoDeCaixa.Designer.cs">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Folha de Pagamento\frmConsultarFolha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Folha de Pagamento\frmConsultarFolha.Designer.cs">
+      <DependentUpon>frmConsultarFolha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Fornecedor_\frmAlterarFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -395,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Fluxo de Caixa\frmFluxoDeCaixa.resx">
       <DependentUpon>frmFluxoDeCaixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Folha de Pagamento\frmConsultarFolha.resx">
+      <DependentUpon>frmConsultarFolha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Fornecedor_\frmAlterarFornecedor.resx">
       <DependentUpon>frmAlterarFornecedor.cs</DependentUpon>
