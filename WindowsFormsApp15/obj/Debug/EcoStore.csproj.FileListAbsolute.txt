@@ -238,3 +238,16 @@ C:\Users\infob04\Source\Repos\eco-store5\WindowsFormsApp15\obj\Debug\WindowsForm
 C:\Users\infob04\Source\Repos\eco-store5\WindowsFormsApp15\obj\Debug\EcoStore.csproj.GenerateResource.Cache
 C:\Users\infob04\Source\Repos\eco-store5\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
 C:\Users\infob04\Source\Repos\eco-store5\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Recuperação_de_Senha.ConfirmarEmail.resources
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Folha_de_Pagamento.frmConsultarFolha.resources
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Usuario_.frmAlterarSenha.resources
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Whatsapp.resources
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Newtonsoft.Json.dll
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Twilio.dll
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Newtonsoft.Json.xml
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Twilio.xml

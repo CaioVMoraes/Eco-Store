@@ -4,37 +4,37 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="8445fe8528b948e0b6f2cbb18b31af2a" Name="Diagram1" ZoomLevel="86">
-        <EntityTypeShape EntityType="ecostoreModel.tb_cliente" Width="1.5" PointX="6" PointY="0.75" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_compra" Width="1.5" PointX="6" PointY="19.25" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_compra_item" Width="1.5" PointX="8.25" PointY="12.125" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_controledeponto" Width="1.5" PointX="3" PointY="4.125" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_despesa" Width="1.5" PointX="0.75" PointY="1.25" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_estoque" Width="1.5" PointX="8.25" PointY="15" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_folhapagamento" Width="1.5" PointX="5.25" PointY="4.75" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_fornecedor" Width="1.5" PointX="3.75" PointY="14.5" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_funcionario" Width="1.5" PointX="0.75" PointY="4.625" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_log" Width="1.5" PointX="5.25" PointY="11.375" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_produto" Width="1.5" PointX="6" PointY="14.75" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_usuario" Width="1.5" PointX="3" PointY="7.875" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_venda" Width="1.5" PointX="8.25" PointY="7.875" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_venda_item" Width="1.5" PointX="10.5" PointY="8.125" />
-        <EntityTypeShape EntityType="ecostoreModel.vw_fluxocaixa" Width="1.5" PointX="2.75" PointY="1.25" />
-        <AssociationConnector Association="ecostoreModel.tb_venda_ibfk_2" />
-        <AssociationConnector Association="ecostoreModel.tb_compra_item_ibfk_1" />
-        <AssociationConnector Association="ecostoreModel.tb_compra_item_ibfk_2" />
-        <AssociationConnector Association="ecostoreModel.tb_controledeponto_ibfk_1" />
-        <AssociationConnector Association="ecostoreModel.tb_folhapagamento_ibfk_2" />
-        <AssociationConnector Association="ecostoreModel.tb_estoque_ibfk_1" />
-        <AssociationConnector Association="ecostoreModel.tb_venda_item_ibfk_1" />
-        <AssociationConnector Association="ecostoreModel.tb_folhapagamento_ibfk_1" />
-        <AssociationConnector Association="ecostoreModel.tb_produto_ibfk_1" />
-        <AssociationConnector Association="ecostoreModel.tb_usuario_ibfk_1" />
-        <AssociationConnector Association="ecostoreModel.tb_log_ibfk_1" />
-        <AssociationConnector Association="ecostoreModel.tb_venda_ibfk_1" />
-        <AssociationConnector Association="ecostoreModel.tb_venda_item_ibfk_2" />
-        <EntityTypeShape EntityType="ecostoreModel.tb_recuperacao" Width="1.5" PointX="5.25" PointY="22.25" />
-        <AssociationConnector Association="ecostoreModel.tb_recuperacao_ibfk_1" />
+      <Diagram DiagramId="78dcd9c95bc74f709a09d15567133af8" Name="Diagram1">
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_cliente" Width="1.5" PointX="6" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_compra" Width="1.5" PointX="6" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_compra_item" Width="1.5" PointX="8.25" PointY="15.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_controledeponto" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_despesa" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_estoque" Width="1.5" PointX="8.25" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_folhapagamento" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_fornecedor" Width="1.5" PointX="3.75" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_funcionario" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_log" Width="1.5" PointX="5.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_produto" Width="1.5" PointX="6" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_recuperacao" Width="1.5" PointX="5.25" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_usuario" Width="1.5" PointX="3" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_venda" Width="1.5" PointX="8.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.tb_venda_item" Width="1.5" PointX="10.5" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_a4e776_ecostorModel.vw_fluxocaixa" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_venda_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_compra_item_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_compra_item_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_controledeponto_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_folhapagamento_ibfk_2" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_estoque_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_venda_item_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_folhapagamento_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_produto_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_usuario_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_log_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_recuperacao_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_venda_ibfk_1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_a4e776_ecostorModel.tb_venda_item_ibfk_2" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

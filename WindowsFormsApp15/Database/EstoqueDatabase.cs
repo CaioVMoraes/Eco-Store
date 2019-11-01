@@ -9,7 +9,8 @@ namespace WindowsFormsApp15.Database
 {
     class EstoqueDatabase
     {
-        Model.ecostoreEntities db = new Model.ecostoreEntities();
+        Model.db_a4e776_ecostorEntities db = new db_a4e776_ecostorEntities();
+
         public void CadastrarEstoque(tb_estoque modelo)
         {
             db.tb_estoque.Add(modelo);

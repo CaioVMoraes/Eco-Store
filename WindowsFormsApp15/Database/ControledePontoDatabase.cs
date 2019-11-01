@@ -9,7 +9,8 @@ namespace WindowsFormsApp15.Database
 {
     class ControledePontoDatabase
     {
-        Model.ecostoreEntities db = new Model.ecostoreEntities();
+        Model.db_a4e776_ecostorEntities db = new db_a4e776_ecostorEntities();
+
         public void CadastrarPonto(tb_controledeponto modelo)
         {
             db.tb_controledeponto.Add(modelo);

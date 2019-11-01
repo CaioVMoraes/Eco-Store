@@ -13,10 +13,10 @@ namespace WindowsFormsApp15.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ecostoreEntities : DbContext
+    public partial class db_a4e776_ecostorEntities : DbContext
     {
-        public ecostoreEntities()
-            : base("name=ecostoreEntities")
+        public db_a4e776_ecostorEntities()
+            : base("name=db_a4e776_ecostorEntities")
         {
         }
     
@@ -36,10 +36,10 @@ namespace WindowsFormsApp15.Model
         public virtual DbSet<tb_funcionario> tb_funcionario { get; set; }
         public virtual DbSet<tb_log> tb_log { get; set; }
         public virtual DbSet<tb_produto> tb_produto { get; set; }
+        public virtual DbSet<tb_recuperacao> tb_recuperacao { get; set; }
         public virtual DbSet<tb_usuario> tb_usuario { get; set; }
         public virtual DbSet<tb_venda> tb_venda { get; set; }
         public virtual DbSet<tb_venda_item> tb_venda_item { get; set; }
         public virtual DbSet<vw_fluxocaixa> vw_fluxocaixa { get; set; }
-        public virtual DbSet<tb_recuperacao> tb_recuperacao { get; set; }
     }
 }

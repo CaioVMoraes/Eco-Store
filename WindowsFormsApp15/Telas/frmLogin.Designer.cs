@@ -38,7 +38,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEsqueciSenha = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -200,18 +200,19 @@
             this.lblSair.Text = "X";
             this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
-            // label1
+            // lblEsqueciSenha
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(80, 398);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 20);
-            this.label1.TabIndex = 309;
-            this.label1.Text = "Esqueci minha senha";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lblEsqueciSenha.AutoSize = true;
+            this.lblEsqueciSenha.BackColor = System.Drawing.Color.Transparent;
+            this.lblEsqueciSenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblEsqueciSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEsqueciSenha.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblEsqueciSenha.Location = new System.Drawing.Point(80, 398);
+            this.lblEsqueciSenha.Name = "lblEsqueciSenha";
+            this.lblEsqueciSenha.Size = new System.Drawing.Size(161, 20);
+            this.lblEsqueciSenha.TabIndex = 309;
+            this.lblEsqueciSenha.Text = "Esqueci minha senha";
+            this.lblEsqueciSenha.Click += new System.EventHandler(this.label1_Click);
             // 
             // Form1
             // 
@@ -221,7 +222,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(486, 590);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblEsqueciSenha);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.txtSenha);
@@ -251,7 +252,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblSair;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblEsqueciSenha;
     }
 }
 

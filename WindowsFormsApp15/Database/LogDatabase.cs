@@ -9,7 +9,8 @@ namespace WindowsFormsApp15.Database
 {
     class LogDatabase
     {
-        Model.ecostoreEntities db = new Model.ecostoreEntities();
+        Model.db_a4e776_ecostorEntities db = new db_a4e776_ecostorEntities();
+
         public void InserirLog(tb_log modelo)
         {
             db.tb_log.Add(modelo);

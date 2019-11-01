@@ -115,8 +115,6 @@
     <Compile Include="Database\RecuperacaoDatabase.cs" />
     <Compile Include="Database\UsuarioDatabase.cs" />
     <Compile Include="Database\VendaDatabase.cs" />
-    <Compile Include="Model\tb_compra_compraItem.cs" />
-    <Compile Include="Model\tb_estoque_compra.cs" />
     <Compile Include="Model\Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,6 +136,7 @@
     <Compile Include="Model\tb_compra.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tb_compra_compraItem.cs" />
     <Compile Include="Model\tb_compra_item.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -150,6 +149,8 @@
     <Compile Include="Model\tb_estoque.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tb_estoque_compra.cs" />
+    <Compile Include="Autenticacao\Usuario.cs" />
     <Compile Include="Model\tb_folhapagamento.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -177,14 +178,13 @@
     <Compile Include="Model\tb_venda_item.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Autenticacao\Usuario.cs" />
     <Compile Include="Model\vw_fluxocaixa.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Recuperação de Senha\ConfirmarEmail.cs">
+    <Compile Include="Telas\Recuperação de Senha\ConfirmarEmail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Recuperação de Senha\ConfirmarEmail.Designer.cs">
+    <Compile Include="Telas\Recuperação de Senha\ConfirmarEmail.Designer.cs">
       <DependentUpon>ConfirmarEmail.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Compra\frmConsultarCompra.cs">
@@ -295,6 +295,12 @@
     <Compile Include="Telas\Splash.Designer.cs">
       <DependentUpon>Splash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Usuario_\frmAlterarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Usuario_\frmAlterarSenha.Designer.cs">
+      <DependentUpon>frmAlterarSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Usuario_\frmAlterarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -378,7 +384,7 @@
     <Compile Include="Utils\ConverterImagem.cs" />
     <Compile Include="Utils\GmailSender.cs" />
     <Compile Include="Utils\Validacoes.cs" />
-    <EmbeddedResource Include="Recuperação de Senha\ConfirmarEmail.resx">
+    <EmbeddedResource Include="Telas\Recuperação de Senha\ConfirmarEmail.resx">
       <DependentUpon>ConfirmarEmail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Compra\frmConsultarCompra.resx">
@@ -431,6 +437,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Usuario_\frmAlterarSenha.resx">
+      <DependentUpon>frmAlterarSenha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Usuario_\frmAlterarUsuario.resx">
       <DependentUpon>frmAlterarUsuario.cs</DependentUpon>
@@ -507,6 +516,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\collaborator-male.png" />
+    <None Include="Resources\pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664.jpg" />
     <Content Include="Model\Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
@@ -517,8 +528,6 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\collaborator-male.png" />
-    <None Include="Resources\pngtree-profile-web-icon-flat-line-filled-gray-icon-vector-png-image_1710664.jpg" />
     <Content Include="Resources\3907f0a4052ed31662981053bbf12c4e.jpg" />
     <None Include="Resources\dd.jpg" />
     <None Include="Resources\IconeRemover.png" />

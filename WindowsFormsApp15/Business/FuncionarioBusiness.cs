@@ -224,6 +224,13 @@ namespace WindowsFormsApp15.Business
             db.RemoverFuncionario(id);
         }
 
+        public tb_funcionario ModeloEmail(string email)
+        {
+            tb_funcionario funcioarnio = db.ConfirmarEmail(email);
+
+            return funcioarnio;
+        }
+
         public bool ConfirmarEmail(string email)
         {
             tb_funcionario funcioarnio = db.ConfirmarEmail(email);

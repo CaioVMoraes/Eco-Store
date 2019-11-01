@@ -10,7 +10,8 @@ namespace WindowsFormsApp15.Database
     class ClienteDatabase
     {
 
-        Model.ecostoreEntities db = new ecostoreEntities();
+        Model.db_a4e776_ecostorEntities db = new db_a4e776_ecostorEntities();
+
 
         public void InserirCliente(tb_cliente modelo)
         {

@@ -13,7 +13,7 @@ namespace WindowsFormsApp15.Business
         {
             Database.RecuperacaoDatabase database = new Database.RecuperacaoDatabase();
 
-            if(model.ds_codigo.Length != 6)
+            if(model.ds_codigo.Length < 6)
             {
                 throw new ArgumentException("Codigo invalido");
             }
@@ -23,6 +23,34 @@ namespace WindowsFormsApp15.Business
             }
 
             database.Inserir(model);
+        }
+
+        public bool Consultar(string codigo)
+        {
+            Database.RecuperacaoDatabase database = new Database.RecuperacaoDatabase();
+
+            tb_recuperacao recuperacao = database.Consultar(codigo);
+
+            if (recuperacao == null)
+            {
+                throw new ArgumentException("Código Inválido");
+            }
+
+            if (recuperacao != null && recuperacao.dt_data == DateTime.Now.Date)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void AlterarUsado(tb_recuperacao model)
+        {
+            Database.RecuperacaoDatabase database = new Database.RecuperacaoDatabase();
+
+            database.AlterarUsado(model);
         }
     }
 }

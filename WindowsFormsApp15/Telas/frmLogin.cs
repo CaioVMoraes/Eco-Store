@@ -106,7 +106,8 @@ namespace WindowsFormsApp15
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            Recuperação_de_Senha.ConfirmarEmail tela = new Recuperação_de_Senha.ConfirmarEmail();
+            tela.Show();
         }
     }
 }
