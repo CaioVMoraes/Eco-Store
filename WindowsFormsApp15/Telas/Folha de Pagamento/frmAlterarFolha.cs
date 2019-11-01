@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsApp15.Telas
+namespace WindowsFormsApp15.Telas.Folha_de_Pagamento
 {
-    public partial class nudSaude : Form
+    public partial class frmAlterarFolha : Form
     {
-        public nudSaude()
+        public frmAlterarFolha()
         {
             InitializeComponent();
-        }
-
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -117,7 +117,7 @@ namespace WindowsFormsApp15.Telas
 
         private void btnGerarFolhaPagamento_Click(object sender, EventArgs e)
         {
-            Telas.frmFolhaPagamento CadastrarFolha = new frmFolhaPagamento();
+            Telas.nudSaude CadastrarFolha = new nudSaude();
             CadastrarFolha.Show();
         }
 
