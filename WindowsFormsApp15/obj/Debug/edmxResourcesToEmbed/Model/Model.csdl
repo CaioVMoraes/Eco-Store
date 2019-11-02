@@ -113,8 +113,6 @@
     <Property Name="dt_saidaAlmoco" Type="DateTime" />
     <Property Name="dt_voltaAlmoco" Type="DateTime" />
     <Property Name="dt_saida" Type="DateTime" />
-    <Property Name="dt_entradaHoraExtra" Type="DateTime" />
-    <Property Name="dt_saidaHoraExtra" Type="DateTime" />
     <NavigationProperty Name="tb_funcionario" Relationship="ecostorModel.tb_controledeponto_ibfk_1" FromRole="tb_controledeponto" ToRole="tb_funcionario" />
   </EntityType>
   <EntityType Name="tb_despesa">
@@ -196,9 +194,8 @@
     <Property Name="ds_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
     <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
     <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="vl_salario" Type="Decimal" Nullable="false" />
     <Property Name="dt_contratacao" Type="DateTime" Nullable="false" />
-    <Property Name="tm_horasSemanais" Type="Decimal" Nullable="false" />
+    <Property Name="vl_salarioPorHora" Type="Decimal" Nullable="false" />
     <NavigationProperty Name="tb_controledeponto" Relationship="ecostorModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
     <NavigationProperty Name="tb_folhapagamento" Relationship="ecostorModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
     <NavigationProperty Name="tb_usuario" Relationship="ecostorModel.tb_usuario_ibfk_1" FromRole="tb_funcionario" ToRole="tb_usuario" />

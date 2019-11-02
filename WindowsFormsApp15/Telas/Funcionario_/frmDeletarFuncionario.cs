@@ -42,7 +42,7 @@ namespace WindowsFormsApp15.Telas
             cboCargo.Text = model.ds_cargo;
             txtCelular.Text = model.ds_celular;
             txtTelefone.Text = model.ds_telefone;
-            nudSalario.Value = model.vl_salario;
+            nudSalario.Value = model.vl_salarioPorHora;
             txtCpf.Text = model.ds_cpf;
             cboGen.Text = model.ds_genero;
 
@@ -102,7 +102,7 @@ namespace WindowsFormsApp15.Telas
                 cboCargo.Text = model.ds_cargo;
                 txtCelular.Text = model.ds_celular;
                 txtTelefone.Text = model.ds_telefone;
-                nudSalario.Value = model.vl_salario;
+                nudSalario.Value = model.vl_salarioPorHora;
                 txtCpf.Text = model.ds_cpf;
                 cboGen.Text = model.ds_genero;
 

@@ -55,18 +55,16 @@
             this.nudDentario = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.nudFaltas = new System.Windows.Forms.NumericUpDown();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label16 = new System.Windows.Forms.Label();
+            this.nudDescontos = new System.Windows.Forms.NumericUpDown();
+            this.dtpPagamento = new System.Windows.Forms.DateTimePicker();
             this.lblLiquido = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgFoto = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblBruto = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudRef)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPLR)).BeginInit();
@@ -78,9 +76,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudINSS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDentario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFaltas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDescontos)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // btnEntrar
@@ -104,13 +102,13 @@
             this.btnEntrar.IconVisible = true;
             this.btnEntrar.IconZoom = 90D;
             this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(610, 555);
+            this.btnEntrar.Location = new System.Drawing.Point(573, 592);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEntrar.selected = false;
-            this.btnEntrar.Size = new System.Drawing.Size(144, 34);
+            this.btnEntrar.Size = new System.Drawing.Size(181, 34);
             this.btnEntrar.TabIndex = 123;
             this.btnEntrar.Text = "CALCULAR";
             this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -284,80 +282,120 @@
             // 
             // nudRef
             // 
-            this.nudRef.Enabled = false;
             this.nudRef.Location = new System.Drawing.Point(634, 380);
+            this.nudRef.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.nudRef.Name = "nudRef";
             this.nudRef.Size = new System.Drawing.Size(120, 20);
             this.nudRef.TabIndex = 155;
             // 
             // nudPLR
             // 
-            this.nudPLR.Enabled = false;
             this.nudPLR.Location = new System.Drawing.Point(277, 376);
+            this.nudPLR.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.nudPLR.Name = "nudPLR";
             this.nudPLR.Size = new System.Drawing.Size(120, 20);
             this.nudPLR.TabIndex = 156;
             // 
             // nudAli
             // 
-            this.nudAli.Enabled = false;
             this.nudAli.Location = new System.Drawing.Point(634, 347);
+            this.nudAli.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.nudAli.Name = "nudAli";
             this.nudAli.Size = new System.Drawing.Size(120, 20);
             this.nudAli.TabIndex = 157;
             // 
             // nudFamilia
             // 
-            this.nudFamilia.Enabled = false;
             this.nudFamilia.Location = new System.Drawing.Point(634, 313);
+            this.nudFamilia.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.nudFamilia.Name = "nudFamilia";
             this.nudFamilia.Size = new System.Drawing.Size(120, 20);
             this.nudFamilia.TabIndex = 158;
             // 
             // nudTransporte
             // 
-            this.nudTransporte.Enabled = false;
             this.nudTransporte.Location = new System.Drawing.Point(634, 415);
+            this.nudTransporte.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.nudTransporte.Name = "nudTransporte";
             this.nudTransporte.Size = new System.Drawing.Size(120, 20);
             this.nudTransporte.TabIndex = 159;
             // 
             // nudGratificacoes
             // 
-            this.nudGratificacoes.Enabled = false;
             this.nudGratificacoes.Location = new System.Drawing.Point(277, 347);
+            this.nudGratificacoes.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.nudGratificacoes.Name = "nudGratificacoes";
             this.nudGratificacoes.Size = new System.Drawing.Size(120, 20);
             this.nudGratificacoes.TabIndex = 160;
             // 
             // numericUpDown8
             // 
-            this.numericUpDown8.Enabled = false;
             this.numericUpDown8.Location = new System.Drawing.Point(277, 444);
+            this.numericUpDown8.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.numericUpDown8.Name = "numericUpDown8";
             this.numericUpDown8.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown8.TabIndex = 161;
             // 
             // nudINSS
             // 
-            this.nudINSS.Enabled = false;
             this.nudINSS.Location = new System.Drawing.Point(277, 411);
+            this.nudINSS.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.nudINSS.Name = "nudINSS";
             this.nudINSS.Size = new System.Drawing.Size(120, 20);
             this.nudINSS.TabIndex = 162;
             // 
             // numericUpDown10
             // 
-            this.numericUpDown10.Enabled = false;
             this.numericUpDown10.Location = new System.Drawing.Point(277, 477);
+            this.numericUpDown10.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.numericUpDown10.Name = "numericUpDown10";
             this.numericUpDown10.Size = new System.Drawing.Size(120, 20);
             this.numericUpDown10.TabIndex = 163;
             // 
             // nudDentario
             // 
-            this.nudDentario.Enabled = false;
             this.nudDentario.Location = new System.Drawing.Point(634, 446);
+            this.nudDentario.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
             this.nudDentario.Name = "nudDentario";
             this.nudDentario.Size = new System.Drawing.Size(120, 20);
             this.nudDentario.TabIndex = 164;
@@ -369,11 +407,11 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(49, 512);
+            this.label11.Location = new System.Drawing.Point(406, 477);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 20);
+            this.label11.Size = new System.Drawing.Size(206, 20);
             this.label11.TabIndex = 165;
-            this.label11.Text = "Faltas:";
+            this.label11.Text = "Total Horas Trabalhadas";
             // 
             // label15
             // 
@@ -382,42 +420,32 @@
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(408, 513);
+            this.label15.Location = new System.Drawing.Point(50, 523);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(133, 20);
             this.label15.TabIndex = 166;
             this.label15.Text = "Salario Liquido:";
             // 
-            // nudFaltas
+            // nudDescontos
             // 
-            this.nudFaltas.Enabled = false;
-            this.nudFaltas.Location = new System.Drawing.Point(277, 512);
-            this.nudFaltas.Name = "nudFaltas";
-            this.nudFaltas.Size = new System.Drawing.Size(120, 20);
-            this.nudFaltas.TabIndex = 167;
+            this.nudDescontos.Location = new System.Drawing.Point(634, 477);
+            this.nudDescontos.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.nudDescontos.Name = "nudDescontos";
+            this.nudDescontos.Size = new System.Drawing.Size(120, 20);
+            this.nudDescontos.TabIndex = 167;
             // 
-            // dateTimePicker1
+            // dtpPagamento
             // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(277, 312);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dateTimePicker1.Size = new System.Drawing.Size(120, 20);
-            this.dateTimePicker1.TabIndex = 169;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label16.Location = new System.Drawing.Point(407, 477);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(114, 20);
-            this.label16.TabIndex = 171;
-            this.label16.Text = "Salario Bruto";
+            this.dtpPagamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpPagamento.Location = new System.Drawing.Point(277, 312);
+            this.dtpPagamento.Name = "dtpPagamento";
+            this.dtpPagamento.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dtpPagamento.Size = new System.Drawing.Size(120, 20);
+            this.dtpPagamento.TabIndex = 169;
             // 
             // lblLiquido
             // 
@@ -426,7 +454,7 @@
             this.lblLiquido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLiquido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLiquido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLiquido.Location = new System.Drawing.Point(735, 513);
+            this.lblLiquido.Location = new System.Drawing.Point(273, 523);
             this.lblLiquido.Name = "lblLiquido";
             this.lblLiquido.Size = new System.Drawing.Size(19, 20);
             this.lblLiquido.TabIndex = 172;
@@ -483,16 +511,16 @@
             this.label1.TabIndex = 309;
             this.label1.Text = "Calcular Folha de Pagamento";
             // 
-            // pictureBox1
+            // imgFoto
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::WindowsFormsApp15.Properties.Resources.collaborator_male;
-            this.pictureBox1.Location = new System.Drawing.Point(563, 122);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(126, 112);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 310;
-            this.pictureBox1.TabStop = false;
+            this.imgFoto.BackColor = System.Drawing.Color.Transparent;
+            this.imgFoto.Image = global::WindowsFormsApp15.Properties.Resources.collaborator_male;
+            this.imgFoto.Location = new System.Drawing.Point(573, 122);
+            this.imgFoto.Name = "imgFoto";
+            this.imgFoto.Size = new System.Drawing.Size(126, 112);
+            this.imgFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgFoto.TabIndex = 310;
+            this.imgFoto.TabStop = false;
             // 
             // btnBuscar
             // 
@@ -515,18 +543,19 @@
             this.btnBuscar.IconVisible = true;
             this.btnBuscar.IconZoom = 90D;
             this.btnBuscar.IsTab = false;
-            this.btnBuscar.Location = new System.Drawing.Point(368, 200);
+            this.btnBuscar.Location = new System.Drawing.Point(314, 200);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnBuscar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnBuscar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnBuscar.selected = false;
-            this.btnBuscar.Size = new System.Drawing.Size(138, 34);
+            this.btnBuscar.Size = new System.Drawing.Size(192, 34);
             this.btnBuscar.TabIndex = 311;
             this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Textcolor = System.Drawing.Color.White;
             this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // groupBox1
             // 
@@ -537,25 +566,12 @@
             this.groupBox1.TabIndex = 312;
             this.groupBox1.TabStop = false;
             // 
-            // lblBruto
-            // 
-            this.lblBruto.AutoSize = true;
-            this.lblBruto.BackColor = System.Drawing.Color.Transparent;
-            this.lblBruto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblBruto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBruto.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblBruto.Location = new System.Drawing.Point(735, 477);
-            this.lblBruto.Name = "lblBruto";
-            this.lblBruto.Size = new System.Drawing.Size(19, 20);
-            this.lblBruto.TabIndex = 313;
-            this.lblBruto.Text = "0";
-            // 
             // label19
             // 
             this.label19.AutoSize = true;
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(50, 564);
+            this.label19.Location = new System.Drawing.Point(50, 613);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(101, 13);
             this.label19.TabIndex = 314;
@@ -570,15 +586,13 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(806, 658);
             this.Controls.Add(this.label19);
-            this.Controls.Add(this.lblBruto);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.imgFoto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblLiquido);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.nudFaltas);
+            this.Controls.Add(this.dtpPagamento);
+            this.Controls.Add(this.nudDescontos);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.nudDentario);
@@ -606,10 +620,10 @@
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox1);
-            this.Enabled = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "nudSaude";
             this.Text = "Folha de Pagamento";
+            this.Load += new System.EventHandler(this.nudSaude_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudRef)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPLR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAli)).EndInit();
@@ -620,10 +634,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudINSS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDentario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudFaltas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudDescontos)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -656,18 +670,16 @@
         private System.Windows.Forms.NumericUpDown nudDentario;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.NumericUpDown nudFaltas;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown nudDescontos;
+        private System.Windows.Forms.DateTimePicker dtpPagamento;
         private System.Windows.Forms.Label lblLiquido;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblSair;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox imgFoto;
         private Bunifu.Framework.UI.BunifuFlatButton btnBuscar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblBruto;
         private System.Windows.Forms.Label label19;
     }
 }

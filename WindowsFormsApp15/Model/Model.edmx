@@ -44,8 +44,6 @@
           <Property Name="dt_saidaAlmoco" Type="datetime" Precision="0" />
           <Property Name="dt_voltaAlmoco" Type="datetime" Precision="0" />
           <Property Name="dt_saida" Type="datetime" Precision="0" />
-          <Property Name="dt_entradaHoraExtra" Type="datetime" Precision="0" />
-          <Property Name="dt_saidaHoraExtra" Type="datetime" Precision="0" />
         </EntityType>
         <EntityType Name="tb_despesa">
           <Key>
@@ -122,9 +120,8 @@
           <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
           <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
-          <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
           <Property Name="dt_contratacao" Type="date" Nullable="false" />
-          <Property Name="tm_horasSemanais" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+          <Property Name="vl_salarioPorHora" Type="decimal" Precision="10" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_log">
           <Key>
@@ -563,8 +560,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="dt_saidaAlmoco" Type="DateTime" />
           <Property Name="dt_voltaAlmoco" Type="DateTime" />
           <Property Name="dt_saida" Type="DateTime" />
-          <Property Name="dt_entradaHoraExtra" Type="DateTime" />
-          <Property Name="dt_saidaHoraExtra" Type="DateTime" />
           <NavigationProperty Name="tb_funcionario" Relationship="ecostorModel.tb_controledeponto_ibfk_1" FromRole="tb_controledeponto" ToRole="tb_funcionario" />
         </EntityType>
         <EntityType Name="tb_despesa">
@@ -646,9 +641,8 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Property Name="ds_complemento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ds_numeroCasa" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="ds_cargo" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="vl_salario" Type="Decimal" Nullable="false" />
           <Property Name="dt_contratacao" Type="DateTime" Nullable="false" />
-          <Property Name="tm_horasSemanais" Type="Decimal" Nullable="false" />
+          <Property Name="vl_salarioPorHora" Type="Decimal" Nullable="false" />
           <NavigationProperty Name="tb_controledeponto" Relationship="ecostorModel.tb_controledeponto_ibfk_1" FromRole="tb_funcionario" ToRole="tb_controledeponto" />
           <NavigationProperty Name="tb_folhapagamento" Relationship="ecostorModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
           <NavigationProperty Name="tb_usuario" Relationship="ecostorModel.tb_usuario_ibfk_1" FromRole="tb_funcionario" ToRole="tb_usuario" />
@@ -909,7 +903,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -950,8 +944,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <EntitySetMapping Name="tb_controledeponto">
             <EntityTypeMapping TypeName="ecostorModel.tb_controledeponto">
               <MappingFragment StoreEntitySet="tb_controledeponto">
-                <ScalarProperty Name="dt_saidaHoraExtra" ColumnName="dt_saidaHoraExtra" />
-                <ScalarProperty Name="dt_entradaHoraExtra" ColumnName="dt_entradaHoraExtra" />
                 <ScalarProperty Name="dt_saida" ColumnName="dt_saida" />
                 <ScalarProperty Name="dt_voltaAlmoco" ColumnName="dt_voltaAlmoco" />
                 <ScalarProperty Name="dt_saidaAlmoco" ColumnName="dt_saidaAlmoco" />
@@ -1022,9 +1014,8 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <EntitySetMapping Name="tb_funcionario">
             <EntityTypeMapping TypeName="ecostorModel.tb_funcionario">
               <MappingFragment StoreEntitySet="tb_funcionario">
-                <ScalarProperty Name="tm_horasSemanais" ColumnName="tm_horasSemanais" />
+                <ScalarProperty Name="vl_salarioPorHora" ColumnName="vl_salarioPorHora" />
                 <ScalarProperty Name="dt_contratacao" ColumnName="dt_contratacao" />
-                <ScalarProperty Name="vl_salario" ColumnName="vl_salario" />
                 <ScalarProperty Name="ds_cargo" ColumnName="ds_cargo" />
                 <ScalarProperty Name="ds_numeroCasa" ColumnName="ds_numeroCasa" />
                 <ScalarProperty Name="ds_complemento" ColumnName="ds_complemento" />

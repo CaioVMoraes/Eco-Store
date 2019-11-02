@@ -20,8 +20,6 @@ namespace WindowsFormsApp15.Model
         public Nullable<System.DateTime> dt_saidaAlmoco { get; set; }
         public Nullable<System.DateTime> dt_voltaAlmoco { get; set; }
         public Nullable<System.DateTime> dt_saida { get; set; }
-        public Nullable<System.DateTime> dt_entradaHoraExtra { get; set; }
-        public Nullable<System.DateTime> dt_saidaHoraExtra { get; set; }
     
         public virtual tb_funcionario tb_funcionario { get; set; }
     }

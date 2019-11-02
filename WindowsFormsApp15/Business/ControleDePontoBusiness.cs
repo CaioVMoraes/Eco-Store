@@ -27,6 +27,14 @@ namespace WindowsFormsApp15.Business
 
             return modelo;
         }
+
+        public List<tb_controledeponto> ListarPorFuncionario(int id, int mes)
+        {
+            List<tb_controledeponto> modelo = db.ListarPorFuncionario(id, mes);
+
+            return modelo;
+        }
+
         public void AlterarPonto(tb_controledeponto modelo)
         {
             db.AlterarPonto(modelo);

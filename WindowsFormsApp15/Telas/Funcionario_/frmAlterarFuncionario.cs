@@ -49,7 +49,7 @@ namespace WindowsFormsApp15.Telas
                 cboCargo.Text = model.ds_cargo;
                 txtCelular.Text = model.ds_celular;
                 txtTelefone.Text = model.ds_telefone;
-                nudSalario.Value = model.vl_salario;
+                nudSalario.Value = model.vl_salarioPorHora;
                 txtCpf.Text = model.ds_cpf;
                 cboGen.Text = model.ds_genero;
 
@@ -103,7 +103,7 @@ namespace WindowsFormsApp15.Telas
             cboCargo.Text = model.ds_cargo;
             txtCelular.Text = model.ds_celular;
             txtTelefone.Text = model.ds_telefone;
-            nudSalario.Value = model.vl_salario;
+            nudSalario.Value = model.vl_salarioPorHora;
             txtCpf.Text = model.ds_cpf;
             cboGen.Text = model.ds_genero;
 
@@ -143,7 +143,7 @@ namespace WindowsFormsApp15.Telas
                 model.ds_cargo = cboCargo.Text;
                 model.ds_celular = txtCelular.Text;
                 model.ds_telefone = txtTelefone.Text;
-                model.vl_salario = nudSalario.Value;
+                model.vl_salarioPorHora = nudSalario.Value;
                 model.ds_cpf = txtCpf.Text;
 
                 //*Endereço*

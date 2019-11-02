@@ -43,7 +43,7 @@ namespace WindowsFormsApp15.Telas
                 model.ds_cargo = cboCargo.Text;
                 model.ds_celular = txtCelular.Text;
                 model.ds_telefone = txtTelefone.Text;
-                model.vl_salario = nudSalario.Value;
+                model.vl_salarioPorHora = nudSalario.Value;
                 
                 //*Endereço*
 

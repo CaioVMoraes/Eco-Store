@@ -82,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label11
@@ -159,7 +160,7 @@
             // nudSalario
             // 
             this.nudSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSalario.Location = new System.Drawing.Point(558, 276);
+            this.nudSalario.Location = new System.Drawing.Point(527, 193);
             this.nudSalario.Maximum = new decimal(new int[] {
             1000000000,
             0,
@@ -230,9 +231,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label3.Location = new System.Drawing.Point(454, 278);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 20);
+            this.label3.Size = new System.Drawing.Size(85, 40);
             this.label3.TabIndex = 165;
-            this.label3.Text = "Salario:";
+            this.label3.Text = "Salario\r\nPor Hora:";
             // 
             // label1
             // 
@@ -647,6 +648,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.nudSalario);
             this.groupBox1.Location = new System.Drawing.Point(31, 103);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(697, 249);
@@ -724,7 +726,6 @@
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.dtpContrat);
-            this.Controls.Add(this.nudSalario);
             this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
@@ -745,6 +746,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -39,8 +39,6 @@
     <Property Name="dt_saidaAlmoco" Type="datetime" Precision="0" />
     <Property Name="dt_voltaAlmoco" Type="datetime" Precision="0" />
     <Property Name="dt_saida" Type="datetime" Precision="0" />
-    <Property Name="dt_entradaHoraExtra" Type="datetime" Precision="0" />
-    <Property Name="dt_saidaHoraExtra" Type="datetime" Precision="0" />
   </EntityType>
   <EntityType Name="tb_despesa">
     <Key>
@@ -117,9 +115,8 @@
     <Property Name="ds_complemento" Type="varchar" MaxLength="50" />
     <Property Name="ds_numeroCasa" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="dt_contratacao" Type="date" Nullable="false" />
-    <Property Name="tm_horasSemanais" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="vl_salarioPorHora" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_log">
     <Key>

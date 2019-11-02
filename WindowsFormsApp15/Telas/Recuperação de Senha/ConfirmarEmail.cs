@@ -52,7 +52,7 @@ namespace WindowsFormsApp15.Recuperação_de_Senha
                 Autenticacao.Usuario.UsuarioLogado.Complemento = funcionario.ds_complemento;
                 Autenticacao.Usuario.UsuarioLogado.NumeroCasa = funcionario.ds_numeroCasa;
                 Autenticacao.Usuario.UsuarioLogado.Cargo = funcionario.ds_cargo;
-                Autenticacao.Usuario.UsuarioLogado.Salario = funcionario.vl_salario;
+                Autenticacao.Usuario.UsuarioLogado.Salario = funcionario.vl_salarioPorHora;
                 Autenticacao.Usuario.UsuarioLogado.DataContratacao = funcionario.dt_contratacao;
                 Autenticacao.Usuario.UsuarioLogado.Foto = funcionario.img_foto;
 

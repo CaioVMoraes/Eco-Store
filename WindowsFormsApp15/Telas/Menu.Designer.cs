@@ -30,15 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblMinimizar = new System.Windows.Forms.Label();
-            this.lblSair = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.imgPerfil = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnCadastrarUsuario = new System.Windows.Forms.Button();
             this.btnConsultarFuncionario = new System.Windows.Forms.Button();
             this.btnCadastrarFuncionario = new System.Windows.Forms.Button();
@@ -58,145 +49,28 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.lblVoltarPausa = new System.Windows.Forms.Label();
-            this.lblSaidaHoraExtra = new System.Windows.Forms.Label();
-            this.lblComecarHoraExtra = new System.Windows.Forms.Label();
             this.lblDesligar = new System.Windows.Forms.Label();
             this.lblPausar = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.imgPerfil = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblMinimizar = new System.Windows.Forms.Label();
+            this.lblSair = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.lblMinimizar);
-            this.panel1.Controls.Add(this.lblSair);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(884, 38);
-            this.panel1.TabIndex = 325;
-            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(403, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 24);
-            this.label3.TabIndex = 160;
-            this.label3.Text = "Menu";
-            // 
-            // lblMinimizar
-            // 
-            this.lblMinimizar.AutoSize = true;
-            this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
-            this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMinimizar.ForeColor = System.Drawing.Color.White;
-            this.lblMinimizar.Location = new System.Drawing.Point(824, 6);
-            this.lblMinimizar.Name = "lblMinimizar";
-            this.lblMinimizar.Size = new System.Drawing.Size(21, 23);
-            this.lblMinimizar.TabIndex = 156;
-            this.lblMinimizar.Text = "_";
-            this.lblMinimizar.Click += new System.EventHandler(this.lblMinimizar_Click);
-            // 
-            // lblSair
-            // 
-            this.lblSair.AutoSize = true;
-            this.lblSair.BackColor = System.Drawing.Color.Transparent;
-            this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSair.ForeColor = System.Drawing.Color.White;
-            this.lblSair.Location = new System.Drawing.Point(849, 9);
-            this.lblSair.Name = "lblSair";
-            this.lblSair.Size = new System.Drawing.Size(23, 23);
-            this.lblSair.TabIndex = 155;
-            this.lblSair.Text = "X";
-            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.Controls.Add(this.lblVoltarPausa);
-            this.panel2.Controls.Add(this.lblSaidaHoraExtra);
-            this.panel2.Controls.Add(this.lblComecarHoraExtra);
-            this.panel2.Controls.Add(this.lblDesligar);
-            this.panel2.Controls.Add(this.lblPausar);
-            this.panel2.Controls.Add(this.lblHora);
-            this.panel2.Controls.Add(this.lblNome);
-            this.panel2.Controls.Add(this.imgPerfil);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 38);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(275, 566);
-            this.panel2.TabIndex = 326;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.BackColor = System.Drawing.Color.Transparent;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblNome.Location = new System.Drawing.Point(21, 20);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(86, 29);
-            this.lblNome.TabIndex = 158;
-            this.lblNome.Text = "NOME";
-            this.lblNome.Click += new System.EventHandler(this.lblNome_Click);
-            // 
-            // imgPerfil
-            // 
-            this.imgPerfil.BackColor = System.Drawing.Color.Transparent;
-            this.imgPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.imgPerfil.Location = new System.Drawing.Point(24, 65);
-            this.imgPerfil.Name = "imgPerfil";
-            this.imgPerfil.Size = new System.Drawing.Size(225, 211);
-            this.imgPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.imgPerfil.TabIndex = 157;
-            this.imgPerfil.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(833, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(21, 23);
-            this.label1.TabIndex = 156;
-            this.label1.Text = "_";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(858, 5);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(23, 23);
-            this.label2.TabIndex = 155;
-            this.label2.Text = "X";
             // 
             // btnCadastrarUsuario
             // 
@@ -370,7 +244,6 @@
             // 
             this.btnGerarFolhaPagamento.BackColor = System.Drawing.Color.SeaGreen;
             this.btnGerarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGerarFolhaPagamento.Enabled = false;
             this.btnGerarFolhaPagamento.FlatAppearance.BorderSize = 0;
             this.btnGerarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -496,6 +369,29 @@
             this.tabPage4.Text = "Baixo";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.lblVoltarPausa);
+            this.panel2.Controls.Add(this.lblDesligar);
+            this.panel2.Controls.Add(this.lblPausar);
+            this.panel2.Controls.Add(this.lblHora);
+            this.panel2.Controls.Add(this.lblNome);
+            this.panel2.Controls.Add(this.imgPerfil);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 38);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(275, 566);
+            this.panel2.TabIndex = 326;
+            // 
             // lblVoltarPausa
             // 
             this.lblVoltarPausa.AutoSize = true;
@@ -511,38 +407,6 @@
             this.lblVoltarPausa.Text = "Voltar da Pausa";
             this.lblVoltarPausa.Click += new System.EventHandler(this.lblVoltarPausa_Click);
             // 
-            // lblSaidaHoraExtra
-            // 
-            this.lblSaidaHoraExtra.AutoSize = true;
-            this.lblSaidaHoraExtra.BackColor = System.Drawing.Color.Transparent;
-            this.lblSaidaHoraExtra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblSaidaHoraExtra.Enabled = false;
-            this.lblSaidaHoraExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSaidaHoraExtra.ForeColor = System.Drawing.Color.White;
-            this.lblSaidaHoraExtra.Location = new System.Drawing.Point(22, 436);
-            this.lblSaidaHoraExtra.Name = "lblSaidaHoraExtra";
-            this.lblSaidaHoraExtra.Size = new System.Drawing.Size(128, 20);
-            this.lblSaidaHoraExtra.TabIndex = 164;
-            this.lblSaidaHoraExtra.Text = "Saída Hora extra";
-            this.lblSaidaHoraExtra.Visible = false;
-            this.lblSaidaHoraExtra.Click += new System.EventHandler(this.lblSaidaHoraExtra_Click);
-            // 
-            // lblComecarHoraExtra
-            // 
-            this.lblComecarHoraExtra.AutoSize = true;
-            this.lblComecarHoraExtra.BackColor = System.Drawing.Color.Transparent;
-            this.lblComecarHoraExtra.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblComecarHoraExtra.Enabled = false;
-            this.lblComecarHoraExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblComecarHoraExtra.ForeColor = System.Drawing.Color.White;
-            this.lblComecarHoraExtra.Location = new System.Drawing.Point(22, 401);
-            this.lblComecarHoraExtra.Name = "lblComecarHoraExtra";
-            this.lblComecarHoraExtra.Size = new System.Drawing.Size(151, 20);
-            this.lblComecarHoraExtra.TabIndex = 163;
-            this.lblComecarHoraExtra.Text = "Começar Hora extra";
-            this.lblComecarHoraExtra.Visible = false;
-            this.lblComecarHoraExtra.Click += new System.EventHandler(this.lblComecarHoraExtra_Click);
-            // 
             // lblDesligar
             // 
             this.lblDesligar.AutoSize = true;
@@ -550,7 +414,7 @@
             this.lblDesligar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblDesligar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesligar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblDesligar.Location = new System.Drawing.Point(22, 479);
+            this.lblDesligar.Location = new System.Drawing.Point(22, 445);
             this.lblDesligar.Name = "lblDesligar";
             this.lblDesligar.Size = new System.Drawing.Size(86, 24);
             this.lblDesligar.TabIndex = 162;
@@ -583,10 +447,109 @@
             this.lblHora.TabIndex = 160;
             this.lblHora.Text = "label1";
             // 
-            // timer1
+            // lblNome
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.lblNome.AutoSize = true;
+            this.lblNome.BackColor = System.Drawing.Color.Transparent;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblNome.Location = new System.Drawing.Point(21, 20);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(86, 29);
+            this.lblNome.TabIndex = 158;
+            this.lblNome.Text = "NOME";
+            this.lblNome.Click += new System.EventHandler(this.lblNome_Click);
+            // 
+            // imgPerfil
+            // 
+            this.imgPerfil.BackColor = System.Drawing.Color.Transparent;
+            this.imgPerfil.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.imgPerfil.Location = new System.Drawing.Point(24, 65);
+            this.imgPerfil.Name = "imgPerfil";
+            this.imgPerfil.Size = new System.Drawing.Size(225, 211);
+            this.imgPerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.imgPerfil.TabIndex = 157;
+            this.imgPerfil.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(833, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(21, 23);
+            this.label1.TabIndex = 156;
+            this.label1.Text = "_";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label2.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(858, 5);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(23, 23);
+            this.label2.TabIndex = 155;
+            this.label2.Text = "X";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblMinimizar);
+            this.panel1.Controls.Add(this.lblSair);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(884, 38);
+            this.panel1.TabIndex = 325;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label3.Location = new System.Drawing.Point(403, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 24);
+            this.label3.TabIndex = 160;
+            this.label3.Text = "Menu";
+            // 
+            // lblMinimizar
+            // 
+            this.lblMinimizar.AutoSize = true;
+            this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMinimizar.ForeColor = System.Drawing.Color.White;
+            this.lblMinimizar.Location = new System.Drawing.Point(824, 6);
+            this.lblMinimizar.Name = "lblMinimizar";
+            this.lblMinimizar.Size = new System.Drawing.Size(21, 23);
+            this.lblMinimizar.TabIndex = 156;
+            this.lblMinimizar.Text = "_";
+            this.lblMinimizar.Click += new System.EventHandler(this.lblMinimizar_Click);
+            // 
+            // lblSair
+            // 
+            this.lblSair.AutoSize = true;
+            this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSair.ForeColor = System.Drawing.Color.White;
+            this.lblSair.Location = new System.Drawing.Point(849, 9);
+            this.lblSair.Name = "lblSair";
+            this.lblSair.Size = new System.Drawing.Size(23, 23);
+            this.lblSair.TabIndex = 155;
+            this.lblSair.Text = "X";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // Menu
             // 
@@ -600,15 +563,15 @@
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -644,8 +607,6 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblVoltarPausa;
-        private System.Windows.Forms.Label lblSaidaHoraExtra;
-        private System.Windows.Forms.Label lblComecarHoraExtra;
         private System.Windows.Forms.Label lblDesligar;
         private System.Windows.Forms.Label lblPausar;
         private System.Windows.Forms.Label lblHora;

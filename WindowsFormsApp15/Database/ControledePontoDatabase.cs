@@ -29,7 +29,14 @@ namespace WindowsFormsApp15.Database
 
             return modelo;
         }
-        
+
+        public List<tb_controledeponto> ListarPorFuncionario(int id, int mes)
+        {
+            List<tb_controledeponto> modelo = db.tb_controledeponto.Where(x => x.id_funcionario == id && x.dt_chegada.Value.Month == mes).ToList();
+
+            return modelo;
+        }
+
         public void AlterarPonto(tb_controledeponto modelo)
         {
             tb_controledeponto alterar = db.tb_controledeponto.FirstOrDefault(x => x.id_controleDePonto == x.id_controleDePonto);
@@ -38,8 +45,6 @@ namespace WindowsFormsApp15.Database
             alterar.dt_saida = modelo.dt_saida;
             alterar.dt_saidaAlmoco = modelo.dt_saidaAlmoco;
             alterar.dt_voltaAlmoco = modelo.dt_voltaAlmoco;
-            alterar.dt_entradaHoraExtra = modelo.dt_entradaHoraExtra;
-            alterar.dt_saidaHoraExtra = modelo.dt_saidaHoraExtra;
 
             db.SaveChanges();
         }

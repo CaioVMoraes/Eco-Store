@@ -309,3 +309,4 @@ C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Twilio.xml
 C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csproj.CopyComplete
 C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
 C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
+C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Folha_de_Pagamento.frmFolhaDePagamento.resources

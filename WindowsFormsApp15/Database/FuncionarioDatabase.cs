@@ -61,7 +61,7 @@ namespace WindowsFormsApp15.Database
 
             alterar.id_funcionario = modelo.id_funcionario;
             alterar.nm_funcionario = modelo.nm_funcionario;
-            alterar.vl_salario = modelo.vl_salario;
+            alterar.vl_salarioPorHora = modelo.vl_salarioPorHora;
             alterar.ds_cargo = modelo.ds_cargo;
             alterar.ds_celular = modelo.ds_celular;
             alterar.ds_cep = modelo.ds_cep;

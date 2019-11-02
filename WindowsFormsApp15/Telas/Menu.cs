@@ -44,8 +44,6 @@ namespace WindowsFormsApp15.Telas
             ponto.dt_saida = null;
             ponto.dt_saidaAlmoco = null;
             ponto.dt_voltaAlmoco = null;
-            ponto.dt_entradaHoraExtra = null;
-            ponto.dt_saidaHoraExtra = null;
 
             business.CadastrarPonto(ponto);
         }
@@ -177,14 +175,7 @@ namespace WindowsFormsApp15.Telas
             }
             else
             {
-                if (ponto.dt_entradaHoraExtra != null && ponto.dt_saidaHoraExtra == null)
-                {
-                    MessageBox.Show("Saída da hora extra não cadastrada");
-                }
-                else
-                {
-                    Application.Exit();
-                }
+                Application.Exit();
             }
         }
 
@@ -218,36 +209,15 @@ namespace WindowsFormsApp15.Telas
             lblVoltarPausa.Enabled = false;
         }
 
-        private void lblComecarHoraExtra_Click(object sender, EventArgs e)
-        {
-            ponto.dt_entradaHoraExtra = DateTime.Now;
-
-            business.AlterarPonto(ponto);
-
-            lblComecarHoraExtra.Enabled = false;
-            lblSaidaHoraExtra.Enabled = true;
-        }
-
-        private void lblSaidaHoraExtra_Click(object sender, EventArgs e)
-        {
-            ponto.dt_saidaHoraExtra = DateTime.Now;
-
-            business.AlterarPonto(ponto);
-
-            lblSaidaHoraExtra.Enabled = false;
-        }
-
         private void lblDesligar_Click(object sender, EventArgs e)
         {
             ponto.dt_saida = DateTime.Now;
 
             business.AlterarPonto(ponto);
 
-            lblComecarHoraExtra.Enabled = true;
-            lblComecarHoraExtra.Visible = true;
+            lblDesligar.Enabled = false;
 
-            lblSaidaHoraExtra.Enabled = true;
-            lblSaidaHoraExtra.Visible = true;
+            //Application.Exit();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
