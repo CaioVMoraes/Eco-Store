@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -57,6 +58,13 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.lblVoltarPausa = new System.Windows.Forms.Label();
+            this.lblSaidaHoraExtra = new System.Windows.Forms.Label();
+            this.lblComecarHoraExtra = new System.Windows.Forms.Label();
+            this.lblDesligar = new System.Windows.Forms.Label();
+            this.lblPausar = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
@@ -124,6 +132,12 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.Controls.Add(this.lblVoltarPausa);
+            this.panel2.Controls.Add(this.lblSaidaHoraExtra);
+            this.panel2.Controls.Add(this.lblComecarHoraExtra);
+            this.panel2.Controls.Add(this.lblDesligar);
+            this.panel2.Controls.Add(this.lblPausar);
+            this.panel2.Controls.Add(this.lblHora);
             this.panel2.Controls.Add(this.lblNome);
             this.panel2.Controls.Add(this.imgPerfil);
             this.panel2.Controls.Add(this.label1);
@@ -482,6 +496,98 @@
             this.tabPage4.Text = "Baixo";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // lblVoltarPausa
+            // 
+            this.lblVoltarPausa.AutoSize = true;
+            this.lblVoltarPausa.BackColor = System.Drawing.Color.Transparent;
+            this.lblVoltarPausa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblVoltarPausa.Enabled = false;
+            this.lblVoltarPausa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblVoltarPausa.ForeColor = System.Drawing.Color.White;
+            this.lblVoltarPausa.Location = new System.Drawing.Point(22, 336);
+            this.lblVoltarPausa.Name = "lblVoltarPausa";
+            this.lblVoltarPausa.Size = new System.Drawing.Size(122, 20);
+            this.lblVoltarPausa.TabIndex = 165;
+            this.lblVoltarPausa.Text = "Voltar da Pausa";
+            this.lblVoltarPausa.Click += new System.EventHandler(this.lblVoltarPausa_Click);
+            // 
+            // lblSaidaHoraExtra
+            // 
+            this.lblSaidaHoraExtra.AutoSize = true;
+            this.lblSaidaHoraExtra.BackColor = System.Drawing.Color.Transparent;
+            this.lblSaidaHoraExtra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblSaidaHoraExtra.Enabled = false;
+            this.lblSaidaHoraExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSaidaHoraExtra.ForeColor = System.Drawing.Color.White;
+            this.lblSaidaHoraExtra.Location = new System.Drawing.Point(22, 436);
+            this.lblSaidaHoraExtra.Name = "lblSaidaHoraExtra";
+            this.lblSaidaHoraExtra.Size = new System.Drawing.Size(128, 20);
+            this.lblSaidaHoraExtra.TabIndex = 164;
+            this.lblSaidaHoraExtra.Text = "Saída Hora extra";
+            this.lblSaidaHoraExtra.Visible = false;
+            this.lblSaidaHoraExtra.Click += new System.EventHandler(this.lblSaidaHoraExtra_Click);
+            // 
+            // lblComecarHoraExtra
+            // 
+            this.lblComecarHoraExtra.AutoSize = true;
+            this.lblComecarHoraExtra.BackColor = System.Drawing.Color.Transparent;
+            this.lblComecarHoraExtra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblComecarHoraExtra.Enabled = false;
+            this.lblComecarHoraExtra.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblComecarHoraExtra.ForeColor = System.Drawing.Color.White;
+            this.lblComecarHoraExtra.Location = new System.Drawing.Point(22, 401);
+            this.lblComecarHoraExtra.Name = "lblComecarHoraExtra";
+            this.lblComecarHoraExtra.Size = new System.Drawing.Size(151, 20);
+            this.lblComecarHoraExtra.TabIndex = 163;
+            this.lblComecarHoraExtra.Text = "Começar Hora extra";
+            this.lblComecarHoraExtra.Visible = false;
+            this.lblComecarHoraExtra.Click += new System.EventHandler(this.lblComecarHoraExtra_Click);
+            // 
+            // lblDesligar
+            // 
+            this.lblDesligar.AutoSize = true;
+            this.lblDesligar.BackColor = System.Drawing.Color.Transparent;
+            this.lblDesligar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblDesligar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesligar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblDesligar.Location = new System.Drawing.Point(22, 479);
+            this.lblDesligar.Name = "lblDesligar";
+            this.lblDesligar.Size = new System.Drawing.Size(86, 24);
+            this.lblDesligar.TabIndex = 162;
+            this.lblDesligar.Text = "Desligar";
+            this.lblDesligar.Click += new System.EventHandler(this.lblDesligar_Click);
+            // 
+            // lblPausar
+            // 
+            this.lblPausar.AutoSize = true;
+            this.lblPausar.BackColor = System.Drawing.Color.Transparent;
+            this.lblPausar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblPausar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPausar.ForeColor = System.Drawing.Color.White;
+            this.lblPausar.Location = new System.Drawing.Point(22, 301);
+            this.lblPausar.Name = "lblPausar";
+            this.lblPausar.Size = new System.Drawing.Size(105, 20);
+            this.lblPausar.TabIndex = 161;
+            this.lblPausar.Text = "Ir Para Pausa";
+            this.lblPausar.Click += new System.EventHandler(this.lblPausar_Click);
+            // 
+            // lblHora
+            // 
+            this.lblHora.AutoSize = true;
+            this.lblHora.BackColor = System.Drawing.Color.Transparent;
+            this.lblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHora.ForeColor = System.Drawing.Color.White;
+            this.lblHora.Location = new System.Drawing.Point(22, 523);
+            this.lblHora.Name = "lblHora";
+            this.lblHora.Size = new System.Drawing.Size(51, 20);
+            this.lblHora.TabIndex = 160;
+            this.lblHora.Text = "label1";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,5 +643,12 @@
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblVoltarPausa;
+        private System.Windows.Forms.Label lblSaidaHoraExtra;
+        private System.Windows.Forms.Label lblComecarHoraExtra;
+        private System.Windows.Forms.Label lblDesligar;
+        private System.Windows.Forms.Label lblPausar;
+        private System.Windows.Forms.Label lblHora;
+        private System.Windows.Forms.Timer timer1;
     }
 }

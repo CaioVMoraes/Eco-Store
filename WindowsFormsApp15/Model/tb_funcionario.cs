@@ -41,6 +41,7 @@ namespace WindowsFormsApp15.Model
         public string ds_cargo { get; set; }
         public decimal vl_salario { get; set; }
         public System.DateTime dt_contratacao { get; set; }
+        public decimal tm_horasSemanais { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tb_controledeponto> tb_controledeponto { get; set; }

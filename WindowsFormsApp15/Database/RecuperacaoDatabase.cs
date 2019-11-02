@@ -9,7 +9,8 @@ namespace WindowsFormsApp15.Database
 {
     class RecuperacaoDatabase
     {
-        Model.db_a4e776_ecostorEntities db = new db_a4e776_ecostorEntities();
+        Model.ecostorEntities db = new ecostorEntities();
+
         public void Inserir (tb_recuperacao model)
         {
             db.tb_recuperacao.Add(model);

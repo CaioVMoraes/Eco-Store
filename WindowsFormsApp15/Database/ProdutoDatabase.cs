@@ -9,8 +9,7 @@ namespace WindowsFormsApp15.Database
 {
     class ProdutoDatabase
     {
-        Model.db_a4e776_ecostorEntities db = new db_a4e776_ecostorEntities();
-
+        Model.ecostorEntities db = new ecostorEntities();
 
         public void CadastrarProduto(tb_produto produto)
         {

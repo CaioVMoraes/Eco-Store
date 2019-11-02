@@ -13,10 +13,10 @@ namespace WindowsFormsApp15.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class db_a4e776_ecostorEntities : DbContext
+    public partial class ecostorEntities : DbContext
     {
-        public db_a4e776_ecostorEntities()
-            : base("name=db_a4e776_ecostorEntities")
+        public ecostorEntities()
+            : base("name=ecostorEntities")
         {
         }
     

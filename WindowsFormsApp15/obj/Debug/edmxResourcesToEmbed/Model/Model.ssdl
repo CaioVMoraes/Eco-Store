@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="db_a4e776_ecostorModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="ecostorModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="tb_cliente">
     <Key>
       <PropertyRef Name="id_cliente" />
@@ -25,7 +25,7 @@
     <Key>
       <PropertyRef Name="id_compra_item" />
     </Key>
-    <Property Name="id_compra_item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_compra_item" Type="int" Nullable="false" />
     <Property Name="id_compra" Type="int" Nullable="false" />
     <Property Name="id_produto" Type="int" Nullable="false" />
   </EntityType>
@@ -66,7 +66,6 @@
     </Key>
     <Property Name="id_folhaPagamento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_funcionario" Type="int" Nullable="false" />
-    <Property Name="id_controleDePonto" Type="int" Nullable="false" />
     <Property Name="dt_pagamento" Type="date" Nullable="false" />
     <Property Name="vl_gratificacoes" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_plr" Type="decimal" Precision="10" Scale="2" Nullable="false" />
@@ -79,7 +78,6 @@
     <Property Name="vl_fgts" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_planoSaude" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_planoOdonto" Type="decimal" Precision="10" Scale="2" Nullable="false" />
-    <Property Name="vl_faltas" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="vl_liquido" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_fornecedor">
@@ -121,6 +119,7 @@
     <Property Name="ds_cargo" Type="varchar" MaxLength="45" Nullable="false" />
     <Property Name="vl_salario" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="dt_contratacao" Type="date" Nullable="false" />
+    <Property Name="tm_horasSemanais" Type="decimal" Precision="10" Scale="2" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_log">
     <Key>
@@ -140,8 +139,8 @@
     <Property Name="id_fornecedor" Type="int" Nullable="false" />
     <Property Name="ds_categoria" Type="varchar" MaxLength="70" Nullable="false" />
     <Property Name="nm_produto" Type="varchar" MaxLength="45" Nullable="false" />
-    <Property Name="img_produto" Type="longblob" Nullable="false" />
     <Property Name="vl_valor" Type="decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="img_produto" Type="longblob" />
   </EntityType>
   <EntityType Name="tb_recuperacao">
     <Key>
@@ -151,7 +150,7 @@
     <Property Name="id_usuario" Type="int" Nullable="false" />
     <Property Name="ds_codigo" Type="varchar" MaxLength="6" Nullable="false" />
     <Property Name="dt_data" Type="date" Nullable="false" />
-    <Property Name="bt_usado" Type="bool" />
+    <Property Name="bt_usado" Type="bool" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_usuario">
     <Key>
@@ -255,20 +254,6 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
       </Principal>
       <Dependent Role="tb_folhapagamento">
         <PropertyRef Name="id_funcionario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="tb_folhapagamento_ibfk_2">
-    <End Role="tb_controledeponto" Type="Self.tb_controledeponto" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Role="tb_folhapagamento" Type="Self.tb_folhapagamento" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_controledeponto">
-        <PropertyRef Name="id_controleDePonto" />
-      </Principal>
-      <Dependent Role="tb_folhapagamento">
-        <PropertyRef Name="id_controleDePonto" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -380,7 +365,7 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="db_a4e776_ecostorModelStoreContainer">
+  <EntityContainer Name="ecostorModelStoreContainer">
     <EntitySet Name="tb_cliente" EntityType="Self.tb_cliente" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_compra" EntityType="Self.tb_compra" Schema="db_a4e776_ecostor" store:Type="Tables" />
     <EntitySet Name="tb_compra_item" EntityType="Self.tb_compra_item" Schema="db_a4e776_ecostor" store:Type="Tables" />
@@ -421,10 +406,6 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
     </AssociationSet>
     <AssociationSet Name="tb_folhapagamento_ibfk_1" Association="Self.tb_folhapagamento_ibfk_1">
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
-      <End Role="tb_folhapagamento" EntitySet="tb_folhapagamento" />
-    </AssociationSet>
-    <AssociationSet Name="tb_folhapagamento_ibfk_2" Association="Self.tb_folhapagamento_ibfk_2">
-      <End Role="tb_controledeponto" EntitySet="tb_controledeponto" />
       <End Role="tb_folhapagamento" EntitySet="tb_folhapagamento" />
     </AssociationSet>
     <AssociationSet Name="tb_log_ibfk_1" Association="Self.tb_log_ibfk_1">

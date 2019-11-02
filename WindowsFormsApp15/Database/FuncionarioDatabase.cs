@@ -9,7 +9,7 @@ namespace WindowsFormsApp15.Database
 {
     class FuncionarioDatabase
     {
-        Model.db_a4e776_ecostorEntities db = new Model.db_a4e776_ecostorEntities();
+        Model.ecostorEntities db = new ecostorEntities();
 
         public void CadastrarFuncionario(tb_funcionario funcionario)
         {

@@ -9,7 +9,7 @@ namespace WindowsFormsApp15.Database
 {
     class ControledePontoDatabase
     {
-        Model.db_a4e776_ecostorEntities db = new db_a4e776_ecostorEntities();
+        Model.ecostorEntities db = new ecostorEntities();
 
         public void CadastrarPonto(tb_controledeponto modelo)
         {
@@ -34,12 +34,12 @@ namespace WindowsFormsApp15.Database
         {
             tb_controledeponto alterar = db.tb_controledeponto.FirstOrDefault(x => x.id_controleDePonto == x.id_controleDePonto);
 
-            modelo.dt_chegada = alterar.dt_chegada;
-            modelo.dt_saida = alterar.dt_saida;
-            modelo.dt_saidaAlmoco = alterar.dt_saidaAlmoco;
-            modelo.dt_voltaAlmoco = alterar.dt_voltaAlmoco;
-            modelo.dt_entradaHoraExtra = alterar.dt_entradaHoraExtra;
-            modelo.dt_saidaHoraExtra = alterar.dt_saidaHoraExtra;
+            alterar.dt_chegada = modelo.dt_chegada;
+            alterar.dt_saida = modelo.dt_saida;
+            alterar.dt_saidaAlmoco = modelo.dt_saidaAlmoco;
+            alterar.dt_voltaAlmoco = modelo.dt_voltaAlmoco;
+            alterar.dt_entradaHoraExtra = modelo.dt_entradaHoraExtra;
+            alterar.dt_saidaHoraExtra = modelo.dt_saidaHoraExtra;
 
             db.SaveChanges();
         }

@@ -64,8 +64,6 @@ namespace WindowsFormsApp15
                 if (login == true)
                 {
                     Telas.Menu tela = new Telas.Menu();
-                    Telas.frmCadastrarPonto ponto = new Telas.frmCadastrarPonto();
-                    ponto.Show();
                     tela.Show();
                 }
                 else

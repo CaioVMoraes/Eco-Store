@@ -9,7 +9,7 @@ namespace WindowsFormsApp15.Database
 {
     class VendaDatabase
     {
-        Model.db_a4e776_ecostorEntities db = new db_a4e776_ecostorEntities();
+        Model.ecostorEntities db = new ecostorEntities();
 
         public void InserirVenda(tb_venda modelo)
         {
