@@ -251,7 +251,6 @@ C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Microsoft.Id
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Newtonsoft.Json.xml
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Twilio.xml
-C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csprojAssemblyReference.cache
 C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Recuperação_de_Senha.ConfirmarEmail.resources
 C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmConsultarCompra.resources
 C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmTelaCompra.resources
@@ -310,3 +309,4 @@ C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csp
 C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
 C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
 C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Folha_de_Pagamento.frmFolhaDePagamento.resources
+C:\Users\Gustavo\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csprojAssemblyReference.cache

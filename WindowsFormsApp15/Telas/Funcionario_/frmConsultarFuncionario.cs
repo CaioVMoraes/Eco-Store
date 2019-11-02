@@ -60,7 +60,7 @@ namespace WindowsFormsApp15.Telas
 
         private void cboCargo_TextChanged(object sender, EventArgs e)
         {
-            string cargo = cboCargo.Text;
+            string cargo = txtCargo.Text;
 
             List<Model.tb_funcionario> lista = business.ConsultarFuncionarioCargo(cargo);
 
@@ -148,9 +148,13 @@ namespace WindowsFormsApp15.Telas
 
         private void label3_Click(object sender, EventArgs e)
         {
-            Menu tela = new Menu();
-            tela.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
         }
     }
 }

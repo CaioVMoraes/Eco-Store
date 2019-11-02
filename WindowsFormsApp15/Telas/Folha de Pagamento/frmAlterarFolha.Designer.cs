@@ -116,7 +116,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(287, 70);
+            this.label1.Location = new System.Drawing.Point(344, 68);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 20);
             this.label1.TabIndex = 346;
@@ -514,6 +514,7 @@
             this.lblMinimizar.Size = new System.Drawing.Size(21, 23);
             this.lblMinimizar.TabIndex = 156;
             this.lblMinimizar.Text = "_";
+            this.lblMinimizar.Click += new System.EventHandler(this.lblMinimizar_Click);
             // 
             // lblSair
             // 
@@ -527,6 +528,7 @@
             this.lblSair.Size = new System.Drawing.Size(23, 23);
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
+            this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
             // btnAlterar
             // 
@@ -566,7 +568,7 @@
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = global::WindowsFormsApp15.Properties.Resources.Editar;
-            this.pictureBox2.Location = new System.Drawing.Point(188, 44);
+            this.pictureBox2.Location = new System.Drawing.Point(245, 42);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(83, 72);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -621,6 +623,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAlterarFolha";
             this.Text = "frmAlterarFolha";
+            this.Load += new System.EventHandler(this.frmAlterarFolha_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudFaltas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDentario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();

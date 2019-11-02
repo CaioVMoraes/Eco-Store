@@ -42,7 +42,6 @@
             this.picFoto = new System.Windows.Forms.PictureBox();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.cboCargo = new System.Windows.Forms.ComboBox();
             this.cboGen = new System.Windows.Forms.ComboBox();
             this.nudSalario = new System.Windows.Forms.NumericUpDown();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -69,7 +68,6 @@
             this.txtCep = new System.Windows.Forms.TextBox();
             this.txtEndereço = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
-            this.cboUF = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -80,11 +78,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtUF = new System.Windows.Forms.TextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -208,6 +209,7 @@
             this.label28.Size = new System.Drawing.Size(21, 23);
             this.label28.TabIndex = 156;
             this.label28.Text = "_";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label29
             // 
@@ -263,16 +265,6 @@
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(148, 22);
             this.txtTelefone.TabIndex = 382;
-            // 
-            // cboCargo
-            // 
-            this.cboCargo.Enabled = false;
-            this.cboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(537, 284);
-            this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(148, 24);
-            this.cboCargo.TabIndex = 381;
             // 
             // cboGen
             // 
@@ -605,16 +597,6 @@
             this.txtCidade.Size = new System.Drawing.Size(326, 22);
             this.txtCidade.TabIndex = 405;
             // 
-            // cboUF
-            // 
-            this.cboUF.Enabled = false;
-            this.cboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboUF.FormattingEnabled = true;
-            this.cboUF.Location = new System.Drawing.Point(235, 605);
-            this.cboUF.Name = "cboUF";
-            this.cboUF.Size = new System.Drawing.Size(327, 24);
-            this.cboUF.TabIndex = 404;
-            // 
             // label13
             // 
             this.label13.AutoSize = true;
@@ -709,6 +691,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtUF);
             this.groupBox2.Location = new System.Drawing.Point(30, 477);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(564, 232);
@@ -719,6 +702,7 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.txtCargo);
             this.groupBox3.Controls.Add(this.nudSalario);
             this.groupBox3.Location = new System.Drawing.Point(30, 223);
             this.groupBox3.Name = "groupBox3";
@@ -739,6 +723,26 @@
             this.label3.TabIndex = 412;
             this.label3.Text = "Salario\r\nPor Hora:";
             // 
+            // txtUF
+            // 
+            this.txtUF.Enabled = false;
+            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUF.Location = new System.Drawing.Point(205, 130);
+            this.txtUF.MaxLength = 2;
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(326, 22);
+            this.txtUF.TabIndex = 336;
+            // 
+            // txtCargo
+            // 
+            this.txtCargo.Enabled = false;
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(507, 62);
+            this.txtCargo.MaxLength = 20;
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(148, 22);
+            this.txtCargo.TabIndex = 337;
+            // 
             // frmDeletarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -752,7 +756,6 @@
             this.Controls.Add(this.txtCep);
             this.Controls.Add(this.txtEndereço);
             this.Controls.Add(this.txtCidade);
-            this.Controls.Add(this.cboUF);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
@@ -766,7 +769,6 @@
             this.Controls.Add(this.txtRg);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.cboGen);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNome);
@@ -801,6 +803,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -822,7 +826,6 @@
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.ComboBox cboCargo;
         private System.Windows.Forms.ComboBox cboGen;
         private System.Windows.Forms.NumericUpDown nudSalario;
         private System.Windows.Forms.TextBox txtEmail;
@@ -849,7 +852,6 @@
         private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.TextBox txtEndereço;
         private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.ComboBox cboUF;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -860,5 +862,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtUF;
+        private System.Windows.Forms.TextBox txtCargo;
     }
 }

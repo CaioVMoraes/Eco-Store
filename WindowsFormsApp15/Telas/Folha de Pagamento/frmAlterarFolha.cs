@@ -16,5 +16,21 @@ namespace WindowsFormsApp15.Telas.Folha_de_Pagamento
         {
             InitializeComponent();
         }
+
+        private void lblMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmAlterarFolha_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

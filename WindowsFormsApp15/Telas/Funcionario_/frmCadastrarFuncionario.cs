@@ -40,7 +40,7 @@ namespace WindowsFormsApp15.Telas
                 model.ds_email = txtEmail.Text;
                 model.dt_contratacao = dtpContrat.Value.Date;
                 model.ds_genero = cboGen.Text;
-                model.ds_cargo = cboCargo.Text;
+                model.ds_cargo = txtCargo.Text;
                 model.ds_celular = txtCelular.Text;
                 model.ds_telefone = txtTelefone.Text;
                 model.vl_salarioPorHora = nudSalario.Value;
@@ -50,7 +50,7 @@ namespace WindowsFormsApp15.Telas
                 model.ds_endereco = txtEndereço.Text;
                 model.ds_cep = txtCep.Text;
                 model.ds_cidade = txtCidade.Text;
-                model.ds_UF = cboUF.Text;
+                model.ds_UF = txtUF.Text;
                 model.ds_complemento = txtComplemento.Text;
                 model.ds_numeroCasa = txtNumRes.Text;
 
@@ -108,9 +108,13 @@ namespace WindowsFormsApp15.Telas
 
         private void label29_Click(object sender, EventArgs e)
         {
-            Menu tela = new Menu();
-            tela.Show();
-            this.Hide();
+            this.Close();
+        }
+
+        private void label28_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
         }
     }
 }

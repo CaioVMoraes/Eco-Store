@@ -65,6 +65,7 @@ namespace WindowsFormsApp15
                 {
                     Telas.Menu tela = new Telas.Menu();
                     tela.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -99,6 +100,7 @@ namespace WindowsFormsApp15
 
         private void lblMinimizar_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
 
         }
 

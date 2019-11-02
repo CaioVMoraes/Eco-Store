@@ -61,7 +61,6 @@
             this.dtpNascimento = new Bunifu.Framework.UI.BunifuDatepicker();
             this.txtCelular = new System.Windows.Forms.TextBox();
             this.txtTelefone = new System.Windows.Forms.TextBox();
-            this.cboCargo = new System.Windows.Forms.ComboBox();
             this.cboGen = new System.Windows.Forms.ComboBox();
             this.nudSalario = new System.Windows.Forms.NumericUpDown();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
@@ -72,7 +71,6 @@
             this.txtEndereço = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblErro = new System.Windows.Forms.Label();
-            this.cboUF = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -85,11 +83,14 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.txtUF = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -403,6 +404,7 @@
             this.label28.Size = new System.Drawing.Size(21, 23);
             this.label28.TabIndex = 156;
             this.label28.Text = "_";
+            this.label28.Click += new System.EventHandler(this.label28_Click);
             // 
             // label29
             // 
@@ -511,19 +513,14 @@
             this.txtTelefone.Size = new System.Drawing.Size(148, 22);
             this.txtTelefone.TabIndex = 310;
             // 
-            // cboCargo
-            // 
-            this.cboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(539, 277);
-            this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(148, 24);
-            this.cboCargo.TabIndex = 309;
-            // 
             // cboGen
             // 
+            this.cboGen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboGen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboGen.FormattingEnabled = true;
+            this.cboGen.Items.AddRange(new object[] {
+            "Masculino",
+            "Feminino"});
             this.cboGen.Location = new System.Drawing.Point(539, 244);
             this.cboGen.Name = "cboGen";
             this.cboGen.Size = new System.Drawing.Size(148, 24);
@@ -616,15 +613,6 @@
             this.lblErro.Name = "lblErro";
             this.lblErro.Size = new System.Drawing.Size(0, 16);
             this.lblErro.TabIndex = 325;
-            // 
-            // cboUF
-            // 
-            this.cboUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboUF.FormattingEnabled = true;
-            this.cboUF.Location = new System.Drawing.Point(234, 605);
-            this.cboUF.Name = "cboUF";
-            this.cboUF.Size = new System.Drawing.Size(327, 24);
-            this.cboUF.TabIndex = 324;
             // 
             // label13
             // 
@@ -765,6 +753,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtUF);
             this.groupBox2.Location = new System.Drawing.Point(24, 472);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(574, 237);
@@ -774,6 +763,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.txtCargo);
             this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Controls.Add(this.nudSalario);
             this.groupBox3.Location = new System.Drawing.Point(24, 220);
@@ -795,6 +785,24 @@
             this.label3.TabIndex = 334;
             this.label3.Text = "Salario\r\nPor Hora:";
             // 
+            // txtCargo
+            // 
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(515, 61);
+            this.txtCargo.MaxLength = 20;
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(148, 22);
+            this.txtCargo.TabIndex = 334;
+            // 
+            // txtUF
+            // 
+            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUF.Location = new System.Drawing.Point(210, 133);
+            this.txtUF.MaxLength = 2;
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(326, 22);
+            this.txtUF.TabIndex = 334;
+            // 
             // frmAlterarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -810,7 +818,6 @@
             this.Controls.Add(this.txtEndereço);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.lblErro);
-            this.Controls.Add(this.cboUF);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
@@ -823,7 +830,6 @@
             this.Controls.Add(this.txtRg);
             this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txtTelefone);
-            this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.cboGen);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNome);
@@ -861,6 +867,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -901,7 +909,6 @@
         private Bunifu.Framework.UI.BunifuDatepicker dtpNascimento;
         private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.TextBox txtTelefone;
-        private System.Windows.Forms.ComboBox cboCargo;
         private System.Windows.Forms.ComboBox cboGen;
         private System.Windows.Forms.NumericUpDown nudSalario;
         private System.Windows.Forms.MaskedTextBox txtCpf;
@@ -912,7 +919,6 @@
         private System.Windows.Forms.TextBox txtEndereço;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblErro;
-        private System.Windows.Forms.ComboBox cboUF;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
@@ -925,5 +931,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtCargo;
+        private System.Windows.Forms.TextBox txtUF;
     }
 }

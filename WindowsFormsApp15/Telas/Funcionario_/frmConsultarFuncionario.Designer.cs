@@ -57,13 +57,13 @@
             this.txtRg = new System.Windows.Forms.MaskedTextBox();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.dtpContrat = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.cboCargo = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.picFoto = new System.Windows.Forms.PictureBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFuncionario)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
@@ -339,16 +339,6 @@
             this.dtpContrat.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
             this.dtpContrat.onValueChanged += new System.EventHandler(this.dtpContrat_onValueChanged);
             // 
-            // cboCargo
-            // 
-            this.cboCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCargo.FormattingEnabled = true;
-            this.cboCargo.Location = new System.Drawing.Point(388, 92);
-            this.cboCargo.Name = "cboCargo";
-            this.cboCargo.Size = new System.Drawing.Size(197, 24);
-            this.cboCargo.TabIndex = 186;
-            this.cboCargo.TextChanged += new System.EventHandler(this.cboCargo_TextChanged);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -356,7 +346,7 @@
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(320, 95);
+            this.label9.Location = new System.Drawing.Point(356, 93);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 20);
             this.label9.TabIndex = 185;
@@ -388,6 +378,7 @@
             this.label5.Size = new System.Drawing.Size(21, 23);
             this.label5.TabIndex = 156;
             this.label5.Text = "_";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel1
             // 
@@ -422,16 +413,25 @@
             this.picFoto.TabIndex = 189;
             this.picFoto.TabStop = false;
             // 
+            // txtCargo
+            // 
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(424, 93);
+            this.txtCargo.MaxLength = 20;
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(148, 22);
+            this.txtCargo.TabIndex = 336;
+            // 
             // frmConsultarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.ClientSize = new System.Drawing.Size(973, 675);
+            this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.picFoto);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.cboCargo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dtpContrat);
             this.Controls.Add(this.txtCPF);
@@ -464,7 +464,6 @@
         private System.Windows.Forms.MaskedTextBox txtRg;
         private System.Windows.Forms.MaskedTextBox txtCPF;
         private Bunifu.Framework.UI.BunifuDatepicker dtpContrat;
-        private System.Windows.Forms.ComboBox cboCargo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
@@ -490,5 +489,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.TextBox txtCargo;
     }
 }

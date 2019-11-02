@@ -58,5 +58,16 @@ namespace WindowsFormsApp15.Telas
         {
 
         }
+
+        private void lblMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
