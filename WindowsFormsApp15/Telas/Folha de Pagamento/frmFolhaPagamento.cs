@@ -55,14 +55,15 @@ namespace WindowsFormsApp15.Telas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            int funcionarioID = Convert.ToInt32(cboID.Text);
+            tb_funcionario comboFuncionario = cboID.SelectedItem as tb_funcionario;
+
             int mes = dtpPagamento.Value.Month;
 
             Business.FuncionarioBusiness funcionarioBusiness = new Business.FuncionarioBusiness();
             Business.ControleDePontoBusiness controleBusiness = new Business.ControleDePontoBusiness();
 
-            List<tb_controledeponto> ponto = controleBusiness.ListarPorFuncionario(funcionarioID, mes);
-            tb_funcionario funcionario = funcionarioBusiness.Listar(funcionarioID);
+            List<tb_controledeponto> ponto = controleBusiness.ListarPorFuncionario(comboFuncionario.id_funcionario, mes);
+            tb_funcionario funcionario = funcionarioBusiness.Listar(comboFuncionario.id_funcionario);
 
             Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 
