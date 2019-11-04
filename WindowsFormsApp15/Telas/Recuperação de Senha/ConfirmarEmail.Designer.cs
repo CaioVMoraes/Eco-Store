@@ -40,7 +40,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(213, 90);
+            this.txtEmail.Location = new System.Drawing.Point(210, 105);
             this.txtEmail.MaxLength = 50;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(204, 22);
@@ -53,7 +53,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(38, 92);
+            this.label1.Location = new System.Drawing.Point(35, 107);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 20);
             this.label1.TabIndex = 295;
@@ -74,7 +74,7 @@
             // btnConfirmar
             // 
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnConfirmar.Location = new System.Drawing.Point(438, 89);
+            this.btnConfirmar.Location = new System.Drawing.Point(435, 104);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(84, 25);
             this.btnConfirmar.TabIndex = 298;
@@ -85,7 +85,7 @@
             // btnCodigo
             // 
             this.btnCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnCodigo.Location = new System.Drawing.Point(438, 90);
+            this.btnCodigo.Location = new System.Drawing.Point(435, 105);
             this.btnCodigo.Name = "btnCodigo";
             this.btnCodigo.Size = new System.Drawing.Size(84, 25);
             this.btnCodigo.TabIndex = 301;
@@ -98,7 +98,7 @@
             // 
             this.txtCodigo.AcceptsTab = true;
             this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(213, 90);
+            this.txtCodigo.Location = new System.Drawing.Point(210, 105);
             this.txtCodigo.MaxLength = 6;
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(204, 22);
@@ -112,7 +112,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(137, 92);
+            this.label2.Location = new System.Drawing.Point(134, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 20);
             this.label2.TabIndex = 299;

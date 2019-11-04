@@ -33,14 +33,14 @@
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
             this.dgvCompra = new System.Windows.Forms.DataGridView();
-            this.dtpCompra = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtpCompra = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).BeginInit();
             this.SuspendLayout();
@@ -101,6 +101,43 @@
             this.dgvCompra.Size = new System.Drawing.Size(670, 339);
             this.dgvCompra.TabIndex = 326;
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "id_venda";
+            this.Column1.HeaderText = "ID Venda";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "nm_usuario";
+            this.Column5.HeaderText = "Usuario";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "nm_produto";
+            this.Column2.HeaderText = "Produto";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 200;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "vl_valorTotal";
+            this.Column3.HeaderText = "Valor Total";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "dt_saida";
+            this.Column4.HeaderText = "Data da Compra";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 125;
+            // 
             // dtpCompra
             // 
             this.dtpCompra.BackColor = System.Drawing.Color.SkyBlue;
@@ -140,43 +177,6 @@
             this.label3.Size = new System.Drawing.Size(153, 20);
             this.label3.TabIndex = 325;
             this.label3.Text = "Consultar Compra";
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "id_venda";
-            this.Column1.HeaderText = "ID Venda";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "nm_usuario";
-            this.Column5.HeaderText = "Usuario";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "nm_produto";
-            this.Column2.HeaderText = "Produto";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "vl_valorTotal";
-            this.Column3.HeaderText = "Valor Total";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "dt_saida";
-            this.Column4.HeaderText = "Data da Compra";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 125;
             // 
             // frmConsultarVenda
             // 

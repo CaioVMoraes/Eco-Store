@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
@@ -46,7 +47,6 @@
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtImagem = new System.Windows.Forms.TextBox();
-            this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduto)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -144,7 +144,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(64, 313);
+            this.label2.Location = new System.Drawing.Point(64, 273);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 305;
@@ -157,7 +157,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(64, 278);
+            this.label7.Location = new System.Drawing.Point(64, 308);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 304;
@@ -179,10 +179,19 @@
             this.groupBox2.TabIndex = 306;
             this.groupBox2.TabStop = false;
             // 
+            // cboFornecedor
+            // 
+            this.cboFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFornecedor.FormattingEnabled = true;
+            this.cboFornecedor.Location = new System.Drawing.Point(170, 57);
+            this.cboFornecedor.Name = "cboFornecedor";
+            this.cboFornecedor.Size = new System.Drawing.Size(183, 23);
+            this.cboFornecedor.TabIndex = 303;
+            // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(170, 61);
+            this.txtNome.Location = new System.Drawing.Point(170, 21);
             this.txtNome.MaxLength = 45;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(183, 22);
@@ -225,10 +234,11 @@
             // 
             // nudValor
             // 
+            this.nudValor.DecimalPlaces = 2;
             this.nudValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudValor.Location = new System.Drawing.Point(170, 131);
             this.nudValor.Maximum = new decimal(new int[] {
-            1000,
+            999999,
             0,
             0,
             0});
@@ -280,15 +290,6 @@
             this.txtImagem.Name = "txtImagem";
             this.txtImagem.Size = new System.Drawing.Size(203, 22);
             this.txtImagem.TabIndex = 303;
-            // 
-            // cboFornecedor
-            // 
-            this.cboFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFornecedor.FormattingEnabled = true;
-            this.cboFornecedor.Location = new System.Drawing.Point(170, 27);
-            this.cboFornecedor.Name = "cboFornecedor";
-            this.cboFornecedor.Size = new System.Drawing.Size(183, 23);
-            this.cboFornecedor.TabIndex = 303;
             // 
             // frmCadastrarProduto
             // 

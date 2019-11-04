@@ -45,8 +45,9 @@ namespace WindowsFormsApp15.Database
         {
             tb_usuario alterar = db.tb_usuario.FirstOrDefault(x => x.id_usuario == x.id_usuario);
 
-            modelo.nm_usuario = alterar.nm_usuario;
-            modelo.ds_senha = alterar.ds_senha;
+            alterar.nm_usuario = modelo.nm_usuario;
+            alterar.id_funcionario = modelo.id_funcionario;
+            alterar.nv_nivelAcesso = modelo.nv_nivelAcesso;
 
             db.SaveChanges();
         }

@@ -152,9 +152,15 @@
             // 
             // nudValor
             // 
+            this.nudValor.DecimalPlaces = 2;
             this.nudValor.Enabled = false;
             this.nudValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudValor.Location = new System.Drawing.Point(181, 131);
+            this.nudValor.Location = new System.Drawing.Point(181, 134);
+            this.nudValor.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.nudValor.Name = "nudValor";
             this.nudValor.Size = new System.Drawing.Size(183, 24);
             this.nudValor.TabIndex = 289;
@@ -167,11 +173,11 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(21, 30);
+            this.label7.Location = new System.Drawing.Point(21, 59);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 20);
+            this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 284;
-            this.label7.Text = "ID Fornecedor:";
+            this.label7.Text = "Fornecedor:";
             // 
             // label6
             // 
@@ -180,7 +186,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(21, 99);
+            this.label6.Location = new System.Drawing.Point(21, 98);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 20);
             this.label6.TabIndex = 158;
@@ -193,7 +199,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(21, 64);
+            this.label2.Location = new System.Drawing.Point(21, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 285;
@@ -217,7 +223,7 @@
             this.cboCategoria.Enabled = false;
             this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(181, 94);
+            this.cboCategoria.Location = new System.Drawing.Point(181, 97);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(183, 23);
             this.cboCategoria.TabIndex = 288;
@@ -244,7 +250,7 @@
             // 
             this.txtNome.Enabled = false;
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(181, 61);
+            this.txtNome.Location = new System.Drawing.Point(181, 25);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(183, 22);
             this.txtNome.TabIndex = 298;
@@ -253,7 +259,7 @@
             // 
             this.txtIDFornecedor.Enabled = false;
             this.txtIDFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDFornecedor.Location = new System.Drawing.Point(181, 27);
+            this.txtIDFornecedor.Location = new System.Drawing.Point(181, 59);
             this.txtIDFornecedor.Name = "txtIDFornecedor";
             this.txtIDFornecedor.Size = new System.Drawing.Size(183, 22);
             this.txtIDFornecedor.TabIndex = 297;

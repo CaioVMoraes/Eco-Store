@@ -41,16 +41,12 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.txtFuncionario = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtConfirmar = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtSenha = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.cboNivel = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.cboFuncionario = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -78,7 +74,7 @@
             this.btnAlterar.IconVisible = true;
             this.btnAlterar.IconZoom = 90D;
             this.btnAlterar.IsTab = false;
-            this.btnAlterar.Location = new System.Drawing.Point(163, 255);
+            this.btnAlterar.Location = new System.Drawing.Point(163, 176);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnAlterar.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -115,7 +111,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(493, 28);
+            this.panel1.Size = new System.Drawing.Size(487, 28);
             this.panel1.TabIndex = 334;
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove_1);
             // 
@@ -172,7 +168,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WindowsFormsApp15.Properties.Resources.EditarFuncionario;
-            this.pictureBox1.Location = new System.Drawing.Point(164, 91);
+            this.pictureBox1.Location = new System.Drawing.Point(180, 91);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(139, 112);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -207,7 +203,7 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(152, 43);
+            this.txtID.Location = new System.Drawing.Point(151, 38);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(129, 22);
             this.txtID.TabIndex = 284;
@@ -219,7 +215,7 @@
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(37, 45);
+            this.label27.Location = new System.Drawing.Point(36, 40);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(100, 20);
             this.label27.TabIndex = 166;
@@ -232,7 +228,7 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(171, 58);
+            this.label5.Location = new System.Drawing.Point(187, 58);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(130, 20);
             this.label5.TabIndex = 331;
@@ -241,30 +237,18 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.txtFuncionario);
+            this.groupBox2.Controls.Add(this.cboFuncionario);
             this.groupBox2.Controls.Add(this.btnAlterar);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtConfirmar);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtSenha);
-            this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtUsuario);
             this.groupBox2.Controls.Add(this.cboNivel);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(12, 346);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(460, 320);
+            this.groupBox2.Size = new System.Drawing.Size(460, 248);
             this.groupBox2.TabIndex = 330;
             this.groupBox2.TabStop = false;
-            // 
-            // txtFuncionario
-            // 
-            this.txtFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFuncionario.Location = new System.Drawing.Point(232, 207);
-            this.txtFuncionario.Name = "txtFuncionario";
-            this.txtFuncionario.Size = new System.Drawing.Size(183, 23);
-            this.txtFuncionario.TabIndex = 331;
             // 
             // label8
             // 
@@ -273,7 +257,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(37, 210);
+            this.label8.Location = new System.Drawing.Point(37, 122);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 20);
             this.label8.TabIndex = 330;
@@ -292,54 +276,12 @@
             this.label6.TabIndex = 322;
             this.label6.Text = "Usuário:";
             // 
-            // txtConfirmar
-            // 
-            this.txtConfirmar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmar.Location = new System.Drawing.Point(232, 125);
-            this.txtConfirmar.Name = "txtConfirmar";
-            this.txtConfirmar.Size = new System.Drawing.Size(183, 23);
-            this.txtConfirmar.TabIndex = 329;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(37, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
-            this.label1.TabIndex = 323;
-            this.label1.Text = "Senha:";
-            // 
-            // txtSenha
-            // 
-            this.txtSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(232, 84);
-            this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(183, 23);
-            this.txtSenha.TabIndex = 328;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(37, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(149, 20);
-            this.label3.TabIndex = 324;
-            this.label3.Text = "Confirmar Senha:";
-            // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsuario.Location = new System.Drawing.Point(232, 42);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(183, 23);
+            this.txtUsuario.Size = new System.Drawing.Size(183, 22);
             this.txtUsuario.TabIndex = 327;
             // 
             // cboNivel
@@ -351,7 +293,7 @@
             "Médio",
             "Alto",
             "Administrador"});
-            this.cboNivel.Location = new System.Drawing.Point(232, 167);
+            this.cboNivel.Location = new System.Drawing.Point(232, 79);
             this.cboNivel.Name = "cboNivel";
             this.cboNivel.Size = new System.Drawing.Size(183, 24);
             this.cboNivel.TabIndex = 325;
@@ -363,11 +305,25 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(37, 171);
+            this.label4.Location = new System.Drawing.Point(37, 83);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 20);
             this.label4.TabIndex = 326;
             this.label4.Text = "Nível de Acesso:";
+            // 
+            // cboFuncionario
+            // 
+            this.cboFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFuncionario.FormattingEnabled = true;
+            this.cboFuncionario.Items.AddRange(new object[] {
+            "Baixo",
+            "Médio",
+            "Alto",
+            "Administrador"});
+            this.cboFuncionario.Location = new System.Drawing.Point(232, 118);
+            this.cboFuncionario.Name = "cboFuncionario";
+            this.cboFuncionario.Size = new System.Drawing.Size(183, 24);
+            this.cboFuncionario.TabIndex = 331;
             // 
             // frmAlterarUsuario
             // 
@@ -375,7 +331,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(493, 681);
+            this.ClientSize = new System.Drawing.Size(487, 603);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label21);
@@ -411,15 +367,11 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox txtFuncionario;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtConfirmar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtSenha;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.ComboBox cboNivel;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cboFuncionario;
     }
 }

@@ -35,7 +35,7 @@ namespace WindowsFormsApp15.Telas
             Business.FolhaDePagamentoBusiness business = new Business.FolhaDePagamentoBusiness();
             tb_folhapagamento model = new tb_folhapagamento();
 
-            int id =Convert.ToInt32( cboID.Text);
+            int id = Convert.ToInt32(cboID.Text);
 
             decimal gratificaçoes = nudGratificacoes.Value;
             decimal Plr = nudPLR.Value;

@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas.Usuario
 {
@@ -25,9 +26,31 @@ namespace WindowsFormsApp15.Telas.Usuario
             InitializeComponent();
         }
 
+        private void CarregarFuncionario()
+        {
+            Business.FuncionarioBusiness business = new Business.FuncionarioBusiness();
+
+            List<tb_funcionario> lista = business.ConsultarFuncionario();
+
+            cboFuncionario.DisplayMember = nameof(tb_funcionario.nm_funcionario);
+            cboFuncionario.DataSource = lista;
+        }
+
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(txtID.Text);
 
+            Business.UsuarioBusiness business = new Business.UsuarioBusiness();
+            Model.tb_usuario model = new Model.tb_usuario();
+
+            tb_funcionario comboFuncionario = cboFuncionario.SelectedItem as tb_funcionario;
+
+            model.nm_usuario = txtUsuario.Text;
+            model.id_funcionario = comboFuncionario.id_funcionario;
+            model.nv_nivelAcesso = cboNivel.Text;
+
+            business.alterarusuario(model);
+            
         }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {

@@ -384,12 +384,6 @@
     <Compile Include="Telas\Usuario_\frmDeletarUsuario.Designer.cs">
       <DependentUpon>frmDeletarUsuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Whatsapp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Whatsapp.Designer.cs">
-      <DependentUpon>Whatsapp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Utils\ConverterImagem.cs" />
     <Compile Include="Utils\GmailSender.cs" />
     <Compile Include="Utils\Validacoes.cs" />
@@ -501,9 +495,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Usuario_\frmDeletarUsuario.resx">
       <DependentUpon>frmDeletarUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Whatsapp.resx">
-      <DependentUpon>Whatsapp.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model\Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
