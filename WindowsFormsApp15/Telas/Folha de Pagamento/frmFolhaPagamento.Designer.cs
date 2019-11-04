@@ -49,9 +49,9 @@
             this.nudFamilia = new System.Windows.Forms.NumericUpDown();
             this.nudTransporte = new System.Windows.Forms.NumericUpDown();
             this.nudGratificacoes = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown8 = new System.Windows.Forms.NumericUpDown();
+            this.nudFGTS = new System.Windows.Forms.NumericUpDown();
             this.nudINSS = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown10 = new System.Windows.Forms.NumericUpDown();
+            this.nudPlanosaude = new System.Windows.Forms.NumericUpDown();
             this.nudDentario = new System.Windows.Forms.NumericUpDown();
             this.label11 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -72,9 +72,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudFamilia)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTransporte)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGratificacoes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFGTS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudINSS)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlanosaude)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDentario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDescontos)).BeginInit();
             this.panel1.SuspendLayout();
@@ -352,17 +352,17 @@
             this.nudGratificacoes.Size = new System.Drawing.Size(120, 20);
             this.nudGratificacoes.TabIndex = 160;
             // 
-            // numericUpDown8
+            // nudFGTS
             // 
-            this.numericUpDown8.Location = new System.Drawing.Point(277, 444);
-            this.numericUpDown8.Maximum = new decimal(new int[] {
+            this.nudFGTS.Location = new System.Drawing.Point(277, 444);
+            this.nudFGTS.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
-            this.numericUpDown8.Name = "numericUpDown8";
-            this.numericUpDown8.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown8.TabIndex = 161;
+            this.nudFGTS.Name = "nudFGTS";
+            this.nudFGTS.Size = new System.Drawing.Size(120, 20);
+            this.nudFGTS.TabIndex = 161;
             // 
             // nudINSS
             // 
@@ -376,17 +376,17 @@
             this.nudINSS.Size = new System.Drawing.Size(120, 20);
             this.nudINSS.TabIndex = 162;
             // 
-            // numericUpDown10
+            // nudPlanosaude
             // 
-            this.numericUpDown10.Location = new System.Drawing.Point(277, 477);
-            this.numericUpDown10.Maximum = new decimal(new int[] {
+            this.nudPlanosaude.Location = new System.Drawing.Point(277, 477);
+            this.nudPlanosaude.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
-            this.numericUpDown10.Name = "numericUpDown10";
-            this.numericUpDown10.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown10.TabIndex = 163;
+            this.nudPlanosaude.Name = "nudPlanosaude";
+            this.nudPlanosaude.Size = new System.Drawing.Size(120, 20);
+            this.nudPlanosaude.TabIndex = 163;
             // 
             // nudDentario
             // 
@@ -399,6 +399,7 @@
             this.nudDentario.Name = "nudDentario";
             this.nudDentario.Size = new System.Drawing.Size(120, 20);
             this.nudDentario.TabIndex = 164;
+            this.nudDentario.ValueChanged += new System.EventHandler(this.nudDentario_ValueChanged);
             // 
             // label11
             // 
@@ -409,9 +410,9 @@
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label11.Location = new System.Drawing.Point(406, 477);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(206, 20);
+            this.label11.Size = new System.Drawing.Size(124, 20);
             this.label11.TabIndex = 165;
-            this.label11.Text = "Total Horas Trabalhadas";
+            this.label11.Text = "Salario Ganho";
             // 
             // label15
             // 
@@ -598,9 +599,9 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.nudDentario);
-            this.Controls.Add(this.numericUpDown10);
+            this.Controls.Add(this.nudPlanosaude);
             this.Controls.Add(this.nudINSS);
-            this.Controls.Add(this.numericUpDown8);
+            this.Controls.Add(this.nudFGTS);
             this.Controls.Add(this.nudGratificacoes);
             this.Controls.Add(this.nudTransporte);
             this.Controls.Add(this.nudFamilia);
@@ -625,16 +626,15 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "nudSaude";
             this.Text = "Folha de Pagamento";
-            this.Load += new System.EventHandler(this.nudSaude_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudRef)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPLR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAli)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudFamilia)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudTransporte)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudGratificacoes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudFGTS)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudINSS)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPlanosaude)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDentario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDescontos)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -666,9 +666,9 @@
         private System.Windows.Forms.NumericUpDown nudFamilia;
         private System.Windows.Forms.NumericUpDown nudTransporte;
         private System.Windows.Forms.NumericUpDown nudGratificacoes;
-        private System.Windows.Forms.NumericUpDown numericUpDown8;
+        private System.Windows.Forms.NumericUpDown nudFGTS;
         private System.Windows.Forms.NumericUpDown nudINSS;
-        private System.Windows.Forms.NumericUpDown numericUpDown10;
+        private System.Windows.Forms.NumericUpDown nudPlanosaude;
         private System.Windows.Forms.NumericUpDown nudDentario;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label15;
