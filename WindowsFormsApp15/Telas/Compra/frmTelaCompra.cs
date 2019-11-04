@@ -151,5 +151,28 @@ namespace WindowsFormsApp15.Telas.Compra
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void dgvProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 3)
+            {
+                try
+                {
+                    tb_produto produto = dgvProdutos.CurrentRow.DataBoundItem as tb_produto;
+
+                    List<Model.tb_produto> itens = dgvProdutos.DataSource as List<Model.tb_produto>;
+
+                    itens.Remove(produto);
+
+                    dgvProdutos.AutoGenerateColumns = false;
+                    dgvProdutos.DataSource = null;
+                    dgvProdutos.DataSource = itens;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }

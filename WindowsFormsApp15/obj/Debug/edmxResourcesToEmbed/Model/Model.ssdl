@@ -25,7 +25,7 @@
     <Key>
       <PropertyRef Name="id_compra_item" />
     </Key>
-    <Property Name="id_compra_item" Type="int" Nullable="false" />
+    <Property Name="id_compra_item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="id_compra" Type="int" Nullable="false" />
     <Property Name="id_produto" Type="int" Nullable="false" />
   </EntityType>

@@ -214,6 +214,12 @@ namespace WindowsFormsApp15.Business
 
             db.AlterarFuncionario(funcionario);
         }
+        public List<tb_funcionario> ConsultarFuncionario()
+        {
+            List<tb_funcionario> lista = db.ConsultarFuncionario();
+
+            return lista;
+        }
         public void RemoverFuncionario(int id)
         {
             if(id == 0)

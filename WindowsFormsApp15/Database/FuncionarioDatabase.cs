@@ -23,6 +23,12 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
+        public List<tb_funcionario> ConsultarFuncionario()
+        {
+            List<tb_funcionario> lista = db.tb_funcionario.ToList();
+
+            return lista;
+        }
         public List<tb_funcionario> ConsultarFuncionarioRg(string Rg)
         {
             List<tb_funcionario> lista = db.tb_funcionario.Where(x => x.ds_rg.Contains(Rg)).ToList();

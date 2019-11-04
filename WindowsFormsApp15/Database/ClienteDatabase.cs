@@ -76,12 +76,13 @@ namespace WindowsFormsApp15.Database
         {
             tb_cliente alterar = db.tb_cliente.FirstOrDefault(x => x.id_cliente == x.id_cliente);
 
-            modelo.ds_celular = alterar.ds_celular;
-            modelo.ds_cpf = alterar.ds_cpf;
-            modelo.ds_rg = alterar.ds_rg;
-            modelo.ds_email = alterar.ds_email;
-            modelo.ds_telefone = alterar.ds_telefone;
-            modelo.nm_cliente = alterar.nm_cliente;
+            alterar.ds_celular = modelo.ds_celular;
+            alterar.ds_cpf = modelo.ds_cpf;
+            alterar.ds_rg = modelo.ds_rg;
+            alterar.ds_email = modelo.ds_email;
+            alterar.ds_telefone = modelo.ds_telefone;
+            alterar.nm_cliente = modelo.nm_cliente;
+            alterar.qtd_frequenciaMensal = modelo.qtd_frequenciaMensal;
 
             db.SaveChanges();
 

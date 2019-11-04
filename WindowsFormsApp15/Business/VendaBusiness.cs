@@ -20,9 +20,16 @@ namespace WindowsFormsApp15.Business
             db.InserirVendaitem(modelo);
         }
 
-        public List<tb_venda> ConsultarVenda()
+        public List<tb_venda> ConsultarVenda(DateTime venda)
         {
-            List<tb_venda> lista = db.ConsultarVenda();
+            List<tb_venda> lista = db.ConsultarVenda(venda);
+
+            return lista;
+        }
+
+        public List<tb_venda_item> ConsultarVendaItem(DateTime venda)
+        {
+            List<tb_venda_item> lista = db.ConsultarVendaItem(venda);
 
             return lista;
         }

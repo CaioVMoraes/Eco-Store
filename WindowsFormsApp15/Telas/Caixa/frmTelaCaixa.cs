@@ -47,12 +47,12 @@ namespace WindowsFormsApp15.Telas
                         itens = new List<Model.tb_estoque>();
                     }
 
-                    tb_estoque estoqueModelo = estoqueBusiness.ListarAlterarNaoVendidos(produto.id_produto);
-
                     int quantidade = Convert.ToInt32(nudQuantidade.Value);
 
                     for (int i = 0; i < quantidade; i++)
                     {
+                        tb_estoque estoqueModelo = estoqueBusiness.ListarAlterarNaoVendidos(produto.id_produto);
+                    
                         itens.Add(estoqueModelo);
 
                         dgvProdutos.AutoGenerateColumns = false;
@@ -121,7 +121,17 @@ namespace WindowsFormsApp15.Telas
 
                 venda.id_usuario = Autenticacao.Usuario.UsuarioLogado.IDUsuario;
                 venda.dt_saida = DateTime.Now;
-                venda.vl_valorTotal = Convert.ToDecimal(lblTotal.Text);
+
+                tb_cliente clienteQTD = clienteBusiness.ListarClienteCpf(txtCPFCliente.Text);
+                
+                if(clienteQTD.qtd_frequenciaMensal == 100)
+                {
+                    venda.vl_valorTotal = Convert.ToDecimal(lblTotal.Text) / 2;
+                }
+                else
+                {
+                    venda.vl_valorTotal = Convert.ToDecimal(lblTotal.Text);
+                }
 
                 vendaBusiness.InserirVenda(venda);
 
@@ -138,6 +148,10 @@ namespace WindowsFormsApp15.Telas
                     }
 
                     MessageBox.Show("Pedido finalizado com sucesso");
+
+                    clienteQTD.qtd_frequenciaMensal = clienteQTD.qtd_frequenciaMensal + 1;
+
+                    clienteBusiness.AlterarCliente(clienteQTD);
 
                     dgvProdutos.DataSource = null;
 
@@ -221,6 +235,25 @@ namespace WindowsFormsApp15.Telas
         {
             if(e.ColumnIndex == 3)
             {
+                try
+                {
+                    tb_estoque estoque = dgvProdutos.CurrentRow.DataBoundItem as tb_estoque;
+
+                    List<Model.tb_estoque> itens = dgvProdutos.DataSource as List<Model.tb_estoque>;
+
+                    itens.Remove(estoque);
+
+                    dgvProdutos.AutoGenerateColumns = false;
+                    dgvProdutos.DataSource = null;
+                    dgvProdutos.DataSource = itens;
+
+                    estoqueBusiness.AlterarEstoqueNaoVendido(estoque.id_produto);
+
+                    }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }

@@ -37,6 +37,12 @@ namespace WindowsFormsApp15.Business
 
             return lista;
         }
+        public List<tb_estoque> ConsultarEstoqueProduto(string produto)
+        {
+            List<tb_estoque> lista = db.ConsultarEstoqueProduto(produto);
+
+            return lista;
+        }
         public List<tb_estoque> ConsultarEstoqueVendidoSim(bool vendido)
         {
             List<tb_estoque> lista = db.ConsultarEstoqueVendidoSim(vendido);
@@ -90,6 +96,11 @@ namespace WindowsFormsApp15.Business
         public void RemoverEstoque(int id)
         {
             db.RemoverEstoque(id);
+        }
+
+        public void AlterarEstoqueNaoVendido(int id)
+        {
+            db.AlterarEstoqueNaoVendido(id);
         }
     }
 }

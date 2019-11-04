@@ -29,6 +29,12 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
+        public List<tb_estoque> ConsultarEstoqueProduto(string produto)
+        {
+            List<tb_estoque> lista = db.tb_estoque.Where(x => x.tb_produto.nm_produto.Contains(produto)).ToList();
+
+            return lista;
+        }
         public List<tb_estoque> ConsultarEstoqueVendidoSim(bool vendido)
         {
             List<tb_estoque> lista = db.tb_estoque.Where(x => x.bt_vendido == true).ToList();
@@ -88,6 +94,15 @@ namespace WindowsFormsApp15.Database
             tb_estoque deletar = db.tb_estoque.FirstOrDefault(x => x.id_estoque == id);
 
             db.tb_estoque.Remove(deletar);
+            db.SaveChanges();
+        }
+
+        public void AlterarEstoqueNaoVendido(int id)
+        {
+            tb_estoque alterar = db.tb_estoque.FirstOrDefault(x => x.id_estoque == id);
+
+            alterar.bt_vendido = false;
+
             db.SaveChanges();
         }
 

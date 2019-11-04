@@ -30,7 +30,7 @@
           <Key>
             <PropertyRef Name="id_compra_item" />
           </Key>
-          <Property Name="id_compra_item" Type="int" Nullable="false" />
+          <Property Name="id_compra_item" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_compra" Type="int" Nullable="false" />
           <Property Name="id_produto" Type="int" Nullable="false" />
         </EntityType>
@@ -544,7 +544,7 @@ FROM `vw_fluxocaixa` AS `vw_fluxocaixa`</DefiningQuery>
           <Key>
             <PropertyRef Name="id_compra_item" />
           </Key>
-          <Property Name="id_compra_item" Type="Int32" Nullable="false" />
+          <Property Name="id_compra_item" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_compra" Type="Int32" Nullable="false" />
           <Property Name="id_produto" Type="Int32" Nullable="false" />
           <NavigationProperty Name="tb_compra" Relationship="ecostorModel.tb_compra_item_ibfk_1" FromRole="tb_compra_item" ToRole="tb_compra" />

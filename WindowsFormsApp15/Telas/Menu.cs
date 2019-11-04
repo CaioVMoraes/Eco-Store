@@ -218,12 +218,18 @@ namespace WindowsFormsApp15.Telas
 
             lblDesligar.Enabled = false;
 
-            //Application.Exit();
+            Application.Exit();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblHora.Text = DateTime.Now.ToString();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Telas.Caixa.frmConsultarVenda tela = new Caixa.frmConsultarVenda();
+            tela.Show();
         }
     }
 }

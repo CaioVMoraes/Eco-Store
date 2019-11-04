@@ -16,6 +16,17 @@ namespace WindowsFormsApp15.Telas
         public nudSaude()
         {
             InitializeComponent();
+
+        }
+
+        private void CarregarFuncionario()
+        {
+            Business.FuncionarioBusiness business = new Business.FuncionarioBusiness();
+
+            List<tb_funcionario> lista = business.ConsultarFuncionario();
+
+            cboID.DisplayMember = nameof(tb_funcionario.nm_funcionario);
+            cboID.DataSource = lista;
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)

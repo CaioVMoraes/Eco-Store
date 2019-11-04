@@ -29,7 +29,7 @@ namespace WindowsFormsApp15.Telas.Estoque
         {
             Business.EstoqueBusiness business = new Business.EstoqueBusiness();
 
-            DateTime data = dtpData.Value;
+            DateTime data = dtpData.Value.Date;
             
            List<tb_estoque> listar = business.ConsultarEstoqueData(data);
 
@@ -40,9 +40,9 @@ namespace WindowsFormsApp15.Telas.Estoque
         {
             Business.EstoqueBusiness business = new Business.EstoqueBusiness();
 
-            int id = Convert.ToInt32(txtProduto.Text);
+            string produto = txtProduto.Text;
 
-            List<tb_estoque> listar = business.ConsultarEstoqueId(id);
+            List<tb_estoque> listar = business.ConsultarEstoqueProduto(produto);
 
             dgvConsultarEstoque.DataSource = listar;
         }
