@@ -24,9 +24,18 @@ namespace WindowsFormsApp15.Telas
         public frmCadastrarProduto()
         {
             InitializeComponent();
+            this.CarregarFornecedor();
         }
 
-        
+        private void CarregarFornecedor()
+        {
+            Business.FornecedorBusiness business = new Business.FornecedorBusiness();
+
+            List<tb_fornecedor> lista = business.ConsultarFornecedor();
+
+            cboFornecedor.DisplayMember = nameof(tb_fornecedor.nm_fornecedor);
+            cboFornecedor.DataSource = lista;
+        }
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             try
@@ -42,8 +51,10 @@ namespace WindowsFormsApp15.Telas
 
                 imagem_byte = br.ReadBytes((int)fstream.Length);
 
+                tb_fornecedor comboFonecedor = cboFornecedor.SelectedItem as tb_fornecedor;
+
                 modelo.img_produto = imagem_byte;
-                modelo.id_fornecedor = Convert.ToInt32(txtIDFornecedor.Text);
+                modelo.id_fornecedor = comboFonecedor.id_fornecedor;
                 modelo.ds_categoria = cboCategoria.Text;
                 modelo.nm_produto = txtNome.Text;
                 modelo.vl_valor = nudValor.Value;
@@ -94,11 +105,6 @@ namespace WindowsFormsApp15.Telas
         private void lblSair_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void frmCadastrarProduto_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

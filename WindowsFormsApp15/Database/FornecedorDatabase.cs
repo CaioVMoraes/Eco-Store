@@ -30,6 +30,12 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
+        public List<tb_fornecedor> ConsultarFornecedor()
+        {
+            List<tb_fornecedor> lista = db.tb_fornecedor.ToList();
+
+            return lista;
+        }
         public tb_fornecedor Listar(int id)
         {
             tb_fornecedor modelo = db.tb_fornecedor.FirstOrDefault(x => x.id_fornecedor == id);

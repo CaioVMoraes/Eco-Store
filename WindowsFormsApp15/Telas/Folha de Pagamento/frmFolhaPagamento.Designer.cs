@@ -136,6 +136,7 @@
             this.cboID.Name = "cboID";
             this.cboID.Size = new System.Drawing.Size(192, 21);
             this.cboID.TabIndex = 133;
+            this.cboID.SelectedIndexChanged += new System.EventHandler(this.cboID_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -399,7 +400,6 @@
             this.nudDentario.Name = "nudDentario";
             this.nudDentario.Size = new System.Drawing.Size(120, 20);
             this.nudDentario.TabIndex = 164;
-            this.nudDentario.ValueChanged += new System.EventHandler(this.nudDentario_ValueChanged);
             // 
             // label11
             // 
@@ -558,7 +558,6 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBuscar.Textcolor = System.Drawing.Color.White;
             this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // groupBox1
             // 

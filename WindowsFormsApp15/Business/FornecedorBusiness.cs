@@ -157,5 +157,11 @@ namespace WindowsFormsApp15.Business
 
             db.RemoverFornecedor(id);
         }
+        public List<tb_fornecedor> ConsultarFornecedor()
+        {
+            List<tb_fornecedor> lista = db.tb_fornecedor.ToList();
+
+            return lista;
+        }
     }
 }

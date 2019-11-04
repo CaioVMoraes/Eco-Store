@@ -41,12 +41,12 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtIDFornecedor = new System.Windows.Forms.TextBox();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtImagem = new System.Windows.Forms.TextBox();
+            this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduto)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -159,16 +159,16 @@
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label7.Location = new System.Drawing.Point(64, 278);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 20);
+            this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 304;
-            this.label7.Text = "ID Fornecedor:";
+            this.label7.Text = "Fornecedor:";
             // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.cboFornecedor);
             this.groupBox2.Controls.Add(this.txtNome);
             this.groupBox2.Controls.Add(this.btnCadastrar);
-            this.groupBox2.Controls.Add(this.txtIDFornecedor);
             this.groupBox2.Controls.Add(this.nudValor);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.cboCategoria);
@@ -222,14 +222,6 @@
             this.btnCadastrar.Textcolor = System.Drawing.Color.White;
             this.btnCadastrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
-            // 
-            // txtIDFornecedor
-            // 
-            this.txtIDFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDFornecedor.Location = new System.Drawing.Point(170, 27);
-            this.txtIDFornecedor.Name = "txtIDFornecedor";
-            this.txtIDFornecedor.Size = new System.Drawing.Size(183, 22);
-            this.txtIDFornecedor.TabIndex = 301;
             // 
             // nudValor
             // 
@@ -289,6 +281,15 @@
             this.txtImagem.Size = new System.Drawing.Size(203, 22);
             this.txtImagem.TabIndex = 303;
             // 
+            // cboFornecedor
+            // 
+            this.cboFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFornecedor.FormattingEnabled = true;
+            this.cboFornecedor.Location = new System.Drawing.Point(170, 27);
+            this.cboFornecedor.Name = "cboFornecedor";
+            this.cboFornecedor.Size = new System.Drawing.Size(183, 23);
+            this.cboFornecedor.TabIndex = 303;
+            // 
             // frmCadastrarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,7 +310,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCadastrarProduto";
             this.Text = "CadastrarProduto";
-            this.Load += new System.EventHandler(this.frmCadastrarProduto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduto)).EndInit();
@@ -335,11 +335,11 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtNome;
         private Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
-        private System.Windows.Forms.TextBox txtIDFornecedor;
         private System.Windows.Forms.NumericUpDown nudValor;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtImagem;
+        private System.Windows.Forms.ComboBox cboFornecedor;
     }
 }

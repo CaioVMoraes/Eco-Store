@@ -54,7 +54,18 @@ namespace WindowsFormsApp15.Telas
 
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private void lblMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void cboID_SelectedIndexChanged(object sender, EventArgs e)
         {
             tb_funcionario comboFuncionario = cboID.SelectedItem as tb_funcionario;
 
@@ -83,23 +94,6 @@ namespace WindowsFormsApp15.Telas
             int expediente = (saida - chegada) - totalAlmoco;
 
             nudDescontos.Value = expediente * funcionario.vl_salarioPorHora;
-
-        }
-
-        private void lblMinimizar_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-
-        }
-
-        private void lblSair_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void nudDentario_ValueChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

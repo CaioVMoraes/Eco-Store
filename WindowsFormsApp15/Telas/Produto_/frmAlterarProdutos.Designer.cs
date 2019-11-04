@@ -36,7 +36,6 @@
             this.btnAlterar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNome = new System.Windows.Forms.TextBox();
-            this.txtIDFornecedor = new System.Windows.Forms.TextBox();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.btnLimpar = new System.Windows.Forms.Button();
             this.imgImagem = new System.Windows.Forms.PictureBox();
             this.txtImagem = new System.Windows.Forms.TextBox();
+            this.cboFornecedor = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -149,9 +149,9 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.cboFornecedor);
             this.groupBox2.Controls.Add(this.txtNome);
             this.groupBox2.Controls.Add(this.btnAlterar);
-            this.groupBox2.Controls.Add(this.txtIDFornecedor);
             this.groupBox2.Controls.Add(this.nudValor);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.cboCategoria);
@@ -172,14 +172,6 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(183, 22);
             this.txtNome.TabIndex = 302;
-            // 
-            // txtIDFornecedor
-            // 
-            this.txtIDFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDFornecedor.Location = new System.Drawing.Point(170, 27);
-            this.txtIDFornecedor.Name = "txtIDFornecedor";
-            this.txtIDFornecedor.Size = new System.Drawing.Size(183, 22);
-            this.txtIDFornecedor.TabIndex = 301;
             // 
             // nudValor
             // 
@@ -378,6 +370,15 @@
             this.txtImagem.Size = new System.Drawing.Size(203, 22);
             this.txtImagem.TabIndex = 304;
             // 
+            // cboFornecedor
+            // 
+            this.cboFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFornecedor.FormattingEnabled = true;
+            this.cboFornecedor.Location = new System.Drawing.Point(170, 27);
+            this.cboFornecedor.Name = "cboFornecedor";
+            this.cboFornecedor.Size = new System.Drawing.Size(183, 23);
+            this.cboFornecedor.TabIndex = 303;
+            // 
             // frmAlterarProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -428,12 +429,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtIdProduto;
         private System.Windows.Forms.TextBox txtNome;
-        private System.Windows.Forms.TextBox txtIDFornecedor;
         private System.Windows.Forms.NumericUpDown nudValor;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.PictureBox imgImagem;
         private System.Windows.Forms.TextBox txtImagem;
+        private System.Windows.Forms.ComboBox cboFornecedor;
     }
 }

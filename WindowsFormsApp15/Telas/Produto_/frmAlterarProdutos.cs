@@ -24,8 +24,17 @@ namespace WindowsFormsApp15.Telas
         public frmAlterarProdutos()
         {
             InitializeComponent();
+            this.CarregarFornecedor();
         }
+        private void CarregarFornecedor()
+        {
+            Business.FornecedorBusiness business = new Business.FornecedorBusiness();
 
+            List<tb_fornecedor> lista = business.ConsultarFornecedor();
+
+            cboFornecedor.DisplayMember = nameof(tb_fornecedor.nm_fornecedor);
+            cboFornecedor.DataSource = lista;
+        }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -48,6 +57,7 @@ namespace WindowsFormsApp15.Telas
         {
             try
             {
+                tb_fornecedor comboFornecedor = cboFornecedor.SelectedItem as tb_fornecedor;
                 Model.tb_produto modelo = new Model.tb_produto();
 
                 byte[] imagem_byte = null;
@@ -59,7 +69,7 @@ namespace WindowsFormsApp15.Telas
                 imagem_byte = br.ReadBytes((int)fstream.Length);
 
                 modelo.img_produto = imagem_byte;
-                modelo.id_fornecedor = Convert.ToInt32(txtIDFornecedor.Text);
+                modelo.id_fornecedor = comboFornecedor.id_fornecedor;
                 modelo.ds_categoria = cboCategoria.Text;
                 modelo.nm_produto = txtNome.Text;
                 modelo.vl_valor = nudValor.Value;
