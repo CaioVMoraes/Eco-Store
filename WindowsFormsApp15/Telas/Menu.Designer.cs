@@ -48,6 +48,7 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel2 = new System.Windows.Forms.Panel();
@@ -63,7 +64,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -189,7 +189,6 @@
             // 
             this.btnDespesasEGastos.BackColor = System.Drawing.Color.SeaGreen;
             this.btnDespesasEGastos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDespesasEGastos.Enabled = false;
             this.btnDespesasEGastos.FlatAppearance.BorderSize = 0;
             this.btnDespesasEGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDespesasEGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,7 +221,6 @@
             // 
             this.btnConsultarFolhaPagamento.BackColor = System.Drawing.Color.SeaGreen;
             this.btnConsultarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarFolhaPagamento.Enabled = false;
             this.btnConsultarFolhaPagamento.FlatAppearance.BorderSize = 0;
             this.btnConsultarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -239,7 +237,6 @@
             // 
             this.btnGerarFolhaPagamento.BackColor = System.Drawing.Color.SeaGreen;
             this.btnGerarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGerarFolhaPagamento.Enabled = false;
             this.btnGerarFolhaPagamento.FlatAppearance.BorderSize = 0;
             this.btnGerarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -355,6 +352,22 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Médio";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SeaGreen;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button3.Location = new System.Drawing.Point(306, 210);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(236, 43);
+            this.button3.TabIndex = 344;
+            this.button3.Text = "Historico de Vendas";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage4
             // 
@@ -546,22 +559,6 @@
             this.lblSair.TabIndex = 155;
             this.lblSair.Text = "X";
             this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.SeaGreen;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(306, 210);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(236, 43);
-            this.button3.TabIndex = 344;
-            this.button3.Text = "Historico de Vendas";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // Menu
             // 

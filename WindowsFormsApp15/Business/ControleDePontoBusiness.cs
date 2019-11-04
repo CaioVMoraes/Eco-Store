@@ -45,7 +45,7 @@ namespace WindowsFormsApp15.Business
 
         public void AlterarPonto(tb_controledeponto modelo)
         {
-            if (model.id_funcionario == 0)
+            if (modelo.id_funcionario == 0)
             {
                 throw new ArgumentException("id do funcionário inválido");
             }

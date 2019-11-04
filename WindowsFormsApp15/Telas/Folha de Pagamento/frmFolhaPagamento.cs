@@ -16,6 +16,7 @@ namespace WindowsFormsApp15.Telas
         public nudSaude()
         {
             InitializeComponent();
+            this.CarregarFuncionario();
 
         }
 
