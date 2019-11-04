@@ -20,6 +20,25 @@ namespace WindowsFormsApp15.Telas
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            Business.FolhaDePagamentoBusiness business = new Business.FolhaDePagamentoBusiness();
+            tb_folhapagamento model = new tb_folhapagamento();
+
+            int id =Convert.ToInt32( cboID.Text);
+
+            decimal gratificaçoes = nudGratificacoes.Value;
+            decimal Plr = nudPLR.Value;
+            decimal INSS = nudINSS.Value;
+            decimal FGTS = nudFGTS.Value;
+            decimal planosaude = nudPlanosaude.Value;
+            decimal salariofami = nudFamilia.Value;
+            decimal VA = nudAli.Value;
+            decimal VR = nudRef.Value;
+            decimal VT = nudTransporte.Value;
+            decimal planodent = nudDentario.Value;
+            DateTime data = dtpPagamento.Value;
+            decimal bruto = nudDescontos.Value;
+
+            lblLiquido.Text = (bruto + gratificaçoes - Plr - INSS - FGTS - planosaude - salariofami - VA - VR - VT - planodent).ToString();
 
         }
 
@@ -54,11 +73,6 @@ namespace WindowsFormsApp15.Telas
 
         }
 
-        private void nudSaude_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -68,6 +82,11 @@ namespace WindowsFormsApp15.Telas
         private void lblSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void nudDentario_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

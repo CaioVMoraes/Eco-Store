@@ -10,13 +10,36 @@ namespace WindowsFormsApp15.Business
     class VendaBusiness
     {
         Database.VendaDatabase db = new Database.VendaDatabase();
+        tb_venda model = new tb_venda();
 
         public void InserirVenda(tb_venda modelo)
         {
+            if(model.id_usuario == 0)
+            {
+                throw new ArgumentException("id do usuario invalido");
+            }
+            if (model.vl_valorTotal == 0)
+            {
+                throw new ArgumentException("Total inválido");
+            }
+            if (model.dt_saida == null)
+            {
+                throw new ArgumentException("Data de saida inválida");
+            }
+
             db.InserirVenda(modelo);
+
+
         }
         public void InserirVendaItem(tb_venda_item modelo)
         {
+            tb_venda_item vendaitemmodelo = new tb_venda_item();
+
+            if(vendaitemmodelo.id_estoque == 0)
+            {
+                throw new ArgumentException("Id estoque inválido");
+            }
+          
             db.InserirVendaitem(modelo);
         }
 
@@ -35,10 +58,36 @@ namespace WindowsFormsApp15.Business
 
         public void AlterarVenda(tb_venda modelo)
         {
+            if (model.id_usuario == 0)
+            {
+                throw new ArgumentException("id do usuario invalido");
+            }
+            if (model.vl_valorTotal == 0)
+            {
+                throw new ArgumentException("Total inválido");
+            }
+            if (model.dt_saida == null)
+            {
+                throw new ArgumentException("Data de saida inválida");
+            }
+
             db.AlterarVenda(modelo);
         }
         public void RemoverVenda(int id)
         {
+            if (model.id_usuario == 0)
+            {
+                throw new ArgumentException("id do usuario invalido");
+            }
+            if (model.vl_valorTotal == 0)
+            {
+                throw new ArgumentException("Total inválido");
+            }
+            if (model.dt_saida == null)
+            {
+                throw new ArgumentException("Data de saida inválida");
+            }
+
             db.RemoverVenda(id);
         }
     }
