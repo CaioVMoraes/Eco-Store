@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas.Usuario
 {
@@ -46,6 +47,39 @@ namespace WindowsFormsApp15.Telas.Usuario
         private void lblSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void CarregarTela(tb_usuario model)
+        {
+            txtID.Text = model.id_usuario.ToString();
+            txtUsuario.Text = model.nm_usuario;
+            cboFuncionario.Text = model.tb_funcionario.nm_funcionario;
+            cboNivel.Text = model.nv_nivelAcesso;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            Business.UsuarioBusiness business = new Business.UsuarioBusiness();
+
+            int id = Convert.ToInt32(txtID.Text);
+
+            tb_usuario model = business.ConsultarPorID(id);
+
+            txtID.Text = model.id_usuario.ToString();
+            txtUsuario.Text = model.nm_usuario;
+            cboFuncionario.Text = model.tb_funcionario.nm_funcionario;
+            cboNivel.Text = model.nv_nivelAcesso;
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            Business.UsuarioBusiness business = new Business.UsuarioBusiness();
+
+            int id = Convert.ToInt32(txtID.Text);
+
+            business.RemoverUsuario(id);
+
+            MessageBox.Show("Deletado com sucesso");
         }
     }
 }

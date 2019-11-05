@@ -141,12 +141,8 @@ namespace WindowsFormsApp15.Telas
 
         private void btnConsultarFolhaPagamento_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void lblNome_Click(object sender, EventArgs e)
-        {
-
+            Telas.Folha_de_Pagamento.frmConsultarFolha tela = new Folha_de_Pagamento.frmConsultarFolha();
+            tela.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -229,6 +225,12 @@ namespace WindowsFormsApp15.Telas
         private void button3_Click(object sender, EventArgs e)
         {
             Telas.Caixa.frmConsultarVenda tela = new Caixa.frmConsultarVenda();
+            tela.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Telas.Usuario.frmConsultarUsuario tela = new Usuario.frmConsultarUsuario();
             tela.Show();
         }
     }

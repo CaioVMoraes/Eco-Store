@@ -24,10 +24,31 @@ namespace WindowsFormsApp15.Database
             return usuario;
         }
 
+        public tb_usuario ConsultarPorID(int id)
+        {
+            tb_usuario usuario = db.tb_usuario.FirstOrDefault(x => x.id_usuario == id);
+
+            return usuario;
+        }
+
         public void inserirUsuario(tb_usuario usuario)
         {
             db.tb_usuario.Add(usuario);
             db.SaveChanges();
+        }
+
+        public List<tb_usuario> ListaDeUsuariosNome(string nome)
+        {
+            List<tb_usuario> lista = db.tb_usuario.Where(x => x.nm_usuario.Contains(nome)).ToList();
+
+            return lista;
+        }
+
+        public List<tb_usuario> ListaDeUsuariosFuncionario(string funcionario)
+        {
+            List<tb_usuario> lista = db.tb_usuario.Where(x => x.tb_funcionario.nm_funcionario.Contains(funcionario)).ToList();
+
+            return lista;
         }
 
         public List<tb_usuario> ListaDeUsuarios()

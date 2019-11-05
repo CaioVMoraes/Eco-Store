@@ -25,6 +25,27 @@ namespace WindowsFormsApp15.Business
             return usuario;
         }
 
+        public tb_usuario ConsultarPorID(int id)
+        {
+            tb_usuario usuario = db.ConsultarPorID(id);
+
+            return usuario;
+        }
+
+        public List<tb_usuario> ListaDeUsuariosNome(string nome)
+        {
+            List<tb_usuario> lista = db.ListaDeUsuariosNome(nome);
+
+            return lista;
+        }
+
+        public List<tb_usuario> ListaDeUsuariosFuncionario(string funcionario)
+        {
+            List<tb_usuario> lista = db.ListaDeUsuariosFuncionario(funcionario);
+
+            return lista;
+        }
+
         public bool Usuario(string nome, string senha)
         {
             tb_usuario usuario = db.usuario(nome, senha);

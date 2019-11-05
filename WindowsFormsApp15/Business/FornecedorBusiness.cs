@@ -159,7 +159,7 @@ namespace WindowsFormsApp15.Business
         }
         public List<tb_fornecedor> ConsultarFornecedor()
         {
-            List<tb_fornecedor> lista = db.tb_fornecedor.ToList();
+            List<tb_fornecedor> lista = db.ConsultarFornecedor();
 
             return lista;
         }

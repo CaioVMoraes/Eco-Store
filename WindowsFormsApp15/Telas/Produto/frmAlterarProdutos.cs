@@ -94,7 +94,7 @@ namespace WindowsFormsApp15.Telas
 
             Image imagem = imageConverter.byteArrayToImage(modelo.img_produto);
 
-            txtIDFornecedor.Text = modelo.tb_fornecedor.nm_fornecedor;
+            cboFornecedor.Text = modelo.tb_fornecedor.nm_fornecedor;
             txtNome.Text = modelo.nm_produto;
             imgImagem.Image = imagem;
             cboCategoria.Text = modelo.ds_categoria;

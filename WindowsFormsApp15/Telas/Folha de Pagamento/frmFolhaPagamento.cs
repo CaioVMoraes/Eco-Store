@@ -16,8 +16,8 @@ namespace WindowsFormsApp15.Telas
         public nudSaude()
         {
             InitializeComponent();
-            this.CarregarFuncionario();
 
+            this.CarregarFuncionario();
         }
 
         private void CarregarFuncionario()
@@ -30,7 +30,7 @@ namespace WindowsFormsApp15.Telas
             cboID.DataSource = lista;
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private void Calculo()
         {
             Business.FolhaDePagamentoBusiness business = new Business.FolhaDePagamentoBusiness();
             tb_folhapagamento model = new tb_folhapagamento();
@@ -47,11 +47,9 @@ namespace WindowsFormsApp15.Telas
             decimal VR = nudRef.Value;
             decimal VT = nudTransporte.Value;
             decimal planodent = nudDentario.Value;
-            DateTime data = dtpPagamento.Value;
             decimal bruto = nudDescontos.Value;
 
             lblLiquido.Text = (bruto + gratificaçoes - Plr - INSS - FGTS - planosaude - salariofami - VA - VR - VT - planodent).ToString();
-
         }
 
         private void lblMinimizar_Click(object sender, EventArgs e)
@@ -67,33 +65,110 @@ namespace WindowsFormsApp15.Telas
 
         private void cboID_SelectedIndexChanged(object sender, EventArgs e)
         {
-            tb_funcionario comboFuncionario = cboID.SelectedItem as tb_funcionario;
+            try
+            {
+                tb_funcionario comboFuncionario = cboID.SelectedItem as tb_funcionario;
 
-            int mes = dtpPagamento.Value.Month;
+                int mes = Convert.ToInt32(cboMes.Text);
 
-            Business.FuncionarioBusiness funcionarioBusiness = new Business.FuncionarioBusiness();
-            Business.ControleDePontoBusiness controleBusiness = new Business.ControleDePontoBusiness();
+                Business.FuncionarioBusiness funcionarioBusiness = new Business.FuncionarioBusiness();
+                Business.ControleDePontoBusiness controleBusiness = new Business.ControleDePontoBusiness();
 
-            List<tb_controledeponto> ponto = controleBusiness.ListarPorFuncionario(comboFuncionario.id_funcionario, mes);
-            tb_funcionario funcionario = funcionarioBusiness.Listar(comboFuncionario.id_funcionario);
+                List<tb_controledeponto> ponto = controleBusiness.ListarPorFuncionario(comboFuncionario.id_funcionario, mes);
+                tb_funcionario funcionario = funcionarioBusiness.Listar(comboFuncionario.id_funcionario);
 
-            Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+                Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 
-            Image imagem = imageConverter.byteArrayToImage(funcionario.img_foto);
+                Image imagem = imageConverter.byteArrayToImage(funcionario.img_foto);
 
-            imgFoto.Image = imagem;
+                imgFoto.Image = imagem;
 
-            int entradaAlmoco = ponto.Sum(x => x.dt_saidaAlmoco.Value.Hour);
-            int voltaAlmoco = ponto.Sum(x => x.dt_voltaAlmoco.Value.Hour);
+                int entradaAlmoco = ponto.Sum(x => x.dt_saidaAlmoco.Value.Hour);
+                int voltaAlmoco = ponto.Sum(x => x.dt_voltaAlmoco.Value.Hour);
 
-            int totalAlmoco = voltaAlmoco - entradaAlmoco;
+                int totalAlmoco = voltaAlmoco - entradaAlmoco;
 
-            int chegada = ponto.Sum(x => x.dt_chegada.Value.Hour);
-            int saida = ponto.Sum(x => x.dt_saida.Value.Hour);
+                int chegada = ponto.Sum(x => x.dt_chegada.Value.Hour);
+                int saida = ponto.Sum(x => x.dt_saida.Value.Hour);
 
-            int expediente = (saida - chegada) - totalAlmoco;
+                int expediente = (saida - chegada) - totalAlmoco;
 
-            nudDescontos.Value = expediente * funcionario.vl_salarioPorHora;
+                nudDescontos.Value = expediente * funcionario.vl_salarioPorHora;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Gerar Folha de Pagamento");
+            }
+        }
+
+        private void nudGratificacoes_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+        }
+
+        private void nudPLR_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void nudINSS_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void nudFGTS_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void nudPlanosaude_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void nudFamilia_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void nudAli_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void nudRef_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void nudTransporte_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void nudDentario_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void nudDescontos_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -41,12 +41,12 @@
             this.label27 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.cboFuncionario = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.cboNivel = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.cboFuncionario = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -95,7 +95,7 @@
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
-            this.lblMinimizar.Location = new System.Drawing.Point(442, 2);
+            this.lblMinimizar.Location = new System.Drawing.Point(435, 0);
             this.lblMinimizar.Name = "lblMinimizar";
             this.lblMinimizar.Size = new System.Drawing.Size(21, 23);
             this.lblMinimizar.TabIndex = 156;
@@ -122,7 +122,7 @@
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
-            this.lblSair.Location = new System.Drawing.Point(467, 5);
+            this.lblSair.Location = new System.Drawing.Point(460, 3);
             this.lblSair.Name = "lblSair";
             this.lblSair.Size = new System.Drawing.Size(23, 23);
             this.lblSair.TabIndex = 155;
@@ -250,6 +250,20 @@
             this.groupBox2.TabIndex = 330;
             this.groupBox2.TabStop = false;
             // 
+            // cboFuncionario
+            // 
+            this.cboFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFuncionario.FormattingEnabled = true;
+            this.cboFuncionario.Items.AddRange(new object[] {
+            "Baixo",
+            "Médio",
+            "Alto",
+            "Administrador"});
+            this.cboFuncionario.Location = new System.Drawing.Point(232, 118);
+            this.cboFuncionario.Name = "cboFuncionario";
+            this.cboFuncionario.Size = new System.Drawing.Size(183, 24);
+            this.cboFuncionario.TabIndex = 331;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -310,20 +324,6 @@
             this.label4.Size = new System.Drawing.Size(141, 20);
             this.label4.TabIndex = 326;
             this.label4.Text = "Nível de Acesso:";
-            // 
-            // cboFuncionario
-            // 
-            this.cboFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboFuncionario.FormattingEnabled = true;
-            this.cboFuncionario.Items.AddRange(new object[] {
-            "Baixo",
-            "Médio",
-            "Alto",
-            "Administrador"});
-            this.cboFuncionario.Location = new System.Drawing.Point(232, 118);
-            this.cboFuncionario.Name = "cboFuncionario";
-            this.cboFuncionario.Size = new System.Drawing.Size(183, 24);
-            this.cboFuncionario.TabIndex = 331;
             // 
             // frmAlterarUsuario
             // 

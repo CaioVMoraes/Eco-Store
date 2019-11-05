@@ -26,6 +26,14 @@ namespace WindowsFormsApp15.Telas.Usuario
             InitializeComponent();
         }
 
+        public void CarregarTela(tb_usuario model)
+        {
+            txtID.Text = model.id_usuario.ToString();
+            txtUsuario.Text = model.nm_usuario;
+            cboFuncionario.Text = model.tb_funcionario.nm_funcionario;
+            cboNivel.Text = model.nv_nivelAcesso;
+        }
+
         private void CarregarFuncionario()
         {
             Business.FuncionarioBusiness business = new Business.FuncionarioBusiness();
@@ -50,7 +58,11 @@ namespace WindowsFormsApp15.Telas.Usuario
             model.nv_nivelAcesso = cboNivel.Text;
 
             business.alterarusuario(model);
-            
+
+            MessageBox.Show("Alterado com sucesso");
+            MessageBox.Show("O aplicativo será reiniciado");
+
+            Application.Restart();
         }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
@@ -77,7 +89,15 @@ namespace WindowsFormsApp15.Telas.Usuario
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            int id = Convert.ToInt32(txtID.Text);
 
+            Business.UsuarioBusiness business = new Business.UsuarioBusiness();
+
+            tb_usuario usuario = business.ConsultarPorID(id);
+
+            txtUsuario.Text = usuario.nm_usuario;
+            cboFuncionario.Text = usuario.tb_funcionario.nm_funcionario;
+            cboNivel.Text = usuario.nv_nivelAcesso;
         }
     }
 }

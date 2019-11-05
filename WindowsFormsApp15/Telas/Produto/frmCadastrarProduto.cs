@@ -36,6 +36,7 @@ namespace WindowsFormsApp15.Telas
             cboFornecedor.DisplayMember = nameof(tb_fornecedor.nm_fornecedor);
             cboFornecedor.DataSource = lista;
         }
+
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             try

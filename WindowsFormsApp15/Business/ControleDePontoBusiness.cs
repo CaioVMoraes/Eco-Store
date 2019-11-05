@@ -15,9 +15,9 @@ namespace WindowsFormsApp15.Business
 
       public void CadastrarPonto(tb_controledeponto modelo)
        {        
-            if(model.id_funcionario == 0)
+            if(modelo.id_funcionario == 0)
             {
-                throw new ArgumentException("id do funcionário inválido");
+                throw new ArgumentException("Id do funcionário inválido");
             }
 
             db.CadastrarPonto(modelo);

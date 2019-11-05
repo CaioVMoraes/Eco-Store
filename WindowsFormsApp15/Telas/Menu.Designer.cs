@@ -37,7 +37,6 @@
             this.btnCadastrarFornecedor = new System.Windows.Forms.Button();
             this.btnConsultarProduto = new System.Windows.Forms.Button();
             this.btnCadastrarProduto = new System.Windows.Forms.Button();
-            this.btnDespesasEGastos = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
             this.btnConsultarFolhaPagamento = new System.Windows.Forms.Button();
             this.btnGerarFolhaPagamento = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
@@ -64,6 +64,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
+            this.btnDespesasEGastos = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -81,7 +82,7 @@
             this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarUsuario.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCadastrarUsuario.Location = new System.Drawing.Point(65, 172);
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(65, 162);
             this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
             this.btnCadastrarUsuario.Size = new System.Drawing.Size(238, 43);
             this.btnCadastrarUsuario.TabIndex = 327;
@@ -97,7 +98,7 @@
             this.btnConsultarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarFuncionario.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnConsultarFuncionario.Location = new System.Drawing.Point(311, 287);
+            this.btnConsultarFuncionario.Location = new System.Drawing.Point(311, 285);
             this.btnConsultarFuncionario.Name = "btnConsultarFuncionario";
             this.btnConsultarFuncionario.Size = new System.Drawing.Size(235, 43);
             this.btnConsultarFuncionario.TabIndex = 330;
@@ -113,7 +114,7 @@
             this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrarFuncionario.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(67, 287);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(67, 285);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Size = new System.Drawing.Size(236, 43);
             this.btnCadastrarFuncionario.TabIndex = 329;
@@ -185,22 +186,6 @@
             this.btnCadastrarProduto.UseVisualStyleBackColor = false;
             this.btnCadastrarProduto.Click += new System.EventHandler(this.btnCadastrarProduto_Click);
             // 
-            // btnDespesasEGastos
-            // 
-            this.btnDespesasEGastos.BackColor = System.Drawing.Color.SeaGreen;
-            this.btnDespesasEGastos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDespesasEGastos.FlatAppearance.BorderSize = 0;
-            this.btnDespesasEGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDespesasEGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDespesasEGastos.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDespesasEGastos.Location = new System.Drawing.Point(311, 172);
-            this.btnDespesasEGastos.Name = "btnDespesasEGastos";
-            this.btnDespesasEGastos.Size = new System.Drawing.Size(235, 43);
-            this.btnDespesasEGastos.TabIndex = 335;
-            this.btnDespesasEGastos.Text = "Despesas e Gastos";
-            this.btnDespesasEGastos.UseVisualStyleBackColor = false;
-            this.btnDespesasEGastos.Click += new System.EventHandler(this.btnDespesasEGastos_Click);
-            // 
             // btnCaixa
             // 
             this.btnCaixa.BackColor = System.Drawing.Color.SeaGreen;
@@ -225,7 +210,7 @@
             this.btnConsultarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarFolhaPagamento.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnConsultarFolhaPagamento.Location = new System.Drawing.Point(311, 221);
+            this.btnConsultarFolhaPagamento.Location = new System.Drawing.Point(311, 215);
             this.btnConsultarFolhaPagamento.Name = "btnConsultarFolhaPagamento";
             this.btnConsultarFolhaPagamento.Size = new System.Drawing.Size(235, 60);
             this.btnConsultarFolhaPagamento.TabIndex = 340;
@@ -241,7 +226,7 @@
             this.btnGerarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerarFolhaPagamento.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnGerarFolhaPagamento.Location = new System.Drawing.Point(67, 221);
+            this.btnGerarFolhaPagamento.Location = new System.Drawing.Point(67, 215);
             this.btnGerarFolhaPagamento.Name = "btnGerarFolhaPagamento";
             this.btnGerarFolhaPagamento.Size = new System.Drawing.Size(236, 60);
             this.btnGerarFolhaPagamento.TabIndex = 339;
@@ -257,7 +242,7 @@
             this.btnConsultarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultarEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultarEstoque.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnConsultarEstoque.Location = new System.Drawing.Point(313, 290);
+            this.btnConsultarEstoque.Location = new System.Drawing.Point(314, 290);
             this.btnConsultarEstoque.Name = "btnConsultarEstoque";
             this.btnConsultarEstoque.Size = new System.Drawing.Size(236, 43);
             this.btnConsultarEstoque.TabIndex = 341;
@@ -277,7 +262,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(236, 43);
             this.button1.TabIndex = 342;
-            this.button1.Text = "Compra";
+            this.button1.Text = "Entrada de Estoque";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
@@ -295,8 +280,8 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.button4);
             this.tabPage1.Controls.Add(this.btnCadastrarUsuario);
-            this.tabPage1.Controls.Add(this.btnDespesasEGastos);
             this.tabPage1.Controls.Add(this.btnGerarFolhaPagamento);
             this.tabPage1.Controls.Add(this.btnConsultarFolhaPagamento);
             this.tabPage1.Controls.Add(this.btnCadastrarFuncionario);
@@ -309,8 +294,25 @@
             this.tabPage1.Text = "Administrador";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SeaGreen;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button4.Location = new System.Drawing.Point(311, 162);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(238, 43);
+            this.button4.TabIndex = 341;
+            this.button4.Text = "Consultar Usuarios";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.btnDespesasEGastos);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Controls.Add(this.btnCadastrarFornecedor);
             this.tabPage2.Controls.Add(this.button1);
@@ -467,7 +469,6 @@
             this.lblNome.Size = new System.Drawing.Size(86, 29);
             this.lblNome.TabIndex = 158;
             this.lblNome.Text = "NOME";
-            this.lblNome.Click += new System.EventHandler(this.lblNome_Click);
             // 
             // imgPerfil
             // 
@@ -560,6 +561,21 @@
             this.lblSair.Text = "X";
             this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
+            // btnDespesasEGastos
+            // 
+            this.btnDespesasEGastos.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnDespesasEGastos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDespesasEGastos.FlatAppearance.BorderSize = 0;
+            this.btnDespesasEGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDespesasEGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDespesasEGastos.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDespesasEGastos.Location = new System.Drawing.Point(72, 349);
+            this.btnDespesasEGastos.Name = "btnDespesasEGastos";
+            this.btnDespesasEGastos.Size = new System.Drawing.Size(235, 43);
+            this.btnDespesasEGastos.TabIndex = 344;
+            this.btnDespesasEGastos.Text = "Despesas e Gastos";
+            this.btnDespesasEGastos.UseVisualStyleBackColor = false;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -602,7 +618,6 @@
         private System.Windows.Forms.Button btnCadastrarFornecedor;
         private System.Windows.Forms.Button btnConsultarProduto;
         private System.Windows.Forms.Button btnCadastrarProduto;
-        private System.Windows.Forms.Button btnDespesasEGastos;
         private System.Windows.Forms.Button btnCaixa;
         private System.Windows.Forms.Button btnConsultarFolhaPagamento;
         private System.Windows.Forms.Button btnGerarFolhaPagamento;
@@ -621,5 +636,7 @@
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDespesasEGastos;
     }
 }

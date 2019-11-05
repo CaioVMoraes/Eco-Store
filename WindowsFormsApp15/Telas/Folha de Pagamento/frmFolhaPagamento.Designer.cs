@@ -62,8 +62,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.imgFoto = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.dtpPagamento = new System.Windows.Forms.DateTimePicker();
+            this.cboMes = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudRef)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPLR)).BeginInit();
@@ -87,7 +86,7 @@
             this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEntrar.BorderRadius = 0;
-            this.btnEntrar.ButtonText = "CALCULAR";
+            this.btnEntrar.ButtonText = "        GERAR";
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnEntrar.Iconcolor = System.Drawing.Color.Transparent;
@@ -102,15 +101,15 @@
             this.btnEntrar.IconVisible = true;
             this.btnEntrar.IconZoom = 90D;
             this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(573, 592);
+            this.btnEntrar.Location = new System.Drawing.Point(503, 502);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEntrar.selected = false;
-            this.btnEntrar.Size = new System.Drawing.Size(181, 34);
+            this.btnEntrar.Size = new System.Drawing.Size(181, 43);
             this.btnEntrar.TabIndex = 123;
-            this.btnEntrar.Text = "CALCULAR";
+            this.btnEntrar.Text = "        GERAR";
             this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntrar.Textcolor = System.Drawing.Color.White;
             this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -145,7 +144,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(407, 313);
+            this.label2.Location = new System.Drawing.Point(450, 282);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 20);
             this.label2.TabIndex = 143;
@@ -158,7 +157,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(62, 339);
+            this.label3.Location = new System.Drawing.Point(62, 308);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 144;
@@ -171,7 +170,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(62, 310);
+            this.label4.Location = new System.Drawing.Point(62, 279);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(121, 20);
             this.label4.TabIndex = 145;
@@ -184,7 +183,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(407, 446);
+            this.label6.Location = new System.Drawing.Point(450, 415);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(133, 20);
             this.label6.TabIndex = 147;
@@ -197,7 +196,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(63, 443);
+            this.label8.Location = new System.Drawing.Point(63, 412);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(141, 20);
             this.label8.TabIndex = 148;
@@ -210,7 +209,7 @@
             this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(406, 347);
+            this.label9.Location = new System.Drawing.Point(449, 316);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(154, 20);
             this.label9.TabIndex = 149;
@@ -223,7 +222,7 @@
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(62, 407);
+            this.label10.Location = new System.Drawing.Point(62, 376);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(61, 20);
             this.label10.TabIndex = 150;
@@ -236,7 +235,7 @@
             this.label12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label12.Location = new System.Drawing.Point(62, 374);
+            this.label12.Location = new System.Drawing.Point(62, 343);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(56, 20);
             this.label12.TabIndex = 151;
@@ -249,7 +248,7 @@
             this.label13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label13.Location = new System.Drawing.Point(406, 412);
+            this.label13.Location = new System.Drawing.Point(449, 381);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(142, 20);
             this.label13.TabIndex = 152;
@@ -262,7 +261,7 @@
             this.label14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label14.Location = new System.Drawing.Point(406, 380);
+            this.label14.Location = new System.Drawing.Point(449, 349);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(127, 20);
             this.label14.TabIndex = 153;
@@ -270,7 +269,7 @@
             // 
             // nudRef
             // 
-            this.nudRef.Location = new System.Drawing.Point(634, 380);
+            this.nudRef.Location = new System.Drawing.Point(634, 349);
             this.nudRef.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -279,10 +278,11 @@
             this.nudRef.Name = "nudRef";
             this.nudRef.Size = new System.Drawing.Size(120, 20);
             this.nudRef.TabIndex = 155;
+            this.nudRef.ValueChanged += new System.EventHandler(this.nudRef_ValueChanged);
             // 
             // nudPLR
             // 
-            this.nudPLR.Location = new System.Drawing.Point(264, 342);
+            this.nudPLR.Location = new System.Drawing.Point(264, 311);
             this.nudPLR.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -291,10 +291,11 @@
             this.nudPLR.Name = "nudPLR";
             this.nudPLR.Size = new System.Drawing.Size(120, 20);
             this.nudPLR.TabIndex = 156;
+            this.nudPLR.ValueChanged += new System.EventHandler(this.nudPLR_ValueChanged);
             // 
             // nudAli
             // 
-            this.nudAli.Location = new System.Drawing.Point(634, 347);
+            this.nudAli.Location = new System.Drawing.Point(634, 316);
             this.nudAli.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -303,10 +304,11 @@
             this.nudAli.Name = "nudAli";
             this.nudAli.Size = new System.Drawing.Size(120, 20);
             this.nudAli.TabIndex = 157;
+            this.nudAli.ValueChanged += new System.EventHandler(this.nudAli_ValueChanged);
             // 
             // nudFamilia
             // 
-            this.nudFamilia.Location = new System.Drawing.Point(634, 313);
+            this.nudFamilia.Location = new System.Drawing.Point(634, 282);
             this.nudFamilia.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -315,10 +317,11 @@
             this.nudFamilia.Name = "nudFamilia";
             this.nudFamilia.Size = new System.Drawing.Size(120, 20);
             this.nudFamilia.TabIndex = 158;
+            this.nudFamilia.ValueChanged += new System.EventHandler(this.nudFamilia_ValueChanged);
             // 
             // nudTransporte
             // 
-            this.nudTransporte.Location = new System.Drawing.Point(634, 415);
+            this.nudTransporte.Location = new System.Drawing.Point(634, 384);
             this.nudTransporte.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -327,10 +330,11 @@
             this.nudTransporte.Name = "nudTransporte";
             this.nudTransporte.Size = new System.Drawing.Size(120, 20);
             this.nudTransporte.TabIndex = 159;
+            this.nudTransporte.ValueChanged += new System.EventHandler(this.nudTransporte_ValueChanged);
             // 
             // nudGratificacoes
             // 
-            this.nudGratificacoes.Location = new System.Drawing.Point(264, 313);
+            this.nudGratificacoes.Location = new System.Drawing.Point(264, 282);
             this.nudGratificacoes.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -339,10 +343,11 @@
             this.nudGratificacoes.Name = "nudGratificacoes";
             this.nudGratificacoes.Size = new System.Drawing.Size(120, 20);
             this.nudGratificacoes.TabIndex = 160;
+            this.nudGratificacoes.ValueChanged += new System.EventHandler(this.nudGratificacoes_ValueChanged);
             // 
             // nudFGTS
             // 
-            this.nudFGTS.Location = new System.Drawing.Point(264, 410);
+            this.nudFGTS.Location = new System.Drawing.Point(264, 379);
             this.nudFGTS.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -351,10 +356,11 @@
             this.nudFGTS.Name = "nudFGTS";
             this.nudFGTS.Size = new System.Drawing.Size(120, 20);
             this.nudFGTS.TabIndex = 161;
+            this.nudFGTS.ValueChanged += new System.EventHandler(this.nudFGTS_ValueChanged);
             // 
             // nudINSS
             // 
-            this.nudINSS.Location = new System.Drawing.Point(264, 377);
+            this.nudINSS.Location = new System.Drawing.Point(264, 346);
             this.nudINSS.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -363,10 +369,11 @@
             this.nudINSS.Name = "nudINSS";
             this.nudINSS.Size = new System.Drawing.Size(120, 20);
             this.nudINSS.TabIndex = 162;
+            this.nudINSS.ValueChanged += new System.EventHandler(this.nudINSS_ValueChanged);
             // 
             // nudPlanosaude
             // 
-            this.nudPlanosaude.Location = new System.Drawing.Point(264, 443);
+            this.nudPlanosaude.Location = new System.Drawing.Point(264, 412);
             this.nudPlanosaude.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -375,10 +382,11 @@
             this.nudPlanosaude.Name = "nudPlanosaude";
             this.nudPlanosaude.Size = new System.Drawing.Size(120, 20);
             this.nudPlanosaude.TabIndex = 163;
+            this.nudPlanosaude.ValueChanged += new System.EventHandler(this.nudPlanosaude_ValueChanged);
             // 
             // nudDentario
             // 
-            this.nudDentario.Location = new System.Drawing.Point(634, 446);
+            this.nudDentario.Location = new System.Drawing.Point(634, 415);
             this.nudDentario.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -387,6 +395,7 @@
             this.nudDentario.Name = "nudDentario";
             this.nudDentario.Size = new System.Drawing.Size(120, 20);
             this.nudDentario.TabIndex = 164;
+            this.nudDentario.ValueChanged += new System.EventHandler(this.nudDentario_ValueChanged);
             // 
             // label11
             // 
@@ -395,7 +404,7 @@
             this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label11.Location = new System.Drawing.Point(406, 477);
+            this.label11.Location = new System.Drawing.Point(449, 446);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(124, 20);
             this.label11.TabIndex = 165;
@@ -408,7 +417,7 @@
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(50, 523);
+            this.label15.Location = new System.Drawing.Point(62, 481);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(133, 20);
             this.label15.TabIndex = 166;
@@ -416,7 +425,7 @@
             // 
             // nudDescontos
             // 
-            this.nudDescontos.Location = new System.Drawing.Point(634, 477);
+            this.nudDescontos.Location = new System.Drawing.Point(634, 446);
             this.nudDescontos.Maximum = new decimal(new int[] {
             999999999,
             0,
@@ -425,6 +434,7 @@
             this.nudDescontos.Name = "nudDescontos";
             this.nudDescontos.Size = new System.Drawing.Size(120, 20);
             this.nudDescontos.TabIndex = 167;
+            this.nudDescontos.ValueChanged += new System.EventHandler(this.nudDescontos_ValueChanged);
             // 
             // lblLiquido
             // 
@@ -433,7 +443,7 @@
             this.lblLiquido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLiquido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLiquido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLiquido.Location = new System.Drawing.Point(260, 523);
+            this.lblLiquido.Location = new System.Drawing.Point(272, 481);
             this.lblLiquido.Name = "lblLiquido";
             this.lblLiquido.Size = new System.Drawing.Size(19, 20);
             this.lblLiquido.TabIndex = 172;
@@ -506,7 +516,7 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.dtpPagamento);
+            this.groupBox1.Controls.Add(this.cboMes);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Location = new System.Drawing.Point(61, 91);
@@ -515,25 +525,27 @@
             this.groupBox1.TabIndex = 312;
             this.groupBox1.TabStop = false;
             // 
-            // label19
+            // cboMes
             // 
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(50, 613);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(101, 13);
-            this.label19.TabIndex = 314;
-            this.label19.Text = "CODIGO DE ERRO";
-            // 
-            // dtpPagamento
-            // 
-            this.dtpPagamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpPagamento.Location = new System.Drawing.Point(260, 95);
-            this.dtpPagamento.Name = "dtpPagamento";
-            this.dtpPagamento.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dtpPagamento.Size = new System.Drawing.Size(192, 20);
-            this.dtpPagamento.TabIndex = 171;
+            this.cboMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMes.FormattingEnabled = true;
+            this.cboMes.Items.AddRange(new object[] {
+            "01",
+            "02",
+            "03",
+            "04",
+            "05",
+            "06",
+            "07",
+            "08",
+            "09",
+            "10",
+            "11",
+            "12"});
+            this.cboMes.Location = new System.Drawing.Point(260, 97);
+            this.cboMes.Name = "cboMes";
+            this.cboMes.Size = new System.Drawing.Size(121, 21);
+            this.cboMes.TabIndex = 171;
             // 
             // label5
             // 
@@ -542,21 +554,20 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(81, 96);
+            this.label5.Location = new System.Drawing.Point(207, 95);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(173, 20);
+            this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 170;
-            this.label5.Text = "Data de pagamento:";
+            this.label5.Text = "Mês:";
             // 
             // nudSaude
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(806, 658);
-            this.Controls.Add(this.label19);
+            this.ClientSize = new System.Drawing.Size(806, 555);
             this.Controls.Add(this.imgFoto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -645,8 +656,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox imgFoto;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.DateTimePicker dtpPagamento;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cboMes;
     }
 }
