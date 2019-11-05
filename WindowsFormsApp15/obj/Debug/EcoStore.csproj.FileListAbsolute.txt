@@ -1,4 +1,3 @@
-C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csprojResolveAssemblyReference.cache
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmConsultarCompra.resources
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Compra.frmTelaCompra.resources
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Estoque.frmAlterarEstoque.resources

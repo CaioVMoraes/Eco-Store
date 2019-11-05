@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nudSaude));
-            this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label7 = new System.Windows.Forms.Label();
             this.cboID = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -64,6 +63,11 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cboMes = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dtpPagamento = new System.Windows.Forms.DateTimePicker();
+            this.label16 = new System.Windows.Forms.Label();
+            this.nudIR = new System.Windows.Forms.NumericUpDown();
+            this.label17 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.nudRef)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPLR)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAli)).BeginInit();
@@ -78,42 +82,8 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIR)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEntrar.BorderRadius = 0;
-            this.btnEntrar.ButtonText = "        GERAR";
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEntrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEntrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Iconimage")));
-            this.btnEntrar.Iconimage_right = null;
-            this.btnEntrar.Iconimage_right_Selected = null;
-            this.btnEntrar.Iconimage_Selected = null;
-            this.btnEntrar.IconMarginLeft = 0;
-            this.btnEntrar.IconMarginRight = 0;
-            this.btnEntrar.IconRightVisible = true;
-            this.btnEntrar.IconRightZoom = 0D;
-            this.btnEntrar.IconVisible = true;
-            this.btnEntrar.IconZoom = 90D;
-            this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(503, 502);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEntrar.selected = false;
-            this.btnEntrar.Size = new System.Drawing.Size(181, 43);
-            this.btnEntrar.TabIndex = 123;
-            this.btnEntrar.Text = "        GERAR";
-            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntrar.Textcolor = System.Drawing.Color.White;
-            this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // label7
             // 
@@ -131,7 +101,7 @@
             // cboID
             // 
             this.cboID.FormattingEnabled = true;
-            this.cboID.Location = new System.Drawing.Point(321, 150);
+            this.cboID.Location = new System.Drawing.Point(259, 58);
             this.cboID.Name = "cboID";
             this.cboID.Size = new System.Drawing.Size(192, 21);
             this.cboID.TabIndex = 133;
@@ -417,7 +387,7 @@
             this.label15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label15.Location = new System.Drawing.Point(62, 481);
+            this.label15.Location = new System.Drawing.Point(62, 509);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(133, 20);
             this.label15.TabIndex = 166;
@@ -443,7 +413,7 @@
             this.lblLiquido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLiquido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLiquido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblLiquido.Location = new System.Drawing.Point(272, 481);
+            this.lblLiquido.Location = new System.Drawing.Point(272, 509);
             this.lblLiquido.Name = "lblLiquido";
             this.lblLiquido.Size = new System.Drawing.Size(19, 20);
             this.lblLiquido.TabIndex = 172;
@@ -455,10 +425,11 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.lblMinimizar);
             this.panel1.Controls.Add(this.lblSair);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(806, 28);
+            this.panel1.Size = new System.Drawing.Size(806, 30);
             this.panel1.TabIndex = 308;
             // 
             // lblMinimizar
@@ -496,7 +467,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(286, 46);
+            this.label1.Location = new System.Drawing.Point(289, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(245, 20);
             this.label1.TabIndex = 309;
@@ -505,8 +476,8 @@
             // imgFoto
             // 
             this.imgFoto.BackColor = System.Drawing.Color.Transparent;
-            this.imgFoto.Image = global::WindowsFormsApp15.Properties.Resources.collaborator_male;
-            this.imgFoto.Location = new System.Drawing.Point(573, 122);
+            this.imgFoto.Image = ((System.Drawing.Image)(resources.GetObject("imgFoto.Image")));
+            this.imgFoto.Location = new System.Drawing.Point(511, 30);
             this.imgFoto.Name = "imgFoto";
             this.imgFoto.Size = new System.Drawing.Size(126, 112);
             this.imgFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -518,8 +489,10 @@
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.cboMes);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.imgFoto);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(61, 91);
+            this.groupBox1.Controls.Add(this.cboID);
+            this.groupBox1.Location = new System.Drawing.Point(66, 46);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(673, 164);
             this.groupBox1.TabIndex = 312;
@@ -554,11 +527,92 @@
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(207, 95);
+            this.label5.Location = new System.Drawing.Point(207, 98);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(47, 20);
             this.label5.TabIndex = 170;
             this.label5.Text = "Mês:";
+            // 
+            // btnEntrar
+            // 
+            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnEntrar.BorderRadius = 0;
+            this.btnEntrar.ButtonText = "        GERAR";
+            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEntrar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnEntrar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnEntrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Iconimage")));
+            this.btnEntrar.Iconimage_right = null;
+            this.btnEntrar.Iconimage_right_Selected = null;
+            this.btnEntrar.Iconimage_Selected = null;
+            this.btnEntrar.IconMarginLeft = 0;
+            this.btnEntrar.IconMarginRight = 0;
+            this.btnEntrar.IconRightVisible = true;
+            this.btnEntrar.IconRightZoom = 0D;
+            this.btnEntrar.IconVisible = true;
+            this.btnEntrar.IconZoom = 90D;
+            this.btnEntrar.IsTab = false;
+            this.btnEntrar.Location = new System.Drawing.Point(503, 502);
+            this.btnEntrar.Name = "btnEntrar";
+            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
+            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnEntrar.selected = false;
+            this.btnEntrar.Size = new System.Drawing.Size(181, 43);
+            this.btnEntrar.TabIndex = 123;
+            this.btnEntrar.Text = "        GERAR";
+            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEntrar.Textcolor = System.Drawing.Color.White;
+            this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
+            // 
+            // dtpPagamento
+            // 
+            this.dtpPagamento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpPagamento.Location = new System.Drawing.Point(456, 227);
+            this.dtpPagamento.Name = "dtpPagamento";
+            this.dtpPagamento.Size = new System.Drawing.Size(120, 20);
+            this.dtpPagamento.TabIndex = 313;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label16.Location = new System.Drawing.Point(255, 228);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(169, 20);
+            this.label16.TabIndex = 314;
+            this.label16.Text = "Data de Pagamento";
+            // 
+            // nudIR
+            // 
+            this.nudIR.Location = new System.Drawing.Point(264, 446);
+            this.nudIR.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.nudIR.Name = "nudIR";
+            this.nudIR.Size = new System.Drawing.Size(120, 20);
+            this.nudIR.TabIndex = 316;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label17.Location = new System.Drawing.Point(62, 443);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(162, 20);
+            this.label17.TabIndex = 315;
+            this.label17.Text = "Imposto de Renda:";
             // 
             // nudSaude
             // 
@@ -567,9 +621,11 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(806, 555);
-            this.Controls.Add(this.imgFoto);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(806, 575);
+            this.Controls.Add(this.nudIR);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.dtpPagamento);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblLiquido);
             this.Controls.Add(this.nudDescontos);
@@ -595,7 +651,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.cboID);
             this.Controls.Add(this.btnEntrar);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -617,6 +672,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgFoto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudIR)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,5 +714,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboMes;
+        private System.Windows.Forms.DateTimePicker dtpPagamento;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.NumericUpDown nudIR;
+        private System.Windows.Forms.Label label17;
     }
 }

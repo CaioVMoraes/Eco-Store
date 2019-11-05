@@ -168,7 +168,29 @@ namespace WindowsFormsApp15.Telas
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
+            Model.tb_folhapagamento model = new Model.tb_folhapagamento();
+            Business.FolhaDePagamentoBusiness business = new Business.FolhaDePagamentoBusiness();
 
+            tb_funcionario comboFuncionario = cboID.SelectedItem as tb_funcionario;
+
+            model.dt_pagamento = dtpPagamento.Value.Date;
+            model.id_funcionario = comboFuncionario.id_funcionario;
+            model.vl_fgts = nudFGTS.Value;
+            model.vl_gratificacoes = nudGratificacoes.Value;
+            model.vl_inss = nudINSS.Value;
+            model.vl_ir = nudIR.Value;
+            model.vl_planoOdonto = nudDentario.Value;
+            model.vl_planoSaude = nudPlanosaude.Value;
+            model.vl_plr = nudPLR.Value;
+            model.vl_salarioFamilia = nudFamilia.Value;
+            model.vl_valeAlimentacao = nudAli.Value;
+            model.vl_valeRefeicao = nudRef.Value;
+            model.vl_valeTransporte = nudTransporte.Value;
+            model.vl_liquido = Convert.ToDecimal(lblLiquido.Text);
+
+            business.InserirFolha(model);
+
+            MessageBox.Show("Folha cadastrada com sucesso");
         }
     }
 }
