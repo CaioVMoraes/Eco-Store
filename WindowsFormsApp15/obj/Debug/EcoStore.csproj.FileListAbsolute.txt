@@ -376,3 +376,4 @@ C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Microsoft.Ident
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Twilio.xml
+C:\Users\Caio\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csprojResolveAssemblyReference.cache

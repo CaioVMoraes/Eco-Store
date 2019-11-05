@@ -30,6 +30,24 @@ namespace WindowsFormsApp15.Telas
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            if(Autenticacao.Usuario.UsuarioLogado.NivelAcesso == "Baixo")
+            {
+                tabControl1.TabPages.Remove(tabPage1);
+                tabControl1.TabPages.Remove(tabPage2);
+                tabControl1.TabPages.Remove(tabPage3);
+            }
+
+            if (Autenticacao.Usuario.UsuarioLogado.NivelAcesso == "Médio")
+            {
+                tabControl1.TabPages.Remove(tabPage1);
+                tabControl1.TabPages.Remove(tabPage2);
+            }
+
+            if (Autenticacao.Usuario.UsuarioLogado.NivelAcesso == "Alto")
+            {
+                tabControl1.TabPages.Remove(tabPage1);
+            }
+
             lblNome.Text = Autenticacao.Usuario.UsuarioLogado.Nome;
 
             Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
@@ -231,6 +249,48 @@ namespace WindowsFormsApp15.Telas
         private void button4_Click(object sender, EventArgs e)
         {
             Telas.Usuario.frmConsultarUsuario tela = new Usuario.frmConsultarUsuario();
+            tela.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Telas.Estoque.frmConsultarEstoque tela = new Estoque.frmConsultarEstoque();
+            tela.Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Telas.frmConsultarProduto tela = new frmConsultarProduto();
+            tela.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Telas.frmFluxoCaixa Caixa = new frmFluxoCaixa();
+            Caixa.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Telas.Caixa.frmConsultarVenda tela = new Caixa.frmConsultarVenda();
+            tela.Show();
+        }
+
+        private void btnDespesasEGastos_Click_1(object sender, EventArgs e)
+        {
+            Telas.Fluxo_de_Caixa.frmFluxoDeCaixa tela = new Fluxo_de_Caixa.frmFluxoDeCaixa();
+            tela.Show();
+        }
+
+        private void btnCadastrarFornecedor_Click_1(object sender, EventArgs e)
+        {
+            Telas.frmCadastroFornecedores tela = new frmCadastroFornecedores();
+            tela.Show();
+        }
+
+        private void btnConsultarFornecedor_Click_1(object sender, EventArgs e)
+        {
+            Telas.frmConsultarFornecedor tela = new frmConsultarFornecedor();
             tela.Show();
         }
     }

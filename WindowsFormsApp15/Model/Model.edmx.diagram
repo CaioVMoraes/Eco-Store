@@ -4,23 +4,23 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="33dc28096c8642308cbb416b50b20944" Name="Diagram1" ZoomLevel="143">
-        <EntityTypeShape EntityType="ecostorModel.tb_cliente" Width="1.5" PointX="3" PointY="17.5" />
-        <EntityTypeShape EntityType="ecostorModel.tb_compra" Width="1.5" PointX="3" PointY="27.125" />
-        <EntityTypeShape EntityType="ecostorModel.tb_compra_item" Width="1.5" PointX="5.25" PointY="23" />
-        <EntityTypeShape EntityType="ecostorModel.tb_controledeponto" Width="1.5" PointX="3" PointY="9.125" />
-        <EntityTypeShape EntityType="ecostorModel.tb_despesa" Width="1.5" PointX="0.75" PointY="1.75" />
-        <EntityTypeShape EntityType="ecostorModel.tb_estoque" Width="1.5" PointX="5.25" PointY="0.75" />
-        <EntityTypeShape EntityType="ecostorModel.tb_folhapagamento" Width="1.5" PointX="3" PointY="4.375" />
-        <EntityTypeShape EntityType="ecostorModel.tb_fornecedor" Width="1.5" PointX="0.75" PointY="22.375" />
-        <EntityTypeShape EntityType="ecostorModel.tb_funcionario" Width="1.5" PointX="0.75" PointY="8.25" />
-        <EntityTypeShape EntityType="ecostorModel.tb_log" Width="1.5" PointX="5.25" PointY="18.5" />
-        <EntityTypeShape EntityType="ecostorModel.tb_produto" Width="1.5" PointX="3" PointY="22.625" />
-        <EntityTypeShape EntityType="ecostorModel.tb_recuperacao" Width="1.5" PointX="5.25" PointY="15.625" />
-        <EntityTypeShape EntityType="ecostorModel.tb_usuario" Width="1.5" PointX="3" PointY="13.5" />
-        <EntityTypeShape EntityType="ecostorModel.tb_venda" Width="1.5" PointX="5.25" PointY="11.5" />
-        <EntityTypeShape EntityType="ecostorModel.tb_venda_item" Width="1.5" PointX="7.5" PointY="11.875" />
-        <EntityTypeShape EntityType="ecostorModel.vw_fluxocaixa" Width="1.5" PointX="5.75" PointY="3.75" />
+      <Diagram DiagramId="33dc28096c8642308cbb416b50b20944" Name="Diagram1" ZoomLevel="155">
+        <EntityTypeShape EntityType="ecostorModel.tb_cliente" Width="1.5" PointX="6" PointY="6.25" />
+        <EntityTypeShape EntityType="ecostorModel.tb_compra" Width="1.5" PointX="6" PointY="22.75" />
+        <EntityTypeShape EntityType="ecostorModel.tb_compra_item" Width="1.5" PointX="8.25" PointY="16.625" />
+        <EntityTypeShape EntityType="ecostorModel.tb_controledeponto" Width="1.5" PointX="3" PointY="3" />
+        <EntityTypeShape EntityType="ecostorModel.tb_despesa" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ecostorModel.tb_estoque" Width="1.5" PointX="8.25" PointY="19.5" />
+        <EntityTypeShape EntityType="ecostorModel.tb_folhapagamento" Width="1.5" PointX="3" PointY="5.875" />
+        <EntityTypeShape EntityType="ecostorModel.tb_fornecedor" Width="1.5" PointX="3.75" PointY="19" />
+        <EntityTypeShape EntityType="ecostorModel.tb_funcionario" Width="1.5" PointX="0.75" PointY="6.625" />
+        <EntityTypeShape EntityType="ecostorModel.tb_log" Width="1.5" PointX="5.25" PointY="10.25" />
+        <EntityTypeShape EntityType="ecostorModel.tb_produto" Width="1.5" PointX="6" PointY="19.25" />
+        <EntityTypeShape EntityType="ecostorModel.tb_recuperacao" Width="1.5" PointX="5.25" PointY="15.875" />
+        <EntityTypeShape EntityType="ecostorModel.tb_usuario" Width="1.5" PointX="3" PointY="11.25" />
+        <EntityTypeShape EntityType="ecostorModel.tb_venda" Width="1.5" PointX="8.25" PointY="11.375" />
+        <EntityTypeShape EntityType="ecostorModel.tb_venda_item" Width="1.5" PointX="10.5" PointY="11.625" />
+        <EntityTypeShape EntityType="ecostorModel.vw_fluxocaixa" Width="1.5" PointX="0.75" PointY="0.75" />
         <AssociationConnector Association="ecostorModel.tb_venda_ibfk_2" />
         <AssociationConnector Association="ecostorModel.tb_compra_item_ibfk_1" />
         <AssociationConnector Association="ecostorModel.tb_compra_item_ibfk_2" />

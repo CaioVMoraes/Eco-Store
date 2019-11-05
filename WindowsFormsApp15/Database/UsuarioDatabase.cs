@@ -59,12 +59,14 @@ namespace WindowsFormsApp15.Database
         }
         public void RemoverUsuario(int id)
         {
-            tb_usuario deletar = db.tb_usuario.FirstOrDefault(x => x.id_usuario == x.id_usuario);
+            tb_usuario deletar = db.tb_usuario.FirstOrDefault(x => x.id_usuario == id);
             db.tb_usuario.Remove(deletar);
+
+            db.SaveChanges();
         }
         public void alterarusuario(tb_usuario modelo)
         {
-            tb_usuario alterar = db.tb_usuario.FirstOrDefault(x => x.id_usuario == x.id_usuario);
+            tb_usuario alterar = db.tb_usuario.FirstOrDefault(x => x.id_usuario == modelo.id_usuario);
 
             alterar.nm_usuario = modelo.nm_usuario;
             alterar.id_funcionario = modelo.id_funcionario;

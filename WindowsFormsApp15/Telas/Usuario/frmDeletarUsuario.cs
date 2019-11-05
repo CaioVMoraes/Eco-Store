@@ -57,20 +57,6 @@ namespace WindowsFormsApp15.Telas.Usuario
             cboNivel.Text = model.nv_nivelAcesso;
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            Business.UsuarioBusiness business = new Business.UsuarioBusiness();
-
-            int id = Convert.ToInt32(txtID.Text);
-
-            tb_usuario model = business.ConsultarPorID(id);
-
-            txtID.Text = model.id_usuario.ToString();
-            txtUsuario.Text = model.nm_usuario;
-            cboFuncionario.Text = model.tb_funcionario.nm_funcionario;
-            cboNivel.Text = model.nv_nivelAcesso;
-        }
-
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             Business.UsuarioBusiness business = new Business.UsuarioBusiness();

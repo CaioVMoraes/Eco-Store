@@ -59,15 +59,11 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.dtpContrat = new Bunifu.Framework.UI.BunifuDatepicker();
             this.dtpNascimento = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.txtCelular = new System.Windows.Forms.TextBox();
-            this.txtTelefone = new System.Windows.Forms.TextBox();
             this.cboGen = new System.Windows.Forms.ComboBox();
-            this.nudSalario = new System.Windows.Forms.NumericUpDown();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.txtRg = new System.Windows.Forms.MaskedTextBox();
             this.txtNumRes = new System.Windows.Forms.TextBox();
             this.txtComplemento = new System.Windows.Forms.TextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
             this.txtEndereço = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblErro = new System.Windows.Forms.Label();
@@ -81,17 +77,21 @@
             this.btnCadastrarFuncionario = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtImagem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtCargo = new System.Windows.Forms.TextBox();
             this.txtUF = new System.Windows.Forms.TextBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.nudSalario = new System.Windows.Forms.NumericUpDown();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
             this.SuspendLayout();
             // 
             // label12
@@ -495,24 +495,6 @@
             this.dtpNascimento.TabIndex = 295;
             this.dtpNascimento.Value = new System.DateTime(2019, 9, 25, 23, 52, 13, 816);
             // 
-            // txtCelular
-            // 
-            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCelular.Location = new System.Drawing.Point(539, 312);
-            this.txtCelular.MaxLength = 20;
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(148, 22);
-            this.txtCelular.TabIndex = 311;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefone.Location = new System.Drawing.Point(539, 347);
-            this.txtTelefone.MaxLength = 15;
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(148, 22);
-            this.txtTelefone.TabIndex = 310;
-            // 
             // cboGen
             // 
             this.cboGen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -521,24 +503,10 @@
             this.cboGen.Items.AddRange(new object[] {
             "Masculino",
             "Feminino"});
-            this.cboGen.Location = new System.Drawing.Point(539, 244);
+            this.cboGen.Location = new System.Drawing.Point(543, 244);
             this.cboGen.Name = "cboGen";
             this.cboGen.Size = new System.Drawing.Size(148, 24);
             this.cboGen.TabIndex = 308;
-            // 
-            // nudSalario
-            // 
-            this.nudSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudSalario.Location = new System.Drawing.Point(515, 181);
-            this.nudSalario.Maximum = new decimal(new int[] {
-            1316134912,
-            2328,
-            0,
-            0});
-            this.nudSalario.Name = "nudSalario";
-            this.nudSalario.Size = new System.Drawing.Size(148, 22);
-            this.nudSalario.TabIndex = 307;
-            this.nudSalario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // txtCpf
             // 
@@ -575,15 +543,6 @@
             this.txtComplemento.Name = "txtComplemento";
             this.txtComplemento.Size = new System.Drawing.Size(328, 22);
             this.txtComplemento.TabIndex = 329;
-            // 
-            // txtCep
-            // 
-            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.Location = new System.Drawing.Point(234, 538);
-            this.txtCep.MaxLength = 20;
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(326, 22);
-            this.txtCep.TabIndex = 328;
             // 
             // txtEndereço
             // 
@@ -754,23 +713,44 @@
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.txtUF);
+            this.groupBox2.Controls.Add(this.txtCep);
             this.groupBox2.Location = new System.Drawing.Point(24, 472);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(574, 237);
             this.groupBox2.TabIndex = 332;
             this.groupBox2.TabStop = false;
             // 
+            // txtUF
+            // 
+            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUF.Location = new System.Drawing.Point(210, 133);
+            this.txtUF.MaxLength = 2;
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(326, 22);
+            this.txtUF.TabIndex = 334;
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.txtTelefone);
             this.groupBox3.Controls.Add(this.txtCargo);
-            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.txtCelular);
             this.groupBox3.Controls.Add(this.nudSalario);
+            this.groupBox3.Controls.Add(this.label3);
             this.groupBox3.Location = new System.Drawing.Point(24, 220);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(697, 230);
             this.groupBox3.TabIndex = 333;
             this.groupBox3.TabStop = false;
+            // 
+            // txtCargo
+            // 
+            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargo.Location = new System.Drawing.Point(519, 61);
+            this.txtCargo.MaxLength = 20;
+            this.txtCargo.Name = "txtCargo";
+            this.txtCargo.Size = new System.Drawing.Size(148, 22);
+            this.txtCargo.TabIndex = 334;
             // 
             // label3
             // 
@@ -785,23 +765,44 @@
             this.label3.TabIndex = 334;
             this.label3.Text = "Salario\r\nPor Hora:";
             // 
-            // txtCargo
+            // txtTelefone
             // 
-            this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCargo.Location = new System.Drawing.Point(515, 61);
-            this.txtCargo.MaxLength = 20;
-            this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(148, 22);
-            this.txtCargo.TabIndex = 334;
+            this.txtTelefone.Location = new System.Drawing.Point(519, 130);
+            this.txtTelefone.Mask = "(00)0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(148, 20);
+            this.txtTelefone.TabIndex = 340;
             // 
-            // txtUF
+            // txtCelular
             // 
-            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUF.Location = new System.Drawing.Point(210, 133);
-            this.txtUF.MaxLength = 2;
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(326, 22);
-            this.txtUF.TabIndex = 334;
+            this.txtCelular.Location = new System.Drawing.Point(519, 95);
+            this.txtCelular.Mask = "(00)00000-0000";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(148, 20);
+            this.txtCelular.TabIndex = 339;
+            // 
+            // nudSalario
+            // 
+            this.nudSalario.DecimalPlaces = 2;
+            this.nudSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nudSalario.Location = new System.Drawing.Point(519, 180);
+            this.nudSalario.Maximum = new decimal(new int[] {
+            276447231,
+            23283,
+            0,
+            0});
+            this.nudSalario.Name = "nudSalario";
+            this.nudSalario.Size = new System.Drawing.Size(148, 22);
+            this.nudSalario.TabIndex = 337;
+            this.nudSalario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtCep
+            // 
+            this.txtCep.Location = new System.Drawing.Point(209, 66);
+            this.txtCep.Mask = "00000-000";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(327, 20);
+            this.txtCep.TabIndex = 338;
             // 
             // frmAlterarFuncionario
             // 
@@ -814,7 +815,6 @@
             this.Controls.Add(this.txtImagem);
             this.Controls.Add(this.txtNumRes);
             this.Controls.Add(this.txtComplemento);
-            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.txtEndereço);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.lblErro);
@@ -828,8 +828,6 @@
             this.Controls.Add(this.btnCadastrarFuncionario);
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtRg);
-            this.Controls.Add(this.txtCelular);
-            this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.cboGen);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNome);
@@ -866,11 +864,11 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -907,15 +905,11 @@
         private System.Windows.Forms.TextBox txtNome;
         private Bunifu.Framework.UI.BunifuDatepicker dtpContrat;
         private Bunifu.Framework.UI.BunifuDatepicker dtpNascimento;
-        private System.Windows.Forms.TextBox txtCelular;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.ComboBox cboGen;
-        private System.Windows.Forms.NumericUpDown nudSalario;
         private System.Windows.Forms.MaskedTextBox txtCpf;
         private System.Windows.Forms.MaskedTextBox txtRg;
         private System.Windows.Forms.TextBox txtNumRes;
         private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.TextBox txtEndereço;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lblErro;
@@ -933,5 +927,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.TextBox txtUF;
+        private System.Windows.Forms.MaskedTextBox txtCep;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.NumericUpDown nudSalario;
     }
 }

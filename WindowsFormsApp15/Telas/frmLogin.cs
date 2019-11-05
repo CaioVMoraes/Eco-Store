@@ -59,7 +59,7 @@ namespace WindowsFormsApp15
                 Autenticacao.Usuario.UsuarioLogado.Salario = funcionario.vl_salarioPorHora;
                 Autenticacao.Usuario.UsuarioLogado.DataContratacao = funcionario.dt_contratacao;
                 Autenticacao.Usuario.UsuarioLogado.Foto = funcionario.img_foto;
-
+                Autenticacao.Usuario.UsuarioLogado.NivelAcesso = modeloUsuario.nv_nivelAcesso;
 
                 if (login == true)
                 {

@@ -60,7 +60,7 @@
           </Key>
           <Property Name="id_estoque" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_produto" Type="int" Nullable="false" />
-          <Property Name="dt_entrada" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="dt_entrada" Type="date" Nullable="false" />
           <Property Name="bt_vendido" Type="bool" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_folhapagamento">
@@ -171,7 +171,7 @@
           <Property Name="id_venda" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_usuario" Type="int" Nullable="false" />
           <Property Name="id_cliente" Type="int" />
-          <Property Name="dt_saida" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="dt_saida" Type="date" Nullable="false" />
           <Property Name="vl_valorTotal" Type="decimal" Precision="10" Scale="2" Nullable="false" />
         </EntityType>
         <EntityType Name="tb_venda_item">
@@ -189,7 +189,7 @@ warning 6002: The table/view 'def.db_a4e776_ecostor.vw_fluxocaixa' does not have
             <PropertyRef Name="dt_pagamento" />
             <PropertyRef Name="tp_operacao" />
           </Key>
-          <Property Name="dt_pagamento" Type="datetime" Precision="0" Nullable="false" />
+          <Property Name="dt_pagamento" Type="date" Nullable="false" />
           <Property Name="vl_operacao" Type="decimal" Precision="54" Scale="2" />
           <Property Name="tp_operacao" Type="varchar" MaxLength="7" Nullable="false" />
         </EntityType>

@@ -28,7 +28,7 @@ namespace WindowsFormsApp15.Business
 
         public List<tb_folhapagamento> ConsultarFolha(int id)
         {
-            List<tb_folhapagamento> lista = db.COnsultarFolha(id);
+            List<tb_folhapagamento> lista = db.ConsultarFolha(id);
 
             return lista;
         }

@@ -24,6 +24,8 @@ namespace WindowsFormsApp15.Telas.Usuario
         public frmAlterarUsuario()
         {
             InitializeComponent();
+
+            this.CarregarFuncionario();
         }
 
         public void CarregarTela(tb_usuario model)
@@ -53,6 +55,7 @@ namespace WindowsFormsApp15.Telas.Usuario
 
             tb_funcionario comboFuncionario = cboFuncionario.SelectedItem as tb_funcionario;
 
+            model.id_usuario = Convert.ToInt32(txtID.Text);
             model.nm_usuario = txtUsuario.Text;
             model.id_funcionario = comboFuncionario.id_funcionario;
             model.nv_nivelAcesso = cboNivel.Text;
@@ -60,7 +63,7 @@ namespace WindowsFormsApp15.Telas.Usuario
             business.alterarusuario(model);
 
             MessageBox.Show("Alterado com sucesso");
-            MessageBox.Show("O aplicativo será reiniciado");
+            MessageBox.Show("O programa será reiniciado");
 
             Application.Restart();
         }
