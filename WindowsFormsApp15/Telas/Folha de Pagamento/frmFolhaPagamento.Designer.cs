@@ -239,6 +239,7 @@
             // 
             // nudRef
             // 
+            this.nudRef.DecimalPlaces = 2;
             this.nudRef.Location = new System.Drawing.Point(634, 349);
             this.nudRef.Maximum = new decimal(new int[] {
             999999999,
@@ -252,6 +253,7 @@
             // 
             // nudPLR
             // 
+            this.nudPLR.DecimalPlaces = 2;
             this.nudPLR.Location = new System.Drawing.Point(264, 311);
             this.nudPLR.Maximum = new decimal(new int[] {
             999999999,
@@ -265,6 +267,7 @@
             // 
             // nudAli
             // 
+            this.nudAli.DecimalPlaces = 2;
             this.nudAli.Location = new System.Drawing.Point(634, 316);
             this.nudAli.Maximum = new decimal(new int[] {
             999999999,
@@ -278,6 +281,7 @@
             // 
             // nudFamilia
             // 
+            this.nudFamilia.DecimalPlaces = 2;
             this.nudFamilia.Location = new System.Drawing.Point(634, 282);
             this.nudFamilia.Maximum = new decimal(new int[] {
             999999999,
@@ -291,6 +295,7 @@
             // 
             // nudTransporte
             // 
+            this.nudTransporte.DecimalPlaces = 2;
             this.nudTransporte.Location = new System.Drawing.Point(634, 384);
             this.nudTransporte.Maximum = new decimal(new int[] {
             999999999,
@@ -304,6 +309,7 @@
             // 
             // nudGratificacoes
             // 
+            this.nudGratificacoes.DecimalPlaces = 2;
             this.nudGratificacoes.Location = new System.Drawing.Point(264, 282);
             this.nudGratificacoes.Maximum = new decimal(new int[] {
             999999999,
@@ -317,6 +323,7 @@
             // 
             // nudFGTS
             // 
+            this.nudFGTS.DecimalPlaces = 2;
             this.nudFGTS.Location = new System.Drawing.Point(264, 379);
             this.nudFGTS.Maximum = new decimal(new int[] {
             999999999,
@@ -330,6 +337,7 @@
             // 
             // nudINSS
             // 
+            this.nudINSS.DecimalPlaces = 2;
             this.nudINSS.Location = new System.Drawing.Point(264, 346);
             this.nudINSS.Maximum = new decimal(new int[] {
             999999999,
@@ -343,6 +351,7 @@
             // 
             // nudPlanosaude
             // 
+            this.nudPlanosaude.DecimalPlaces = 2;
             this.nudPlanosaude.Location = new System.Drawing.Point(264, 412);
             this.nudPlanosaude.Maximum = new decimal(new int[] {
             999999999,
@@ -356,6 +365,7 @@
             // 
             // nudDentario
             // 
+            this.nudDentario.DecimalPlaces = 2;
             this.nudDentario.Location = new System.Drawing.Point(634, 415);
             this.nudDentario.Maximum = new decimal(new int[] {
             999999999,
@@ -395,6 +405,7 @@
             // 
             // nudDescontos
             // 
+            this.nudDescontos.DecimalPlaces = 2;
             this.nudDescontos.Location = new System.Drawing.Point(634, 446);
             this.nudDescontos.Maximum = new decimal(new int[] {
             999999999,
@@ -591,6 +602,7 @@
             // 
             // nudIR
             // 
+            this.nudIR.DecimalPlaces = 2;
             this.nudIR.Location = new System.Drawing.Point(264, 446);
             this.nudIR.Maximum = new decimal(new int[] {
             999999999,

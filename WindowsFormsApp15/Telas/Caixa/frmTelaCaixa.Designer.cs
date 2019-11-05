@@ -42,7 +42,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listProdutos = new System.Windows.Forms.ListBox();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -243,15 +243,15 @@
             this.label4.TabIndex = 46;
             this.label4.Text = "Valor (R$)";
             // 
-            // listBox1
+            // listProdutos
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 20;
-            this.listBox1.Location = new System.Drawing.Point(742, 294);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(309, 184);
-            this.listBox1.TabIndex = 78;
+            this.listProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.listProdutos.FormattingEnabled = true;
+            this.listProdutos.ItemHeight = 20;
+            this.listProdutos.Location = new System.Drawing.Point(742, 294);
+            this.listProdutos.Name = "listProdutos";
+            this.listProdutos.Size = new System.Drawing.Size(309, 184);
+            this.listProdutos.TabIndex = 78;
             // 
             // dgvProdutos
             // 
@@ -515,7 +515,7 @@
             this.Controls.Add(this.label15);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listProdutos);
             this.Controls.Add(this.btnFinalizarPedido);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox3);
@@ -562,7 +562,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listProdutos;
         private System.Windows.Forms.DataGridView dgvProdutos;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label4;

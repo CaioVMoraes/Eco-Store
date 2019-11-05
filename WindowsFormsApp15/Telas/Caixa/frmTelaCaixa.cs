@@ -34,7 +34,7 @@ namespace WindowsFormsApp15.Telas
         {
             try
             {
-                Model.tb_produto produto = listBox1.SelectedItem as Model.tb_produto;
+                Model.tb_produto produto = listProdutos.SelectedItem as Model.tb_produto;
 
                 List<Model.tb_estoque> estoque = estoqueBusiness.ConsultarEstoqueId(produto.id_produto);
 
@@ -86,8 +86,8 @@ namespace WindowsFormsApp15.Telas
 
                 List<tb_produto> lista = produtoBusiness.ConsultarTodosProdutos();
 
-                listBox1.DisplayMember = nameof(tb_produto.nm_produto);
-                listBox1.DataSource = lista;
+                listProdutos.DisplayMember = nameof(tb_produto.nm_produto);
+                listProdutos.DataSource = lista;
 
                 Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 

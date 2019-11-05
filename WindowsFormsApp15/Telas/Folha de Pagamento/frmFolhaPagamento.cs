@@ -48,8 +48,9 @@ namespace WindowsFormsApp15.Telas
             decimal VT = nudTransporte.Value;
             decimal planodent = nudDentario.Value;
             decimal bruto = nudDescontos.Value;
+            decimal IR = nudIR.Value;
 
-            lblLiquido.Text = (bruto + gratificaçoes - Plr - INSS - FGTS - planosaude - salariofami - VA - VR - VT - planodent).ToString();
+            lblLiquido.Text = (bruto + gratificaçoes - Plr - INSS - FGTS - planosaude - salariofami - IR - VA - VR - VT - planodent).ToString();
         }
 
         private void lblMinimizar_Click(object sender, EventArgs e)

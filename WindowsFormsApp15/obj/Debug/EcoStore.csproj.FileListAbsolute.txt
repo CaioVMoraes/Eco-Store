@@ -230,7 +230,6 @@ C:\Users\infob04\Source\Repos\eco-store5\WindowsFormsApp15\obj\Debug\WindowsForm
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Recuperação_de_Senha.ConfirmarEmail.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Folha_de_Pagamento.frmConsultarFolha.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Usuario_.frmAlterarSenha.resources
-C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Whatsapp.resources
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Microsoft.IdentityModel.Logging.dll
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Microsoft.IdentityModel.Tokens.dll
 C:\Users\infob02\Source\Repos\eco-store\WindowsFormsApp15\bin\Debug\Newtonsoft.Json.dll
