@@ -68,8 +68,6 @@ namespace WindowsFormsApp15.Telas
         
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            try
-            {
                 tb_fornecedor comboFornecedor = cboFornecedor.SelectedItem as tb_fornecedor;
                 Model.tb_produto modelo = new Model.tb_produto();
                 tb_produto produto = business.Listar(Convert.ToInt32(txtIdProduto.Text));
@@ -98,12 +96,9 @@ namespace WindowsFormsApp15.Telas
 
                 business.AlterarProduto(modelo);
 
-                MessageBox.Show("Cadastrado com sucesso");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+                MessageBox.Show("Alterado com sucesso");
+            
+           
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)

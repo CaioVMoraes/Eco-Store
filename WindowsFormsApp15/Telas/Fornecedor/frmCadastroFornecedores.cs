@@ -34,29 +34,38 @@ namespace WindowsFormsApp15.Telas
 
         private void btnEntrar_Click_1(object sender, EventArgs e)
         {
-            Business.FornecedorBusiness business = new Business.FornecedorBusiness();
 
-            Model.tb_fornecedor modelo = new Model.tb_fornecedor();
+            try
+            {
 
-            //*Informações básicas*
+                Business.FornecedorBusiness business = new Business.FornecedorBusiness();
 
-            modelo.ds_celular = txtCelular.Text;
-            modelo.ds_cnpj = txtCNPJ.Text;
-            modelo.nm_empresa = txtEmpresa.Text;
-            modelo.nm_fornecedor = txtNome.Text;
-            modelo.ds_telefone = txtTelefone.Text;
+                Model.tb_fornecedor modelo = new Model.tb_fornecedor();
 
-            //*Endereço*
+                //*Informações básicas*
 
-            modelo.ds_cep = txtCEP.Text;
-            modelo.ds_cidade = txtCidade.Text;
-            modelo.ds_complemento = txtComplemento.Text;
-            modelo.ds_endereco = txtEndereco.Text;
-            modelo.ds_UF = txtUF.Text;
+                modelo.ds_celular = txtCelular.Text;
+                modelo.ds_cnpj = txtCNPJ.Text;
+                modelo.nm_empresa = txtEmpresa.Text;
+                modelo.nm_fornecedor = txtNome.Text;
+                modelo.ds_telefone = txtTelefone.Text;
 
-            business.CadastrarFornecedor(modelo);
+                //*Endereço*
 
-            MessageBox.Show("Cadastrado com sucesso");
+                modelo.ds_cep = txtCEP.Text;
+                modelo.ds_cidade = txtCidade.Text;
+                modelo.ds_complemento = txtComplemento.Text;
+                modelo.ds_endereco = txtEndereco.Text;
+                modelo.ds_UF = txtUF.Text;
+
+                business.CadastrarFornecedor(modelo);
+
+                MessageBox.Show("Cadastrado com sucesso");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)

@@ -22,11 +22,11 @@ namespace WindowsFormsApp15.Business
             {
                 throw new ArgumentException("Nome do fornecedor inválido");
             }
-            if (modelo.ds_celular == string.Empty)
+            if (modelo.ds_celular.Length < 14)
             {
                 throw new ArgumentException("Nº de celular inválido");
             }
-            if (modelo.ds_cep == string.Empty)
+            if (modelo.ds_cep.Length < 8)
             {
                 throw new ArgumentException("CEP inválido");
             }
@@ -34,7 +34,7 @@ namespace WindowsFormsApp15.Business
             {
                 throw new ArgumentException("Cidade inválida");
             }
-            if (modelo.ds_cnpj == string.Empty)
+            if (modelo.ds_cnpj.Length < 18)
             {
                 throw new ArgumentException("CNPJ inválido");
             }
@@ -42,7 +42,7 @@ namespace WindowsFormsApp15.Business
             {
                 throw new ArgumentException("Endereço inválido");
             }
-            if (modelo.ds_telefone == string.Empty)
+            if (modelo.ds_telefone.Length < 14)
             {
                 throw new ArgumentException("Nº de telefone inválido");
             }
