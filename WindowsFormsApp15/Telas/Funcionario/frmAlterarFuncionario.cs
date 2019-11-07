@@ -116,11 +116,11 @@ namespace WindowsFormsApp15.Telas
             txtComplemento.Text = model.ds_complemento;
             txtNumRes.Text = model.ds_numeroCasa;
 
-            //Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+            Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 
-            //Image imagem = imageConverter.byteArrayToImage(model.img_foto);
+            Image imagem = imageConverter.byteArrayToImage(model.img_foto);
 
-            //picFoto.Image = imagem;
+            picFoto.Image = imagem;
         }
 
         private void btnCadastrarFuncionario_Click_1(object sender, EventArgs e)

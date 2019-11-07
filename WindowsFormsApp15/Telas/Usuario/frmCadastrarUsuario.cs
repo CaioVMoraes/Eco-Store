@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas
 {
@@ -23,16 +24,30 @@ namespace WindowsFormsApp15.Telas
         public frmCadastrarUsuario()
         {
             InitializeComponent();
+
+            this.CarregarFuncionario();
         }
 
         Model.tb_usuario model = new Model.tb_usuario();
         Business.UsuarioBusiness business = new Business.UsuarioBusiness();
 
+        private void CarregarFuncionario()
+        {
+            Business.FuncionarioBusiness business = new Business.FuncionarioBusiness();
+
+            List<tb_funcionario> lista = business.ConsultarFuncionario();
+
+            cboFuncionario.DisplayMember = nameof(tb_funcionario.nm_funcionario);
+            cboFuncionario.DataSource = lista;
+        }
+
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             try
             {
-                model.id_funcionario = Convert.ToInt32(txtFuncionario.Text);
+                tb_funcionario comboFuncionario = cboFuncionario.SelectedItem as tb_funcionario;
+
+                model.id_funcionario = comboFuncionario.id_funcionario;
                 model.nm_usuario = txtUsuario.Text;
                 model.ds_senha = txtSenha.Text;
                 string confirmar = txtConfirmar.Text;

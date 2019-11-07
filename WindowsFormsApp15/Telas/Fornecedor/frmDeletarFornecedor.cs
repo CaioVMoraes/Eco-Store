@@ -60,10 +60,13 @@ namespace WindowsFormsApp15.Telas.Fornecedor
         private void btnDeletar_Click(object sender, EventArgs e)
         {
             try
-            {         
+            {
                 int id = Convert.ToInt32(txtID.Text);
 
                 business.RemoverForncedor(id);
+
+                MessageBox.Show("Deletado com sucesso");
+                this.Close();
             }
             catch(Exception ex)
             {

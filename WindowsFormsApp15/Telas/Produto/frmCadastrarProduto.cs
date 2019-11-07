@@ -107,5 +107,10 @@ namespace WindowsFormsApp15.Telas
         {
             this.Close();
         }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            picProduto.Image = WindowsFormsApp15.Properties.Resources._860086;
+        }
     }
 }

@@ -141,22 +141,24 @@
             // 
             // btnLimpar
             // 
+            this.btnLimpar.BackColor = System.Drawing.SystemColors.Control;
             this.btnLimpar.Location = new System.Drawing.Point(864, 386);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
             this.btnLimpar.TabIndex = 247;
             this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnProcurar
             // 
+            this.btnProcurar.BackColor = System.Drawing.SystemColors.Control;
             this.btnProcurar.Location = new System.Drawing.Point(783, 386);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(75, 23);
             this.btnProcurar.TabIndex = 246;
             this.btnProcurar.Text = "Procurar";
-            this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // label8

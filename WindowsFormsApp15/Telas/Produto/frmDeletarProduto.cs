@@ -27,9 +27,10 @@ namespace WindowsFormsApp15.Telas
 
         public void CarregarTela(tb_produto model)
         {
-            txtIdProduto.Text = model.tb_fornecedor.nm_fornecedor;
+            txtIdProduto.Text = model.id_produto.ToString();
             txtNome.Text = model.nm_produto;
             txtCategoria.Text = model.ds_categoria;
+            txtIDFornecedor.Text = model.tb_fornecedor.nm_fornecedor;
             nudValor.Value = model.vl_valor;
 
             Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
@@ -58,11 +59,13 @@ namespace WindowsFormsApp15.Telas
         {
             try
             {
-                int id = Convert.ToInt32(txtIDFornecedor.Text);
+                int id = Convert.ToInt32(txtIdProduto.Text);
 
                 business.RemoverProduto(id);
 
                 MessageBox.Show("Deletado com Sucesso");
+
+                this.Close();
             }
             catch (Exception ex)
             {

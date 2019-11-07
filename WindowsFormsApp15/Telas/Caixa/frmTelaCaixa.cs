@@ -109,9 +109,11 @@ namespace WindowsFormsApp15.Telas
 
                 Model.tb_venda venda = new Model.tb_venda();
 
+                tb_cliente cliente = new tb_cliente();
+
                 if (txtCPFCliente.Visible == true)
                 {
-                    tb_cliente cliente = clienteBusiness.ListarClienteCpf(txtCPFCliente.Text);
+                    cliente = clienteBusiness.ListarClienteCpf(txtCPFCliente.Text);
                     venda.id_cliente = cliente.id_cliente;
                 }
                 else
@@ -122,9 +124,8 @@ namespace WindowsFormsApp15.Telas
                 venda.id_usuario = Autenticacao.Usuario.UsuarioLogado.IDUsuario;
                 venda.dt_saida = DateTime.Now;
 
-                tb_cliente clienteQTD = clienteBusiness.ListarClienteCpf(txtCPFCliente.Text);
                 
-                if(clienteQTD.qtd_frequenciaMensal == 100)
+                if(cliente.qtd_frequenciaMensal == 100)
                 {
                     venda.vl_valorTotal = Convert.ToDecimal(lblTotal.Text) / 2;
                 }
@@ -149,9 +150,9 @@ namespace WindowsFormsApp15.Telas
 
                     MessageBox.Show("Pedido finalizado com sucesso");
 
-                    clienteQTD.qtd_frequenciaMensal = clienteQTD.qtd_frequenciaMensal + 1;
+                    cliente.qtd_frequenciaMensal = cliente.qtd_frequenciaMensal + 1;
 
-                    clienteBusiness.AlterarCliente(clienteQTD);
+                    clienteBusiness.AlterarCliente(cliente);
 
                     dgvProdutos.DataSource = null;
 
@@ -255,6 +256,18 @@ namespace WindowsFormsApp15.Telas
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            Telas.Cliente.frmCadastrarCliente tela = new Cliente.frmCadastrarCliente();
+            tela.Show();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Telas.Cliente.frmCadastrarCliente tela = new Cliente.frmCadastrarCliente();
+            tela.Show();
         }
     }
 }

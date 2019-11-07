@@ -29,9 +29,10 @@ namespace WindowsFormsApp15.Telas
 
         public void CarregarTela(tb_produto model)
         {
-            txtIdProduto.Text = model.tb_fornecedor.nm_fornecedor;
+            txtIdProduto.Text = model.id_produto.ToString();
             txtNome.Text = model.nm_produto;
             txtCategoria.Text = model.ds_categoria;
+            cboFornecedor.Text = model.tb_fornecedor.nm_fornecedor;
             nudValor.Value = model.vl_valor;
 
             Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
@@ -68,10 +69,13 @@ namespace WindowsFormsApp15.Telas
         
         private void btnAlterar_Click(object sender, EventArgs e)
         {
+            try
+            {
                 tb_fornecedor comboFornecedor = cboFornecedor.SelectedItem as tb_fornecedor;
                 Model.tb_produto modelo = new Model.tb_produto();
                 tb_produto produto = business.Listar(Convert.ToInt32(txtIdProduto.Text));
 
+                modelo.id_produto = Convert.ToInt32(txtIdProduto.Text);
                 modelo.id_fornecedor = comboFornecedor.id_fornecedor;
                 modelo.ds_categoria = txtCategoria.Text;
                 modelo.nm_produto = txtNome.Text;
@@ -97,8 +101,11 @@ namespace WindowsFormsApp15.Telas
                 business.AlterarProduto(modelo);
 
                 MessageBox.Show("Alterado com sucesso");
-            
-           
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
@@ -138,6 +145,11 @@ namespace WindowsFormsApp15.Telas
         private void lblSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            imgImagem.Image = Properties.Resources._860086;
         }
     }
 }

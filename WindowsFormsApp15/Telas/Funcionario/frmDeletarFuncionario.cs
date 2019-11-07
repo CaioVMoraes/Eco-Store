@@ -101,6 +101,7 @@ namespace WindowsFormsApp15.Telas
                 business.RemoverFuncionario(id);
 
                 MessageBox.Show("Funcionario removido com sucesso");
+                this.Close();
             }
             catch (Exception ex)
             {

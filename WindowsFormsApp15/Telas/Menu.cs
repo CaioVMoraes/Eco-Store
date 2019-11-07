@@ -377,5 +377,65 @@ namespace WindowsFormsApp15.Telas
             Telas.Compra.frmConsultarCompra tela = new Compra.frmConsultarCompra();
             tela.Show();
         }
+
+        private void btnCadastrarFuncionario_Click_1(object sender, EventArgs e)
+        {
+            Telas.frmCadastrarFuncionario tela = new Telas.frmCadastrarFuncionario();
+            tela.Show();
+        }
+
+        private void btnConsultarFuncionario_Click_1(object sender, EventArgs e)
+        {
+            frmConsultarFuncionario tela = new Telas.frmConsultarFuncionario();
+            tela.Show();
+        }
+
+        private void btnCadastrarUsuario_Click_1(object sender, EventArgs e)
+        {
+            Telas.frmCadastrarUsuario tela = new Telas.frmCadastrarUsuario();
+            tela.Show();
+        }
+
+        private void btnConsultarUsuario_Click_1(object sender, EventArgs e)
+        {
+            Telas.Usuario.frmConsultarUsuario tela = new Usuario.frmConsultarUsuario();
+            tela.Show();
+        }
+
+        private void btnGerarFolhaPagamento_Click_1(object sender, EventArgs e)
+        {
+            Telas.nudSaude CadastrarFolha = new nudSaude();
+            CadastrarFolha.Show();
+        }
+
+        private void btnConsultarFolhaPagamento_Click_1(object sender, EventArgs e)
+        {
+            Telas.Folha_de_Pagamento.frmConsultarFolha tela = new Folha_de_Pagamento.frmConsultarFolha();
+            tela.Show();
+        }
+
+        private void btnCaixa_Click_1(object sender, EventArgs e)
+        {
+            Telas.frmFluxoCaixa tela = new Telas.frmFluxoCaixa();
+            tela.Show();
+        }
+
+        private void btnConsultarVenda_Click(object sender, EventArgs e)
+        {
+            Telas.Caixa.frmConsultarVenda tela = new Caixa.frmConsultarVenda();
+            tela.Show();
+        }
+
+        private void button2_Click_3(object sender, EventArgs e)
+        {
+            Telas.Cliente.frmCadastrarCliente tela = new Cliente.frmCadastrarCliente();
+            tela.Show();
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            Telas.Cliente.frmConsultarCliente tela = new Cliente.frmConsultarCliente();
+            tela.Show();
+        }
     }
 }

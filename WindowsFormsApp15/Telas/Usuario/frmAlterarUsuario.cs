@@ -51,6 +51,7 @@ namespace WindowsFormsApp15.Telas.Usuario
             int id = Convert.ToInt32(txtID.Text);
 
             Business.UsuarioBusiness business = new Business.UsuarioBusiness();
+
             Model.tb_usuario model = new Model.tb_usuario();
 
             tb_funcionario comboFuncionario = cboFuncionario.SelectedItem as tb_funcionario;
@@ -63,9 +64,6 @@ namespace WindowsFormsApp15.Telas.Usuario
             business.alterarusuario(model);
 
             MessageBox.Show("Alterado com sucesso");
-            MessageBox.Show("O programa será reiniciado");
-
-            Application.Restart();
         }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {

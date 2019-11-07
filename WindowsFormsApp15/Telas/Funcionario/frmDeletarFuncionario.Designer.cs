@@ -207,6 +207,7 @@
             // 
             this.dtpContrat.BackColor = System.Drawing.Color.SeaGreen;
             this.dtpContrat.BorderRadius = 0;
+            this.dtpContrat.Enabled = false;
             this.dtpContrat.ForeColor = System.Drawing.Color.White;
             this.dtpContrat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpContrat.FormatCustom = null;
@@ -220,6 +221,7 @@
             // 
             this.dtpNascimento.BackColor = System.Drawing.Color.SeaGreen;
             this.dtpNascimento.BorderRadius = 0;
+            this.dtpNascimento.Enabled = false;
             this.dtpNascimento.ForeColor = System.Drawing.Color.White;
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpNascimento.FormatCustom = null;
@@ -582,6 +584,7 @@
             // 
             // txtCep
             // 
+            this.txtCep.Enabled = false;
             this.txtCep.Location = new System.Drawing.Point(204, 61);
             this.txtCep.Mask = "00000-000";
             this.txtCep.Name = "txtCep";
@@ -621,6 +624,7 @@
             // nudSalario
             // 
             this.nudSalario.DecimalPlaces = 2;
+            this.nudSalario.Enabled = false;
             this.nudSalario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudSalario.Location = new System.Drawing.Point(507, 188);
             this.nudSalario.Maximum = new decimal(new int[] {

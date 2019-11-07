@@ -43,7 +43,7 @@
             this.lblSair = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtFuncionario = new System.Windows.Forms.TextBox();
+            this.cboFuncionario = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(51, 131);
+            this.label1.Location = new System.Drawing.Point(51, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 20);
             this.label1.TabIndex = 131;
@@ -67,7 +67,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(51, 89);
+            this.label2.Location = new System.Drawing.Point(51, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 20);
             this.label2.TabIndex = 130;
@@ -76,7 +76,7 @@
             // btnEntrar
             // 
             this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEntrar.BorderRadius = 0;
             this.btnEntrar.ButtonText = "CADASTRAR";
@@ -115,7 +115,7 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(51, 172);
+            this.label3.Location = new System.Drawing.Point(51, 166);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(149, 20);
             this.label3.TabIndex = 136;
@@ -123,13 +123,14 @@
             // 
             // cboNivel
             // 
+            this.cboNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNivel.FormattingEnabled = true;
             this.cboNivel.Items.AddRange(new object[] {
             "Baixo",
             "Médio",
             "Alto",
             "Administrador"});
-            this.cboNivel.Location = new System.Drawing.Point(246, 214);
+            this.cboNivel.Location = new System.Drawing.Point(246, 251);
             this.cboNivel.Name = "cboNivel";
             this.cboNivel.Size = new System.Drawing.Size(183, 21);
             this.cboNivel.TabIndex = 138;
@@ -141,7 +142,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(51, 215);
+            this.label4.Location = new System.Drawing.Point(51, 252);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 20);
             this.label4.TabIndex = 139;
@@ -149,27 +150,31 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.Location = new System.Drawing.Point(246, 86);
+            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Location = new System.Drawing.Point(246, 80);
             this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(183, 23);
+            this.txtUsuario.Size = new System.Drawing.Size(183, 22);
             this.txtUsuario.TabIndex = 302;
             // 
             // txtSenha
             // 
-            this.txtSenha.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(246, 128);
+            this.txtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Location = new System.Drawing.Point(246, 122);
             this.txtSenha.Name = "txtSenha";
-            this.txtSenha.Size = new System.Drawing.Size(183, 23);
+            this.txtSenha.PasswordChar = '*';
+            this.txtSenha.Size = new System.Drawing.Size(183, 22);
             this.txtSenha.TabIndex = 303;
+            this.txtSenha.UseSystemPasswordChar = true;
             // 
             // txtConfirmar
             // 
-            this.txtConfirmar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConfirmar.Location = new System.Drawing.Point(246, 169);
+            this.txtConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtConfirmar.Location = new System.Drawing.Point(246, 163);
             this.txtConfirmar.Name = "txtConfirmar";
-            this.txtConfirmar.Size = new System.Drawing.Size(183, 23);
+            this.txtConfirmar.PasswordChar = '*';
+            this.txtConfirmar.Size = new System.Drawing.Size(183, 22);
             this.txtConfirmar.TabIndex = 304;
+            this.txtConfirmar.UseSystemPasswordChar = true;
             // 
             // panel1
             // 
@@ -177,6 +182,7 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.lblMinimizar);
             this.panel1.Controls.Add(this.lblSair);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -219,7 +225,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(170, 43);
+            this.label7.Location = new System.Drawing.Point(170, 5);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(155, 20);
             this.label7.TabIndex = 308;
@@ -232,19 +238,25 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(51, 254);
+            this.label8.Location = new System.Drawing.Point(51, 208);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 20);
             this.label8.TabIndex = 310;
             this.label8.Text = "Funcionário:";
             // 
-            // txtFuncionario
+            // cboFuncionario
             // 
-            this.txtFuncionario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFuncionario.Location = new System.Drawing.Point(246, 251);
-            this.txtFuncionario.Name = "txtFuncionario";
-            this.txtFuncionario.Size = new System.Drawing.Size(183, 23);
-            this.txtFuncionario.TabIndex = 311;
+            this.cboFuncionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboFuncionario.FormattingEnabled = true;
+            this.cboFuncionario.Items.AddRange(new object[] {
+            "Baixo",
+            "Médio",
+            "Alto",
+            "Administrador"});
+            this.cboFuncionario.Location = new System.Drawing.Point(246, 207);
+            this.cboFuncionario.Name = "cboFuncionario";
+            this.cboFuncionario.Size = new System.Drawing.Size(183, 21);
+            this.cboFuncionario.TabIndex = 311;
             // 
             // frmCadastrarUsuario
             // 
@@ -254,9 +266,8 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(501, 379);
-            this.Controls.Add(this.txtFuncionario);
+            this.Controls.Add(this.cboFuncionario);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtConfirmar);
             this.Controls.Add(this.txtSenha);
@@ -292,6 +303,6 @@
         private System.Windows.Forms.Label lblSair;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtFuncionario;
+        private System.Windows.Forms.ComboBox cboFuncionario;
     }
 }

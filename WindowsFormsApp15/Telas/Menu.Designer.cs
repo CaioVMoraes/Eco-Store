@@ -31,6 +31,42 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panelCompra = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnDespesasGastos = new System.Windows.Forms.Button();
+            this.btnHistoricoCompra = new System.Windows.Forms.Button();
+            this.btnCompra = new System.Windows.Forms.Button();
+            this.btnConsultarEstoque = new System.Windows.Forms.Button();
+            this.btnCadastrarProduto = new System.Windows.Forms.Button();
+            this.btnConsultarProduto = new System.Windows.Forms.Button();
+            this.btnConsultarFornecedor = new System.Windows.Forms.Button();
+            this.btnCadastrarFornecedor = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.lblVoltarPausa = new System.Windows.Forms.Label();
+            this.lblDesligar = new System.Windows.Forms.Label();
+            this.lblPausar = new System.Windows.Forms.Label();
+            this.lblHora = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.imgPerfil = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblMinimizar = new System.Windows.Forms.Label();
+            this.lblSair = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panelFuncionario = new System.Windows.Forms.Panel();
             this.btnConsultarUsuario = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -49,25 +85,6 @@
             this.label15 = new System.Windows.Forms.Label();
             this.btnGerarFolhaPagamento = new System.Windows.Forms.Button();
             this.btnConsultarFolhaPagamento = new System.Windows.Forms.Button();
-            this.panelCompra = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnCadastrarFornecedor = new System.Windows.Forms.Button();
             this.panelVenda = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -75,31 +92,18 @@
             this.label11 = new System.Windows.Forms.Label();
             this.btnConsultarVenda = new System.Windows.Forms.Button();
             this.btnCaixa = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.lblVoltarPausa = new System.Windows.Forms.Label();
-            this.lblDesligar = new System.Windows.Forms.Label();
-            this.lblPausar = new System.Windows.Forms.Label();
-            this.lblHora = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblNome = new System.Windows.Forms.Label();
-            this.imgPerfil = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lblMinimizar = new System.Windows.Forms.Label();
-            this.lblSair = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panelFuncionario.SuspendLayout();
-            this.panelFolhaPagamento.SuspendLayout();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelCompra.SuspendLayout();
-            this.panelVenda.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panelFuncionario.SuspendLayout();
+            this.panelFolhaPagamento.SuspendLayout();
+            this.panelVenda.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -107,261 +111,11 @@
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // panelFuncionario
-            // 
-            this.panelFuncionario.BackColor = System.Drawing.Color.White;
-            this.panelFuncionario.Controls.Add(this.btnConsultarUsuario);
-            this.panelFuncionario.Controls.Add(this.label9);
-            this.panelFuncionario.Controls.Add(this.btnCadastrarUsuario);
-            this.panelFuncionario.Controls.Add(this.label10);
-            this.panelFuncionario.Controls.Add(this.btnConsultarFuncionario);
-            this.panelFuncionario.Controls.Add(this.btnCadastrarFuncionario);
-            this.panelFuncionario.Controls.Add(this.label14);
-            this.panelFuncionario.Controls.Add(this.label3);
-            this.panelFuncionario.Controls.Add(this.label13);
-            this.panelFuncionario.Controls.Add(this.label12);
-            this.panelFuncionario.Location = new System.Drawing.Point(56, 82);
-            this.panelFuncionario.Name = "panelFuncionario";
-            this.panelFuncionario.Size = new System.Drawing.Size(698, 31);
-            this.panelFuncionario.TabIndex = 344;
-            this.panelFuncionario.Visible = false;
-            // 
-            // btnConsultarUsuario
-            // 
-            this.btnConsultarUsuario.BackColor = System.Drawing.Color.White;
-            this.btnConsultarUsuario.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._480px_Magnifying_glass_icon_svg;
-            this.btnConsultarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConsultarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarUsuario.FlatAppearance.BorderSize = 0;
-            this.btnConsultarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarUsuario.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnConsultarUsuario.Location = new System.Drawing.Point(386, 298);
-            this.btnConsultarUsuario.Name = "btnConsultarUsuario";
-            this.btnConsultarUsuario.Size = new System.Drawing.Size(194, 134);
-            this.btnConsultarUsuario.TabIndex = 341;
-            this.btnConsultarUsuario.UseVisualStyleBackColor = false;
-            this.btnConsultarUsuario.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(833, 2);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 23);
-            this.label9.TabIndex = 156;
-            this.label9.Text = "_";
-            // 
-            // btnCadastrarUsuario
-            // 
-            this.btnCadastrarUsuario.BackColor = System.Drawing.Color.White;
-            this.btnCadastrarUsuario.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.user_add_21977;
-            this.btnCadastrarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarUsuario.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarUsuario.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCadastrarUsuario.Location = new System.Drawing.Point(146, 288);
-            this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
-            this.btnCadastrarUsuario.Size = new System.Drawing.Size(170, 134);
-            this.btnCadastrarUsuario.TabIndex = 327;
-            this.btnCadastrarUsuario.UseVisualStyleBackColor = false;
-            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label10.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(858, 5);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(23, 23);
-            this.label10.TabIndex = 155;
-            this.label10.Text = "X";
-            // 
-            // btnConsultarFuncionario
-            // 
-            this.btnConsultarFuncionario.BackColor = System.Drawing.Color.White;
-            this.btnConsultarFuncionario.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._480px_Magnifying_glass_icon_svg;
-            this.btnConsultarFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConsultarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarFuncionario.FlatAppearance.BorderSize = 0;
-            this.btnConsultarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarFuncionario.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnConsultarFuncionario.Location = new System.Drawing.Point(390, 81);
-            this.btnConsultarFuncionario.Name = "btnConsultarFuncionario";
-            this.btnConsultarFuncionario.Size = new System.Drawing.Size(169, 134);
-            this.btnConsultarFuncionario.TabIndex = 330;
-            this.btnConsultarFuncionario.UseVisualStyleBackColor = false;
-            this.btnConsultarFuncionario.Click += new System.EventHandler(this.btnConsultarFuncionario_Click);
-            // 
-            // btnCadastrarFuncionario
-            // 
-            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.White;
-            this.btnCadastrarFuncionario.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.adduser_4961;
-            this.btnCadastrarFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCadastrarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCadastrarFuncionario.FlatAppearance.BorderSize = 0;
-            this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrarFuncionario.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(146, 81);
-            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
-            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(170, 134);
-            this.btnCadastrarFuncionario.TabIndex = 329;
-            this.btnCadastrarFuncionario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
-            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(144, 442);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(167, 24);
-            this.label14.TabIndex = 349;
-            this.label14.Text = "Cadastrar Usuarios";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(408, 442);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 24);
-            this.label3.TabIndex = 348;
-            this.label3.Text = "Consultar Usuarios";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(386, 219);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(195, 24);
-            this.label13.TabIndex = 347;
-            this.label13.Text = "Consultar Funcionario";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(131, 219);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(195, 24);
-            this.label12.TabIndex = 346;
-            this.label12.Text = "Cadastrar Funcionario";
-            // 
-            // panelFolhaPagamento
-            // 
-            this.panelFolhaPagamento.BackColor = System.Drawing.Color.White;
-            this.panelFolhaPagamento.Controls.Add(this.label4);
-            this.panelFolhaPagamento.Controls.Add(this.label5);
-            this.panelFolhaPagamento.Controls.Add(this.label16);
-            this.panelFolhaPagamento.Controls.Add(this.label15);
-            this.panelFolhaPagamento.Controls.Add(this.btnGerarFolhaPagamento);
-            this.panelFolhaPagamento.Controls.Add(this.btnConsultarFolhaPagamento);
-            this.panelFolhaPagamento.Location = new System.Drawing.Point(53, 139);
-            this.panelFolhaPagamento.Name = "panelFolhaPagamento";
-            this.panelFolhaPagamento.Size = new System.Drawing.Size(698, 35);
-            this.panelFolhaPagamento.TabIndex = 345;
-            this.panelFolhaPagamento.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(833, 2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(21, 23);
-            this.label4.TabIndex = 156;
-            this.label4.Text = "_";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(858, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(23, 23);
-            this.label5.TabIndex = 155;
-            this.label5.Text = "X";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(356, 318);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(270, 24);
-            this.label16.TabIndex = 350;
-            this.label16.Text = "Consultar Folha de Pagamento";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(96, 315);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(238, 24);
-            this.label15.TabIndex = 349;
-            this.label15.Text = "Gerar Folha de Pagamento";
-            // 
-            // btnGerarFolhaPagamento
-            // 
-            this.btnGerarFolhaPagamento.BackColor = System.Drawing.Color.White;
-            this.btnGerarFolhaPagamento.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.banknotespaymentmoney_billetesdebanco_pag_3773;
-            this.btnGerarFolhaPagamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnGerarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGerarFolhaPagamento.FlatAppearance.BorderSize = 0;
-            this.btnGerarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGerarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerarFolhaPagamento.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnGerarFolhaPagamento.Location = new System.Drawing.Point(126, 151);
-            this.btnGerarFolhaPagamento.Name = "btnGerarFolhaPagamento";
-            this.btnGerarFolhaPagamento.Size = new System.Drawing.Size(172, 146);
-            this.btnGerarFolhaPagamento.TabIndex = 339;
-            this.btnGerarFolhaPagamento.UseVisualStyleBackColor = false;
-            this.btnGerarFolhaPagamento.Click += new System.EventHandler(this.btnGerarFolhaPagamento_Click);
-            // 
-            // btnConsultarFolhaPagamento
-            // 
-            this.btnConsultarFolhaPagamento.BackColor = System.Drawing.Color.White;
-            this.btnConsultarFolhaPagamento.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._480px_Magnifying_glass_icon_svg;
-            this.btnConsultarFolhaPagamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConsultarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarFolhaPagamento.FlatAppearance.BorderSize = 0;
-            this.btnConsultarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarFolhaPagamento.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnConsultarFolhaPagamento.Location = new System.Drawing.Point(402, 151);
-            this.btnConsultarFolhaPagamento.Name = "btnConsultarFolhaPagamento";
-            this.btnConsultarFolhaPagamento.Size = new System.Drawing.Size(155, 146);
-            this.btnConsultarFolhaPagamento.TabIndex = 340;
-            this.btnConsultarFolhaPagamento.UseVisualStyleBackColor = false;
-            this.btnConsultarFolhaPagamento.Click += new System.EventHandler(this.btnConsultarFolhaPagamento_Click);
-            // 
             // panelCompra
             // 
             this.panelCompra.BackColor = System.Drawing.Color.White;
             this.panelCompra.Controls.Add(this.label6);
             this.panelCompra.Controls.Add(this.label7);
-            this.panelCompra.Controls.Add(this.panelVenda);
             this.panelCompra.Controls.Add(this.label24);
             this.panelCompra.Controls.Add(this.label23);
             this.panelCompra.Controls.Add(this.label22);
@@ -370,18 +124,17 @@
             this.panelCompra.Controls.Add(this.label20);
             this.panelCompra.Controls.Add(this.label18);
             this.panelCompra.Controls.Add(this.label17);
-            this.panelCompra.Controls.Add(this.button2);
-            this.panelCompra.Controls.Add(this.button3);
-            this.panelCompra.Controls.Add(this.button4);
-            this.panelCompra.Controls.Add(this.button5);
-            this.panelCompra.Controls.Add(this.button6);
-            this.panelCompra.Controls.Add(this.button7);
-            this.panelCompra.Controls.Add(this.button1);
+            this.panelCompra.Controls.Add(this.btnDespesasGastos);
+            this.panelCompra.Controls.Add(this.btnHistoricoCompra);
+            this.panelCompra.Controls.Add(this.btnCompra);
+            this.panelCompra.Controls.Add(this.btnConsultarEstoque);
+            this.panelCompra.Controls.Add(this.btnCadastrarProduto);
+            this.panelCompra.Controls.Add(this.btnConsultarProduto);
+            this.panelCompra.Controls.Add(this.btnConsultarFornecedor);
             this.panelCompra.Controls.Add(this.btnCadastrarFornecedor);
-            this.panelCompra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCompra.Location = new System.Drawing.Point(0, 0);
+            this.panelCompra.Location = new System.Drawing.Point(31, 82);
             this.panelCompra.Name = "panelCompra";
-            this.panelCompra.Size = new System.Drawing.Size(698, 566);
+            this.panelCompra.Size = new System.Drawing.Size(635, 45);
             this.panelCompra.TabIndex = 346;
             this.panelCompra.Visible = false;
             // 
@@ -415,7 +168,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(160, 480);
+            this.label24.Location = new System.Drawing.Point(165, 498);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(186, 24);
             this.label24.TabIndex = 362;
@@ -425,7 +178,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(358, 480);
+            this.label23.Location = new System.Drawing.Point(363, 498);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(191, 24);
             this.label23.TabIndex = 361;
@@ -435,7 +188,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(455, 311);
+            this.label22.Location = new System.Drawing.Point(465, 311);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(164, 24);
             this.label22.TabIndex = 360;
@@ -455,7 +208,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(273, 311);
+            this.label19.Location = new System.Drawing.Point(275, 311);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(160, 24);
             this.label19.TabIndex = 358;
@@ -475,7 +228,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(51, 311);
+            this.label18.Location = new System.Drawing.Point(52, 311);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(194, 24);
             this.label18.TabIndex = 356;
@@ -491,130 +244,130 @@
             this.label17.TabIndex = 355;
             this.label17.Text = "Cadastrar Fornecedor";
             // 
-            // button2
+            // btnDespesasGastos
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.budgetmoneybagexpense_1097511;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button2.Location = new System.Drawing.Point(158, 366);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(188, 106);
-            this.button2.TabIndex = 354;
-            this.button2.Text = " ";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click_2);
+            this.btnDespesasGastos.BackColor = System.Drawing.Color.White;
+            this.btnDespesasGastos.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.budgetmoneybagexpense_1097511;
+            this.btnDespesasGastos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnDespesasGastos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDespesasGastos.FlatAppearance.BorderSize = 0;
+            this.btnDespesasGastos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDespesasGastos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDespesasGastos.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnDespesasGastos.Location = new System.Drawing.Point(155, 384);
+            this.btnDespesasGastos.Name = "btnDespesasGastos";
+            this.btnDespesasGastos.Size = new System.Drawing.Size(188, 106);
+            this.btnDespesasGastos.TabIndex = 354;
+            this.btnDespesasGastos.Text = " ";
+            this.btnDespesasGastos.UseVisualStyleBackColor = false;
+            this.btnDespesasGastos.Click += new System.EventHandler(this.button2_Click_2);
             // 
-            // button3
+            // btnHistoricoCompra
             // 
-            this.button3.BackColor = System.Drawing.Color.White;
-            this.button3.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.listofworks_121961;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button3.Location = new System.Drawing.Point(367, 362);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(160, 110);
-            this.button3.TabIndex = 353;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.btnHistoricoCompra.BackColor = System.Drawing.Color.White;
+            this.btnHistoricoCompra.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.listofworks_121961;
+            this.btnHistoricoCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnHistoricoCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHistoricoCompra.FlatAppearance.BorderSize = 0;
+            this.btnHistoricoCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistoricoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistoricoCompra.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnHistoricoCompra.Location = new System.Drawing.Point(372, 380);
+            this.btnHistoricoCompra.Name = "btnHistoricoCompra";
+            this.btnHistoricoCompra.Size = new System.Drawing.Size(160, 110);
+            this.btnHistoricoCompra.TabIndex = 353;
+            this.btnHistoricoCompra.UseVisualStyleBackColor = false;
+            this.btnHistoricoCompra.Click += new System.EventHandler(this.button3_Click_1);
             // 
-            // button4
+            // btnCompra
             // 
-            this.button4.BackColor = System.Drawing.Color.White;
-            this.button4.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.wheelbarrow_118344;
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button4.Location = new System.Drawing.Point(453, 55);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(182, 96);
-            this.button4.TabIndex = 352;
-            this.button4.Text = " ";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.btnCompra.BackColor = System.Drawing.Color.White;
+            this.btnCompra.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.wheelbarrow_118344;
+            this.btnCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCompra.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCompra.FlatAppearance.BorderSize = 0;
+            this.btnCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompra.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCompra.Location = new System.Drawing.Point(453, 55);
+            this.btnCompra.Name = "btnCompra";
+            this.btnCompra.Size = new System.Drawing.Size(182, 96);
+            this.btnCompra.TabIndex = 352;
+            this.btnCompra.Text = " ";
+            this.btnCompra.UseVisualStyleBackColor = false;
+            this.btnCompra.Click += new System.EventHandler(this.button4_Click_1);
             // 
-            // button5
+            // btnConsultarEstoque
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
-            this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
-            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button5.Location = new System.Drawing.Point(453, 206);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(182, 102);
-            this.button5.TabIndex = 351;
-            this.button5.Text = " ";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click_1);
+            this.btnConsultarEstoque.BackColor = System.Drawing.Color.White;
+            this.btnConsultarEstoque.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarEstoque.BackgroundImage")));
+            this.btnConsultarEstoque.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarEstoque.FlatAppearance.BorderSize = 0;
+            this.btnConsultarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarEstoque.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnConsultarEstoque.Location = new System.Drawing.Point(453, 206);
+            this.btnConsultarEstoque.Name = "btnConsultarEstoque";
+            this.btnConsultarEstoque.Size = new System.Drawing.Size(182, 102);
+            this.btnConsultarEstoque.TabIndex = 351;
+            this.btnConsultarEstoque.Text = " ";
+            this.btnConsultarEstoque.UseVisualStyleBackColor = false;
+            this.btnConsultarEstoque.Click += new System.EventHandler(this.button5_Click_1);
             // 
-            // button6
+            // btnCadastrarProduto
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
-            this.button6.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.icon_produto;
-            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button6.Location = new System.Drawing.Point(249, 53);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(198, 98);
-            this.button6.TabIndex = 349;
-            this.button6.Text = " ";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.btnCadastrarProduto.BackColor = System.Drawing.Color.White;
+            this.btnCadastrarProduto.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.icon_produto;
+            this.btnCadastrarProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarProduto.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarProduto.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCadastrarProduto.Location = new System.Drawing.Point(249, 53);
+            this.btnCadastrarProduto.Name = "btnCadastrarProduto";
+            this.btnCadastrarProduto.Size = new System.Drawing.Size(198, 98);
+            this.btnCadastrarProduto.TabIndex = 349;
+            this.btnCadastrarProduto.Text = " ";
+            this.btnCadastrarProduto.UseVisualStyleBackColor = false;
+            this.btnCadastrarProduto.Click += new System.EventHandler(this.button6_Click_1);
             // 
-            // button7
+            // btnConsultarProduto
             // 
-            this.button7.BackColor = System.Drawing.Color.White;
-            this.button7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button7.BackgroundImage")));
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button7.Location = new System.Drawing.Point(249, 206);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(198, 102);
-            this.button7.TabIndex = 350;
-            this.button7.Text = " ";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            this.btnConsultarProduto.BackColor = System.Drawing.Color.White;
+            this.btnConsultarProduto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarProduto.BackgroundImage")));
+            this.btnConsultarProduto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarProduto.FlatAppearance.BorderSize = 0;
+            this.btnConsultarProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarProduto.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnConsultarProduto.Location = new System.Drawing.Point(249, 206);
+            this.btnConsultarProduto.Name = "btnConsultarProduto";
+            this.btnConsultarProduto.Size = new System.Drawing.Size(198, 102);
+            this.btnConsultarProduto.TabIndex = 350;
+            this.btnConsultarProduto.Text = " ";
+            this.btnConsultarProduto.UseVisualStyleBackColor = false;
+            this.btnConsultarProduto.Click += new System.EventHandler(this.button7_Click_1);
             // 
-            // button1
+            // btnConsultarFornecedor
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.button1.Location = new System.Drawing.Point(47, 206);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(206, 102);
-            this.button1.TabIndex = 348;
-            this.button1.Text = " ";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnConsultarFornecedor.BackColor = System.Drawing.Color.White;
+            this.btnConsultarFornecedor.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConsultarFornecedor.BackgroundImage")));
+            this.btnConsultarFornecedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarFornecedor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFornecedor.FlatAppearance.BorderSize = 0;
+            this.btnConsultarFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFornecedor.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnConsultarFornecedor.Location = new System.Drawing.Point(47, 206);
+            this.btnConsultarFornecedor.Name = "btnConsultarFornecedor";
+            this.btnConsultarFornecedor.Size = new System.Drawing.Size(198, 102);
+            this.btnConsultarFornecedor.TabIndex = 348;
+            this.btnConsultarFornecedor.Text = " ";
+            this.btnConsultarFornecedor.UseVisualStyleBackColor = false;
+            this.btnConsultarFornecedor.Click += new System.EventHandler(this.button1_Click_2);
             // 
             // btnCadastrarFornecedor
             // 
@@ -633,103 +386,6 @@
             this.btnCadastrarFornecedor.Text = " ";
             this.btnCadastrarFornecedor.UseVisualStyleBackColor = false;
             this.btnCadastrarFornecedor.Click += new System.EventHandler(this.btnCadastrarFornecedor_Click_1);
-            // 
-            // panelVenda
-            // 
-            this.panelVenda.BackColor = System.Drawing.Color.White;
-            this.panelVenda.Controls.Add(this.label26);
-            this.panelVenda.Controls.Add(this.label25);
-            this.panelVenda.Controls.Add(this.label8);
-            this.panelVenda.Controls.Add(this.label11);
-            this.panelVenda.Controls.Add(this.btnConsultarVenda);
-            this.panelVenda.Controls.Add(this.btnCaixa);
-            this.panelVenda.Location = new System.Drawing.Point(47, 311);
-            this.panelVenda.Name = "panelVenda";
-            this.panelVenda.Size = new System.Drawing.Size(698, 120);
-            this.panelVenda.TabIndex = 347;
-            this.panelVenda.Visible = false;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(388, 306);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(144, 24);
-            this.label26.TabIndex = 362;
-            this.label26.Text = "Lista de Vendas";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(214, 306);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(57, 24);
-            this.label25.TabIndex = 361;
-            this.label25.Text = "Caixa";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(833, 2);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(21, 23);
-            this.label8.TabIndex = 156;
-            this.label8.Text = "_";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label11.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(858, 5);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(23, 23);
-            this.label11.TabIndex = 155;
-            this.label11.Text = "X";
-            // 
-            // btnConsultarVenda
-            // 
-            this.btnConsultarVenda.BackColor = System.Drawing.Color.White;
-            this.btnConsultarVenda.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.ic_ad_97607;
-            this.btnConsultarVenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnConsultarVenda.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnConsultarVenda.FlatAppearance.BorderSize = 0;
-            this.btnConsultarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarVenda.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnConsultarVenda.Location = new System.Drawing.Point(347, 171);
-            this.btnConsultarVenda.Name = "btnConsultarVenda";
-            this.btnConsultarVenda.Size = new System.Drawing.Size(236, 119);
-            this.btnConsultarVenda.TabIndex = 344;
-            this.btnConsultarVenda.Text = " ";
-            this.btnConsultarVenda.UseVisualStyleBackColor = false;
-            this.btnConsultarVenda.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnCaixa
-            // 
-            this.btnCaixa.BackColor = System.Drawing.Color.White;
-            this.btnCaixa.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.emptyshoppingcart_shopingcart_carritodelacompravacio_4565;
-            this.btnCaixa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCaixa.FlatAppearance.BorderSize = 0;
-            this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCaixa.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btnCaixa.Location = new System.Drawing.Point(107, 171);
-            this.btnCaixa.Name = "btnCaixa";
-            this.btnCaixa.Size = new System.Drawing.Size(234, 119);
-            this.btnCaixa.TabIndex = 338;
-            this.btnCaixa.Text = " ";
-            this.btnCaixa.UseVisualStyleBackColor = false;
-            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click);
             // 
             // panel2
             // 
@@ -754,11 +410,10 @@
             // button11
             // 
             this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
+            this.button11.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button11.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -773,11 +428,10 @@
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
+            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button10.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -792,11 +446,10 @@
             // button9
             // 
             this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
+            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -811,11 +464,10 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.ForestGreen;
+            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.ForestGreen;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button8.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -978,12 +630,420 @@
             // 
             this.panel3.Controls.Add(this.panelFuncionario);
             this.panel3.Controls.Add(this.panelFolhaPagamento);
+            this.panel3.Controls.Add(this.panelVenda);
             this.panel3.Controls.Add(this.panelCompra);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(186, 38);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(698, 566);
             this.panel3.TabIndex = 327;
+            // 
+            // panelFuncionario
+            // 
+            this.panelFuncionario.BackColor = System.Drawing.Color.White;
+            this.panelFuncionario.Controls.Add(this.btnConsultarUsuario);
+            this.panelFuncionario.Controls.Add(this.label9);
+            this.panelFuncionario.Controls.Add(this.btnCadastrarUsuario);
+            this.panelFuncionario.Controls.Add(this.label10);
+            this.panelFuncionario.Controls.Add(this.btnConsultarFuncionario);
+            this.panelFuncionario.Controls.Add(this.btnCadastrarFuncionario);
+            this.panelFuncionario.Controls.Add(this.label14);
+            this.panelFuncionario.Controls.Add(this.label3);
+            this.panelFuncionario.Controls.Add(this.label13);
+            this.panelFuncionario.Controls.Add(this.label12);
+            this.panelFuncionario.Location = new System.Drawing.Point(31, 233);
+            this.panelFuncionario.Name = "panelFuncionario";
+            this.panelFuncionario.Size = new System.Drawing.Size(637, 31);
+            this.panelFuncionario.TabIndex = 349;
+            this.panelFuncionario.Visible = false;
+            // 
+            // btnConsultarUsuario
+            // 
+            this.btnConsultarUsuario.BackColor = System.Drawing.Color.White;
+            this.btnConsultarUsuario.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._480px_Magnifying_glass_icon_svg;
+            this.btnConsultarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarUsuario.FlatAppearance.BorderSize = 0;
+            this.btnConsultarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarUsuario.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnConsultarUsuario.Location = new System.Drawing.Point(386, 298);
+            this.btnConsultarUsuario.Name = "btnConsultarUsuario";
+            this.btnConsultarUsuario.Size = new System.Drawing.Size(194, 134);
+            this.btnConsultarUsuario.TabIndex = 341;
+            this.btnConsultarUsuario.UseVisualStyleBackColor = false;
+            this.btnConsultarUsuario.Click += new System.EventHandler(this.btnConsultarUsuario_Click_1);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label9.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(833, 2);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(21, 23);
+            this.label9.TabIndex = 156;
+            this.label9.Text = "_";
+            // 
+            // btnCadastrarUsuario
+            // 
+            this.btnCadastrarUsuario.BackColor = System.Drawing.Color.White;
+            this.btnCadastrarUsuario.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.user_add_21977;
+            this.btnCadastrarUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarUsuario.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarUsuario.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCadastrarUsuario.Location = new System.Drawing.Point(146, 288);
+            this.btnCadastrarUsuario.Name = "btnCadastrarUsuario";
+            this.btnCadastrarUsuario.Size = new System.Drawing.Size(170, 134);
+            this.btnCadastrarUsuario.TabIndex = 327;
+            this.btnCadastrarUsuario.UseVisualStyleBackColor = false;
+            this.btnCadastrarUsuario.Click += new System.EventHandler(this.btnCadastrarUsuario_Click_1);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label10.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(858, 5);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(23, 23);
+            this.label10.TabIndex = 155;
+            this.label10.Text = "X";
+            // 
+            // btnConsultarFuncionario
+            // 
+            this.btnConsultarFuncionario.BackColor = System.Drawing.Color.White;
+            this.btnConsultarFuncionario.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._480px_Magnifying_glass_icon_svg;
+            this.btnConsultarFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFuncionario.FlatAppearance.BorderSize = 0;
+            this.btnConsultarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFuncionario.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnConsultarFuncionario.Location = new System.Drawing.Point(390, 81);
+            this.btnConsultarFuncionario.Name = "btnConsultarFuncionario";
+            this.btnConsultarFuncionario.Size = new System.Drawing.Size(169, 134);
+            this.btnConsultarFuncionario.TabIndex = 330;
+            this.btnConsultarFuncionario.UseVisualStyleBackColor = false;
+            this.btnConsultarFuncionario.Click += new System.EventHandler(this.btnConsultarFuncionario_Click_1);
+            // 
+            // btnCadastrarFuncionario
+            // 
+            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.White;
+            this.btnCadastrarFuncionario.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.adduser_4961;
+            this.btnCadastrarFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCadastrarFuncionario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCadastrarFuncionario.FlatAppearance.BorderSize = 0;
+            this.btnCadastrarFuncionario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrarFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrarFuncionario.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(146, 81);
+            this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(170, 134);
+            this.btnCadastrarFuncionario.TabIndex = 329;
+            this.btnCadastrarFuncionario.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnCadastrarFuncionario.UseVisualStyleBackColor = false;
+            this.btnCadastrarFuncionario.Click += new System.EventHandler(this.btnCadastrarFuncionario_Click_1);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(144, 442);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(167, 24);
+            this.label14.TabIndex = 349;
+            this.label14.Text = "Cadastrar Usuarios";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(408, 442);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(167, 24);
+            this.label3.TabIndex = 348;
+            this.label3.Text = "Consultar Usuarios";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(386, 219);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(195, 24);
+            this.label13.TabIndex = 347;
+            this.label13.Text = "Consultar Funcionario";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(131, 219);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(195, 24);
+            this.label12.TabIndex = 346;
+            this.label12.Text = "Cadastrar Funcionario";
+            // 
+            // panelFolhaPagamento
+            // 
+            this.panelFolhaPagamento.BackColor = System.Drawing.Color.White;
+            this.panelFolhaPagamento.Controls.Add(this.label4);
+            this.panelFolhaPagamento.Controls.Add(this.label5);
+            this.panelFolhaPagamento.Controls.Add(this.label16);
+            this.panelFolhaPagamento.Controls.Add(this.label15);
+            this.panelFolhaPagamento.Controls.Add(this.btnGerarFolhaPagamento);
+            this.panelFolhaPagamento.Controls.Add(this.btnConsultarFolhaPagamento);
+            this.panelFolhaPagamento.Location = new System.Drawing.Point(31, 166);
+            this.panelFolhaPagamento.Name = "panelFolhaPagamento";
+            this.panelFolhaPagamento.Size = new System.Drawing.Size(635, 35);
+            this.panelFolhaPagamento.TabIndex = 348;
+            this.panelFolhaPagamento.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(833, 2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(21, 23);
+            this.label4.TabIndex = 156;
+            this.label4.Text = "_";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(858, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(23, 23);
+            this.label5.TabIndex = 155;
+            this.label5.Text = "X";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(356, 318);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(270, 24);
+            this.label16.TabIndex = 350;
+            this.label16.Text = "Consultar Folha de Pagamento";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(96, 315);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(238, 24);
+            this.label15.TabIndex = 349;
+            this.label15.Text = "Gerar Folha de Pagamento";
+            // 
+            // btnGerarFolhaPagamento
+            // 
+            this.btnGerarFolhaPagamento.BackColor = System.Drawing.Color.White;
+            this.btnGerarFolhaPagamento.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.banknotespaymentmoney_billetesdebanco_pag_3773;
+            this.btnGerarFolhaPagamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnGerarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGerarFolhaPagamento.FlatAppearance.BorderSize = 0;
+            this.btnGerarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGerarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerarFolhaPagamento.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnGerarFolhaPagamento.Location = new System.Drawing.Point(126, 151);
+            this.btnGerarFolhaPagamento.Name = "btnGerarFolhaPagamento";
+            this.btnGerarFolhaPagamento.Size = new System.Drawing.Size(172, 146);
+            this.btnGerarFolhaPagamento.TabIndex = 339;
+            this.btnGerarFolhaPagamento.UseVisualStyleBackColor = false;
+            this.btnGerarFolhaPagamento.Click += new System.EventHandler(this.btnGerarFolhaPagamento_Click_1);
+            // 
+            // btnConsultarFolhaPagamento
+            // 
+            this.btnConsultarFolhaPagamento.BackColor = System.Drawing.Color.White;
+            this.btnConsultarFolhaPagamento.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._480px_Magnifying_glass_icon_svg;
+            this.btnConsultarFolhaPagamento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarFolhaPagamento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarFolhaPagamento.FlatAppearance.BorderSize = 0;
+            this.btnConsultarFolhaPagamento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarFolhaPagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarFolhaPagamento.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnConsultarFolhaPagamento.Location = new System.Drawing.Point(402, 151);
+            this.btnConsultarFolhaPagamento.Name = "btnConsultarFolhaPagamento";
+            this.btnConsultarFolhaPagamento.Size = new System.Drawing.Size(155, 146);
+            this.btnConsultarFolhaPagamento.TabIndex = 340;
+            this.btnConsultarFolhaPagamento.UseVisualStyleBackColor = false;
+            this.btnConsultarFolhaPagamento.Click += new System.EventHandler(this.btnConsultarFolhaPagamento_Click_1);
+            // 
+            // panelVenda
+            // 
+            this.panelVenda.BackColor = System.Drawing.Color.White;
+            this.panelVenda.Controls.Add(this.label27);
+            this.panelVenda.Controls.Add(this.label28);
+            this.panelVenda.Controls.Add(this.button1);
+            this.panelVenda.Controls.Add(this.button2);
+            this.panelVenda.Controls.Add(this.label26);
+            this.panelVenda.Controls.Add(this.label25);
+            this.panelVenda.Controls.Add(this.label8);
+            this.panelVenda.Controls.Add(this.label11);
+            this.panelVenda.Controls.Add(this.btnConsultarVenda);
+            this.panelVenda.Controls.Add(this.btnCaixa);
+            this.panelVenda.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelVenda.Location = new System.Drawing.Point(0, 0);
+            this.panelVenda.Name = "panelVenda";
+            this.panelVenda.Size = new System.Drawing.Size(698, 566);
+            this.panelVenda.TabIndex = 350;
+            this.panelVenda.Visible = false;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(391, 226);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(144, 24);
+            this.label26.TabIndex = 362;
+            this.label26.Text = "Lista de Vendas";
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(217, 226);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(57, 24);
+            this.label25.TabIndex = 361;
+            this.label25.Text = "Caixa";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(833, 2);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(21, 23);
+            this.label8.TabIndex = 156;
+            this.label8.Text = "_";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(858, 5);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(23, 23);
+            this.label11.TabIndex = 155;
+            this.label11.Text = "X";
+            // 
+            // btnConsultarVenda
+            // 
+            this.btnConsultarVenda.BackColor = System.Drawing.Color.White;
+            this.btnConsultarVenda.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.ic_ad_97607;
+            this.btnConsultarVenda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnConsultarVenda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConsultarVenda.FlatAppearance.BorderSize = 0;
+            this.btnConsultarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultarVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarVenda.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnConsultarVenda.Location = new System.Drawing.Point(350, 91);
+            this.btnConsultarVenda.Name = "btnConsultarVenda";
+            this.btnConsultarVenda.Size = new System.Drawing.Size(236, 119);
+            this.btnConsultarVenda.TabIndex = 344;
+            this.btnConsultarVenda.Text = " ";
+            this.btnConsultarVenda.UseVisualStyleBackColor = false;
+            this.btnConsultarVenda.Click += new System.EventHandler(this.btnConsultarVenda_Click);
+            // 
+            // btnCaixa
+            // 
+            this.btnCaixa.BackColor = System.Drawing.Color.White;
+            this.btnCaixa.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.emptyshoppingcart_shopingcart_carritodelacompravacio_4565;
+            this.btnCaixa.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCaixa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCaixa.FlatAppearance.BorderSize = 0;
+            this.btnCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCaixa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCaixa.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnCaixa.Location = new System.Drawing.Point(110, 91);
+            this.btnCaixa.Name = "btnCaixa";
+            this.btnCaixa.Size = new System.Drawing.Size(234, 119);
+            this.btnCaixa.TabIndex = 338;
+            this.btnCaixa.Text = " ";
+            this.btnCaixa.UseVisualStyleBackColor = false;
+            this.btnCaixa.Click += new System.EventHandler(this.btnCaixa_Click_1);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(393, 406);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(161, 24);
+            this.label27.TabIndex = 366;
+            this.label27.Text = "Consultar Clientes";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(171, 405);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(152, 24);
+            this.label28.TabIndex = 365;
+            this.label28.Text = "Cadastrar Cliente";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._480px_Magnifying_glass_icon_svg;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button1.Location = new System.Drawing.Point(352, 271);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(236, 119);
+            this.button1.TabIndex = 364;
+            this.button1.Text = " ";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_3);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.adduser_4961;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.button2.Location = new System.Drawing.Point(136, 271);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(234, 119);
+            this.button2.TabIndex = 363;
+            this.button2.Text = " ";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click_3);
             // 
             // Menu
             // 
@@ -998,20 +1058,20 @@
             this.Name = "Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Menu_Load);
-            this.panelFuncionario.ResumeLayout(false);
-            this.panelFuncionario.PerformLayout();
-            this.panelFolhaPagamento.ResumeLayout(false);
-            this.panelFolhaPagamento.PerformLayout();
             this.panelCompra.ResumeLayout(false);
             this.panelCompra.PerformLayout();
-            this.panelVenda.ResumeLayout(false);
-            this.panelVenda.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPerfil)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
+            this.panelFuncionario.ResumeLayout(false);
+            this.panelFuncionario.PerformLayout();
+            this.panelFolhaPagamento.ResumeLayout(false);
+            this.panelFolhaPagamento.PerformLayout();
+            this.panelVenda.ResumeLayout(false);
+            this.panelVenda.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1026,45 +1086,22 @@
         private System.Windows.Forms.PictureBox imgPerfil;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnCadastrarUsuario;
-        private System.Windows.Forms.Button btnConsultarFuncionario;
-        private System.Windows.Forms.Button btnCadastrarFuncionario;
-        private System.Windows.Forms.Button btnCaixa;
-        private System.Windows.Forms.Button btnConsultarFolhaPagamento;
-        private System.Windows.Forms.Button btnGerarFolhaPagamento;
         private System.Windows.Forms.Label lblVoltarPausa;
         private System.Windows.Forms.Label lblDesligar;
         private System.Windows.Forms.Label lblPausar;
         private System.Windows.Forms.Label lblHora;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button btnConsultarVenda;
-        private System.Windows.Forms.Button btnConsultarUsuario;
         private System.Windows.Forms.Button btnCadastrarFornecedor;
-        private System.Windows.Forms.Panel panelFuncionario;
-        private System.Windows.Forms.Panel panelFolhaPagamento;
         private System.Windows.Forms.Panel panelCompra;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Panel panelVenda;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnDespesasGastos;
+        private System.Windows.Forms.Button btnHistoricoCompra;
+        private System.Windows.Forms.Button btnCompra;
+        private System.Windows.Forms.Button btnConsultarEstoque;
+        private System.Windows.Forms.Button btnCadastrarProduto;
+        private System.Windows.Forms.Button btnConsultarProduto;
+        private System.Windows.Forms.Button btnConsultarFornecedor;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label19;
@@ -1073,12 +1110,39 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panelFuncionario;
+        private System.Windows.Forms.Button btnConsultarUsuario;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button btnCadastrarUsuario;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Button btnConsultarFuncionario;
+        private System.Windows.Forms.Button btnCadastrarFuncionario;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panelFolhaPagamento;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnGerarFolhaPagamento;
+        private System.Windows.Forms.Button btnConsultarFolhaPagamento;
+        private System.Windows.Forms.Panel panelVenda;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnConsultarVenda;
+        private System.Windows.Forms.Button btnCaixa;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

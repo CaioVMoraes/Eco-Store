@@ -46,8 +46,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCategoria = new System.Windows.Forms.TextBox();
+            this.picProduto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduto)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvProduto
@@ -63,11 +65,12 @@
             this.Column4,
             this.Column5,
             this.Column6});
-            this.dgvProduto.Location = new System.Drawing.Point(12, 227);
+            this.dgvProduto.Location = new System.Drawing.Point(12, 294);
             this.dgvProduto.Name = "dgvProduto";
             this.dgvProduto.ReadOnly = true;
-            this.dgvProduto.Size = new System.Drawing.Size(494, 375);
+            this.dgvProduto.Size = new System.Drawing.Size(494, 308);
             this.dgvProduto.TabIndex = 0;
+            this.dgvProduto.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellClick);
             this.dgvProduto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProduto_CellContentClick);
             // 
             // Column1
@@ -122,6 +125,7 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.lblMinimizar);
             this.panel1.Controls.Add(this.lblSair);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -136,7 +140,7 @@
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
-            this.lblMinimizar.Location = new System.Drawing.Point(452, 0);
+            this.lblMinimizar.Location = new System.Drawing.Point(458, 0);
             this.lblMinimizar.Name = "lblMinimizar";
             this.lblMinimizar.Size = new System.Drawing.Size(21, 23);
             this.lblMinimizar.TabIndex = 156;
@@ -150,7 +154,7 @@
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
-            this.lblSair.Location = new System.Drawing.Point(477, 3);
+            this.lblSair.Location = new System.Drawing.Point(483, 3);
             this.lblSair.Name = "lblSair";
             this.lblSair.Size = new System.Drawing.Size(23, 23);
             this.lblSair.TabIndex = 155;
@@ -164,7 +168,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(77, 113);
+            this.label7.Location = new System.Drawing.Point(72, 187);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(153, 20);
             this.label7.TabIndex = 156;
@@ -177,7 +181,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(77, 184);
+            this.label2.Location = new System.Drawing.Point(72, 258);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 160;
@@ -185,9 +189,10 @@
             // 
             // cboFornecedor
             // 
+            this.cboFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFornecedor.FormattingEnabled = true;
-            this.cboFornecedor.Location = new System.Drawing.Point(251, 143);
+            this.cboFornecedor.Location = new System.Drawing.Point(246, 217);
             this.cboFornecedor.Name = "cboFornecedor";
             this.cboFornecedor.Size = new System.Drawing.Size(192, 26);
             this.cboFornecedor.TabIndex = 161;
@@ -200,7 +205,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(77, 149);
+            this.label1.Location = new System.Drawing.Point(72, 223);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 20);
             this.label1.TabIndex = 162;
@@ -213,7 +218,7 @@
             this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(170, 53);
+            this.label4.Location = new System.Drawing.Point(175, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 20);
             this.label4.TabIndex = 164;
@@ -222,7 +227,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(251, 106);
+            this.txtNome.Location = new System.Drawing.Point(246, 180);
             this.txtNome.MaxLength = 45;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(192, 22);
@@ -232,12 +237,23 @@
             // txtCategoria
             // 
             this.txtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCategoria.Location = new System.Drawing.Point(251, 184);
+            this.txtCategoria.Location = new System.Drawing.Point(246, 258);
             this.txtCategoria.MaxLength = 45;
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(192, 22);
             this.txtCategoria.TabIndex = 305;
             this.txtCategoria.TextChanged += new System.EventHandler(this.txtCategoria_TextChanged);
+            // 
+            // picProduto
+            // 
+            this.picProduto.BackColor = System.Drawing.Color.Transparent;
+            this.picProduto.Image = global::WindowsFormsApp15.Properties.Resources._860086;
+            this.picProduto.Location = new System.Drawing.Point(185, 46);
+            this.picProduto.Name = "picProduto";
+            this.picProduto.Size = new System.Drawing.Size(139, 112);
+            this.picProduto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picProduto.TabIndex = 312;
+            this.picProduto.TabStop = false;
             // 
             // frmConsultarProduto
             // 
@@ -246,9 +262,9 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(516, 614);
+            this.Controls.Add(this.picProduto);
             this.Controls.Add(this.txtCategoria);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cboFornecedor);
             this.Controls.Add(this.label2);
@@ -261,6 +277,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvProduto)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picProduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,5 +302,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.PictureBox picProduto;
     }
 }

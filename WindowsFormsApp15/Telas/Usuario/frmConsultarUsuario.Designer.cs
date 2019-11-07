@@ -168,6 +168,8 @@
             // Column4
             // 
             this.Column4.HeaderText = "";
+            this.Column4.Image = global::WindowsFormsApp15.Properties.Resources.flat_style_circle_edit_icon_icons_com_66939;
+            this.Column4.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             this.Column4.Width = 25;
@@ -175,6 +177,8 @@
             // Column5
             // 
             this.Column5.HeaderText = "";
+            this.Column5.Image = global::WindowsFormsApp15.Properties.Resources.recyclebinfilled_recycling_full_garbage_1993;
+            this.Column5.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             this.Column5.Width = 25;

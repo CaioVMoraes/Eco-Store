@@ -15,7 +15,7 @@ namespace WindowsFormsApp15.Business
         {
             if(modelo.id_usuario == 0)
             {
-                throw new ArgumentException("id do usuario invalido");
+                throw new ArgumentException("Usuario Invalido");
             }
             if (modelo.vl_valorTotal == 0)
             {
@@ -62,7 +62,7 @@ namespace WindowsFormsApp15.Business
         {
             if (modelo.id_usuario == 0)
             {
-                throw new ArgumentException("id do usuario invalido");
+                throw new ArgumentException("Usuario Invalido");
             }
             if (modelo.vl_valorTotal == 0)
             {

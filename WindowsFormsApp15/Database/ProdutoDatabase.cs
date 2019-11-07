@@ -59,13 +59,13 @@ namespace WindowsFormsApp15.Database
 
         public void AlterarProduto(tb_produto modelo)
         {
-            tb_produto alterar = db.tb_produto.FirstOrDefault(x => x.id_produto == x.id_produto);
+            tb_produto alterar = db.tb_produto.FirstOrDefault(x => x.id_produto == modelo.id_produto);
 
-            modelo.nm_produto = alterar.nm_produto;
-            modelo.vl_valor = alterar.vl_valor;
-            modelo.ds_categoria = alterar.ds_categoria;
-            modelo.id_fornecedor = alterar.id_fornecedor;
-            modelo.img_produto = alterar.img_produto;
+            alterar.nm_produto = modelo.nm_produto;
+            alterar.vl_valor = modelo.vl_valor;
+            alterar.ds_categoria = modelo.ds_categoria;
+            alterar.id_fornecedor = modelo.id_fornecedor;
+            alterar.img_produto = modelo.img_produto;
             
             db.SaveChanges();
           

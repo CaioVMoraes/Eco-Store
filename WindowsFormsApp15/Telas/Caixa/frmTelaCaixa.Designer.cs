@@ -64,6 +64,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.nudQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudPago)).BeginInit();
@@ -75,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgUsuario)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -367,6 +370,8 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Plano_Verde1;
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtCPFCliente);
             this.panel1.Controls.Add(this.label13);
@@ -388,7 +393,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(825, 35);
+            this.label2.Location = new System.Drawing.Point(387, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(163, 20);
             this.label2.TabIndex = 47;
@@ -398,7 +403,7 @@
             // txtCPFCliente
             // 
             this.txtCPFCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtCPFCliente.Location = new System.Drawing.Point(684, 32);
+            this.txtCPFCliente.Location = new System.Drawing.Point(556, 28);
             this.txtCPFCliente.Mask = "000.000.000-00";
             this.txtCPFCliente.Name = "txtCPFCliente";
             this.txtCPFCliente.Size = new System.Drawing.Size(133, 26);
@@ -502,6 +507,35 @@
             this.nudQuantidade.Size = new System.Drawing.Size(80, 31);
             this.nudQuantidade.TabIndex = 172;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = global::WindowsFormsApp15.Properties.Resources.collaborator_male;
+            this.pictureBox1.Location = new System.Drawing.Point(778, 30);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(26, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 160;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label11.Location = new System.Drawing.Point(810, 34);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(132, 20);
+            this.label11.TabIndex = 161;
+            this.label11.Text = "Cadastrar Cliente";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
             // frmFluxoCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,6 +575,7 @@
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,5 +618,7 @@
         private System.Windows.Forms.DataGridViewImageColumn Column4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.NumericUpDown nudQuantidade;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

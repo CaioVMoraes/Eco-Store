@@ -184,6 +184,30 @@
     <Compile Include="Telas\Caixa\frmConsultarVenda.Designer.cs">
       <DependentUpon>frmConsultarVenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Cliente\frmConsultarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cliente\frmConsultarCliente.Designer.cs">
+      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cliente\frmAlterarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cliente\frmAlterarCliente.Designer.cs">
+      <DependentUpon>frmAlterarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cliente\frmCadastrarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cliente\frmCadastrarCliente.Designer.cs">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Cliente\frmDeletarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Cliente\frmDeletarCliente.Designer.cs">
+      <DependentUpon>frmDeletarCliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Recuperação de Senha\ConfirmarEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -383,6 +407,18 @@
     <Compile Include="Utils\Validacoes.cs" />
     <EmbeddedResource Include="Telas\Caixa\frmConsultarVenda.resx">
       <DependentUpon>frmConsultarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cliente\frmAlterarCliente.resx">
+      <DependentUpon>frmAlterarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cliente\frmCadastrarCliente.resx">
+      <DependentUpon>frmCadastrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cliente\frmConsultarCliente.resx">
+      <DependentUpon>frmConsultarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Cliente\frmDeletarCliente.resx">
+      <DependentUpon>frmDeletarCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Recuperação de Senha\ConfirmarEmail.resx">
       <DependentUpon>ConfirmarEmail.cs</DependentUpon>

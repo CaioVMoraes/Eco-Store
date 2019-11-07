@@ -31,13 +31,13 @@ namespace WindowsFormsApp15.Database
         }
         public List<tb_cliente> ConsultarClienteNome(string nome)
         {
-            List<tb_cliente> lista = db.tb_cliente.Where(x => x.nm_cliente == nome).ToList();
+            List<tb_cliente> lista = db.tb_cliente.Where(x => x.nm_cliente.Contains(nome)).ToList();
 
             return lista;
         }
          public List<tb_cliente> ConsultarClienteCpf(string cpf)
         {
-            List<tb_cliente> lista = db.tb_cliente.Where(x => x.ds_cpf == cpf).ToList();
+            List<tb_cliente> lista = db.tb_cliente.Where(x => x.ds_cpf.Contains(cpf)).ToList();
 
             return lista;
         }
@@ -49,13 +49,13 @@ namespace WindowsFormsApp15.Database
         }
         public List<tb_cliente> ConsultarClienteRg(string RG)
         {
-            List<tb_cliente> lista = db.tb_cliente.Where(x => x.ds_rg == RG).ToList();
+            List<tb_cliente> lista = db.tb_cliente.Where(x => x.ds_rg.Contains(RG)).ToList();
 
             return lista;
         }
         public List<tb_cliente> ConsultarClienteTelefone(string tel)
         {
-            List<tb_cliente> lista = db.tb_cliente.Where(x => x.ds_telefone == tel).ToList();
+            List<tb_cliente> lista = db.tb_cliente.Where(x => x.ds_telefone.Contains(tel)).ToList();
 
             return lista;
         }

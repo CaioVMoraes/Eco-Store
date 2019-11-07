@@ -23,7 +23,19 @@ namespace WindowsFormsApp15.Telas
         public frmConsultarProduto()
         {
             InitializeComponent();
+            this.CarregarFornecedor();
         }
+
+        private void CarregarFornecedor()
+        {
+            Business.FornecedorBusiness business = new Business.FornecedorBusiness();
+
+            List<tb_fornecedor> lista = business.ConsultarFornecedor();
+
+            cboFornecedor.DisplayMember = nameof(tb_fornecedor.nm_fornecedor);
+            cboFornecedor.DataSource = lista;
+        }
+
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -118,6 +130,24 @@ namespace WindowsFormsApp15.Telas
                 Telas.frmDeletarProduto tela = new Telas.frmDeletarProduto();
                 tela.CarregarTela(produto);
                 tela.ShowDialog();
+            }
+        }
+
+        private void dgvProduto_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                tb_produto produto = dgvProduto.CurrentRow.DataBoundItem as tb_produto;
+
+                Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+
+                Image imagem = imageConverter.byteArrayToImage(produto.img_produto);
+
+                picProduto.Image = imagem;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

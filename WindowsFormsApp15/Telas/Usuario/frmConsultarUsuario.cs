@@ -76,7 +76,7 @@ namespace WindowsFormsApp15.Telas.Usuario
 
         private void dgvUsuario_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 3)
+            if (e.ColumnIndex == 0)
             {
                 tb_usuario usuario = dgvUsuario.CurrentRow.DataBoundItem as tb_usuario;
 
@@ -85,7 +85,7 @@ namespace WindowsFormsApp15.Telas.Usuario
 
                 tela.ShowDialog();
             }
-            if (e.ColumnIndex == 4)
+            if (e.ColumnIndex == 1)
             {
                 tb_usuario usuario = dgvUsuario.CurrentRow.DataBoundItem as tb_usuario;
 

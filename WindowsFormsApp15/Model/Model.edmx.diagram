@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="33dc28096c8642308cbb416b50b20944" Name="Diagram1" ZoomLevel="74">
+      <Diagram DiagramId="33dc28096c8642308cbb416b50b20944" Name="Diagram1" ZoomLevel="192">
         <EntityTypeShape EntityType="ecostorModel.tb_cliente" Width="1.5" PointX="3" PointY="19.25" />
         <EntityTypeShape EntityType="ecostorModel.tb_compra" Width="1.5" PointX="3" PointY="22.75" />
         <EntityTypeShape EntityType="ecostorModel.tb_compra_item" Width="1.5" PointX="5.25" PointY="0.75" />

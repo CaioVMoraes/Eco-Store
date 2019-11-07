@@ -52,7 +52,7 @@
             // btnAlterar
             // 
             this.btnAlterar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnAlterar.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAlterar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAlterar.BorderRadius = 0;
             this.btnAlterar.ButtonText = "ALTERAR";
@@ -190,6 +190,7 @@
             // 
             // cboFuncionario
             // 
+            this.cboFuncionario.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFuncionario.FormattingEnabled = true;
             this.cboFuncionario.Location = new System.Drawing.Point(232, 118);
@@ -233,6 +234,7 @@
             // 
             // cboNivel
             // 
+            this.cboNivel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboNivel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboNivel.FormattingEnabled = true;
             this.cboNivel.Items.AddRange(new object[] {

@@ -66,6 +66,8 @@ namespace WindowsFormsApp15.Telas.Usuario
             business.RemoverUsuario(id);
 
             MessageBox.Show("Deletado com sucesso");
+
+            this.Close();
         }
     }
 }
