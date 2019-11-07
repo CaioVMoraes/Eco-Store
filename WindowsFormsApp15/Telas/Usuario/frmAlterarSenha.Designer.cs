@@ -123,23 +123,23 @@
             // btnAlterar
             // 
             this.btnAlterar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnAlterar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAlterar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAlterar.BorderRadius = 0;
             this.btnAlterar.ButtonText = "ALTERAR";
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.DisabledColor = System.Drawing.Color.Gray;
             this.btnAlterar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAlterar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAlterar.Iconimage")));
+            this.btnAlterar.Iconimage = global::WindowsFormsApp15.Properties.Resources.Editar;
             this.btnAlterar.Iconimage_right = null;
             this.btnAlterar.Iconimage_right_Selected = null;
             this.btnAlterar.Iconimage_Selected = null;
-            this.btnAlterar.IconMarginLeft = 0;
+            this.btnAlterar.IconMarginLeft = 15;
             this.btnAlterar.IconMarginRight = 0;
             this.btnAlterar.IconRightVisible = true;
             this.btnAlterar.IconRightZoom = 0D;
             this.btnAlterar.IconVisible = true;
-            this.btnAlterar.IconZoom = 90D;
+            this.btnAlterar.IconZoom = 50D;
             this.btnAlterar.IsTab = false;
             this.btnAlterar.Location = new System.Drawing.Point(171, 135);
             this.btnAlterar.Name = "btnAlterar";
@@ -210,7 +210,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
+            this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources.Background_3;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(477, 410);
             this.Controls.Add(this.panel1);

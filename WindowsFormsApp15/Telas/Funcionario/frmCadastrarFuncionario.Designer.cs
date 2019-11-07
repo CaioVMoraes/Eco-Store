@@ -61,7 +61,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label19 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.lblErro = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtEndereço = new System.Windows.Forms.TextBox();
@@ -71,14 +70,14 @@
             this.txtRg = new System.Windows.Forms.MaskedTextBox();
             this.txtCpf = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.txtUF = new System.Windows.Forms.TextBox();
             this.txtImagem = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtCep = new System.Windows.Forms.MaskedTextBox();
-            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             this.panel1.SuspendLayout();
@@ -147,7 +146,7 @@
             // 
             // dtpContrat
             // 
-            this.dtpContrat.BackColor = System.Drawing.Color.SkyBlue;
+            this.dtpContrat.BackColor = System.Drawing.Color.SeaGreen;
             this.dtpContrat.BorderRadius = 0;
             this.dtpContrat.ForeColor = System.Drawing.Color.White;
             this.dtpContrat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -175,7 +174,7 @@
             // 
             // dtpNascimento
             // 
-            this.dtpNascimento.BackColor = System.Drawing.Color.SkyBlue;
+            this.dtpNascimento.BackColor = System.Drawing.Color.SeaGreen;
             this.dtpNascimento.BorderRadius = 0;
             this.dtpNascimento.ForeColor = System.Drawing.Color.White;
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -253,7 +252,7 @@
             // btnCadastrarFuncionario
             // 
             this.btnCadastrarFuncionario.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadastrarFuncionario.BorderRadius = 0;
             this.btnCadastrarFuncionario.ButtonText = "CADASTRAR";
@@ -271,7 +270,7 @@
             this.btnCadastrarFuncionario.IconVisible = true;
             this.btnCadastrarFuncionario.IconZoom = 90D;
             this.btnCadastrarFuncionario.IsTab = true;
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(617, 516);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(613, 595);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnCadastrarFuncionario.OnHovercolor = System.Drawing.Color.RoyalBlue;
@@ -423,7 +422,7 @@
             this.label22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label22.Location = new System.Drawing.Point(44, 614);
+            this.label22.Location = new System.Drawing.Point(11, 209);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(174, 20);
             this.label22.TabIndex = 188;
@@ -524,17 +523,6 @@
             this.label21.TabIndex = 155;
             this.label21.Text = "X";
             // 
-            // lblErro
-            // 
-            this.lblErro.AutoSize = true;
-            this.lblErro.BackColor = System.Drawing.Color.Transparent;
-            this.lblErro.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblErro.ForeColor = System.Drawing.Color.Red;
-            this.lblErro.Location = new System.Drawing.Point(614, 600);
-            this.lblErro.Name = "lblErro";
-            this.lblErro.Size = new System.Drawing.Size(0, 16);
-            this.lblErro.TabIndex = 284;
-            // 
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -620,6 +608,22 @@
             this.groupBox1.TabIndex = 298;
             this.groupBox1.TabStop = false;
             // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(527, 140);
+            this.txtTelefone.Mask = "(00)0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(148, 20);
+            this.txtTelefone.TabIndex = 336;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Location = new System.Drawing.Point(527, 105);
+            this.txtCelular.Mask = "(00)00000-0000";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(148, 20);
+            this.txtCelular.TabIndex = 307;
+            // 
             // txtCargo
             // 
             this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -634,11 +638,20 @@
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.txtCep);
             this.groupBox2.Controls.Add(this.txtUF);
+            this.groupBox2.Controls.Add(this.label22);
             this.groupBox2.Location = new System.Drawing.Point(31, 405);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(555, 245);
             this.groupBox2.TabIndex = 299;
             this.groupBox2.TabStop = false;
+            // 
+            // txtCep
+            // 
+            this.txtCep.Location = new System.Drawing.Point(204, 73);
+            this.txtCep.Mask = "00000-000";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(327, 20);
+            this.txtCep.TabIndex = 306;
             // 
             // txtUF
             // 
@@ -671,30 +684,6 @@
             this.label14.TabIndex = 305;
             this.label14.Text = "Cadastrar Funcionario";
             // 
-            // txtCep
-            // 
-            this.txtCep.Location = new System.Drawing.Point(204, 73);
-            this.txtCep.Mask = "00000-000";
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(327, 20);
-            this.txtCep.TabIndex = 306;
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(527, 105);
-            this.txtCelular.Mask = "(00)00000-0000";
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(148, 20);
-            this.txtCelular.TabIndex = 307;
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(527, 140);
-            this.txtTelefone.Mask = "(00)0000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(148, 20);
-            this.txtTelefone.TabIndex = 336;
-            // 
             // frmCadastrarFuncionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -713,13 +702,11 @@
             this.Controls.Add(this.txtEndereço);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.lblErro);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.label22);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label12);
@@ -792,7 +779,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label lblErro;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtEndereço;
