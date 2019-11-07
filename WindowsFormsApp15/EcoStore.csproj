@@ -168,6 +168,7 @@
     <Compile Include="Model\tb_produto.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tb_produto_fornecedor.cs" />
     <Compile Include="Model\tb_recuperacao.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -542,10 +543,26 @@
     <None Include="Resources\Caminhão.png" />
     <None Include="Resources\gif.gif" />
     <None Include="Resources\Fundo.png" />
+    <None Include="Resources\adduser_4961.png" />
+    <None Include="Resources\480px-Magnifying_glass_icon.svg.png" />
+    <None Include="Resources\banknotespaymentmoney_billetesdebanco_pag_3773.png" />
+    <None Include="Resources\ic-vendor_97612.png" />
+    <None Include="Resources\icon-produto.png" />
+    <None Include="Resources\budgetmoneybagexpense_109751.png" />
+    <None Include="Resources\budgetmoneybagexpense_1097511.png" />
+    <None Include="Resources\emptyshoppingcart_shopingcart_carritodelacompravacio_4565.png" />
+    <None Include="Resources\ic-ad_97607.png" />
+    <None Include="Resources\flat-style-circle-edit_icon-icons.com_66939.png" />
     <Content Include="Resources\kkk.jpg" />
     <None Include="Resources\Logo Branco.png" />
     <None Include="Resources\Plano Verde1.png" />
     <None Include="Resources\Splash.gif" />
+    <None Include="Resources\user_add_21977.png" />
+    <None Include="Resources\wheelbarrow_118344.png" />
+    <None Include="Resources\listofworks_121961.png" />
+    <None Include="Resources\mediaplaybackpause_103385.png" />
+    <None Include="Resources\systemshutdown_103390.png" />
+    <None Include="Resources\recyclebinfilled_recycling_full_garbage_1993.png" />
     <Content Include="Script.txt" />
   </ItemGroup>
   <ItemGroup>

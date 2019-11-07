@@ -39,16 +39,15 @@ namespace WindowsFormsApp15.Telas
         }
 
         Business.ProdutoBusiness business = new Business.ProdutoBusiness();
-        Model.tb_produto modelo = new Model.tb_produto();
         private void txtNome_TextChanged(object sender, EventArgs e)
         {
             try
             {
                 string nome = txtNome.Text;
-                nome = modelo.nm_produto;
 
                 List<tb_produto> lista = business.ConsultarProduto(nome);
 
+                dgvProduto.AutoGenerateColumns = false;
                 dgvProduto.DataSource = lista;
             }
             catch(Exception ex)
@@ -65,6 +64,61 @@ namespace WindowsFormsApp15.Telas
         private void lblSair_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cboFornecedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string fornecedor = cboFornecedor.Text;
+
+                List<tb_produto> lista = business.ConsultarProdutoFornecedor(fornecedor);
+
+                dgvProduto.AutoGenerateColumns = false;
+                dgvProduto.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void txtCategoria_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string categoria = txtCategoria.Text;
+
+                List<tb_produto> lista = business.ConsultarProdutoCategoria(categoria);
+
+                dgvProduto.AutoGenerateColumns = false;
+                dgvProduto.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dgvProduto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                tb_produto produto = dgvProduto.CurrentRow.DataBoundItem as tb_produto;
+
+                Telas.frmAlterarProdutos tela = new frmAlterarProdutos();
+                tela.CarregarTela(produto);
+
+                tela.ShowDialog();
+            }
+            if(e.ColumnIndex == 1)
+            {
+                tb_produto produto = dgvProduto.CurrentRow.DataBoundItem as tb_produto;
+
+                Telas.frmDeletarProduto tela = new Telas.frmDeletarProduto();
+                tela.CarregarTela(produto);
+                tela.ShowDialog();
+            }
         }
     }
 }

@@ -21,19 +21,7 @@ namespace WindowsFormsApp15.Business
             {
                 throw new ArgumentException("O campo data de entrada é obrigatório");
             }
-            if (modelo.nm_categoria == string.Empty)
-            {
-                throw new ArgumentException("Categoria inválida");
-            }
-            if (modelo.nm_produto == string.Empty)
-            {
-                throw new ArgumentException("Produto Inválido");
-            }
-            if (modelo.vl_valor == 0)
-            {
-                throw new ArgumentException("Valor Inválido");
-            }
-                     
+
             db.CadastrarEstoque(modelo);
         }
         public List<tb_estoque> ConsultarEstoque()

@@ -76,57 +76,8 @@ namespace WindowsFormsApp15.Telas
             {
                 MessageBox.Show(ex.Message);
             }
-
-            
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                Model.tb_funcionario model = new Model.tb_funcionario();
-
-                int id = Convert.ToInt32(txtId.Text);
-
-                model = business.Listar(id);
-
-                //*Informações Pessoais*
-
-                txtId.Text = model.id_funcionario.ToString();
-                txtNome.Text = model.nm_funcionario;
-                dtpNascimento.Value = model.dt_nascimento;
-                txtRg.Text = model.ds_rg;
-                txtEmail.Text = model.ds_email;
-                dtpContrat.Value = model.dt_contratacao;
-                cboGen.Text = model.ds_genero;
-                txtCargo.Text = model.ds_cargo;
-                txtCelular.Text = model.ds_celular;
-                txtTelefone.Text = model.ds_telefone;
-                nudSalario.Value = model.vl_salarioPorHora;
-                txtCpf.Text = model.ds_cpf;
-                cboGen.Text = model.ds_genero;
-
-                //*Endereço*
-
-                txtEndereço.Text = model.ds_endereco;
-                txtCep.Text = model.ds_cep;
-                txtCidade.Text = model.ds_cidade;
-                txtUF.Text = model.ds_UF;
-                txtComplemento.Text = model.ds_complemento;
-                txtNumRes.Text = model.ds_numeroCasa;
-
-                Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
-
-                Image imagem = imageConverter.byteArrayToImage(model.img_foto);
-
-                picFoto.Image = imagem;
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)

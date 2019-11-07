@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas.Fornecedor
 {
@@ -22,6 +23,24 @@ namespace WindowsFormsApp15.Telas.Fornecedor
         public frmDeletarFornecedor()
         {
             InitializeComponent();
+        }
+
+        public void CarregarTela(tb_fornecedor fornecedor)
+        {
+            //*Informações básicas*
+            txtID.Text = fornecedor.id_fornecedor.ToString();
+            txtCelular.Text = fornecedor.ds_celular;
+            txtEmpresa.Text = fornecedor.nm_empresa;
+            txtNome.Text = fornecedor.nm_fornecedor;
+            txtTelefone.Text = fornecedor.ds_telefone;
+            txtCNPJ.Text = fornecedor.ds_cnpj;
+
+            //*Endereço*
+            txtCEP.Text = fornecedor.ds_cep;
+            txtCidade.Text = fornecedor.ds_cidade;
+            txtComplemento.Text = fornecedor.ds_complemento;
+            txtEndereco.Text = fornecedor.ds_endereco;
+            txtUF.Text = fornecedor.ds_UF;
         }
 
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)

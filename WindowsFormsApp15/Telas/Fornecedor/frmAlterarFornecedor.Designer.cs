@@ -34,18 +34,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.btnAlterar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label21 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label27 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtComplemento = new System.Windows.Forms.TextBox();
-            this.txtUF = new System.Windows.Forms.ComboBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.txtCNPJ = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtCelular = new System.Windows.Forms.MaskedTextBox();
@@ -68,9 +64,12 @@
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.lblErro = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
+            this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
+            this.txtUF = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -81,7 +80,7 @@
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
-            this.lblMinimizar.Location = new System.Drawing.Point(798, 2);
+            this.lblMinimizar.Location = new System.Drawing.Point(798, 0);
             this.lblMinimizar.Name = "lblMinimizar";
             this.lblMinimizar.Size = new System.Drawing.Size(21, 23);
             this.lblMinimizar.TabIndex = 156;
@@ -95,7 +94,7 @@
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
-            this.lblSair.Location = new System.Drawing.Point(823, 5);
+            this.lblSair.Location = new System.Drawing.Point(823, 3);
             this.lblSair.Name = "lblSair";
             this.lblSair.Size = new System.Drawing.Size(23, 23);
             this.lblSair.TabIndex = 155;
@@ -149,13 +148,13 @@
             this.btnAlterar.IconVisible = true;
             this.btnAlterar.IconZoom = 90D;
             this.btnAlterar.IsTab = false;
-            this.btnAlterar.Location = new System.Drawing.Point(599, 563);
+            this.btnAlterar.Location = new System.Drawing.Point(599, 586);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Normalcolor = System.Drawing.Color.DodgerBlue;
             this.btnAlterar.OnHovercolor = System.Drawing.Color.RoyalBlue;
             this.btnAlterar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAlterar.selected = false;
-            this.btnAlterar.Size = new System.Drawing.Size(182, 65);
+            this.btnAlterar.Size = new System.Drawing.Size(182, 42);
             this.btnAlterar.TabIndex = 366;
             this.btnAlterar.Text = "ALTERAR";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -163,24 +162,10 @@
             this.btnAlterar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(360, 106);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(167, 20);
-            this.label21.TabIndex = 393;
-            this.label21.Text = "Buscar Fornecedor:";
-            // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.txtID);
-            this.groupBox4.Controls.Add(this.btnBuscar);
             this.groupBox4.Controls.Add(this.label27);
             this.groupBox4.Location = new System.Drawing.Point(227, 106);
             this.groupBox4.Name = "groupBox4";
@@ -191,45 +176,10 @@
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(150, 43);
+            this.txtID.Location = new System.Drawing.Point(222, 39);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(144, 22);
             this.txtID.TabIndex = 285;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnBuscar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.BorderRadius = 0;
-            this.btnBuscar.ButtonText = "BUSCAR";
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBuscar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Iconimage")));
-            this.btnBuscar.Iconimage_right = null;
-            this.btnBuscar.Iconimage_right_Selected = null;
-            this.btnBuscar.Iconimage_Selected = null;
-            this.btnBuscar.IconMarginLeft = 0;
-            this.btnBuscar.IconMarginRight = 0;
-            this.btnBuscar.IconRightVisible = true;
-            this.btnBuscar.IconRightZoom = 0D;
-            this.btnBuscar.IconVisible = true;
-            this.btnBuscar.IconZoom = 90D;
-            this.btnBuscar.IsTab = false;
-            this.btnBuscar.Location = new System.Drawing.Point(320, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnBuscar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnBuscar.selected = false;
-            this.btnBuscar.Size = new System.Drawing.Size(110, 27);
-            this.btnBuscar.TabIndex = 170;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Textcolor = System.Drawing.Color.White;
-            this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // label27
             // 
@@ -238,7 +188,7 @@
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(12, 45);
+            this.label27.Location = new System.Drawing.Point(84, 41);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(130, 20);
             this.label27.TabIndex = 166;
@@ -257,27 +207,18 @@
             // 
             // txtComplemento
             // 
-            this.txtComplemento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplemento.Location = new System.Drawing.Point(217, 647);
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(303, 23);
+            this.txtComplemento.Size = new System.Drawing.Size(303, 22);
             this.txtComplemento.TabIndex = 416;
-            // 
-            // txtUF
-            // 
-            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUF.FormattingEnabled = true;
-            this.txtUF.Location = new System.Drawing.Point(217, 604);
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(303, 24);
-            this.txtUF.TabIndex = 415;
             // 
             // txtCidade
             // 
-            this.txtCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(217, 566);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(303, 23);
+            this.txtCidade.Size = new System.Drawing.Size(303, 22);
             this.txtCidade.TabIndex = 414;
             // 
             // label15
@@ -306,14 +247,6 @@
             this.label14.TabIndex = 412;
             this.label14.Text = "Contato:";
             // 
-            // txtCNPJ
-            // 
-            this.txtCNPJ.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNPJ.Location = new System.Drawing.Point(217, 366);
-            this.txtCNPJ.Name = "txtCNPJ";
-            this.txtCNPJ.Size = new System.Drawing.Size(255, 23);
-            this.txtCNPJ.TabIndex = 411;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -329,10 +262,10 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(217, 486);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(303, 23);
+            this.txtEndereco.Size = new System.Drawing.Size(303, 22);
             this.txtEndereco.TabIndex = 409;
             // 
             // txtCelular
@@ -355,10 +288,10 @@
             // 
             // txtEmpresa
             // 
-            this.txtEmpresa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmpresa.Location = new System.Drawing.Point(217, 327);
             this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(255, 23);
+            this.txtEmpresa.Size = new System.Drawing.Size(255, 22);
             this.txtEmpresa.TabIndex = 406;
             // 
             // label12
@@ -394,7 +327,7 @@
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(527, 333);
+            this.label10.Location = new System.Drawing.Point(13, 93);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 20);
             this.label10.TabIndex = 403;
@@ -459,7 +392,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(527, 293);
+            this.label7.Location = new System.Drawing.Point(13, 53);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 20);
             this.label7.TabIndex = 398;
@@ -467,10 +400,10 @@
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(217, 290);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(255, 23);
+            this.txtNome.Size = new System.Drawing.Size(255, 22);
             this.txtNome.TabIndex = 397;
             // 
             // label6
@@ -511,6 +444,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(514, 246);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(286, 162);
@@ -521,6 +456,7 @@
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
             this.groupBox3.Controls.Add(this.txtCEP);
+            this.groupBox3.Controls.Add(this.txtUF);
             this.groupBox3.Location = new System.Drawing.Point(46, 445);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(508, 249);
@@ -557,6 +493,24 @@
             this.label19.TabIndex = 422;
             this.label19.Text = "Alterar Fornecedor";
             // 
+            // txtCNPJ
+            // 
+            this.txtCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNPJ.Location = new System.Drawing.Point(217, 362);
+            this.txtCNPJ.Mask = "00.000.000/0000-00";
+            this.txtCNPJ.Name = "txtCNPJ";
+            this.txtCNPJ.Size = new System.Drawing.Size(255, 24);
+            this.txtCNPJ.TabIndex = 424;
+            // 
+            // txtUF
+            // 
+            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUF.Location = new System.Drawing.Point(171, 161);
+            this.txtUF.MaxLength = 2;
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(303, 22);
+            this.txtUF.TabIndex = 425;
+            // 
             // frmAlterarFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -565,15 +519,14 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(857, 712);
+            this.Controls.Add(this.txtCNPJ);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.lblErro);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtComplemento);
-            this.Controls.Add(this.txtUF);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtCNPJ);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtCelular);
@@ -581,19 +534,16 @@
             this.Controls.Add(this.txtEmpresa);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
@@ -606,6 +556,8 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -619,18 +571,14 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuFlatButton btnAlterar;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox txtID;
-        private Bunifu.Framework.UI.BunifuFlatButton btnBuscar;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtComplemento;
-        private System.Windows.Forms.ComboBox txtUF;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox txtCNPJ;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.MaskedTextBox txtCelular;
@@ -653,5 +601,7 @@
         private System.Windows.Forms.MaskedTextBox txtCEP;
         private System.Windows.Forms.Label lblErro;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TextBox txtUF;
+        private System.Windows.Forms.MaskedTextBox txtCNPJ;
     }
 }

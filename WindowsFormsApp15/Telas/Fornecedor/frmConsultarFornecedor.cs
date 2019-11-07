@@ -42,13 +42,12 @@ namespace WindowsFormsApp15.Telas
             try
             {
                 Business.FornecedorBusiness business = new Business.FornecedorBusiness();
-                Model.tb_fornecedor modelo = new Model.tb_fornecedor();
 
                 string nome = txtFornecedor.Text;
-                nome = modelo.nm_fornecedor;
 
                 List<tb_fornecedor> lista = business.ConsultarFornecedorNome(nome);
 
+                dgvConsultarFuncionario.AutoGenerateColumns = false;
                 dgvConsultarFuncionario.DataSource = lista;
             }
             catch (Exception ex)
@@ -62,13 +61,12 @@ namespace WindowsFormsApp15.Telas
             try
             {
                 Business.FornecedorBusiness business = new Business.FornecedorBusiness();
-                Model.tb_fornecedor modelo = new Model.tb_fornecedor();
 
                 string nomeempresa = txtEmpresa.Text;
-                nomeempresa = modelo.nm_fornecedor;
 
                 List<tb_fornecedor> lista = business.ConsultarFornecedorNomeEmpresa(nomeempresa);
 
+                dgvConsultarFuncionario.AutoGenerateColumns = false;
                 dgvConsultarFuncionario.DataSource = lista;
             }
             catch(Exception ex)
@@ -85,6 +83,28 @@ namespace WindowsFormsApp15.Telas
         private void label3_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmConsultarFornecedor_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void dgvConsultarFuncionario_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.ColumnIndex == 0)
+            {
+                tb_fornecedor fornecedor = dgvConsultarFuncionario.CurrentRow.DataBoundItem as tb_fornecedor;
+                Telas.Fornecedor.frmAlterarFornecedor tela = new Fornecedor.frmAlterarFornecedor();
+                tela.CarregarTela(fornecedor);
+                tela.ShowDialog();
+            }
+            if(e.ColumnIndex == 1)
+            {
+                tb_fornecedor fornecedor = dgvConsultarFuncionario.CurrentRow.DataBoundItem as tb_fornecedor;
+                Telas.Fornecedor.frmDeletarFornecedor tela = new Fornecedor.frmDeletarFornecedor();
+                tela.CarregarTela(fornecedor);
+                tela.ShowDialog();
+            }
         }
     }
 }

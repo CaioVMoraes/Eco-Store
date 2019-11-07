@@ -49,11 +49,9 @@
             this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.txtCNPJ = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.txtCidade = new System.Windows.Forms.TextBox();
-            this.txtUF = new System.Windows.Forms.ComboBox();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -62,7 +60,11 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
             this.lblErro = new System.Windows.Forms.Label();
+            this.txtUF = new System.Windows.Forms.TextBox();
+            this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -115,7 +117,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(527, 177);
+            this.label7.Location = new System.Drawing.Point(10, 45);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(84, 20);
             this.label7.TabIndex = 338;
@@ -123,10 +125,10 @@
             // 
             // txtNome
             // 
-            this.txtNome.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNome.Location = new System.Drawing.Point(217, 174);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(255, 23);
+            this.txtNome.Size = new System.Drawing.Size(255, 22);
             this.txtNome.TabIndex = 337;
             // 
             // label6
@@ -249,7 +251,7 @@
             this.label10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label10.Location = new System.Drawing.Point(527, 217);
+            this.label10.Location = new System.Drawing.Point(13, 85);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(70, 20);
             this.label10.TabIndex = 344;
@@ -283,10 +285,10 @@
             // 
             // txtEmpresa
             // 
-            this.txtEmpresa.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmpresa.Location = new System.Drawing.Point(217, 211);
             this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(255, 23);
+            this.txtEmpresa.Size = new System.Drawing.Size(255, 22);
             this.txtEmpresa.TabIndex = 347;
             // 
             // txtTelefone
@@ -309,10 +311,10 @@
             // 
             // txtEndereco
             // 
-            this.txtEndereco.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEndereco.Location = new System.Drawing.Point(217, 370);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(303, 23);
+            this.txtEndereco.Size = new System.Drawing.Size(303, 22);
             this.txtEndereco.TabIndex = 350;
             // 
             // label13
@@ -327,14 +329,6 @@
             this.label13.Size = new System.Drawing.Size(242, 29);
             this.label13.TabIndex = 351;
             this.label13.Text = "Dados da Empresa:";
-            // 
-            // txtCNPJ
-            // 
-            this.txtCNPJ.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNPJ.Location = new System.Drawing.Point(217, 250);
-            this.txtCNPJ.Name = "txtCNPJ";
-            this.txtCNPJ.Size = new System.Drawing.Size(255, 23);
-            this.txtCNPJ.TabIndex = 352;
             // 
             // label14
             // 
@@ -364,32 +358,24 @@
             // 
             // txtCidade
             // 
-            this.txtCidade.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCidade.Location = new System.Drawing.Point(217, 450);
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(303, 23);
+            this.txtCidade.Size = new System.Drawing.Size(303, 22);
             this.txtCidade.TabIndex = 356;
-            // 
-            // txtUF
-            // 
-            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUF.FormattingEnabled = true;
-            this.txtUF.Location = new System.Drawing.Point(217, 488);
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(303, 24);
-            this.txtUF.TabIndex = 357;
             // 
             // txtComplemento
             // 
-            this.txtComplemento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtComplemento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComplemento.Location = new System.Drawing.Point(217, 531);
             this.txtComplemento.Name = "txtComplemento";
-            this.txtComplemento.Size = new System.Drawing.Size(303, 23);
+            this.txtComplemento.Size = new System.Drawing.Size(303, 22);
             this.txtComplemento.TabIndex = 358;
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.Controls.Add(this.txtCNPJ);
             this.groupBox1.Location = new System.Drawing.Point(46, 130);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(452, 162);
@@ -399,6 +385,8 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Location = new System.Drawing.Point(514, 130);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(286, 162);
@@ -408,6 +396,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.txtUF);
             this.groupBox3.Controls.Add(this.txtCEP);
             this.groupBox3.Location = new System.Drawing.Point(46, 329);
             this.groupBox3.Name = "groupBox3";
@@ -456,6 +445,24 @@
             this.lblErro.Size = new System.Drawing.Size(0, 13);
             this.lblErro.TabIndex = 422;
             // 
+            // txtUF
+            // 
+            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUF.Location = new System.Drawing.Point(171, 161);
+            this.txtUF.MaxLength = 2;
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(303, 22);
+            this.txtUF.TabIndex = 423;
+            // 
+            // txtCNPJ
+            // 
+            this.txtCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNPJ.Location = new System.Drawing.Point(171, 119);
+            this.txtCNPJ.Mask = "00.000.000/0000-00";
+            this.txtCNPJ.Name = "txtCNPJ";
+            this.txtCNPJ.Size = new System.Drawing.Size(255, 24);
+            this.txtCNPJ.TabIndex = 423;
+            // 
             // frmCadastroFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -468,11 +475,9 @@
             this.Controls.Add(this.label19);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtComplemento);
-            this.Controls.Add(this.txtUF);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.txtCNPJ);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtCelular);
@@ -480,13 +485,11 @@
             this.Controls.Add(this.txtEmpresa);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnEntrar);
@@ -500,6 +503,10 @@
             this.Text = "CadastroFornecedores";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -530,11 +537,9 @@
         private System.Windows.Forms.MaskedTextBox txtCelular;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtCNPJ;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox txtCidade;
-        private System.Windows.Forms.ComboBox txtUF;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -543,5 +548,7 @@
         private System.Windows.Forms.MaskedTextBox txtCEP;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label lblErro;
+        private System.Windows.Forms.MaskedTextBox txtCNPJ;
+        private System.Windows.Forms.TextBox txtUF;
     }
 }

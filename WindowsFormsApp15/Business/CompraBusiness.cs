@@ -14,25 +14,19 @@ namespace WindowsFormsApp15.Business
 
         public void InserirCompra(tb_compra modelo)
         {
-            if(model.dt_compra == null)
+            if(modelo.dt_compra == null)
             {
                 throw new ArgumentException("Data de compra inválida");
             }
-            if (model.vl_valorTotal == 0)
+            if (modelo.vl_valorTotal == 0)
             {
                 throw new ArgumentException("Total inválido");
             }
 
             db.InserirCompra(modelo);
-
-
-
         }
-        public void InserirCompraItem(tb_compra_item modelo)
+        public void InserirCompraItem(tb_compra_item modelocompra)
         {
-
-            tb_compra_item modelocompra = new tb_compra_item();
-
             if(modelocompra.id_compra == 0)
             {
                 throw new ArgumentException("Id compra Inválido");
@@ -43,23 +37,7 @@ namespace WindowsFormsApp15.Business
                 throw new ArgumentException("Id prdouto Inválido");
             }
 
-            if (modelocompra.nm_produto == string.Empty)
-            {
-                throw new ArgumentException("Nome do produto Inválido");
-            }
-
-            if (modelocompra.vl_valorTotal == 0)
-            {
-                throw new ArgumentException("valor total Inválido");
-            }
-            if (modelocompra.dt_compra == null)
-            {
-                throw new ArgumentException("Data de compra Inválida");
-            }
-
-            db.InserirCompraitem(modelo);
-
-
+            db.InserirCompraitem(modelocompra);
         }
 
         public List<tb_compra> ConsultarCompra()
@@ -83,7 +61,6 @@ namespace WindowsFormsApp15.Business
 
         public void AlterarCompra(tb_compra modelo)
         {
-
             if (model.dt_compra == null)
             {
                 throw new ArgumentException("Data de compra inválida");
@@ -94,13 +71,9 @@ namespace WindowsFormsApp15.Business
             }
 
             db.AlterarCompra(modelo);
-
-
         }
         public void RemoverCompra(int id)
         {
-
-
             if (model.dt_compra == null)
             {
                 throw new ArgumentException("Data de compra inválida");
@@ -111,7 +84,6 @@ namespace WindowsFormsApp15.Business
             }
 
             db.RemoverCompra(id);
-
         }
     }
 }

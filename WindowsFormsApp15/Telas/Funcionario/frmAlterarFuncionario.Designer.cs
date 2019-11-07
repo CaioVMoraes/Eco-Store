@@ -45,10 +45,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label27 = new System.Windows.Forms.Label();
             this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label28 = new System.Windows.Forms.Label();
@@ -78,13 +76,13 @@
             this.txtImagem = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtUF = new System.Windows.Forms.TextBox();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             this.txtCelular = new System.Windows.Forms.MaskedTextBox();
             this.nudSalario = new System.Windows.Forms.NumericUpDown();
-            this.txtCep = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -293,24 +291,10 @@
             this.pictureBox1.TabIndex = 281;
             this.pictureBox1.TabStop = false;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(453, 87);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(169, 20);
-            this.label21.TabIndex = 279;
-            this.label21.Text = "Buscar Funcionario:";
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txtId);
-            this.groupBox1.Controls.Add(this.btnEntrar);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Location = new System.Drawing.Point(315, 87);
             this.groupBox1.Name = "groupBox1";
@@ -321,45 +305,10 @@
             // txtId
             // 
             this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(150, 43);
+            this.txtId.Location = new System.Drawing.Point(212, 42);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(144, 22);
             this.txtId.TabIndex = 285;
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEntrar.BorderRadius = 0;
-            this.btnEntrar.ButtonText = "BUSCAR";
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEntrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEntrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Iconimage")));
-            this.btnEntrar.Iconimage_right = null;
-            this.btnEntrar.Iconimage_right_Selected = null;
-            this.btnEntrar.Iconimage_Selected = null;
-            this.btnEntrar.IconMarginLeft = 0;
-            this.btnEntrar.IconMarginRight = 0;
-            this.btnEntrar.IconRightVisible = true;
-            this.btnEntrar.IconRightZoom = 0D;
-            this.btnEntrar.IconVisible = true;
-            this.btnEntrar.IconZoom = 90D;
-            this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(320, 38);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEntrar.selected = false;
-            this.btnEntrar.Size = new System.Drawing.Size(110, 27);
-            this.btnEntrar.TabIndex = 170;
-            this.btnEntrar.Text = "BUSCAR";
-            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntrar.Textcolor = System.Drawing.Color.White;
-            this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // label27
             // 
@@ -368,7 +317,7 @@
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(12, 45);
+            this.label27.Location = new System.Drawing.Point(74, 44);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(132, 20);
             this.label27.TabIndex = 166;
@@ -729,6 +678,14 @@
             this.txtUF.Size = new System.Drawing.Size(326, 22);
             this.txtUF.TabIndex = 334;
             // 
+            // txtCep
+            // 
+            this.txtCep.Location = new System.Drawing.Point(209, 66);
+            this.txtCep.Mask = "00000-000";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(327, 20);
+            this.txtCep.TabIndex = 338;
+            // 
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
@@ -743,6 +700,14 @@
             this.groupBox3.TabIndex = 333;
             this.groupBox3.TabStop = false;
             // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(519, 130);
+            this.txtTelefone.Mask = "(00)0000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(148, 20);
+            this.txtTelefone.TabIndex = 340;
+            // 
             // txtCargo
             // 
             this.txtCargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -751,27 +716,6 @@
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(148, 22);
             this.txtCargo.TabIndex = 334;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(424, 162);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 40);
-            this.label3.TabIndex = 334;
-            this.label3.Text = "Salario\r\nPor Hora:";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Location = new System.Drawing.Point(519, 130);
-            this.txtTelefone.Mask = "(00)0000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(148, 20);
-            this.txtTelefone.TabIndex = 340;
             // 
             // txtCelular
             // 
@@ -796,13 +740,18 @@
             this.nudSalario.TabIndex = 337;
             this.nudSalario.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtCep
+            // label3
             // 
-            this.txtCep.Location = new System.Drawing.Point(209, 66);
-            this.txtCep.Mask = "00000-000";
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(327, 20);
-            this.txtCep.TabIndex = 338;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(424, 162);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 40);
+            this.label3.TabIndex = 334;
+            this.label3.Text = "Salario\r\nPor Hora:";
             // 
             // frmAlterarFuncionario
             // 
@@ -835,7 +784,6 @@
             this.Controls.Add(this.dtpNascimento);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label12);
@@ -891,10 +839,8 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Label label29;

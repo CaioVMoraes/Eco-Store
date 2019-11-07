@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas
 {
@@ -23,6 +24,21 @@ namespace WindowsFormsApp15.Telas
         {
             InitializeComponent();
         }
+
+        public void CarregarTela(tb_produto model)
+        {
+            txtIdProduto.Text = model.tb_fornecedor.nm_fornecedor;
+            txtNome.Text = model.nm_produto;
+            txtCategoria.Text = model.ds_categoria;
+            nudValor.Value = model.vl_valor;
+
+            Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
+
+            Image imagem = imageConverter.byteArrayToImage(model.img_produto);
+
+            imgImagem.Image = imagem;
+        }
+
         public static void Move_Form(IntPtr Handle, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -67,7 +83,7 @@ namespace WindowsFormsApp15.Telas
             txtIDFornecedor.Text = modelo.tb_fornecedor.nm_fornecedor;
             txtNome.Text = modelo.nm_produto;
             imgImagem.Image = imagem;
-            cboCategoria.Text = modelo.ds_categoria;
+            txtCategoria.Text = modelo.ds_categoria;
         }
 
         private void label1_Click(object sender, EventArgs e)

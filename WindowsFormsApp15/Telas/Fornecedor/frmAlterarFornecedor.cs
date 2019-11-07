@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp15.Model;
 
 namespace WindowsFormsApp15.Telas.Fornecedor
 {
@@ -24,16 +25,31 @@ namespace WindowsFormsApp15.Telas.Fornecedor
             InitializeComponent();
         }
 
+        public void CarregarTela(tb_fornecedor fornecedor)
+        {
+            //*Informações básicas*
+            txtID.Text = fornecedor.id_fornecedor.ToString();
+            txtCelular.Text = fornecedor.ds_celular;
+            txtEmpresa.Text = fornecedor.nm_empresa;
+            txtNome.Text = fornecedor.nm_fornecedor;
+            txtTelefone.Text = fornecedor.ds_telefone;
+            txtCNPJ.Text = fornecedor.ds_cnpj;
+
+            //*Endereço*
+            txtCEP.Text = fornecedor.ds_cep;
+            txtCidade.Text = fornecedor.ds_cidade;
+            txtComplemento.Text = fornecedor.ds_complemento;
+            txtEndereco.Text = fornecedor.ds_endereco;
+            txtUF.Text = fornecedor.ds_UF;
+        }
+
         Business.FornecedorBusiness business = new Business.FornecedorBusiness();
         Model.tb_fornecedor modelo = new Model.tb_fornecedor();
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             try
             {
-
                 int id = Convert.ToInt32(txtID.Text);
-
-                id = modelo.id_fornecedor;
 
                 //*Informações básicas*
 
@@ -49,9 +65,7 @@ namespace WindowsFormsApp15.Telas.Fornecedor
                 modelo.ds_cidade = txtCidade.Text;
                 modelo.ds_complemento = txtComplemento.Text;
                 modelo.ds_endereco = txtEndereco.Text;
-              
                 modelo.ds_UF = txtUF.Text;
-              
 
                 business.AlterarFornecedor(modelo);
             }
@@ -81,7 +95,6 @@ namespace WindowsFormsApp15.Telas.Fornecedor
             id = modelo.id_fornecedor;
 
             business.Listar(id);
-
 
             //*Informações básicas*
 

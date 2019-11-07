@@ -14,39 +14,39 @@ namespace WindowsFormsApp15.Business
 
         public void CadastrarFornecedor(Model.tb_fornecedor modelo)
         {
-            if(model.nm_empresa == string.Empty)
+            if(modelo.nm_empresa == string.Empty)
             {
                 throw new ArgumentException("Nome da empresa inválido");
             }
-            if (model.nm_fornecedor == string.Empty)
+            if (modelo.nm_fornecedor == string.Empty)
             {
                 throw new ArgumentException("Nome do fornecedor inválido");
             }
-            if (model.ds_celular == string.Empty)
+            if (modelo.ds_celular == string.Empty)
             {
                 throw new ArgumentException("Nº de celular inválido");
             }
-            if (model.ds_cep == string.Empty)
+            if (modelo.ds_cep == string.Empty)
             {
                 throw new ArgumentException("CEP inválido");
             }
-            if (model.ds_cidade == string.Empty)
+            if (modelo.ds_cidade == string.Empty)
             {
                 throw new ArgumentException("Cidade inválida");
             }
-            if (model.ds_cnpj == string.Empty)
+            if (modelo.ds_cnpj == string.Empty)
             {
                 throw new ArgumentException("CNPJ inválido");
             }
-            if (model.ds_endereco == string.Empty)
+            if (modelo.ds_endereco == string.Empty)
             {
                 throw new ArgumentException("Endereço inválido");
             }
-            if (model.ds_telefone == string.Empty)
+            if (modelo.ds_telefone == string.Empty)
             {
                 throw new ArgumentException("Nº de telefone inválido");
             }
-            if (model.ds_UF == string.Empty)
+            if (modelo.ds_UF == string.Empty)
             {
                 throw new ArgumentException("UF inválido");
             }
@@ -76,39 +76,39 @@ namespace WindowsFormsApp15.Business
         public void AlterarFornecedor(Model.tb_fornecedor modelo)
         {
 
-            if (model.nm_empresa == string.Empty)
+            if (modelo.nm_empresa == string.Empty)
             {
                 throw new ArgumentException("Nome da empresa inválido");
             }
-            if (model.nm_fornecedor == string.Empty)
+            if (modelo.nm_fornecedor == string.Empty)
             {
                 throw new ArgumentException("Nome do fornecedor inválido");
             }
-            if (model.ds_celular == string.Empty)
+            if (modelo.ds_celular == string.Empty)
             {
                 throw new ArgumentException("Nº de celular inválido");
             }
-            if (model.ds_cep == string.Empty)
+            if (modelo.ds_cep == string.Empty)
             {
                 throw new ArgumentException("CEP inválido");
             }
-            if (model.ds_cidade == string.Empty)
+            if (modelo.ds_cidade == string.Empty)
             {
                 throw new ArgumentException("Cidade inválida");
             }
-            if (model.ds_cnpj == string.Empty)
+            if (modelo.ds_cnpj == string.Empty)
             {
                 throw new ArgumentException("CNPJ inválido");
             }
-            if (model.ds_endereco == string.Empty)
+            if (modelo.ds_endereco == string.Empty)
             {
                 throw new ArgumentException("Endereço inválido");
             }
-            if (model.ds_telefone == string.Empty)
+            if (modelo.ds_telefone == string.Empty)
             {
                 throw new ArgumentException("Nº de telefone inválido");
             }
-            if (model.ds_UF == string.Empty)
+            if (modelo.ds_UF == string.Empty)
             {
                 throw new ArgumentException("UF inválido");
             }
@@ -118,43 +118,6 @@ namespace WindowsFormsApp15.Business
 
         public void RemoverForncedor(int id)
         {
-            if (model.nm_empresa == string.Empty)
-            {
-                throw new ArgumentException("Nome da empresa inválido");
-            }
-            if (model.nm_fornecedor == string.Empty)
-            {
-                throw new ArgumentException("Nome do fornecedor inválido");
-            }
-            if (model.ds_celular == string.Empty)
-            {
-                throw new ArgumentException("Nº de celular inválido");
-            }
-            if (model.ds_cep == string.Empty)
-            {
-                throw new ArgumentException("CEP inválido");
-            }
-            if (model.ds_cidade == string.Empty)
-            {
-                throw new ArgumentException("Cidade inválida");
-            }
-            if (model.ds_cnpj == string.Empty)
-            {
-                throw new ArgumentException("CNPJ inválido");
-            }
-            if (model.ds_endereco == string.Empty)
-            {
-                throw new ArgumentException("Endereço inválido");
-            }
-            if (model.ds_telefone == string.Empty)
-            {
-                throw new ArgumentException("Nº de telefone inválido");
-            }
-            if (model.ds_UF == string.Empty)
-            {
-                throw new ArgumentException("UF inválido");
-            }
-
             db.RemoverFornecedor(id);
         }
         public List<tb_fornecedor> ConsultarFornecedor()

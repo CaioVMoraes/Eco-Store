@@ -44,9 +44,9 @@
             this.btnCadastrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtImagem = new System.Windows.Forms.TextBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProduto)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -120,21 +120,23 @@
             // 
             // btnLimpar
             // 
+            this.btnLimpar.BackColor = System.Drawing.SystemColors.Control;
             this.btnLimpar.Location = new System.Drawing.Point(244, 189);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(67, 23);
             this.btnLimpar.TabIndex = 310;
             this.btnLimpar.Text = "Limpar";
-            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.UseVisualStyleBackColor = false;
             // 
             // btnProcurar
             // 
+            this.btnProcurar.BackColor = System.Drawing.SystemColors.Control;
             this.btnProcurar.Location = new System.Drawing.Point(172, 189);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(66, 23);
             this.btnProcurar.TabIndex = 309;
             this.btnProcurar.Text = "Procurar";
-            this.btnProcurar.UseVisualStyleBackColor = true;
+            this.btnProcurar.UseVisualStyleBackColor = false;
             this.btnProcurar.Click += new System.EventHandler(this.btnProcurar_Click);
             // 
             // label2
@@ -166,12 +168,12 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtCategoria);
             this.groupBox2.Controls.Add(this.cboFornecedor);
             this.groupBox2.Controls.Add(this.txtNome);
             this.groupBox2.Controls.Add(this.btnCadastrar);
             this.groupBox2.Controls.Add(this.nudValor);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.cboCategoria);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(57, 248);
             this.groupBox2.Name = "groupBox2";
@@ -181,6 +183,7 @@
             // 
             // cboFornecedor
             // 
+            this.cboFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFornecedor.FormattingEnabled = true;
             this.cboFornecedor.Location = new System.Drawing.Point(170, 57);
@@ -260,15 +263,6 @@
             this.label6.TabIndex = 158;
             this.label6.Text = "Categoria:";
             // 
-            // cboCategoria
-            // 
-            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(170, 94);
-            this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(183, 23);
-            this.cboCategoria.TabIndex = 299;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -290,6 +284,15 @@
             this.txtImagem.Name = "txtImagem";
             this.txtImagem.Size = new System.Drawing.Size(203, 22);
             this.txtImagem.TabIndex = 303;
+            // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(170, 97);
+            this.txtCategoria.MaxLength = 45;
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(183, 22);
+            this.txtCategoria.TabIndex = 304;
             // 
             // frmCadastrarProduto
             // 
@@ -338,9 +341,9 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnCadastrar;
         private System.Windows.Forms.NumericUpDown nudValor;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtImagem;
         private System.Windows.Forms.ComboBox cboFornecedor;
+        private System.Windows.Forms.TextBox txtCategoria;
     }
 }

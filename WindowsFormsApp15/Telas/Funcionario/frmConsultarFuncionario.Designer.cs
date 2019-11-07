@@ -30,6 +30,21 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarFuncionario));
             this.dgvConsultarFuncionario = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtRg = new System.Windows.Forms.MaskedTextBox();
+            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
+            this.dtpContrat = new Bunifu.Framework.UI.BunifuDatepicker();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.picFoto = new System.Windows.Forms.PictureBox();
+            this.txtCargo = new System.Windows.Forms.TextBox();
             this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column15 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,21 +64,6 @@
             this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtRg = new System.Windows.Forms.MaskedTextBox();
-            this.txtCPF = new System.Windows.Forms.MaskedTextBox();
-            this.dtpContrat = new Bunifu.Framework.UI.BunifuDatepicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.picFoto = new System.Windows.Forms.PictureBox();
-            this.txtCargo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFuncionario)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
@@ -102,143 +102,6 @@
             this.dgvConsultarFuncionario.TabIndex = 165;
             this.dgvConsultarFuncionario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarFuncionario_CellClick);
             this.dgvConsultarFuncionario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConsultarFuncionario_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "";
-            this.Column1.Image = ((System.Drawing.Image)(resources.GetObject("Column1.Image")));
-            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 25;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "";
-            this.Column15.Image = ((System.Drawing.Image)(resources.GetObject("Column15.Image")));
-            this.Column15.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            this.Column15.Width = 25;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "nm_funcionario";
-            this.Column2.HeaderText = "Nome";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "ds_rg";
-            this.Column3.HeaderText = "RG";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Columm4
-            // 
-            this.Columm4.DataPropertyName = "ds_cpf";
-            this.Columm4.HeaderText = "CPF";
-            this.Columm4.Name = "Columm4";
-            this.Columm4.ReadOnly = true;
-            // 
-            // ds_telefone
-            // 
-            this.ds_telefone.DataPropertyName = "ds_telefone";
-            this.ds_telefone.HeaderText = "Telefone";
-            this.ds_telefone.Name = "ds_telefone";
-            this.ds_telefone.ReadOnly = true;
-            // 
-            // ds_celular
-            // 
-            this.ds_celular.DataPropertyName = "ds_celular";
-            this.ds_celular.HeaderText = "Celular";
-            this.ds_celular.Name = "ds_celular";
-            this.ds_celular.ReadOnly = true;
-            // 
-            // ds_email
-            // 
-            this.ds_email.DataPropertyName = "ds_email";
-            this.ds_email.HeaderText = "Email";
-            this.ds_email.Name = "ds_email";
-            this.ds_email.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "dt_nascimento";
-            this.Column4.HeaderText = "Nascimento";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "ds_genero";
-            this.Column5.HeaderText = "Sexo";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "ds_cep";
-            this.Column7.HeaderText = "CEP";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "ds_endereco";
-            this.Column6.HeaderText = "Endereco";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "ds_cidade";
-            this.Column8.HeaderText = "Cidade";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "ds_uf";
-            this.Column9.HeaderText = "UF";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "ds_numeroCasa";
-            this.Column11.HeaderText = "Número";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.DataPropertyName = "ds_complemento";
-            this.Column10.HeaderText = "Complemento";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "ds_cargo";
-            this.Column12.HeaderText = "Cargo";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "vl_salario";
-            this.Column13.HeaderText = "Salário";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.DataPropertyName = "dt_contratacao";
-            this.Column14.HeaderText = "Contratacao";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
             // 
             // label4
             // 
@@ -419,8 +282,145 @@
             this.txtCargo.Location = new System.Drawing.Point(424, 93);
             this.txtCargo.MaxLength = 20;
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(148, 22);
+            this.txtCargo.Size = new System.Drawing.Size(161, 22);
             this.txtCargo.TabIndex = 336;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "";
+            this.Column1.Image = global::WindowsFormsApp15.Properties.Resources.flat_style_circle_edit_icon_icons_com_66939;
+            this.Column1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 25;
+            // 
+            // Column15
+            // 
+            this.Column15.HeaderText = "";
+            this.Column15.Image = global::WindowsFormsApp15.Properties.Resources.recyclebinfilled_recycling_full_garbage_1993;
+            this.Column15.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            this.Column15.Width = 25;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "nm_funcionario";
+            this.Column2.HeaderText = "Nome";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "ds_rg";
+            this.Column3.HeaderText = "RG";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Columm4
+            // 
+            this.Columm4.DataPropertyName = "ds_cpf";
+            this.Columm4.HeaderText = "CPF";
+            this.Columm4.Name = "Columm4";
+            this.Columm4.ReadOnly = true;
+            // 
+            // ds_telefone
+            // 
+            this.ds_telefone.DataPropertyName = "ds_telefone";
+            this.ds_telefone.HeaderText = "Telefone";
+            this.ds_telefone.Name = "ds_telefone";
+            this.ds_telefone.ReadOnly = true;
+            // 
+            // ds_celular
+            // 
+            this.ds_celular.DataPropertyName = "ds_celular";
+            this.ds_celular.HeaderText = "Celular";
+            this.ds_celular.Name = "ds_celular";
+            this.ds_celular.ReadOnly = true;
+            // 
+            // ds_email
+            // 
+            this.ds_email.DataPropertyName = "ds_email";
+            this.ds_email.HeaderText = "Email";
+            this.ds_email.Name = "ds_email";
+            this.ds_email.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "dt_nascimento";
+            this.Column4.HeaderText = "Nascimento";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "ds_genero";
+            this.Column5.HeaderText = "Sexo";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "ds_cep";
+            this.Column7.HeaderText = "CEP";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "ds_endereco";
+            this.Column6.HeaderText = "Endereco";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "ds_cidade";
+            this.Column8.HeaderText = "Cidade";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "ds_uf";
+            this.Column9.HeaderText = "UF";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "ds_numeroCasa";
+            this.Column11.HeaderText = "Número";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "ds_complemento";
+            this.Column10.HeaderText = "Complemento";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "ds_cargo";
+            this.Column12.HeaderText = "Cargo";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "vl_salario";
+            this.Column13.HeaderText = "Salário";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "dt_contratacao";
+            this.Column14.HeaderText = "Contratacao";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
             // 
             // frmConsultarFuncionario
             // 
@@ -470,6 +470,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.PictureBox picFoto;
+        private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.DataGridViewImageColumn Column1;
         private System.Windows.Forms.DataGridViewImageColumn Column15;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
@@ -489,6 +490,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.TextBox txtCargo;
     }
 }

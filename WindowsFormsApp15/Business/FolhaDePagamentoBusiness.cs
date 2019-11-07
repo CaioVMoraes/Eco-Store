@@ -14,11 +14,11 @@ namespace WindowsFormsApp15.Business
 
         public void InserirFolha(tb_folhapagamento modelo)
         {
-            if(model.dt_pagamento == null)
+            if(modelo.dt_pagamento == null)
             {
                 throw new ArgumentException("Data de pagamento inválida");
             }
-            if(model.id_funcionario == 0)
+            if(modelo.id_funcionario == 0)
             {
                 throw new ArgumentException("id do funcionario inválido");
             }
@@ -32,15 +32,15 @@ namespace WindowsFormsApp15.Business
 
             return lista;
         }
+
         public void AlterarFolha(tb_folhapagamento modelo)
         {
             db.AlterarFolha(modelo);
         }
+
         public void RemoverFolha(int id)
         {
             db.RemoverFolha(id);
-
-
         }
     }
 }

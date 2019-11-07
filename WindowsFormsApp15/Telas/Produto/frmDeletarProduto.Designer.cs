@@ -31,16 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDeletarProduto));
             this.txtIdProduto = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnEntrar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label5 = new System.Windows.Forms.Label();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtIDFornecedor = new System.Windows.Forms.TextBox();
@@ -49,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.imgImagem = new System.Windows.Forms.PictureBox();
+            this.txtCategoria = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -58,8 +56,9 @@
             // 
             // txtIdProduto
             // 
+            this.txtIdProduto.Enabled = false;
             this.txtIdProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdProduto.Location = new System.Drawing.Point(137, 43);
+            this.txtIdProduto.Location = new System.Drawing.Point(200, 41);
             this.txtIdProduto.Name = "txtIdProduto";
             this.txtIdProduto.Size = new System.Drawing.Size(118, 22);
             this.txtIdProduto.TabIndex = 284;
@@ -71,71 +70,22 @@
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(21, 45);
+            this.label27.Location = new System.Drawing.Point(84, 43);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(101, 20);
             this.label27.TabIndex = 166;
             this.label27.Text = "ID Produto:";
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(168, 192);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(138, 20);
-            this.label21.TabIndex = 293;
-            this.label21.Text = "Buscar Produto:";
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.txtIdProduto);
-            this.groupBox1.Controls.Add(this.btnEntrar);
             this.groupBox1.Controls.Add(this.label27);
             this.groupBox1.Location = new System.Drawing.Point(27, 192);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(431, 92);
             this.groupBox1.TabIndex = 294;
             this.groupBox1.TabStop = false;
-            // 
-            // btnEntrar
-            // 
-            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEntrar.BorderRadius = 0;
-            this.btnEntrar.ButtonText = "BUSCAR";
-            this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEntrar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEntrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEntrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Iconimage")));
-            this.btnEntrar.Iconimage_right = null;
-            this.btnEntrar.Iconimage_right_Selected = null;
-            this.btnEntrar.Iconimage_Selected = null;
-            this.btnEntrar.IconMarginLeft = 0;
-            this.btnEntrar.IconMarginRight = 0;
-            this.btnEntrar.IconRightVisible = true;
-            this.btnEntrar.IconRightZoom = 0D;
-            this.btnEntrar.IconVisible = true;
-            this.btnEntrar.IconZoom = 90D;
-            this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(282, 38);
-            this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnEntrar.selected = false;
-            this.btnEntrar.Size = new System.Drawing.Size(110, 27);
-            this.btnEntrar.TabIndex = 170;
-            this.btnEntrar.Text = "BUSCAR";
-            this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEntrar.Textcolor = System.Drawing.Color.White;
-            this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // label5
             // 
@@ -218,19 +168,10 @@
             this.label4.TabIndex = 160;
             this.label4.Text = "Valor:";
             // 
-            // cboCategoria
-            // 
-            this.cboCategoria.Enabled = false;
-            this.cboCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(181, 97);
-            this.cboCategoria.Name = "cboCategoria";
-            this.cboCategoria.Size = new System.Drawing.Size(183, 23);
-            this.cboCategoria.TabIndex = 288;
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.txtCategoria);
             this.groupBox2.Controls.Add(this.txtNome);
             this.groupBox2.Controls.Add(this.txtIDFornecedor);
             this.groupBox2.Controls.Add(this.bunifuFlatButton1);
@@ -239,7 +180,6 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.nudValor);
-            this.groupBox2.Controls.Add(this.cboCategoria);
             this.groupBox2.Location = new System.Drawing.Point(27, 290);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(431, 252);
@@ -351,6 +291,15 @@
             this.imgImagem.TabIndex = 292;
             this.imgImagem.TabStop = false;
             // 
+            // txtCategoria
+            // 
+            this.txtCategoria.Enabled = false;
+            this.txtCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(181, 98);
+            this.txtCategoria.Name = "txtCategoria";
+            this.txtCategoria.Size = new System.Drawing.Size(183, 22);
+            this.txtCategoria.TabIndex = 299;
+            // 
             // frmDeletarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -359,7 +308,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(486, 562);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.imgImagem);
             this.Controls.Add(this.label5);
@@ -386,9 +334,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtIdProduto;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEntrar;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox imgImagem;
         private System.Windows.Forms.Label label5;
@@ -398,9 +344,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtIDFornecedor;
         private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtCategoria;
     }
 }

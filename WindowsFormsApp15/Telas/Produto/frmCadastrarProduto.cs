@@ -56,7 +56,7 @@ namespace WindowsFormsApp15.Telas
 
                 modelo.img_produto = imagem_byte;
                 modelo.id_fornecedor = comboFonecedor.id_fornecedor;
-                modelo.ds_categoria = cboCategoria.Text;
+                modelo.ds_categoria = txtCategoria.Text;
                 modelo.nm_produto = txtNome.Text;
                 modelo.vl_valor = nudValor.Value;
 

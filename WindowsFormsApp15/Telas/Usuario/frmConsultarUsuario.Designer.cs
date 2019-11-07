@@ -31,18 +31,18 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarUsuario));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMinimizar = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtFuncionario = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.dgvUsuario = new System.Windows.Forms.DataGridView();
+            this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
@@ -74,6 +74,19 @@
             this.lblMinimizar.TabIndex = 156;
             this.lblMinimizar.Text = "_";
             this.lblMinimizar.Click += new System.EventHandler(this.lblMinimizar_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(145, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(153, 20);
+            this.label3.TabIndex = 313;
+            this.label3.Text = "Consultar Usuario";
             // 
             // lblSair
             // 
@@ -133,19 +146,6 @@
             this.label1.TabIndex = 311;
             this.label1.Text = "Funcionario:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(145, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 20);
-            this.label3.TabIndex = 313;
-            this.label3.Text = "Consultar Usuario";
-            // 
             // dgvUsuario
             // 
             this.dgvUsuario.AllowUserToAddRows = false;
@@ -153,17 +153,31 @@
             this.dgvUsuario.BackgroundColor = System.Drawing.Color.White;
             this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column4,
+            this.Column5,
             this.Column1,
             this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
+            this.Column3});
             this.dgvUsuario.Location = new System.Drawing.Point(12, 150);
             this.dgvUsuario.Name = "dgvUsuario";
             this.dgvUsuario.ReadOnly = true;
             this.dgvUsuario.Size = new System.Drawing.Size(420, 324);
             this.dgvUsuario.TabIndex = 314;
             this.dgvUsuario.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsuario_CellContentClick);
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 25;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 25;
             // 
             // Column1
             // 
@@ -186,20 +200,6 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             this.Column3.Width = 125;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 25;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 25;
             // 
             // frmConsultarUsuario
             // 
@@ -236,10 +236,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvUsuario;
+        private System.Windows.Forms.DataGridViewImageColumn Column4;
+        private System.Windows.Forms.DataGridViewImageColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewImageColumn Column4;
-        private System.Windows.Forms.DataGridViewImageColumn Column5;
     }
 }

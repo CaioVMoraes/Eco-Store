@@ -19,19 +19,19 @@ namespace WindowsFormsApp15.Database
         }
         public List<tb_produto> ConsultarProdutoNome(string Produtonome)
         {
-            List<tb_produto> lista = db.tb_produto.Where(x=> x.nm_produto == Produtonome).ToList();
+            List<tb_produto> lista = db.tb_produto.Where(x=> x.nm_produto.Contains(Produtonome)).ToList();
 
             return lista;
         }
         public List<tb_produto> ConsultarProdutoCategoria(string categoria)
         {
-            List<tb_produto> lista = db.tb_produto.Where(x => x.ds_categoria == categoria).ToList();
+            List<tb_produto> lista = db.tb_produto.Where(x => x.ds_categoria.Contains(categoria)).ToList();
 
             return lista;
         }
-        public List<tb_produto> ConsultarProdutoFornecedor(int idFornecedor)
+        public List<tb_produto> ConsultarProdutoFornecedor(string idFornecedor)
         {
-            List<tb_produto> lista = db.tb_produto.Where(x => x.id_fornecedor == idFornecedor).ToList();
+            List<tb_produto> lista = db.tb_produto.Where(x => x.tb_fornecedor.nm_fornecedor.Contains(idFornecedor)).ToList();
 
             return lista;
         }

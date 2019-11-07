@@ -96,7 +96,7 @@ namespace WindowsFormsApp15.Telas.Compra
                         compraItem.id_produto = item.id_produto;
 
                         estoqueItem.id_produto = item.id_produto;
-                        estoqueItem.dt_entrada = DateTime.Now;
+                        estoqueItem.dt_entrada = DateTime.Now.Date;
                         estoqueItem.bt_vendido = false;
 
                         compraBusiness.InserirCompraItem(compraItem);

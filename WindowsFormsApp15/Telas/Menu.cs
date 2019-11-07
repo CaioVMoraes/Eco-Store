@@ -30,24 +30,6 @@ namespace WindowsFormsApp15.Telas
 
         private void Menu_Load(object sender, EventArgs e)
         {
-            if(Autenticacao.Usuario.UsuarioLogado.NivelAcesso == "Baixo")
-            {
-                tabControl1.TabPages.Remove(tabPage1);
-                tabControl1.TabPages.Remove(tabPage2);
-                tabControl1.TabPages.Remove(tabPage3);
-            }
-
-            if (Autenticacao.Usuario.UsuarioLogado.NivelAcesso == "Médio")
-            {
-                tabControl1.TabPages.Remove(tabPage1);
-                tabControl1.TabPages.Remove(tabPage2);
-            }
-
-            if (Autenticacao.Usuario.UsuarioLogado.NivelAcesso == "Alto")
-            {
-                tabControl1.TabPages.Remove(tabPage1);
-            }
-
             lblNome.Text = Autenticacao.Usuario.UsuarioLogado.Nome;
 
             Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
@@ -291,6 +273,108 @@ namespace WindowsFormsApp15.Telas
         private void btnConsultarFornecedor_Click_1(object sender, EventArgs e)
         {
             Telas.frmConsultarFornecedor tela = new frmConsultarFornecedor();
+            tela.Show();
+        }
+
+        private void button8_Click_1(object sender, EventArgs e)
+        {
+            panelFuncionario.Visible = true;
+            panelFuncionario.Dock = DockStyle.Fill;
+
+            panelFolhaPagamento.Visible = false;
+            panelFolhaPagamento.Dock = DockStyle.None;
+
+            panelCompra.Visible = false;
+            panelCompra.Dock = DockStyle.None;
+
+            panelVenda.Visible = false;
+            panelVenda.Dock = DockStyle.None;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            panelFuncionario.Visible = false;
+            panelFuncionario.Dock = DockStyle.None;
+
+            panelFolhaPagamento.Visible = true;
+            panelFolhaPagamento.Dock = DockStyle.Fill;
+
+            panelCompra.Visible = false;
+            panelCompra.Dock = DockStyle.None;
+
+            panelVenda.Visible = false;
+            panelVenda.Dock = DockStyle.None;
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            panelFuncionario.Visible = false;
+            panelFuncionario.Dock = DockStyle.None;
+
+            panelFolhaPagamento.Visible = false;
+            panelFolhaPagamento.Dock = DockStyle.None;
+
+            panelCompra.Visible = true;
+            panelCompra.Dock = DockStyle.Fill;
+
+            panelVenda.Visible = false;
+            panelVenda.Dock = DockStyle.None;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            panelFuncionario.Visible = false;
+            panelFuncionario.Dock = DockStyle.None;
+
+            panelFolhaPagamento.Visible = false;
+            panelFolhaPagamento.Dock = DockStyle.None;
+
+            panelCompra.Visible = false;
+            panelCompra.Dock = DockStyle.None;
+
+            panelVenda.Visible = true;
+            panelVenda.Dock = DockStyle.Fill;
+        }
+
+        private void button4_Click_1(object sender, EventArgs e)
+        {
+            Telas.Compra.frmTelaCompra tela = new Compra.frmTelaCompra();
+            tela.Show();
+        }
+
+        private void button6_Click_1(object sender, EventArgs e)
+        {
+            Telas.frmCadastrarProduto tela = new Telas.frmCadastrarProduto();
+            tela.Show();
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Telas.frmConsultarFornecedor tela = new Telas.frmConsultarFornecedor();
+            tela.Show();
+        }
+
+        private void button7_Click_1(object sender, EventArgs e)
+        {
+            Telas.frmConsultarProduto tela = new Telas.frmConsultarProduto();
+            tela.Show();
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            Telas.Estoque.frmConsultarEstoque tela = new Estoque.frmConsultarEstoque();
+            tela.Show();
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            Telas.Fluxo_de_Caixa.frmFluxoDeCaixa tela = new Fluxo_de_Caixa.frmFluxoDeCaixa();
+            tela.Show();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Telas.Compra.frmConsultarCompra tela = new Compra.frmConsultarCompra();
             tela.Show();
         }
     }
