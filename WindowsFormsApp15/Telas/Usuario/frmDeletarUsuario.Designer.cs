@@ -35,8 +35,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cboFuncionario = new System.Windows.Forms.ComboBox();
@@ -46,7 +44,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -107,44 +104,22 @@
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(117, 49);
+            this.label27.Location = new System.Drawing.Point(78, 220);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(100, 20);
             this.label27.TabIndex = 166;
             this.label27.Text = "ID Usuario:";
+            this.label27.Visible = false;
             // 
             // txtID
             // 
             this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(232, 47);
+            this.txtID.Location = new System.Drawing.Point(193, 218);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(129, 22);
             this.txtID.TabIndex = 284;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(171, 246);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(132, 20);
-            this.label21.TabIndex = 326;
-            this.label21.Text = "Buscar Usuario";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.txtID);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Location = new System.Drawing.Point(12, 246);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(460, 92);
-            this.groupBox1.TabIndex = 327;
-            this.groupBox1.TabStop = false;
+            this.txtID.Visible = false;
             // 
             // label5
             // 
@@ -169,7 +144,7 @@
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.txtUsuario);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(12, 344);
+            this.groupBox2.Location = new System.Drawing.Point(12, 254);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(460, 246);
             this.groupBox2.TabIndex = 324;
@@ -208,7 +183,7 @@
             // btnDeletar
             // 
             this.btnDeletar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnDeletar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDeletar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDeletar.BorderRadius = 0;
             this.btnDeletar.ButtonText = "DELETAR";
@@ -298,18 +273,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(493, 600);
+            this.ClientSize = new System.Drawing.Size(493, 521);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.label27);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDeletarUsuario";
             this.Text = "frmDeletarUsuario";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -328,8 +301,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox txtID;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.Framework.UI.BunifuFlatButton btnDeletar;
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblSair;

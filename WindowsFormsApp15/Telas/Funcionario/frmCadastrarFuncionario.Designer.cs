@@ -272,8 +272,8 @@
             this.btnCadastrarFuncionario.IsTab = true;
             this.btnCadastrarFuncionario.Location = new System.Drawing.Point(613, 595);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
-            this.btnCadastrarFuncionario.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnCadastrarFuncionario.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnCadastrarFuncionario.Normalcolor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrarFuncionario.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnCadastrarFuncionario.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCadastrarFuncionario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCadastrarFuncionario.selected = false;
@@ -691,7 +691,7 @@
             this.BackColor = System.Drawing.Color.SeaGreen;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(987, 678);
+            this.ClientSize = new System.Drawing.Size(987, 675);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.txtImagem);
             this.Controls.Add(this.txtCpf);

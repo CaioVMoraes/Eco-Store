@@ -76,7 +76,7 @@
             // btnEntrar
             // 
             this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEntrar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEntrar.BorderRadius = 0;
             this.btnEntrar.ButtonText = "CADASTRAR";
