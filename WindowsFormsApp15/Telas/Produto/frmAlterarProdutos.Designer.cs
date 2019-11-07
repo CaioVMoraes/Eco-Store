@@ -115,7 +115,7 @@
             this.btnAlterar.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAlterar.BorderRadius = 0;
-            this.btnAlterar.ButtonText = "ALTERAR";
+            this.btnAlterar.ButtonText = "  ALTERAR";
             this.btnAlterar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlterar.DisabledColor = System.Drawing.Color.Gray;
             this.btnAlterar.Iconcolor = System.Drawing.Color.Transparent;
@@ -128,7 +128,7 @@
             this.btnAlterar.IconRightVisible = true;
             this.btnAlterar.IconRightZoom = 0D;
             this.btnAlterar.IconVisible = true;
-            this.btnAlterar.IconZoom = 80D;
+            this.btnAlterar.IconZoom = 50D;
             this.btnAlterar.IsTab = false;
             this.btnAlterar.Location = new System.Drawing.Point(120, 181);
             this.btnAlterar.Name = "btnAlterar";
@@ -138,7 +138,7 @@
             this.btnAlterar.selected = false;
             this.btnAlterar.Size = new System.Drawing.Size(138, 34);
             this.btnAlterar.TabIndex = 171;
-            this.btnAlterar.Text = "ALTERAR";
+            this.btnAlterar.Text = "  ALTERAR";
             this.btnAlterar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAlterar.Textcolor = System.Drawing.Color.White;
             this.btnAlterar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

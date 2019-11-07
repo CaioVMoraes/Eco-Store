@@ -33,10 +33,7 @@
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblSair = new System.Windows.Forms.Label();
-            this.btnBuscar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,14 +46,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAlterar
             // 
             this.btnAlterar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnAlterar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAlterar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAlterar.BorderRadius = 0;
             this.btnAlterar.ButtonText = "ALTERAR";
@@ -72,7 +68,7 @@
             this.btnAlterar.IconRightVisible = true;
             this.btnAlterar.IconRightZoom = 0D;
             this.btnAlterar.IconVisible = true;
-            this.btnAlterar.IconZoom = 80D;
+            this.btnAlterar.IconZoom = 50D;
             this.btnAlterar.IsTab = false;
             this.btnAlterar.Location = new System.Drawing.Point(163, 176);
             this.btnAlterar.Name = "btnAlterar";
@@ -129,41 +125,6 @@
             this.lblSair.Text = "X";
             this.lblSair.Click += new System.EventHandler(this.lblSair_Click);
             // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnBuscar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.BorderRadius = 0;
-            this.btnBuscar.ButtonText = "BUSCAR";
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBuscar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Iconimage")));
-            this.btnBuscar.Iconimage_right = null;
-            this.btnBuscar.Iconimage_right_Selected = null;
-            this.btnBuscar.Iconimage_Selected = null;
-            this.btnBuscar.IconMarginLeft = 0;
-            this.btnBuscar.IconMarginRight = 0;
-            this.btnBuscar.IconRightVisible = true;
-            this.btnBuscar.IconRightZoom = 0D;
-            this.btnBuscar.IconVisible = true;
-            this.btnBuscar.IconZoom = 90D;
-            this.btnBuscar.IsTab = false;
-            this.btnBuscar.Location = new System.Drawing.Point(305, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnBuscar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnBuscar.selected = false;
-            this.btnBuscar.Size = new System.Drawing.Size(110, 27);
-            this.btnBuscar.TabIndex = 170;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Textcolor = System.Drawing.Color.White;
-            this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -175,38 +136,14 @@
             this.pictureBox1.TabIndex = 335;
             this.pictureBox1.TabStop = false;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(171, 248);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(132, 20);
-            this.label21.TabIndex = 332;
-            this.label21.Text = "Buscar Usuario";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.txtID);
-            this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Location = new System.Drawing.Point(12, 248);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(460, 92);
-            this.groupBox1.TabIndex = 333;
-            this.groupBox1.TabStop = false;
-            // 
             // txtID
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(151, 38);
+            this.txtID.Location = new System.Drawing.Point(163, 215);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(129, 22);
             this.txtID.TabIndex = 284;
+            this.txtID.Visible = false;
             // 
             // label27
             // 
@@ -215,11 +152,12 @@
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(36, 40);
+            this.label27.Location = new System.Drawing.Point(48, 217);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(100, 20);
             this.label27.TabIndex = 166;
             this.label27.Text = "ID Usuario:";
+            this.label27.Visible = false;
             // 
             // label5
             // 
@@ -244,7 +182,7 @@
             this.groupBox2.Controls.Add(this.txtUsuario);
             this.groupBox2.Controls.Add(this.cboNivel);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(12, 346);
+            this.groupBox2.Location = new System.Drawing.Point(12, 244);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(460, 248);
             this.groupBox2.TabIndex = 330;
@@ -326,11 +264,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(487, 603);
+            this.ClientSize = new System.Drawing.Size(487, 521);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label27);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -339,8 +277,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -354,10 +290,7 @@
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblSair;
-        private Bunifu.Framework.UI.BunifuFlatButton btnBuscar;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label5;
