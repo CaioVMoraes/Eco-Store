@@ -68,6 +68,8 @@ namespace WindowsFormsApp15.Telas.Fornecedor
                 modelo.ds_UF = txtUF.Text;
 
                 business.AlterarFornecedor(modelo);
+
+                MessageBox.Show("Alterado com sucesso");
             }
             catch(Exception ex)
             {

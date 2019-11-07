@@ -29,12 +29,10 @@ namespace WindowsFormsApp15.Model
         public virtual DbSet<tb_compra> tb_compra { get; set; }
         public virtual DbSet<tb_compra_item> tb_compra_item { get; set; }
         public virtual DbSet<tb_controledeponto> tb_controledeponto { get; set; }
-        public virtual DbSet<tb_despesa> tb_despesa { get; set; }
         public virtual DbSet<tb_estoque> tb_estoque { get; set; }
         public virtual DbSet<tb_folhapagamento> tb_folhapagamento { get; set; }
         public virtual DbSet<tb_fornecedor> tb_fornecedor { get; set; }
         public virtual DbSet<tb_funcionario> tb_funcionario { get; set; }
-        public virtual DbSet<tb_log> tb_log { get; set; }
         public virtual DbSet<tb_produto> tb_produto { get; set; }
         public virtual DbSet<tb_recuperacao> tb_recuperacao { get; set; }
         public virtual DbSet<tb_usuario> tb_usuario { get; set; }

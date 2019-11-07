@@ -63,8 +63,6 @@ namespace WindowsFormsApp15.Telas.Fornecedor
             {         
                 int id = Convert.ToInt32(txtID.Text);
 
-                id = modelo.id_fornecedor;
-
                 business.RemoverForncedor(id);
             }
             catch(Exception ex)
@@ -76,8 +74,6 @@ namespace WindowsFormsApp15.Telas.Fornecedor
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             int id = Convert.ToInt32(txtID.Text);
-
-            id = modelo.id_fornecedor;
 
             business.Listar(id);
 

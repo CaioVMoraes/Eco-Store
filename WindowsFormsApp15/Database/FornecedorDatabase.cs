@@ -60,6 +60,7 @@ namespace WindowsFormsApp15.Database
             tb_fornecedor deletar = db.tb_fornecedor.FirstOrDefault(x => x.id_fornecedor == id);
 
             db.tb_fornecedor.Remove(deletar);
+
             db.SaveChanges();
         }
     }

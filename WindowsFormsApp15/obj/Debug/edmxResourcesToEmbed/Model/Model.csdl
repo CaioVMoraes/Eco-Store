@@ -5,12 +5,10 @@
     <EntitySet Name="tb_compra" EntityType="ecostorModel.tb_compra" />
     <EntitySet Name="tb_compra_item" EntityType="ecostorModel.tb_compra_item" />
     <EntitySet Name="tb_controledeponto" EntityType="ecostorModel.tb_controledeponto" />
-    <EntitySet Name="tb_despesa" EntityType="ecostorModel.tb_despesa" />
     <EntitySet Name="tb_estoque" EntityType="ecostorModel.tb_estoque" />
     <EntitySet Name="tb_folhapagamento" EntityType="ecostorModel.tb_folhapagamento" />
     <EntitySet Name="tb_fornecedor" EntityType="ecostorModel.tb_fornecedor" />
     <EntitySet Name="tb_funcionario" EntityType="ecostorModel.tb_funcionario" />
-    <EntitySet Name="tb_log" EntityType="ecostorModel.tb_log" />
     <EntitySet Name="tb_produto" EntityType="ecostorModel.tb_produto" />
     <EntitySet Name="tb_recuperacao" EntityType="ecostorModel.tb_recuperacao" />
     <EntitySet Name="tb_usuario" EntityType="ecostorModel.tb_usuario" />
@@ -52,10 +50,6 @@
     <AssociationSet Name="tb_usuario_ibfk_1" Association="ecostorModel.tb_usuario_ibfk_1">
       <End Role="tb_funcionario" EntitySet="tb_funcionario" />
       <End Role="tb_usuario" EntitySet="tb_usuario" />
-    </AssociationSet>
-    <AssociationSet Name="tb_log_ibfk_1" Association="ecostorModel.tb_log_ibfk_1">
-      <End Role="tb_usuario" EntitySet="tb_usuario" />
-      <End Role="tb_log" EntitySet="tb_log" />
     </AssociationSet>
     <AssociationSet Name="tb_recuperacao_ibfk_1" Association="ecostorModel.tb_recuperacao_ibfk_1">
       <End Role="tb_usuario" EntitySet="tb_usuario" />
@@ -114,15 +108,6 @@
     <Property Name="dt_voltaAlmoco" Type="DateTime" />
     <Property Name="dt_saida" Type="DateTime" />
     <NavigationProperty Name="tb_funcionario" Relationship="ecostorModel.tb_controledeponto_ibfk_1" FromRole="tb_controledeponto" ToRole="tb_funcionario" />
-  </EntityType>
-  <EntityType Name="tb_despesa">
-    <Key>
-      <PropertyRef Name="id_despesa" />
-    </Key>
-    <Property Name="id_despesa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ds_descricao" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
-    <Property Name="vl_despesa" Type="Decimal" Nullable="false" />
-    <Property Name="dt_pagamento" Type="DateTime" Nullable="false" />
   </EntityType>
   <EntityType Name="tb_estoque">
     <Key>
@@ -200,17 +185,6 @@
     <NavigationProperty Name="tb_folhapagamento" Relationship="ecostorModel.tb_folhapagamento_ibfk_1" FromRole="tb_funcionario" ToRole="tb_folhapagamento" />
     <NavigationProperty Name="tb_usuario" Relationship="ecostorModel.tb_usuario_ibfk_1" FromRole="tb_funcionario" ToRole="tb_usuario" />
   </EntityType>
-  <EntityType Name="tb_log">
-    <Key>
-      <PropertyRef Name="id_log" />
-    </Key>
-    <Property Name="id_log" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="id_usuario" Type="Int32" Nullable="false" />
-    <Property Name="dt_dataLogin" Type="DateTime" Nullable="false" />
-    <Property Name="ds_telaEntrou" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <Property Name="ds_oqFez" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tb_usuario" Relationship="ecostorModel.tb_log_ibfk_1" FromRole="tb_log" ToRole="tb_usuario" />
-  </EntityType>
   <EntityType Name="tb_produto">
     <Key>
       <PropertyRef Name="id_produto" />
@@ -244,9 +218,8 @@
     <Property Name="id_funcionario" Type="Int32" Nullable="false" />
     <Property Name="nm_usuario" Type="String" Nullable="false" MaxLength="65" FixedLength="false" Unicode="false" />
     <Property Name="ds_senha" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
-    <Property Name="nv_nivelAcesso" Type="String" MaxLength="65532" FixedLength="false" Unicode="false" />
+    <Property Name="nv_nivelAcesso" Type="String" Nullable="false" MaxLength="65532" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="tb_funcionario" Relationship="ecostorModel.tb_usuario_ibfk_1" FromRole="tb_usuario" ToRole="tb_funcionario" />
-    <NavigationProperty Name="tb_log" Relationship="ecostorModel.tb_log_ibfk_1" FromRole="tb_usuario" ToRole="tb_log" />
     <NavigationProperty Name="tb_recuperacao" Relationship="ecostorModel.tb_recuperacao_ibfk_1" FromRole="tb_usuario" ToRole="tb_recuperacao" />
     <NavigationProperty Name="tb_venda" Relationship="ecostorModel.tb_venda_ibfk_1" FromRole="tb_usuario" ToRole="tb_venda" />
   </EntityType>
@@ -297,7 +270,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_compra_item_ibfk_1">
-    <End Type="ecostorModel.tb_compra" Role="tb_compra" Multiplicity="1" />
+    <End Type="ecostorModel.tb_compra" Role="tb_compra" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="ecostorModel.tb_compra_item" Role="tb_compra_item" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_compra">
@@ -309,7 +284,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_compra_item_ibfk_2">
-    <End Type="ecostorModel.tb_produto" Role="tb_produto" Multiplicity="1" />
+    <End Type="ecostorModel.tb_produto" Role="tb_produto" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="ecostorModel.tb_compra_item" Role="tb_compra_item" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_produto">
@@ -377,7 +354,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_produto_ibfk_1">
-    <End Type="ecostorModel.tb_fornecedor" Role="tb_fornecedor" Multiplicity="1" />
+    <End Type="ecostorModel.tb_fornecedor" Role="tb_fornecedor" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="ecostorModel.tb_produto" Role="tb_produto" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_fornecedor">
@@ -389,7 +368,9 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="tb_usuario_ibfk_1">
-    <End Type="ecostorModel.tb_funcionario" Role="tb_funcionario" Multiplicity="1" />
+    <End Type="ecostorModel.tb_funcionario" Role="tb_funcionario" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
     <End Type="ecostorModel.tb_usuario" Role="tb_usuario" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tb_funcionario">
@@ -397,20 +378,6 @@
       </Principal>
       <Dependent Role="tb_usuario">
         <PropertyRef Name="id_funcionario" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="tb_log_ibfk_1">
-    <End Type="ecostorModel.tb_usuario" Role="tb_usuario" Multiplicity="1">
-      <OnDelete Action="Cascade" />
-    </End>
-    <End Type="ecostorModel.tb_log" Role="tb_log" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="tb_usuario">
-        <PropertyRef Name="id_usuario" />
-      </Principal>
-      <Dependent Role="tb_log">
-        <PropertyRef Name="id_usuario" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

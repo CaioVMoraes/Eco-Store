@@ -45,16 +45,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="tb_despesa">
-      <EntityTypeMapping TypeName="ecostorModel.tb_despesa">
-        <MappingFragment StoreEntitySet="tb_despesa">
-          <ScalarProperty Name="dt_pagamento" ColumnName="dt_pagamento" />
-          <ScalarProperty Name="vl_despesa" ColumnName="vl_despesa" />
-          <ScalarProperty Name="ds_descricao" ColumnName="ds_descricao" />
-          <ScalarProperty Name="id_despesa" ColumnName="id_despesa" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="tb_estoque">
       <EntityTypeMapping TypeName="ecostorModel.tb_estoque">
         <MappingFragment StoreEntitySet="tb_estoque">
@@ -125,17 +115,6 @@
           <ScalarProperty Name="ds_rg" ColumnName="ds_rg" />
           <ScalarProperty Name="nm_funcionario" ColumnName="nm_funcionario" />
           <ScalarProperty Name="id_funcionario" ColumnName="id_funcionario" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="tb_log">
-      <EntityTypeMapping TypeName="ecostorModel.tb_log">
-        <MappingFragment StoreEntitySet="tb_log">
-          <ScalarProperty Name="ds_oqFez" ColumnName="ds_oqFez" />
-          <ScalarProperty Name="ds_telaEntrou" ColumnName="ds_telaEntrou" />
-          <ScalarProperty Name="dt_dataLogin" ColumnName="dt_dataLogin" />
-          <ScalarProperty Name="id_usuario" ColumnName="id_usuario" />
-          <ScalarProperty Name="id_log" ColumnName="id_log" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
