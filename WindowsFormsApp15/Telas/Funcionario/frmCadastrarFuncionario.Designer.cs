@@ -251,7 +251,7 @@
             // 
             // btnCadastrarFuncionario
             // 
-            this.btnCadastrarFuncionario.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnCadastrarFuncionario.Activecolor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarFuncionario.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarFuncionario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadastrarFuncionario.BorderRadius = 0;
