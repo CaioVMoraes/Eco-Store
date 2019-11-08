@@ -263,21 +263,21 @@
             this.btnCadastrarFuncionario.Iconimage_right = null;
             this.btnCadastrarFuncionario.Iconimage_right_Selected = null;
             this.btnCadastrarFuncionario.Iconimage_Selected = null;
-            this.btnCadastrarFuncionario.IconMarginLeft = 80;
+            this.btnCadastrarFuncionario.IconMarginLeft = 70;
             this.btnCadastrarFuncionario.IconMarginRight = 0;
             this.btnCadastrarFuncionario.IconRightVisible = true;
             this.btnCadastrarFuncionario.IconRightZoom = 0D;
             this.btnCadastrarFuncionario.IconVisible = true;
             this.btnCadastrarFuncionario.IconZoom = 90D;
             this.btnCadastrarFuncionario.IsTab = true;
-            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(613, 595);
+            this.btnCadastrarFuncionario.Location = new System.Drawing.Point(626, 595);
             this.btnCadastrarFuncionario.Name = "btnCadastrarFuncionario";
             this.btnCadastrarFuncionario.Normalcolor = System.Drawing.Color.SeaGreen;
             this.btnCadastrarFuncionario.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnCadastrarFuncionario.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCadastrarFuncionario.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btnCadastrarFuncionario.selected = false;
-            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(330, 55);
+            this.btnCadastrarFuncionario.Size = new System.Drawing.Size(296, 53);
             this.btnCadastrarFuncionario.TabIndex = 163;
             this.btnCadastrarFuncionario.Text = "CADASTRAR";
             this.btnCadastrarFuncionario.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -458,6 +458,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.BackColor = System.Drawing.Color.Transparent;
+            this.label28.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label28.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.White;
@@ -472,6 +473,7 @@
             // 
             this.label29.AutoSize = true;
             this.label29.BackColor = System.Drawing.Color.Transparent;
+            this.label29.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label29.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.White;
@@ -731,6 +733,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastrarFuncionario";
             this.Text = "CadastrarFuncionario";
             ((System.ComponentModel.ISupportInitialize)(this.nudSalario)).EndInit();

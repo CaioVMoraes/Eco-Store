@@ -59,7 +59,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(351, 63);
+            this.label6.Location = new System.Drawing.Point(351, 81);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 20);
             this.label6.TabIndex = 381;
@@ -72,7 +72,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(34, 60);
+            this.label2.Location = new System.Drawing.Point(34, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 380;
@@ -84,7 +84,6 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.lblMinimizar);
             this.panel1.Controls.Add(this.lblSair);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -95,6 +94,7 @@
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -109,6 +109,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -126,7 +127,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(280, 4);
+            this.label7.Location = new System.Drawing.Point(282, 40);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(147, 20);
             this.label7.TabIndex = 308;
@@ -135,7 +136,7 @@
             // txtRg
             // 
             this.txtRg.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtRg.Location = new System.Drawing.Point(577, 61);
+            this.txtRg.Location = new System.Drawing.Point(577, 79);
             this.txtRg.Mask = "00.000.000-0";
             this.txtRg.Name = "txtRg";
             this.txtRg.Size = new System.Drawing.Size(91, 22);
@@ -149,7 +150,7 @@
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(530, 61);
+            this.label8.Location = new System.Drawing.Point(530, 79);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 20);
             this.label8.TabIndex = 384;
@@ -158,7 +159,7 @@
             // txtCpf
             // 
             this.txtCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtCpf.Location = new System.Drawing.Point(405, 61);
+            this.txtCpf.Location = new System.Drawing.Point(405, 79);
             this.txtCpf.Mask = "000.000.000-00";
             this.txtCpf.Name = "txtCpf";
             this.txtCpf.Size = new System.Drawing.Size(98, 22);
@@ -168,7 +169,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(100, 60);
+            this.txtNome.Location = new System.Drawing.Point(100, 78);
             this.txtNome.MaxLength = 70;
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(223, 22);
@@ -190,7 +191,7 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dgvCliente.Location = new System.Drawing.Point(12, 104);
+            this.dgvCliente.Location = new System.Drawing.Point(12, 122);
             this.dgvCliente.Name = "dgvCliente";
             this.dgvCliente.ReadOnly = true;
             this.dgvCliente.Size = new System.Drawing.Size(693, 276);
@@ -263,9 +264,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(716, 392);
+            this.ClientSize = new System.Drawing.Size(716, 415);
             this.Controls.Add(this.dgvCliente);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtRg);
@@ -273,6 +275,7 @@
             this.Controls.Add(this.txtCpf);
             this.Controls.Add(this.txtNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultarCliente";
             this.Text = "ConsultarCliente";
             this.panel1.ResumeLayout(false);

@@ -54,14 +54,13 @@
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtUF = new System.Windows.Forms.TextBox();
             this.txtCEP = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.lblErro = new System.Windows.Forms.Label();
-            this.txtUF = new System.Windows.Forms.TextBox();
-            this.txtCNPJ = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -86,6 +85,7 @@
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -100,6 +100,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -146,8 +147,8 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEntrar.Activecolor = System.Drawing.Color.SeaGreen;
+            this.btnEntrar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEntrar.BorderRadius = 0;
             this.btnEntrar.ButtonText = "CADASTRAR";
@@ -165,13 +166,13 @@
             this.btnEntrar.IconVisible = true;
             this.btnEntrar.IconZoom = 90D;
             this.btnEntrar.IsTab = false;
-            this.btnEntrar.Location = new System.Drawing.Point(611, 492);
+            this.btnEntrar.Location = new System.Drawing.Point(611, 532);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.Normalcolor = System.Drawing.Color.SeaGreen;
+            this.btnEntrar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEntrar.selected = false;
-            this.btnEntrar.Size = new System.Drawing.Size(170, 46);
+            this.btnEntrar.Size = new System.Drawing.Size(164, 47);
             this.btnEntrar.TabIndex = 333;
             this.btnEntrar.Text = "CADASTRAR";
             this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -382,6 +383,15 @@
             this.groupBox1.TabIndex = 359;
             this.groupBox1.TabStop = false;
             // 
+            // txtCNPJ
+            // 
+            this.txtCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCNPJ.Location = new System.Drawing.Point(171, 119);
+            this.txtCNPJ.Mask = "00.000.000/0000-00";
+            this.txtCNPJ.Name = "txtCNPJ";
+            this.txtCNPJ.Size = new System.Drawing.Size(255, 24);
+            this.txtCNPJ.TabIndex = 423;
+            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
@@ -403,6 +413,15 @@
             this.groupBox3.Size = new System.Drawing.Size(508, 249);
             this.groupBox3.TabIndex = 361;
             this.groupBox3.TabStop = false;
+            // 
+            // txtUF
+            // 
+            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUF.Location = new System.Drawing.Point(171, 161);
+            this.txtUF.MaxLength = 2;
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(303, 22);
+            this.txtUF.TabIndex = 423;
             // 
             // txtCEP
             // 
@@ -437,32 +456,6 @@
             this.label19.TabIndex = 363;
             this.label19.Text = "Cadastrar Fornecedor";
             // 
-            // lblErro
-            // 
-            this.lblErro.AutoSize = true;
-            this.lblErro.Location = new System.Drawing.Point(608, 565);
-            this.lblErro.Name = "lblErro";
-            this.lblErro.Size = new System.Drawing.Size(0, 13);
-            this.lblErro.TabIndex = 422;
-            // 
-            // txtUF
-            // 
-            this.txtUF.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUF.Location = new System.Drawing.Point(171, 161);
-            this.txtUF.MaxLength = 2;
-            this.txtUF.Name = "txtUF";
-            this.txtUF.Size = new System.Drawing.Size(303, 22);
-            this.txtUF.TabIndex = 423;
-            // 
-            // txtCNPJ
-            // 
-            this.txtCNPJ.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCNPJ.Location = new System.Drawing.Point(171, 119);
-            this.txtCNPJ.Mask = "00.000.000/0000-00";
-            this.txtCNPJ.Name = "txtCNPJ";
-            this.txtCNPJ.Size = new System.Drawing.Size(255, 24);
-            this.txtCNPJ.TabIndex = 423;
-            // 
             // frmCadastroFornecedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -470,8 +463,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(857, 613);
-            this.Controls.Add(this.lblErro);
+            this.ClientSize = new System.Drawing.Size(857, 606);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtComplemento);
@@ -498,6 +490,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastroFornecedores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CadastroFornecedores";
@@ -547,7 +540,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MaskedTextBox txtCEP;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label lblErro;
         private System.Windows.Forms.MaskedTextBox txtCNPJ;
         private System.Windows.Forms.TextBox txtUF;
     }

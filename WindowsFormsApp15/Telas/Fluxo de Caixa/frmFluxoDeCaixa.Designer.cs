@@ -55,6 +55,7 @@
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -69,6 +70,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -109,6 +111,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvFluxo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmFluxoDeCaixa";
             this.Text = "frmFluxoDeCaixa";
             this.Load += new System.EventHandler(this.frmFluxoDeCaixa_Load);

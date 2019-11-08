@@ -40,7 +40,6 @@
             this.txtNome = new System.Windows.Forms.TextBox();
             this.nudValor = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtIdProduto = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.lblMinimizar = new System.Windows.Forms.Label();
@@ -52,7 +51,6 @@
             this.txtImagem = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgImagem)).BeginInit();
             this.SuspendLayout();
@@ -111,8 +109,8 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnAlterar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAlterar.Activecolor = System.Drawing.Color.SeaGreen;
+            this.btnAlterar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAlterar.BorderRadius = 0;
             this.btnAlterar.ButtonText = "  ALTERAR";
@@ -132,8 +130,8 @@
             this.btnAlterar.IsTab = false;
             this.btnAlterar.Location = new System.Drawing.Point(120, 181);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnAlterar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnAlterar.Normalcolor = System.Drawing.Color.SeaGreen;
+            this.btnAlterar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnAlterar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAlterar.selected = false;
             this.btnAlterar.Size = new System.Drawing.Size(138, 34);
@@ -156,7 +154,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Location = new System.Drawing.Point(51, 358);
+            this.groupBox2.Location = new System.Drawing.Point(51, 270);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(379, 252);
             this.groupBox2.TabIndex = 173;
@@ -218,43 +216,36 @@
             this.label5.TabIndex = 174;
             this.label5.Text = "Alterar Produto";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.txtIdProduto);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Location = new System.Drawing.Point(51, 260);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(379, 92);
-            this.groupBox1.TabIndex = 282;
-            this.groupBox1.TabStop = false;
-            // 
             // txtIdProduto
             // 
             this.txtIdProduto.Enabled = false;
             this.txtIdProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIdProduto.Location = new System.Drawing.Point(181, 39);
+            this.txtIdProduto.Location = new System.Drawing.Point(93, 113);
             this.txtIdProduto.Name = "txtIdProduto";
-            this.txtIdProduto.Size = new System.Drawing.Size(118, 22);
+            this.txtIdProduto.Size = new System.Drawing.Size(71, 22);
             this.txtIdProduto.TabIndex = 284;
+            this.txtIdProduto.Visible = false;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Enabled = false;
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(73, 40);
+            this.label27.Location = new System.Drawing.Point(-15, 114);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(101, 20);
             this.label27.TabIndex = 166;
             this.label27.Text = "ID Produto:";
+            this.label27.Visible = false;
             // 
             // lblMinimizar
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -269,6 +260,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -338,23 +330,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(488, 643);
+            this.ClientSize = new System.Drawing.Size(488, 551);
+            this.Controls.Add(this.txtIdProduto);
+            this.Controls.Add(this.label27);
             this.Controls.Add(this.txtImagem);
             this.Controls.Add(this.imgImagem);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAlterarProdutos";
             this.Text = "frmAlterarProdutos";
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgImagem)).EndInit();
@@ -371,7 +363,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnAlterar;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label lblMinimizar;
         private System.Windows.Forms.Label lblSair;

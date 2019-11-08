@@ -34,10 +34,7 @@
             this.lblMinimizar = new System.Windows.Forms.Label();
             this.lblSair = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtID = new System.Windows.Forms.TextBox();
-            this.btnBuscar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.label27 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.rdnNao = new System.Windows.Forms.RadioButton();
@@ -52,7 +49,6 @@
             this.btnDeletar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).BeginInit();
             this.SuspendLayout();
@@ -87,6 +83,7 @@
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -101,6 +98,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -122,86 +120,30 @@
             this.pictureBox1.TabIndex = 347;
             this.pictureBox1.TabStop = false;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.BackColor = System.Drawing.Color.Transparent;
-            this.label21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label21.Location = new System.Drawing.Point(176, 244);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(137, 20);
-            this.label21.TabIndex = 350;
-            this.label21.Text = "Buscar Estoque";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.txtID);
-            this.groupBox1.Controls.Add(this.btnBuscar);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Location = new System.Drawing.Point(21, 244);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(460, 92);
-            this.groupBox1.TabIndex = 351;
-            this.groupBox1.TabStop = false;
-            // 
             // txtID
             // 
+            this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.Location = new System.Drawing.Point(152, 43);
+            this.txtID.Location = new System.Drawing.Point(125, 210);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(129, 22);
             this.txtID.TabIndex = 284;
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnBuscar.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBuscar.BorderRadius = 0;
-            this.btnBuscar.ButtonText = "BUSCAR";
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBuscar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBuscar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Iconimage")));
-            this.btnBuscar.Iconimage_right = null;
-            this.btnBuscar.Iconimage_right_Selected = null;
-            this.btnBuscar.Iconimage_Selected = null;
-            this.btnBuscar.IconMarginLeft = 0;
-            this.btnBuscar.IconMarginRight = 0;
-            this.btnBuscar.IconRightVisible = true;
-            this.btnBuscar.IconRightZoom = 0D;
-            this.btnBuscar.IconVisible = true;
-            this.btnBuscar.IconZoom = 90D;
-            this.btnBuscar.IsTab = false;
-            this.btnBuscar.Location = new System.Drawing.Point(305, 38);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnBuscar.OnHovercolor = System.Drawing.Color.RoyalBlue;
-            this.btnBuscar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnBuscar.selected = false;
-            this.btnBuscar.Size = new System.Drawing.Size(110, 27);
-            this.btnBuscar.TabIndex = 170;
-            this.btnBuscar.Text = "BUSCAR";
-            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Textcolor = System.Drawing.Color.White;
-            this.btnBuscar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click_1);
+            this.txtID.Visible = false;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.BackColor = System.Drawing.Color.Transparent;
+            this.label27.Enabled = false;
             this.label27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label27.Location = new System.Drawing.Point(37, 45);
+            this.label27.Location = new System.Drawing.Point(10, 212);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(105, 20);
             this.label27.TabIndex = 166;
             this.label27.Text = "ID Estoque:";
+            this.label27.Visible = false;
             // 
             // groupBox2
             // 
@@ -216,7 +158,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.btnDeletar);
-            this.groupBox2.Location = new System.Drawing.Point(21, 342);
+            this.groupBox2.Location = new System.Drawing.Point(16, 241);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(460, 278);
             this.groupBox2.TabIndex = 348;
@@ -258,7 +200,7 @@
             // 
             // dtpData
             // 
-            this.dtpData.BackColor = System.Drawing.Color.SkyBlue;
+            this.dtpData.BackColor = System.Drawing.Color.SeaGreen;
             this.dtpData.BorderRadius = 0;
             this.dtpData.ForeColor = System.Drawing.Color.White;
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -331,29 +273,29 @@
             // 
             // btnDeletar
             // 
-            this.btnDeletar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnDeletar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDeletar.Activecolor = System.Drawing.Color.SeaGreen;
+            this.btnDeletar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnDeletar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDeletar.BorderRadius = 0;
             this.btnDeletar.ButtonText = "DELETAR";
             this.btnDeletar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeletar.DisabledColor = System.Drawing.Color.Gray;
             this.btnDeletar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDeletar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeletar.Iconimage")));
+            this.btnDeletar.Iconimage = global::WindowsFormsApp15.Properties.Resources.IconeRemover1;
             this.btnDeletar.Iconimage_right = null;
             this.btnDeletar.Iconimage_right_Selected = null;
             this.btnDeletar.Iconimage_Selected = null;
-            this.btnDeletar.IconMarginLeft = 0;
+            this.btnDeletar.IconMarginLeft = 20;
             this.btnDeletar.IconMarginRight = 0;
             this.btnDeletar.IconRightVisible = true;
             this.btnDeletar.IconRightZoom = 0D;
             this.btnDeletar.IconVisible = true;
-            this.btnDeletar.IconZoom = 90D;
+            this.btnDeletar.IconZoom = 50D;
             this.btnDeletar.IsTab = false;
             this.btnDeletar.Location = new System.Drawing.Point(152, 217);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnDeletar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnDeletar.Normalcolor = System.Drawing.Color.SeaGreen;
+            this.btnDeletar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnDeletar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnDeletar.selected = false;
             this.btnDeletar.Size = new System.Drawing.Size(138, 34);
@@ -370,21 +312,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(493, 644);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.groupBox1);
+            this.ClientSize = new System.Drawing.Size(493, 531);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.label27);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDeletarEstoque";
             this.Text = "frmDeletarEstoque";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudValor)).EndInit();
@@ -399,10 +340,7 @@
         private System.Windows.Forms.Label lblSair;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtID;
-        private Bunifu.Framework.UI.BunifuFlatButton btnBuscar;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.RadioButton rdnNao;

@@ -75,8 +75,8 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEntrar.Activecolor = System.Drawing.Color.SeaGreen;
+            this.btnEntrar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEntrar.BorderRadius = 0;
             this.btnEntrar.ButtonText = "CADASTRAR";
@@ -96,8 +96,8 @@
             this.btnEntrar.IsTab = false;
             this.btnEntrar.Location = new System.Drawing.Point(291, 311);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.Normalcolor = System.Drawing.Color.SeaGreen;
+            this.btnEntrar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEntrar.selected = false;
             this.btnEntrar.Size = new System.Drawing.Size(138, 34);
@@ -182,7 +182,6 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Controls.Add(this.lblMinimizar);
             this.panel1.Controls.Add(this.lblSair);
-            this.panel1.Controls.Add(this.label7);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -194,6 +193,7 @@
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -208,6 +208,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -225,7 +226,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(170, 5);
+            this.label7.Location = new System.Drawing.Point(169, 42);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(155, 20);
             this.label7.TabIndex = 308;
@@ -268,6 +269,7 @@
             this.ClientSize = new System.Drawing.Size(501, 379);
             this.Controls.Add(this.cboFuncionario);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtConfirmar);
             this.Controls.Add(this.txtSenha);
@@ -279,6 +281,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastrarUsuario";
             this.Text = "CadastrarUsuario";
             this.panel1.ResumeLayout(false);

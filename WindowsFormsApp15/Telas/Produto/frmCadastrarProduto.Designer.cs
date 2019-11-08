@@ -70,6 +70,7 @@
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -84,6 +85,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -147,7 +149,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(64, 273);
+            this.label2.Location = new System.Drawing.Point(64, 284);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 305;
@@ -160,7 +162,7 @@
             this.label7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(64, 308);
+            this.label7.Location = new System.Drawing.Point(64, 319);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 20);
             this.label7.TabIndex = 304;
@@ -176,7 +178,7 @@
             this.groupBox2.Controls.Add(this.nudValor);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Location = new System.Drawing.Point(57, 248);
+            this.groupBox2.Location = new System.Drawing.Point(57, 259);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(379, 252);
             this.groupBox2.TabIndex = 306;
@@ -212,8 +214,8 @@
             // 
             // btnCadastrar
             // 
-            this.btnCadastrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnCadastrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCadastrar.Activecolor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnCadastrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCadastrar.BorderRadius = 0;
             this.btnCadastrar.ButtonText = "CADASTRAR";
@@ -233,8 +235,8 @@
             this.btnCadastrar.IsTab = false;
             this.btnCadastrar.Location = new System.Drawing.Point(120, 181);
             this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnCadastrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnCadastrar.Normalcolor = System.Drawing.Color.SeaGreen;
+            this.btnCadastrar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnCadastrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnCadastrar.selected = false;
             this.btnCadastrar.Size = new System.Drawing.Size(138, 34);
@@ -313,6 +315,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmCadastrarProduto";
             this.Text = "CadastrarProduto";
             this.panel1.ResumeLayout(false);

@@ -122,7 +122,7 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Activecolor = System.Drawing.Color.RoyalBlue;
+            this.btnAlterar.Activecolor = System.Drawing.Color.SeaGreen;
             this.btnAlterar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnAlterar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAlterar.BorderRadius = 0;
@@ -143,8 +143,8 @@
             this.btnAlterar.IsTab = false;
             this.btnAlterar.Location = new System.Drawing.Point(171, 135);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnAlterar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnAlterar.Normalcolor = System.Drawing.Color.SeaGreen;
+            this.btnAlterar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnAlterar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnAlterar.selected = false;
             this.btnAlterar.Size = new System.Drawing.Size(138, 34);
@@ -171,6 +171,7 @@
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -185,6 +186,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -218,6 +220,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.groupBox2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAlterarSenha";
             this.Text = "frmAlterarSenha";
             this.groupBox2.ResumeLayout(false);

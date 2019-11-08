@@ -94,6 +94,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label5.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
@@ -108,6 +109,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -132,7 +134,7 @@
             // 
             // dtpContrat
             // 
-            this.dtpContrat.BackColor = System.Drawing.Color.SkyBlue;
+            this.dtpContrat.BackColor = System.Drawing.Color.SeaGreen;
             this.dtpContrat.BorderRadius = 0;
             this.dtpContrat.ForeColor = System.Drawing.Color.White;
             this.dtpContrat.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -163,7 +165,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
-            this.ClientSize = new System.Drawing.Size(920, 689);
+            this.ClientSize = new System.Drawing.Size(920, 693);
             this.Controls.Add(this.cboFuncionario);
             this.Controls.Add(this.dtpContrat);
             this.Controls.Add(this.dgvConsultarFuncionario);
@@ -172,6 +174,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultarFolha";
             this.Text = "frmConsultarFolha";
             ((System.ComponentModel.ISupportInitialize)(this.dgvConsultarFuncionario)).EndInit();

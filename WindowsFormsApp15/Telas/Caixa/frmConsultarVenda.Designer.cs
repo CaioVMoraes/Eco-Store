@@ -41,6 +41,7 @@
             this.dtpCompra = new Bunifu.Framework.UI.BunifuDatepicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompra)).BeginInit();
             this.SuspendLayout();
@@ -61,6 +62,7 @@
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -74,6 +76,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -95,7 +98,7 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvCompra.Location = new System.Drawing.Point(12, 97);
+            this.dgvCompra.Location = new System.Drawing.Point(13, 128);
             this.dgvCompra.Name = "dgvCompra";
             this.dgvCompra.ReadOnly = true;
             this.dgvCompra.Size = new System.Drawing.Size(670, 339);
@@ -140,12 +143,12 @@
             // 
             // dtpCompra
             // 
-            this.dtpCompra.BackColor = System.Drawing.Color.SkyBlue;
+            this.dtpCompra.BackColor = System.Drawing.Color.SeaGreen;
             this.dtpCompra.BorderRadius = 0;
             this.dtpCompra.ForeColor = System.Drawing.Color.White;
             this.dtpCompra.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpCompra.FormatCustom = null;
-            this.dtpCompra.Location = new System.Drawing.Point(331, 53);
+            this.dtpCompra.Location = new System.Drawing.Point(332, 84);
             this.dtpCompra.Name = "dtpCompra";
             this.dtpCompra.Size = new System.Drawing.Size(161, 27);
             this.dtpCompra.TabIndex = 328;
@@ -159,7 +162,7 @@
             this.label6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(180, 56);
+            this.label6.Location = new System.Drawing.Point(181, 87);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(135, 20);
             this.label6.TabIndex = 327;
@@ -178,19 +181,34 @@
             this.label3.TabIndex = 325;
             this.label3.Text = "Consultar Compra";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(265, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(143, 20);
+            this.label1.TabIndex = 329;
+            this.label1.Text = "Consultar Venda";
+            // 
             // frmConsultarVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(697, 448);
+            this.ClientSize = new System.Drawing.Size(697, 477);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dgvCompra);
             this.Controls.Add(this.dtpCompra);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmConsultarVenda";
             this.Text = "frmConsultarVenda";
             this.panel1.ResumeLayout(false);
@@ -215,5 +233,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label label1;
     }
 }

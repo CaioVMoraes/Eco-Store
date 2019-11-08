@@ -127,6 +127,7 @@
             // 
             this.lblMinimizar.AutoSize = true;
             this.lblMinimizar.BackColor = System.Drawing.Color.Transparent;
+            this.lblMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblMinimizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblMinimizar.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinimizar.ForeColor = System.Drawing.Color.White;
@@ -141,6 +142,7 @@
             // 
             this.lblSair.AutoSize = true;
             this.lblSair.BackColor = System.Drawing.Color.Transparent;
+            this.lblSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblSair.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSair.ForeColor = System.Drawing.Color.White;
@@ -526,34 +528,34 @@
             // 
             // btnEntrar
             // 
-            this.btnEntrar.Activecolor = System.Drawing.Color.RoyalBlue;
-            this.btnEntrar.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnEntrar.Activecolor = System.Drawing.Color.SeaGreen;
+            this.btnEntrar.BackColor = System.Drawing.Color.SeaGreen;
             this.btnEntrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnEntrar.BorderRadius = 0;
-            this.btnEntrar.ButtonText = "      DELETAR";
+            this.btnEntrar.ButtonText = "   DELETAR";
             this.btnEntrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEntrar.DisabledColor = System.Drawing.Color.Gray;
             this.btnEntrar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEntrar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEntrar.Iconimage")));
+            this.btnEntrar.Iconimage = global::WindowsFormsApp15.Properties.Resources.IconeRemover1;
             this.btnEntrar.Iconimage_right = null;
             this.btnEntrar.Iconimage_right_Selected = null;
             this.btnEntrar.Iconimage_Selected = null;
-            this.btnEntrar.IconMarginLeft = 0;
+            this.btnEntrar.IconMarginLeft = 28;
             this.btnEntrar.IconMarginRight = 0;
             this.btnEntrar.IconRightVisible = true;
             this.btnEntrar.IconRightZoom = 0D;
             this.btnEntrar.IconVisible = true;
-            this.btnEntrar.IconZoom = 90D;
+            this.btnEntrar.IconZoom = 50D;
             this.btnEntrar.IsTab = false;
             this.btnEntrar.Location = new System.Drawing.Point(495, 598);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Normalcolor = System.Drawing.Color.DodgerBlue;
-            this.btnEntrar.OnHovercolor = System.Drawing.Color.RoyalBlue;
+            this.btnEntrar.Normalcolor = System.Drawing.Color.SeaGreen;
+            this.btnEntrar.OnHovercolor = System.Drawing.Color.MediumSeaGreen;
             this.btnEntrar.OnHoverTextColor = System.Drawing.Color.White;
             this.btnEntrar.selected = false;
             this.btnEntrar.Size = new System.Drawing.Size(181, 43);
             this.btnEntrar.TabIndex = 391;
-            this.btnEntrar.Text = "      DELETAR";
+            this.btnEntrar.Text = "   DELETAR";
             this.btnEntrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEntrar.Textcolor = System.Drawing.Color.White;
             this.btnEntrar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -683,6 +685,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmDeletarFolha";
             this.Text = "frmDeletarFolha";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
