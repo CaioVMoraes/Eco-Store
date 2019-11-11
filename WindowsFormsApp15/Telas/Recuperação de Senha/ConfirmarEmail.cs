@@ -116,5 +116,15 @@ namespace WindowsFormsApp15.Recuperação_de_Senha
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void lblSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void lblMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
