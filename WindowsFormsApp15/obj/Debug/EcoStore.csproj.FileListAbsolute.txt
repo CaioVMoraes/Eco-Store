@@ -619,3 +619,7 @@ C:\Users\infob08\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsForms
 C:\Users\infob08\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\EcoStore.csproj.GenerateResource.Cache
 C:\Users\infob08\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
 C:\Users\infob08\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
+C:\Users\teste\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Cliente.frmAlterarCliente.resources
+C:\Users\teste\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Cliente.frmCadastrarCliente.resources
+C:\Users\teste\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Cliente.frmConsultarCliente.resources
+C:\Users\teste\Source\Repos\eco-store\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Telas.Cliente.frmDeletarCliente.resources

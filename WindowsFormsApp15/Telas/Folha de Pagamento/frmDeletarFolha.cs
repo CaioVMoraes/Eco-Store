@@ -25,6 +25,7 @@ namespace WindowsFormsApp15.Telas.Folha_de_Pagamento
             cboFuncionario.Text = model.tb_funcionario.nm_funcionario;
             cboMes.Text = model.dt_pagamento.Month.ToString();
 
+            txtIdFolha.Text = model.id_folhaPagamento.ToString();
             nudAli.Value = model.vl_valeAlimentacao;
             nudDentario.Value = model.vl_planoOdonto;
             nudDescontos.Value = model.vl_liquido;
@@ -60,47 +61,23 @@ namespace WindowsFormsApp15.Telas.Folha_de_Pagamento
             this.Close();
         }
 
-        private void cboFuncionario_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnEntrar_Click(object sender, EventArgs e)
         {
             try
             {
-                tb_funcionario comboFuncionario = cboFuncionario.SelectedItem as tb_funcionario;
-                                                  
-                int mes = Convert.ToInt32(cboMes.Text);
+                int id = Convert.ToInt32(txtIdFolha.Text);
 
-                Business.FuncionarioBusiness funcionarioBusiness = new Business.FuncionarioBusiness();
-                Business.ControleDePontoBusiness controleBusiness = new Business.ControleDePontoBusiness();
+                Business.FolhaDePagamentoBusiness business = new Business.FolhaDePagamentoBusiness();
 
-                List<tb_controledeponto> ponto = controleBusiness.ListarPorFuncionario(comboFuncionario.id_funcionario, mes);
-                tb_funcionario funcionario = funcionarioBusiness.Listar(comboFuncionario.id_funcionario);
+                business.RemoverFolha(id);
 
-                Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
-
-                Image imagem = imageConverter.byteArrayToImage(funcionario.img_foto);
-
-                imgFoto.Image = imagem;
-
-                int entradaAlmoco = ponto.Sum(x => x.dt_saidaAlmoco.Value.Hour);
-                int voltaAlmoco = ponto.Sum(x => x.dt_voltaAlmoco.Value.Hour);
-
-                int totalAlmoco = voltaAlmoco - entradaAlmoco;
-
-                int chegada = ponto.Sum(x => x.dt_chegada.Value.Hour);
-                int saida = ponto.Sum(x => x.dt_saida.Value.Hour);
-
-                int expediente = (saida - chegada) - totalAlmoco;
-
-                nudDescontos.Value = expediente * funcionario.vl_salarioPorHora;
+                MessageBox.Show("Removido com sucesso");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Gerar Folha de Pagamento");
+                MessageBox.Show(ex.Message);
             }
-        }
-
-        private void btnEntrar_Click(object sender, EventArgs e)
-        {
-
+            
         }
     }
 }

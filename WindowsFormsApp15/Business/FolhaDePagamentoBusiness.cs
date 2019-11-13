@@ -33,6 +33,20 @@ namespace WindowsFormsApp15.Business
             return lista;
         }
 
+        public List<tb_folhapagamento> ConsultarFolhaFunc(string func)
+        {
+            List<tb_folhapagamento> lista = db.ConsultarFolhaFunc(func);
+
+            return lista;
+        }
+
+        public List<tb_folhapagamento> ConsultarFolhaData(DateTime data)
+        {
+            List<tb_folhapagamento> lista = db.ConsultarFolhaData(data);
+
+            return lista;
+        }
+
         public void AlterarFolha(tb_folhapagamento modelo)
         {
             db.AlterarFolha(modelo);

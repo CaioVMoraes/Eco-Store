@@ -35,7 +35,9 @@ namespace WindowsFormsApp15.Telas
             Business.FolhaDePagamentoBusiness business = new Business.FolhaDePagamentoBusiness();
             tb_folhapagamento model = new tb_folhapagamento();
 
-            int id = Convert.ToInt32(cboID.Text);
+            tb_funcionario comboFuncionario = cboID.SelectedItem as tb_funcionario;
+
+            int id = comboFuncionario.id_funcionario;
 
             decimal gratificaçoes = nudGratificacoes.Value;
             decimal Plr = nudPLR.Value;
@@ -64,11 +66,14 @@ namespace WindowsFormsApp15.Telas
             this.Close();
         }
 
-        private void cboID_SelectedIndexChanged(object sender, EventArgs e)
+        private void CalculoExpediente()
         {
             try
             {
                 tb_funcionario comboFuncionario = cboID.SelectedItem as tb_funcionario;
+
+                if (cboMes.Text == string.Empty)
+                    cboMes.Text = "1";
 
                 int mes = Convert.ToInt32(cboMes.Text);
 
@@ -76,11 +81,10 @@ namespace WindowsFormsApp15.Telas
                 Business.ControleDePontoBusiness controleBusiness = new Business.ControleDePontoBusiness();
 
                 List<tb_controledeponto> ponto = controleBusiness.ListarPorFuncionario(comboFuncionario.id_funcionario, mes);
-                tb_funcionario funcionario = funcionarioBusiness.Listar(comboFuncionario.id_funcionario);
 
                 Utils.ConverterImagem imageConverter = new Utils.ConverterImagem();
 
-                Image imagem = imageConverter.byteArrayToImage(funcionario.img_foto);
+                Image imagem = imageConverter.byteArrayToImage(comboFuncionario.img_foto);
 
                 imgFoto.Image = imagem;
 
@@ -94,12 +98,17 @@ namespace WindowsFormsApp15.Telas
 
                 int expediente = (saida - chegada) - totalAlmoco;
 
-                nudDescontos.Value = expediente * funcionario.vl_salarioPorHora;
+                nudDescontos.Value = expediente * comboFuncionario.vl_salarioPorHora;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Gerar Folha de Pagamento");
             }
+        }
+
+        private void cboID_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.CalculoExpediente();
         }
 
         private void nudGratificacoes_ValueChanged(object sender, EventArgs e)
@@ -192,6 +201,21 @@ namespace WindowsFormsApp15.Telas
             business.InserirFolha(model);
 
             MessageBox.Show("Folha cadastrada com sucesso");
+        }
+
+        private void cboMes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.CalculoExpediente();
+        }
+
+        private void nudIR_ValueChanged(object sender, EventArgs e)
+        {
+            this.Calculo();
+        }
+
+        private void nudSaude_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -69,6 +69,7 @@
             this.imgFoto = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cboFuncionario = new System.Windows.Forms.ComboBox();
+            this.txtIdFolha = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudIR)).BeginInit();
@@ -207,6 +208,7 @@
             // 
             this.lblLiquido.AutoSize = true;
             this.lblLiquido.BackColor = System.Drawing.Color.Transparent;
+            this.lblLiquido.Enabled = false;
             this.lblLiquido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lblLiquido.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLiquido.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -578,6 +580,7 @@
             // cboMes
             // 
             this.cboMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboMes.Enabled = false;
             this.cboMes.FormattingEnabled = true;
             this.cboMes.Items.AddRange(new object[] {
             "01",
@@ -636,12 +639,20 @@
             // 
             // cboFuncionario
             // 
+            this.cboFuncionario.Enabled = false;
             this.cboFuncionario.FormattingEnabled = true;
             this.cboFuncionario.Location = new System.Drawing.Point(259, 58);
             this.cboFuncionario.Name = "cboFuncionario";
             this.cboFuncionario.Size = new System.Drawing.Size(192, 21);
             this.cboFuncionario.TabIndex = 133;
-            this.cboFuncionario.SelectedIndexChanged += new System.EventHandler(this.cboFuncionario_SelectedIndexChanged);
+            // 
+            // txtIdFolha
+            // 
+            this.txtIdFolha.Location = new System.Drawing.Point(646, 101);
+            this.txtIdFolha.Name = "txtIdFolha";
+            this.txtIdFolha.Size = new System.Drawing.Size(100, 20);
+            this.txtIdFolha.TabIndex = 421;
+            this.txtIdFolha.Visible = false;
             // 
             // frmDeletarFolha
             // 
@@ -651,6 +662,7 @@
             this.BackgroundImage = global::WindowsFormsApp15.Properties.Resources._3907f0a4052ed31662981053bbf12c4e;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(806, 666);
+            this.Controls.Add(this.txtIdFolha);
             this.Controls.Add(this.nudIR);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -753,5 +765,6 @@
         private System.Windows.Forms.PictureBox imgFoto;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cboFuncionario;
+        private System.Windows.Forms.TextBox txtIdFolha;
     }
 }

@@ -43,7 +43,40 @@ namespace WindowsFormsApp15.Telas.Folha_de_Pagamento
 
         private void cboFuncionario_SelectedIndexChanged(object sender, EventArgs e)
         {
+            try
+            {
+                string func = cboFuncionario.Text;
 
+                Business.FolhaDePagamentoBusiness business = new Business.FolhaDePagamentoBusiness();
+
+                List<tb_folhapagamento> lista = business.ConsultarFolhaFunc(func);
+
+                dgvConsultarFuncionario.AutoGenerateColumns = false;
+                dgvConsultarFuncionario.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void dtpContrat_onValueChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DateTime data = dtpContrat.Value.Date;
+
+                Business.FolhaDePagamentoBusiness business = new Business.FolhaDePagamentoBusiness();
+
+                List<tb_folhapagamento> lista = business.ConsultarFolhaData(data);
+
+                dgvConsultarFuncionario.AutoGenerateColumns = false;
+                dgvConsultarFuncionario.DataSource = lista;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

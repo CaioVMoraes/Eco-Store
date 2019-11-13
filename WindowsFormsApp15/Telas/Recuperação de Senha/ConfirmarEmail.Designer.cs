@@ -90,7 +90,7 @@
             // btnCodigo
             // 
             this.btnCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.btnCodigo.Location = new System.Drawing.Point(435, 105);
+            this.btnCodigo.Location = new System.Drawing.Point(435, 118);
             this.btnCodigo.Name = "btnCodigo";
             this.btnCodigo.Size = new System.Drawing.Size(84, 25);
             this.btnCodigo.TabIndex = 301;

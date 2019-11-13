@@ -151,6 +151,7 @@
     <Compile Include="Model\tb_folhapagamento.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tb_folhapagemento_funcionario.cs" />
     <Compile Include="Model\tb_fornecedor.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>

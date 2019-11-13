@@ -406,6 +406,7 @@
             // nudDescontos
             // 
             this.nudDescontos.DecimalPlaces = 2;
+            this.nudDescontos.Enabled = false;
             this.nudDescontos.Location = new System.Drawing.Point(634, 474);
             this.nudDescontos.Maximum = new decimal(new int[] {
             999999999,
@@ -512,7 +513,6 @@
             // 
             // cboMes
             // 
-            this.cboMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMes.FormattingEnabled = true;
             this.cboMes.Items.AddRange(new object[] {
             "01",
@@ -531,6 +531,7 @@
             this.cboMes.Name = "cboMes";
             this.cboMes.Size = new System.Drawing.Size(121, 21);
             this.cboMes.TabIndex = 171;
+            this.cboMes.SelectedIndexChanged += new System.EventHandler(this.cboMes_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -613,6 +614,7 @@
             this.nudIR.Name = "nudIR";
             this.nudIR.Size = new System.Drawing.Size(120, 20);
             this.nudIR.TabIndex = 316;
+            this.nudIR.ValueChanged += new System.EventHandler(this.nudIR_ValueChanged);
             // 
             // label17
             // 
@@ -671,6 +673,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "nudSaude";
             this.Text = "Folha de Pagamento";
+            this.Load += new System.EventHandler(this.nudSaude_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudRef)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPLR)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudAli)).EndInit();

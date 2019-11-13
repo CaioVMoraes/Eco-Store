@@ -22,6 +22,21 @@ namespace WindowsFormsApp15.Database
 
             return lista;
         }
+
+        public List<tb_folhapagamento> ConsultarFolhaFunc(string func)
+        {
+            List<tb_folhapagamento> lista = db.tb_folhapagamento.Where(x => x.tb_funcionario.nm_funcionario == func).ToList();
+
+            return lista;
+        }
+
+        public List<tb_folhapagamento> ConsultarFolhaData(DateTime data)
+        {
+            List<tb_folhapagamento> lista = db.tb_folhapagamento.Where(x => x.dt_pagamento == data).ToList();
+
+            return lista;
+        }
+
         public void AlterarFolha(tb_folhapagamento modelo)
         {
             tb_folhapagamento alterar = db.tb_folhapagamento.FirstOrDefault(x => x.id_funcionario == x.id_funcionario);
@@ -39,7 +54,6 @@ namespace WindowsFormsApp15.Database
             alterar.vl_valeRefeicao = modelo.vl_valeRefeicao;
             alterar.vl_valeTransporte = modelo.vl_valeTransporte;
             alterar.dt_pagamento = modelo.dt_pagamento;
-            alterar.id_funcionario = modelo.id_funcionario;
 
             db.SaveChanges();
         }
